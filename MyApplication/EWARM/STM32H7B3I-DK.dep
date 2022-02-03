@@ -1671,6 +1671,10 @@
             <name>$PROJ_DIR$\STM32H7B3I-DK\Exe\STM32H7B3I-DK.out</name>
             <outputs>
                 <tool>
+                    <name>OBJCOPY</name>
+                    <file> 282</file>
+                </tool>
+                <tool>
                     <name>ILINK</name>
                     <file> 92</file>
                 </tool>
