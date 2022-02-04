@@ -39,7 +39,13 @@ void TouchGFXGeneratedHAL::initialize()
 {
     HAL::initialize();
     registerEventListener(*(Application::getInstance()));
-    setFrameBufferStartAddresses((void*)frameBuf, (void*)(frameBuf + sizeof(frameBuf) / (sizeof(uint32_t) * 2)), (void*)0);
+//    setFrameBufferStartAddresses((void*)frameBuf, (void*)(frameBuf + sizeof(frameBuf) / (sizeof(uint32_t) * 2)), (void*)0);
+
+    /*===============================
+     //sunny
+     //Set Animation buffer 활성화
+    ===============================*/
+    setFrameBufferStartAddresses((void*)frameBuf, (void*)(frameBuf + sizeof(frameBuf) / (sizeof(uint32_t) * 2)), (void*)(frameBuf + sizeof(frameBuf) / (sizeof(uint32_t) * 2) + sizeof(frameBuf) / (sizeof(uint32_t) * 2)));
 }
 
 void TouchGFXGeneratedHAL::configureInterrupts()

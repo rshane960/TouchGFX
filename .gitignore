@@ -5,3 +5,7 @@
 *.dbgdt
 *.xml
 *.siwork
+MyApplication/sourceInsight.si4project/cache/parse/Core_Inc_FreeRTOSConfig.h.sisc
+*.sisc
+MyApplication/sourceInsight.si4project/sourceInsight.SearchResults
+*.sip_xsb
