@@ -45,7 +45,7 @@ void TouchGFXGeneratedHAL::initialize()
      //sunny
      //Set Animation buffer 활성화
     ===============================*/
-    setFrameBufferStartAddresses((void*)frameBuf, (void*)(frameBuf + sizeof(frameBuf) / (sizeof(uint32_t) * 2)), (void*)(frameBuf + sizeof(frameBuf) / (sizeof(uint32_t) * 2) + sizeof(frameBuf) / (sizeof(uint32_t) * 2)));
+    setFrameBufferStartAddresses((void*)frameBuf, (void*)(frameBuf + sizeof(frameBuf) / (sizeof(uint32_t) * 2)), (void*)(frameBuf + sizeof(frameBuf) / (sizeof(uint32_t) * 2)));
 }
 
 void TouchGFXGeneratedHAL::configureInterrupts()

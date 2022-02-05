@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32h7b3i_discovery_ospi.h"
+#include "stm32h7b3i_discovery.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,6 +68,11 @@ const osThreadAttr_t GUI_Task_attributes = {
   .stack_size = 4096 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for testTimer */
+osTimerId_t testTimerHandle;
+const osTimerAttr_t testTimer_attributes = {
+  .name = "testTimer"
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -82,6 +88,7 @@ static void MX_I2C4_Init(void);
 static void MX_OCTOSPI1_Init(void);
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
+void testTmrCallback(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -149,6 +156,10 @@ int main(void)
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
+
+  /* Create the timer(s) */
+  /* creation of testTimer */
+  testTimerHandle = osTimerNew(testTmrCallback, osTimerPeriodic, NULL, &testTimer_attributes);
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
@@ -528,7 +539,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : LED3_Pin LED2_Pin */
   GPIO_InitStruct.Pin = LED3_Pin|LED2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
@@ -587,12 +598,24 @@ void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
 
+    osTimerStart(testTimerHandle, 1000);
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(100);
+    osDelay(1000);
   }
   /* USER CODE END 5 */
+}
+
+/* testTmrCallback function */
+void testTmrCallback(void *argument)
+{
+  /* USER CODE BEGIN testTmrCallback */
+    HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_2);
+    HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_11);
+
+  /* USER CODE END testTmrCallback */
 }
 
 /* MPU Configuration */

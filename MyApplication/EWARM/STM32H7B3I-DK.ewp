@@ -676,7 +676,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>48</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -1160,6 +1160,9 @@
             </group>
             <group>
                 <name>STM32H7B3I-DK</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery.c</name>
+                </file>
                 <file>
                     <name>$PROJ_DIR$\..\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_bus.c</name>
                 </file>
