@@ -50,11 +50,11 @@ void GPIO::set(GPIO_ID id)
     switch (id)
     {
     case GPIO::VSYNC_FREQ:
-        HAL_GPIO_WritePin(GPIOG, LED3_Pin, GPIO_PIN_SET);
+//        HAL_GPIO_WritePin(GPIOG, LED3_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(GPIOG, VSYNC_FREQ_Pin, GPIO_PIN_SET);
         break;
     case GPIO::RENDER_TIME:
-        HAL_GPIO_WritePin(GPIOG, LED2_Pin, GPIO_PIN_SET);
+//        HAL_GPIO_WritePin(GPIOG, LED2_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(GPIOG, RENDER_TIME_Pin, GPIO_PIN_SET);
         break;
     case GPIO::FRAME_RATE:
@@ -74,11 +74,11 @@ void GPIO::clear(GPIO_ID id)
     switch (id)
     {
     case GPIO::VSYNC_FREQ:
-        HAL_GPIO_WritePin(GPIOG, LED3_Pin, GPIO_PIN_RESET);
+//        HAL_GPIO_WritePin(GPIOG, LED3_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(GPIOG, VSYNC_FREQ_Pin, GPIO_PIN_RESET);
         break;
     case GPIO::RENDER_TIME:
-        HAL_GPIO_WritePin(GPIOG, LED2_Pin, GPIO_PIN_RESET);
+//        HAL_GPIO_WritePin(GPIOG, LED2_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(GPIOG, RENDER_TIME_Pin, GPIO_PIN_RESET);
         break;
     case GPIO::FRAME_RATE:
