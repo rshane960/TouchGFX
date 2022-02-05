@@ -1,0 +1,1146 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         05/Feb/2022  15:56:54
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_5.c
+#        [UTF-8]
+#    Command line                 =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Middlewares\FreeRTOS\heap_5.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_5.c
+#        -D USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Middlewares\FreeRTOS
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Middlewares\FreeRTOS
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Middlewares\FreeRTOS
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Middlewares\FreeRTOS\heap_5.o.d
+#    Locale                       =  C
+#    List file                    =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Middlewares\FreeRTOS\heap_5.lst
+#    Object file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Middlewares\FreeRTOS\heap_5.o
+#    Runtime model:                  
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  1
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_5.c
+      1          /*
+      2           * FreeRTOS Kernel V10.3.1
+      3           * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+      4           *
+      5           * Permission is hereby granted, free of charge, to any person obtaining a copy of
+      6           * this software and associated documentation files (the "Software"), to deal in
+      7           * the Software without restriction, including without limitation the rights to
+      8           * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+      9           * the Software, and to permit persons to whom the Software is furnished to do so,
+     10           * subject to the following conditions:
+     11           *
+     12           * The above copyright notice and this permission notice shall be included in all
+     13           * copies or substantial portions of the Software.
+     14           *
+     15           * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     16           * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+     17           * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+     18           * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+     19           * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+     20           * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+     21           *
+     22           * http://www.FreeRTOS.org
+     23           * http://aws.amazon.com/freertos
+     24           *
+     25           * 1 tab == 4 spaces!
+     26           */
+     27          
+     28          /*
+     29           * A sample implementation of pvPortMalloc() that allows the heap to be defined
+     30           * across multiple non-contigous blocks and combines (coalescences) adjacent
+     31           * memory blocks as they are freed.
+     32           *
+     33           * See heap_1.c, heap_2.c, heap_3.c and heap_4.c for alternative
+     34           * implementations, and the memory management pages of http://www.FreeRTOS.org
+     35           * for more information.
+     36           *
+     37           * Usage notes:
+     38           *
+     39           * vPortDefineHeapRegions() ***must*** be called before pvPortMalloc().
+     40           * pvPortMalloc() will be called if any task objects (tasks, queues, event
+     41           * groups, etc.) are created, therefore vPortDefineHeapRegions() ***must*** be
+     42           * called before any other objects are defined.
+     43           *
+     44           * vPortDefineHeapRegions() takes a single parameter.  The parameter is an array
+     45           * of HeapRegion_t structures.  HeapRegion_t is defined in portable.h as
+     46           *
+     47           * typedef struct HeapRegion
+     48           * {
+     49           *	uint8_t *pucStartAddress; << Start address of a block of memory that will be part of the heap.
+     50           *	size_t xSizeInBytes;	  << Size of the block of memory.
+     51           * } HeapRegion_t;
+     52           *
+     53           * The array is terminated using a NULL zero sized region definition, and the
+     54           * memory regions defined in the array ***must*** appear in address order from
+     55           * low address to high address.  So the following is a valid example of how
+     56           * to use the function.
+     57           *
+     58           * HeapRegion_t xHeapRegions[] =
+     59           * {
+     60           * 	{ ( uint8_t * ) 0x80000000UL, 0x10000 }, << Defines a block of 0x10000 bytes starting at address 0x80000000
+     61           * 	{ ( uint8_t * ) 0x90000000UL, 0xa0000 }, << Defines a block of 0xa0000 bytes starting at address of 0x90000000
+     62           * 	{ NULL, 0 }                << Terminates the array.
+     63           * };
+     64           *
+     65           * vPortDefineHeapRegions( xHeapRegions ); << Pass the array into vPortDefineHeapRegions().
+     66           *
+     67           * Note 0x80000000 is the lower address so appears in the array first.
+     68           *
+     69           */
+     70          #include <stdlib.h>
+     71          
+     72          /* Defining MPU_WRAPPERS_INCLUDED_FROM_API_FILE prevents task.h from redefining
+     73          all the API functions to use the MPU wrappers.  That should only be done when
+     74          task.h is included from an application file. */
+     75          #define MPU_WRAPPERS_INCLUDED_FROM_API_FILE
+     76          
+     77          #include "FreeRTOS.h"
+     78          #include "task.h"
+     79          
+     80          #undef MPU_WRAPPERS_INCLUDED_FROM_API_FILE
+     81          
+     82          #if( configSUPPORT_DYNAMIC_ALLOCATION == 0 )
+     83          	#error This file must not be used if configSUPPORT_DYNAMIC_ALLOCATION is 0
+     84          #endif
+     85          
+     86          /* Block sizes must not get too small. */
+     87          #define heapMINIMUM_BLOCK_SIZE	( ( size_t ) ( xHeapStructSize << 1 ) )
+     88          
+     89          /* Assumes 8bit bytes! */
+     90          #define heapBITS_PER_BYTE		( ( size_t ) 8 )
+     91          
+     92          /* Define the linked list structure.  This is used to link free blocks in order
+     93          of their memory address. */
+     94          typedef struct A_BLOCK_LINK
+     95          {
+     96          	struct A_BLOCK_LINK *pxNextFreeBlock;	/*<< The next free block in the list. */
+     97          	size_t xBlockSize;						/*<< The size of the free block. */
+     98          } BlockLink_t;
+     99          
+    100          /*-----------------------------------------------------------*/
+    101          
+    102          /*
+    103           * Inserts a block of memory that is being freed into the correct position in
+    104           * the list of free memory blocks.  The block being freed will be merged with
+    105           * the block in front it and/or the block behind it if the memory blocks are
+    106           * adjacent to each other.
+    107           */
+    108          static void prvInsertBlockIntoFreeList( BlockLink_t *pxBlockToInsert );
+    109          
+    110          /*-----------------------------------------------------------*/
+    111          
+    112          /* The size of the structure placed at the beginning of each allocated memory
+    113          block must by correctly byte aligned. */
+
+   \                                 In section .rodata, align 4
+    114          static const size_t xHeapStructSize	= ( sizeof( BlockLink_t ) + ( ( size_t ) ( portBYTE_ALIGNMENT - 1 ) ) ) & ~( ( size_t ) portBYTE_ALIGNMENT_MASK );
+   \                     xHeapStructSize:
+   \        0x0   0x0000'0008        DC32 8
+    115          
+    116          /* Create a couple of list links to mark the start and end of the list. */
+
+   \                                 In section .bss, align 4
+    117          static BlockLink_t xStart, *pxEnd = NULL;
+   \                     xStart:
+   \        0x0                      DS8 8
+
+   \                                 In section .bss, align 4
+   \                     pxEnd:
+   \        0x0                      DS8 4
+    118          
+    119          /* Keeps track of the number of calls to allocate and free memory as well as the
+    120          number of free bytes remaining, but says nothing about fragmentation. */
+
+   \                                 In section .bss, align 4
+    121          static size_t xFreeBytesRemaining = 0U;
+   \                     xFreeBytesRemaining:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+    122          static size_t xMinimumEverFreeBytesRemaining = 0U;
+   \                     xMinimumEverFreeBytesRemaining:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+    123          static size_t xNumberOfSuccessfulAllocations = 0;
+   \                     xNumberOfSuccessfulAllocations:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+    124          static size_t xNumberOfSuccessfulFrees = 0;
+   \                     xNumberOfSuccessfulFrees:
+   \        0x0                      DS8 4
+    125          
+    126          /* Gets set to the top bit of an size_t type.  When this bit in the xBlockSize
+    127          member of an BlockLink_t structure is set then the block belongs to the
+    128          application.  When the bit is free the block is still part of the free heap
+    129          space. */
+
+   \                                 In section .bss, align 4
+    130          static size_t xBlockAllocatedBit = 0;
+   \                     xBlockAllocatedBit:
+   \        0x0                      DS8 4
+    131          
+    132          /*-----------------------------------------------------------*/
+    133          
+
+   \                                 In section .text, align 2, keep-with-next
+    134          void *pvPortMalloc( size_t xWantedSize )
+    135          {
+   \                     pvPortMalloc: (+1)
+   \        0x0   0xE92D 0x43F8      PUSH     {R3-R9,LR}
+   \        0x4   0x0004             MOVS     R4,R0
+    136          BlockLink_t *pxBlock, *pxPreviousBlock, *pxNewBlockLink;
+    137          void *pvReturn = NULL;
+   \        0x6   0x2500             MOVS     R5,#+0
+    138          
+    139          	/* The heap must be initialised before the first call to
+    140          	prvPortMalloc(). */
+    141          	configASSERT( pxEnd );
+   \        0x8   0x.... 0x....      LDR.W    R9,??DataTable6
+   \        0xC   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0x10   0x2800             CMP      R0,#+0
+   \       0x12   0xD107             BNE.N    ??pvPortMalloc_0
+   \       0x14   0x2050             MOVS     R0,#+80
+   \       0x16   0xF380 0x8811      MSR      BASEPRI,R0
+   \       0x1A   0xF3BF 0x8F4F      DSB      SY
+   \       0x1E   0xF3BF 0x8F6F      ISB      SY
+   \                     ??pvPortMalloc_1: (+1)
+   \       0x22   0xE7FE             B.N      ??pvPortMalloc_1
+    142          
+    143          	vTaskSuspendAll();
+   \                     ??pvPortMalloc_0: (+1)
+   \       0x24   0x.... 0x....      BL       vTaskSuspendAll
+    144          	{
+    145          		/* Check the requested block size is not so large that the top bit is
+    146          		set.  The top bit of the block size member of the BlockLink_t structure
+    147          		is used to determine who owns the block - the application or the
+    148          		kernel, so it must be free. */
+    149          		if( ( xWantedSize & xBlockAllocatedBit ) == 0 )
+   \       0x28   0x....             LDR.N    R6,??DataTable6_1
+   \       0x2A   0x6830             LDR      R0,[R6, #+0]
+   \       0x2C   0x4204             TST      R4,R0
+   \       0x2E   0xD158             BNE.N    ??pvPortMalloc_2
+    150          		{
+    151          			/* The wanted size is increased so it can contain a BlockLink_t
+    152          			structure in addition to the requested amount of bytes. */
+    153          			if( xWantedSize > 0 )
+   \       0x30   0x2C00             CMP      R4,#+0
+   \       0x32   0xD00A             BEQ.N    ??pvPortMalloc_3
+    154          			{
+    155          				xWantedSize += xHeapStructSize;
+   \       0x34   0x....             LDR.N    R0,??DataTable6_2
+   \       0x36   0x6800             LDR      R0,[R0, #+0]
+   \       0x38   0x1904             ADDS     R4,R0,R4
+    156          
+    157          				/* Ensure that blocks are always aligned to the required number
+    158          				of bytes. */
+    159          				if( ( xWantedSize & portBYTE_ALIGNMENT_MASK ) != 0x00 )
+   \       0x3A   0xF014 0x0F07      TST      R4,#0x7
+   \       0x3E   0xD004             BEQ.N    ??pvPortMalloc_3
+    160          				{
+    161          					/* Byte alignment required. */
+    162          					xWantedSize += ( portBYTE_ALIGNMENT - ( xWantedSize & portBYTE_ALIGNMENT_MASK ) );
+   \       0x40   0xF114 0x0008      ADDS     R0,R4,#+8
+   \       0x44   0xF014 0x0407      ANDS     R4,R4,#0x7
+   \       0x48   0x1B04             SUBS     R4,R0,R4
+    163          				}
+    164          				else
+    165          				{
+    166          					mtCOVERAGE_TEST_MARKER();
+    167          				}
+    168          			}
+    169          			else
+    170          			{
+    171          				mtCOVERAGE_TEST_MARKER();
+    172          			}
+    173          
+    174          			if( ( xWantedSize > 0 ) && ( xWantedSize <= xFreeBytesRemaining ) )
+   \                     ??pvPortMalloc_3: (+1)
+   \       0x4A   0x2C00             CMP      R4,#+0
+   \       0x4C   0xD049             BEQ.N    ??pvPortMalloc_2
+   \       0x4E   0x....             LDR.N    R7,??DataTable6_3
+   \       0x50   0x6838             LDR      R0,[R7, #+0]
+   \       0x52   0x42A0             CMP      R0,R4
+   \       0x54   0xD345             BCC.N    ??pvPortMalloc_2
+    175          			{
+    176          				/* Traverse the list from the start	(lowest address) block until
+    177          				one	of adequate size is found. */
+    178          				pxPreviousBlock = &xStart;
+   \       0x56   0x....             LDR.N    R0,??DataTable6_4
+   \       0x58   0x0001             MOVS     R1,R0
+    179          				pxBlock = xStart.pxNextFreeBlock;
+   \       0x5A   0xF8D0 0x8000      LDR      R8,[R0, #+0]
+   \       0x5E   0xE002             B.N      ??pvPortMalloc_4
+    180          				while( ( pxBlock->xBlockSize < xWantedSize ) && ( pxBlock->pxNextFreeBlock != NULL ) )
+    181          				{
+    182          					pxPreviousBlock = pxBlock;
+   \                     ??pvPortMalloc_5: (+1)
+   \       0x60   0x4641             MOV      R1,R8
+    183          					pxBlock = pxBlock->pxNextFreeBlock;
+   \       0x62   0xF8D8 0x8000      LDR      R8,[R8, #+0]
+    184          				}
+   \                     ??pvPortMalloc_4: (+1)
+   \       0x66   0xF8D8 0x0004      LDR      R0,[R8, #+4]
+   \       0x6A   0x42A0             CMP      R0,R4
+   \       0x6C   0xD203             BCS.N    ??pvPortMalloc_6
+   \       0x6E   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x72   0x2800             CMP      R0,#+0
+   \       0x74   0xD1F4             BNE.N    ??pvPortMalloc_5
+    185          
+    186          				/* If the end marker was reached then a block of adequate size
+    187          				was	not found. */
+    188          				if( pxBlock != pxEnd )
+   \                     ??pvPortMalloc_6: (+1)
+   \       0x76   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0x7A   0x4580             CMP      R8,R0
+   \       0x7C   0xD031             BEQ.N    ??pvPortMalloc_2
+    189          				{
+    190          					/* Return the memory space pointed to - jumping over the
+    191          					BlockLink_t structure at its start. */
+    192          					pvReturn = ( void * ) ( ( ( uint8_t * ) pxPreviousBlock->pxNextFreeBlock ) + xHeapStructSize );
+   \       0x7E   0x....             LDR.N    R0,??DataTable6_2
+   \       0x80   0x680A             LDR      R2,[R1, #+0]
+   \       0x82   0x6803             LDR      R3,[R0, #+0]
+   \       0x84   0xEB02 0x0503      ADD      R5,R2,R3
+    193          
+    194          					/* This block is being returned for use so must be taken out
+    195          					of the list of free blocks. */
+    196          					pxPreviousBlock->pxNextFreeBlock = pxBlock->pxNextFreeBlock;
+   \       0x88   0xF8D8 0x2000      LDR      R2,[R8, #+0]
+   \       0x8C   0x600A             STR      R2,[R1, #+0]
+    197          
+    198          					/* If the block is larger than required it can be split into
+    199          					two. */
+    200          					if( ( pxBlock->xBlockSize - xWantedSize ) > heapMINIMUM_BLOCK_SIZE )
+   \       0x8E   0x6800             LDR      R0,[R0, #+0]
+   \       0x90   0x0040             LSLS     R0,R0,#+1
+   \       0x92   0xF8D8 0x1004      LDR      R1,[R8, #+4]
+   \       0x96   0x1B09             SUBS     R1,R1,R4
+   \       0x98   0x4288             CMP      R0,R1
+   \       0x9A   0xD209             BCS.N    ??pvPortMalloc_7
+    201          					{
+    202          						/* This block is to be split into two.  Create a new
+    203          						block following the number of bytes requested. The void
+    204          						cast is used to prevent byte alignment warnings from the
+    205          						compiler. */
+    206          						pxNewBlockLink = ( void * ) ( ( ( uint8_t * ) pxBlock ) + xWantedSize );
+   \       0x9C   0xEB08 0x0004      ADD      R0,R8,R4
+    207          
+    208          						/* Calculate the sizes of two blocks split from the
+    209          						single block. */
+    210          						pxNewBlockLink->xBlockSize = pxBlock->xBlockSize - xWantedSize;
+   \       0xA0   0xF8D8 0x1004      LDR      R1,[R8, #+4]
+   \       0xA4   0x1B09             SUBS     R1,R1,R4
+   \       0xA6   0x6041             STR      R1,[R0, #+4]
+    211          						pxBlock->xBlockSize = xWantedSize;
+   \       0xA8   0xF8C8 0x4004      STR      R4,[R8, #+4]
+    212          
+    213          						/* Insert the new block into the list of free blocks. */
+    214          						prvInsertBlockIntoFreeList( ( pxNewBlockLink ) );
+   \       0xAC   0x.... 0x....      BL       prvInsertBlockIntoFreeList
+    215          					}
+    216          					else
+    217          					{
+    218          						mtCOVERAGE_TEST_MARKER();
+    219          					}
+    220          
+    221          					xFreeBytesRemaining -= pxBlock->xBlockSize;
+   \                     ??pvPortMalloc_7: (+1)
+   \       0xB0   0x6839             LDR      R1,[R7, #+0]
+   \       0xB2   0xF8D8 0x0004      LDR      R0,[R8, #+4]
+   \       0xB6   0x1A09             SUBS     R1,R1,R0
+   \       0xB8   0x6039             STR      R1,[R7, #+0]
+    222          
+    223          					if( xFreeBytesRemaining < xMinimumEverFreeBytesRemaining )
+   \       0xBA   0x....             LDR.N    R0,??DataTable6_5
+   \       0xBC   0x6839             LDR      R1,[R7, #+0]
+   \       0xBE   0x6802             LDR      R2,[R0, #+0]
+   \       0xC0   0x4291             CMP      R1,R2
+   \       0xC2   0xD201             BCS.N    ??pvPortMalloc_8
+    224          					{
+    225          						xMinimumEverFreeBytesRemaining = xFreeBytesRemaining;
+   \       0xC4   0x6839             LDR      R1,[R7, #+0]
+   \       0xC6   0x6001             STR      R1,[R0, #+0]
+    226          					}
+    227          					else
+    228          					{
+    229          						mtCOVERAGE_TEST_MARKER();
+    230          					}
+    231          
+    232          					/* The block is being returned - it is allocated and owned
+    233          					by the application and has no "next" block. */
+    234          					pxBlock->xBlockSize |= xBlockAllocatedBit;
+   \                     ??pvPortMalloc_8: (+1)
+   \       0xC8   0xF8D8 0x1004      LDR      R1,[R8, #+4]
+   \       0xCC   0x6830             LDR      R0,[R6, #+0]
+   \       0xCE   0x4301             ORRS     R1,R0,R1
+   \       0xD0   0xF8C8 0x1004      STR      R1,[R8, #+4]
+    235          					pxBlock->pxNextFreeBlock = NULL;
+   \       0xD4   0x2000             MOVS     R0,#+0
+   \       0xD6   0xF8C8 0x0000      STR      R0,[R8, #+0]
+    236          					xNumberOfSuccessfulAllocations++;
+   \       0xDA   0x....             LDR.N    R0,??DataTable6_6
+   \       0xDC   0x6801             LDR      R1,[R0, #+0]
+   \       0xDE   0x1C49             ADDS     R1,R1,#+1
+   \       0xE0   0x6001             STR      R1,[R0, #+0]
+    237          				}
+    238          				else
+    239          				{
+    240          					mtCOVERAGE_TEST_MARKER();
+    241          				}
+    242          			}
+    243          			else
+    244          			{
+    245          				mtCOVERAGE_TEST_MARKER();
+    246          			}
+    247          		}
+    248          		else
+    249          		{
+    250          			mtCOVERAGE_TEST_MARKER();
+    251          		}
+    252          
+    253          		traceMALLOC( pvReturn, xWantedSize );
+    254          	}
+    255          	( void ) xTaskResumeAll();
+   \                     ??pvPortMalloc_2: (+1)
+   \       0xE2   0x.... 0x....      BL       xTaskResumeAll
+    256          
+    257          	#if( configUSE_MALLOC_FAILED_HOOK == 1 )
+    258          	{
+    259          		if( pvReturn == NULL )
+    260          		{
+    261          			extern void vApplicationMallocFailedHook( void );
+    262          			vApplicationMallocFailedHook();
+    263          		}
+    264          		else
+    265          		{
+    266          			mtCOVERAGE_TEST_MARKER();
+    267          		}
+    268          	}
+    269          	#endif
+    270          
+    271          	return pvReturn;
+   \       0xE6   0x0028             MOVS     R0,R5
+   \       0xE8   0xE8BD 0x83F2      POP      {R1,R4-R9,PC}
+    272          }
+    273          /*-----------------------------------------------------------*/
+    274          
+
+   \                                 In section .text, align 2, keep-with-next
+    275          void vPortFree( void *pv )
+    276          {
+   \                     vPortFree: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    277          uint8_t *puc = ( uint8_t * ) pv;
+   \        0x2   0x0001             MOVS     R1,R0
+    278          BlockLink_t *pxLink;
+    279          
+    280          	if( pv != NULL )
+   \        0x4   0x2800             CMP      R0,#+0
+   \        0x6   0xD037             BEQ.N    ??vPortFree_0
+    281          	{
+    282          		/* The memory being freed will have an BlockLink_t structure immediately
+    283          		before it. */
+    284          		puc -= xHeapStructSize;
+   \        0x8   0x....             LDR.N    R0,??DataTable6_2
+   \        0xA   0x6800             LDR      R0,[R0, #+0]
+   \        0xC   0x4240             RSBS     R0,R0,#+0
+   \        0xE   0xEB01 0x0400      ADD      R4,R1,R0
+    285          
+    286          		/* This casting is to keep the compiler from issuing warnings. */
+    287          		pxLink = ( void * ) puc;
+    288          
+    289          		/* Check the block is actually allocated. */
+    290          		configASSERT( ( pxLink->xBlockSize & xBlockAllocatedBit ) != 0 );
+   \       0x12   0x....             LDR.N    R1,??DataTable6_1
+   \       0x14   0x6860             LDR      R0,[R4, #+4]
+   \       0x16   0x680A             LDR      R2,[R1, #+0]
+   \       0x18   0x4210             TST      R0,R2
+   \       0x1A   0xD107             BNE.N    ??vPortFree_1
+   \       0x1C   0x2050             MOVS     R0,#+80
+   \       0x1E   0xF380 0x8811      MSR      BASEPRI,R0
+   \       0x22   0xF3BF 0x8F4F      DSB      SY
+   \       0x26   0xF3BF 0x8F6F      ISB      SY
+   \                     ??vPortFree_2: (+1)
+   \       0x2A   0xE7FE             B.N      ??vPortFree_2
+    291          		configASSERT( pxLink->pxNextFreeBlock == NULL );
+   \                     ??vPortFree_1: (+1)
+   \       0x2C   0x6820             LDR      R0,[R4, #+0]
+   \       0x2E   0x2800             CMP      R0,#+0
+   \       0x30   0xD007             BEQ.N    ??vPortFree_3
+   \       0x32   0x2050             MOVS     R0,#+80
+   \       0x34   0xF380 0x8811      MSR      BASEPRI,R0
+   \       0x38   0xF3BF 0x8F4F      DSB      SY
+   \       0x3C   0xF3BF 0x8F6F      ISB      SY
+   \                     ??vPortFree_4: (+1)
+   \       0x40   0xE7FE             B.N      ??vPortFree_4
+    292          
+    293          		if( ( pxLink->xBlockSize & xBlockAllocatedBit ) != 0 )
+   \                     ??vPortFree_3: (+1)
+   \       0x42   0x6860             LDR      R0,[R4, #+4]
+   \       0x44   0x680A             LDR      R2,[R1, #+0]
+   \       0x46   0x4210             TST      R0,R2
+   \       0x48   0xD016             BEQ.N    ??vPortFree_0
+    294          		{
+    295          			if( pxLink->pxNextFreeBlock == NULL )
+   \       0x4A   0x6820             LDR      R0,[R4, #+0]
+   \       0x4C   0x2800             CMP      R0,#+0
+   \       0x4E   0xD113             BNE.N    ??vPortFree_0
+    296          			{
+    297          				/* The block is being returned to the heap - it is no longer
+    298          				allocated. */
+    299          				pxLink->xBlockSize &= ~xBlockAllocatedBit;
+   \       0x50   0x6862             LDR      R2,[R4, #+4]
+   \       0x52   0x6808             LDR      R0,[R1, #+0]
+   \       0x54   0x4382             BICS     R2,R2,R0
+   \       0x56   0x6062             STR      R2,[R4, #+4]
+    300          
+    301          				vTaskSuspendAll();
+   \       0x58   0x.... 0x....      BL       vTaskSuspendAll
+    302          				{
+    303          					/* Add this block to the list of free blocks. */
+    304          					xFreeBytesRemaining += pxLink->xBlockSize;
+   \       0x5C   0x....             LDR.N    R1,??DataTable6_3
+   \       0x5E   0x680A             LDR      R2,[R1, #+0]
+   \       0x60   0x6860             LDR      R0,[R4, #+4]
+   \       0x62   0x1882             ADDS     R2,R0,R2
+   \       0x64   0x600A             STR      R2,[R1, #+0]
+    305          					traceFREE( pv, pxLink->xBlockSize );
+    306          					prvInsertBlockIntoFreeList( ( ( BlockLink_t * ) pxLink ) );
+   \       0x66   0x0020             MOVS     R0,R4
+   \       0x68   0x.... 0x....      BL       prvInsertBlockIntoFreeList
+    307          					xNumberOfSuccessfulFrees++;
+   \       0x6C   0x....             LDR.N    R0,??DataTable6_7
+   \       0x6E   0x6801             LDR      R1,[R0, #+0]
+   \       0x70   0x1C49             ADDS     R1,R1,#+1
+   \       0x72   0x6001             STR      R1,[R0, #+0]
+    308          				}
+    309          				( void ) xTaskResumeAll();
+   \       0x74   0x.... 0x....      BL       xTaskResumeAll
+    310          			}
+    311          			else
+    312          			{
+    313          				mtCOVERAGE_TEST_MARKER();
+    314          			}
+    315          		}
+    316          		else
+    317          		{
+    318          			mtCOVERAGE_TEST_MARKER();
+    319          		}
+    320          	}
+    321          }
+   \                     ??vPortFree_0: (+1)
+   \       0x78   0xBD10             POP      {R4,PC}
+    322          /*-----------------------------------------------------------*/
+    323          
+
+   \                                 In section .text, align 2, keep-with-next
+    324          size_t xPortGetFreeHeapSize( void )
+    325          {
+    326          	return xFreeBytesRemaining;
+   \                     xPortGetFreeHeapSize: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable6_3
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+    327          }
+    328          /*-----------------------------------------------------------*/
+    329          
+
+   \                                 In section .text, align 2, keep-with-next
+    330          size_t xPortGetMinimumEverFreeHeapSize( void )
+    331          {
+    332          	return xMinimumEverFreeBytesRemaining;
+   \                     xPortGetMinimumEverFreeHeapSize: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable6_5
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+    333          }
+    334          /*-----------------------------------------------------------*/
+    335          
+
+   \                                 In section .text, align 2, keep-with-next
+    336          static void prvInsertBlockIntoFreeList( BlockLink_t *pxBlockToInsert )
+    337          {
+   \                     prvInsertBlockIntoFreeList: (+1)
+   \        0x0   0xB410             PUSH     {R4}
+    338          BlockLink_t *pxIterator;
+    339          uint8_t *puc;
+    340          
+    341          	/* Iterate through the list until a block is found that has a higher address
+    342          	than the block being inserted. */
+    343          	for( pxIterator = &xStart; pxIterator->pxNextFreeBlock < pxBlockToInsert; pxIterator = pxIterator->pxNextFreeBlock )
+   \        0x2   0x....             LDR.N    R2,??DataTable6_4
+   \        0x4   0xE000             B.N      ??prvInsertBlockIntoFreeList_0
+   \                     ??prvInsertBlockIntoFreeList_1: (+1)
+   \        0x6   0x6812             LDR      R2,[R2, #+0]
+   \                     ??prvInsertBlockIntoFreeList_0: (+1)
+   \        0x8   0x6811             LDR      R1,[R2, #+0]
+   \        0xA   0x4281             CMP      R1,R0
+   \        0xC   0xD3FB             BCC.N    ??prvInsertBlockIntoFreeList_1
+    344          	{
+    345          		/* Nothing to do here, just iterate to the right position. */
+    346          	}
+    347          
+    348          	/* Do the block being inserted, and the block it is being inserted after
+    349          	make a contiguous block of memory? */
+    350          	puc = ( uint8_t * ) pxIterator;
+   \        0xE   0x0011             MOVS     R1,R2
+    351          	if( ( puc + pxIterator->xBlockSize ) == ( uint8_t * ) pxBlockToInsert )
+   \       0x10   0x6853             LDR      R3,[R2, #+4]
+   \       0x12   0x4419             ADD      R1,R1,R3
+   \       0x14   0x4281             CMP      R1,R0
+   \       0x16   0xD104             BNE.N    ??prvInsertBlockIntoFreeList_2
+    352          	{
+    353          		pxIterator->xBlockSize += pxBlockToInsert->xBlockSize;
+   \       0x18   0x6851             LDR      R1,[R2, #+4]
+   \       0x1A   0x6840             LDR      R0,[R0, #+4]
+   \       0x1C   0x1841             ADDS     R1,R0,R1
+   \       0x1E   0x6051             STR      R1,[R2, #+4]
+    354          		pxBlockToInsert = pxIterator;
+   \       0x20   0x0010             MOVS     R0,R2
+    355          	}
+    356          	else
+    357          	{
+    358          		mtCOVERAGE_TEST_MARKER();
+    359          	}
+    360          
+    361          	/* Do the block being inserted, and the block it is being inserted before
+    362          	make a contiguous block of memory? */
+    363          	puc = ( uint8_t * ) pxBlockToInsert;
+   \                     ??prvInsertBlockIntoFreeList_2: (+1)
+   \       0x22   0x0001             MOVS     R1,R0
+    364          	if( ( puc + pxBlockToInsert->xBlockSize ) == ( uint8_t * ) pxIterator->pxNextFreeBlock )
+   \       0x24   0x6843             LDR      R3,[R0, #+4]
+   \       0x26   0x4419             ADD      R1,R1,R3
+   \       0x28   0x6813             LDR      R3,[R2, #+0]
+   \       0x2A   0x4299             CMP      R1,R3
+   \       0x2C   0xD110             BNE.N    ??prvInsertBlockIntoFreeList_3
+    365          	{
+    366          		if( pxIterator->pxNextFreeBlock != pxEnd )
+   \       0x2E   0x....             LDR.N    R1,??DataTable6
+   \       0x30   0x6813             LDR      R3,[R2, #+0]
+   \       0x32   0x680C             LDR      R4,[R1, #+0]
+   \       0x34   0x42A3             CMP      R3,R4
+   \       0x36   0xD008             BEQ.N    ??prvInsertBlockIntoFreeList_4
+    367          		{
+    368          			/* Form one big block from the two blocks. */
+    369          			pxBlockToInsert->xBlockSize += pxIterator->pxNextFreeBlock->xBlockSize;
+   \       0x38   0x6843             LDR      R3,[R0, #+4]
+   \       0x3A   0x6811             LDR      R1,[R2, #+0]
+   \       0x3C   0x6849             LDR      R1,[R1, #+4]
+   \       0x3E   0x18CB             ADDS     R3,R1,R3
+   \       0x40   0x6043             STR      R3,[R0, #+4]
+    370          			pxBlockToInsert->pxNextFreeBlock = pxIterator->pxNextFreeBlock->pxNextFreeBlock;
+   \       0x42   0x6811             LDR      R1,[R2, #+0]
+   \       0x44   0x6809             LDR      R1,[R1, #+0]
+   \       0x46   0x6001             STR      R1,[R0, #+0]
+   \       0x48   0xE004             B.N      ??prvInsertBlockIntoFreeList_5
+    371          		}
+    372          		else
+    373          		{
+    374          			pxBlockToInsert->pxNextFreeBlock = pxEnd;
+   \                     ??prvInsertBlockIntoFreeList_4: (+1)
+   \       0x4A   0x6809             LDR      R1,[R1, #+0]
+   \       0x4C   0x6001             STR      R1,[R0, #+0]
+   \       0x4E   0xE001             B.N      ??prvInsertBlockIntoFreeList_5
+    375          		}
+    376          	}
+    377          	else
+    378          	{
+    379          		pxBlockToInsert->pxNextFreeBlock = pxIterator->pxNextFreeBlock;
+   \                     ??prvInsertBlockIntoFreeList_3: (+1)
+   \       0x50   0x6811             LDR      R1,[R2, #+0]
+   \       0x52   0x6001             STR      R1,[R0, #+0]
+    380          	}
+    381          
+    382          	/* If the block being inserted plugged a gab, so was merged with the block
+    383          	before and the block after, then it's pxNextFreeBlock pointer will have
+    384          	already been set, and should not be set here as that would make it point
+    385          	to itself. */
+    386          	if( pxIterator != pxBlockToInsert )
+   \                     ??prvInsertBlockIntoFreeList_5: (+1)
+   \       0x54   0x4282             CMP      R2,R0
+   \       0x56   0xD000             BEQ.N    ??prvInsertBlockIntoFreeList_6
+    387          	{
+    388          		pxIterator->pxNextFreeBlock = pxBlockToInsert;
+   \       0x58   0x6010             STR      R0,[R2, #+0]
+    389          	}
+    390          	else
+    391          	{
+    392          		mtCOVERAGE_TEST_MARKER();
+    393          	}
+    394          }
+   \                     ??prvInsertBlockIntoFreeList_6: (+1)
+   \       0x5A   0xBC10             POP      {R4}
+   \       0x5C   0x4770             BX       LR
+    395          /*-----------------------------------------------------------*/
+    396          
+
+   \                                 In section .text, align 2, keep-with-next
+    397          void vPortDefineHeapRegions( const HeapRegion_t * const pxHeapRegions )
+    398          {
+   \                     vPortDefineHeapRegions: (+1)
+   \        0x0   0xB4F0             PUSH     {R4-R7}
+   \        0x2   0x0002             MOVS     R2,R0
+    399          BlockLink_t *pxFirstFreeBlockInRegion = NULL, *pxPreviousFreeBlock;
+   \        0x4   0x2000             MOVS     R0,#+0
+    400          size_t xAlignedHeap;
+    401          size_t xTotalRegionSize, xTotalHeapSize = 0;
+   \        0x6   0x2300             MOVS     R3,#+0
+    402          BaseType_t xDefinedRegions = 0;
+   \        0x8   0x2000             MOVS     R0,#+0
+    403          size_t xAddress;
+    404          const HeapRegion_t *pxHeapRegion;
+    405          
+    406          	/* Can only call once! */
+    407          	configASSERT( pxEnd == NULL );
+   \        0xA   0x....             LDR.N    R5,??DataTable6
+   \        0xC   0x6829             LDR      R1,[R5, #+0]
+   \        0xE   0x2900             CMP      R1,#+0
+   \       0x10   0xD007             BEQ.N    ??vPortDefineHeapRegions_0
+   \       0x12   0x2050             MOVS     R0,#+80
+   \       0x14   0xF380 0x8811      MSR      BASEPRI,R0
+   \       0x18   0xF3BF 0x8F4F      DSB      SY
+   \       0x1C   0xF3BF 0x8F6F      ISB      SY
+   \                     ??vPortDefineHeapRegions_1: (+1)
+   \       0x20   0xE7FE             B.N      ??vPortDefineHeapRegions_1
+    408          
+    409          	pxHeapRegion = &( pxHeapRegions[ xDefinedRegions ] );
+   \                     ??vPortDefineHeapRegions_0: (+1)
+   \       0x22   0xEB02 0x07C0      ADD      R7,R2,R0, LSL #+3
+   \       0x26   0xE025             B.N      ??vPortDefineHeapRegions_2
+    410          
+    411          	while( pxHeapRegion->xSizeInBytes > 0 )
+    412          	{
+    413          		xTotalRegionSize = pxHeapRegion->xSizeInBytes;
+    414          
+    415          		/* Ensure the heap region starts on a correctly aligned boundary. */
+    416          		xAddress = ( size_t ) pxHeapRegion->pucStartAddress;
+    417          		if( ( xAddress & portBYTE_ALIGNMENT_MASK ) != 0 )
+    418          		{
+    419          			xAddress += ( portBYTE_ALIGNMENT - 1 );
+    420          			xAddress &= ~portBYTE_ALIGNMENT_MASK;
+    421          
+    422          			/* Adjust the size for the bytes lost to alignment. */
+    423          			xTotalRegionSize -= xAddress - ( size_t ) pxHeapRegion->pucStartAddress;
+    424          		}
+    425          
+    426          		xAlignedHeap = xAddress;
+    427          
+    428          		/* Set xStart if it has not already been set. */
+    429          		if( xDefinedRegions == 0 )
+    430          		{
+    431          			/* xStart is used to hold a pointer to the first item in the list of
+    432          			free blocks.  The void cast is used to prevent compiler warnings. */
+    433          			xStart.pxNextFreeBlock = ( BlockLink_t * ) xAlignedHeap;
+   \                     ??vPortDefineHeapRegions_3: (+1)
+   \       0x28   0x....             LDR.N    R1,??DataTable6_4
+   \       0x2A   0x600F             STR      R7,[R1, #+0]
+    434          			xStart.xBlockSize = ( size_t ) 0;
+   \       0x2C   0x2400             MOVS     R4,#+0
+   \       0x2E   0x604C             STR      R4,[R1, #+4]
+   \       0x30   0xE002             B.N      ??vPortDefineHeapRegions_4
+    435          		}
+    436          		else
+    437          		{
+    438          			/* Should only get here if one region has already been added to the
+    439          			heap. */
+    440          			configASSERT( pxEnd != NULL );
+    441          
+    442          			/* Check blocks are passed in with increasing start addresses. */
+    443          			configASSERT( xAddress > ( size_t ) pxEnd );
+   \                     ??vPortDefineHeapRegions_5: (+1)
+   \       0x32   0x6829             LDR      R1,[R5, #+0]
+   \       0x34   0x42A1             CMP      R1,R4
+   \       0x36   0xD239             BCS.N    ??vPortDefineHeapRegions_6
+    444          		}
+    445          
+    446          		/* Remember the location of the end marker in the previous region, if
+    447          		any. */
+    448          		pxPreviousFreeBlock = pxEnd;
+   \                     ??vPortDefineHeapRegions_4: (+1)
+   \       0x38   0x6829             LDR      R1,[R5, #+0]
+    449          
+    450          		/* pxEnd is used to mark the end of the list of free blocks and is
+    451          		inserted at the end of the region space. */
+    452          		xAddress = xAlignedHeap + xTotalRegionSize;
+   \       0x3A   0x19F6             ADDS     R6,R6,R7
+    453          		xAddress -= xHeapStructSize;
+   \       0x3C   0x....             LDR.N    R4,??DataTable6_2
+   \       0x3E   0x6824             LDR      R4,[R4, #+0]
+   \       0x40   0x1B36             SUBS     R6,R6,R4
+    454          		xAddress &= ~portBYTE_ALIGNMENT_MASK;
+   \       0x42   0x08F6             LSRS     R6,R6,#+3
+   \       0x44   0x00F6             LSLS     R6,R6,#+3
+    455          		pxEnd = ( BlockLink_t * ) xAddress;
+   \       0x46   0x602E             STR      R6,[R5, #+0]
+    456          		pxEnd->xBlockSize = 0;
+   \       0x48   0x2400             MOVS     R4,#+0
+   \       0x4A   0xF8D5 0xC000      LDR      R12,[R5, #+0]
+   \       0x4E   0xF8CC 0x4004      STR      R4,[R12, #+4]
+    457          		pxEnd->pxNextFreeBlock = NULL;
+   \       0x52   0x2400             MOVS     R4,#+0
+   \       0x54   0xF8D5 0xC000      LDR      R12,[R5, #+0]
+   \       0x58   0xF8CC 0x4000      STR      R4,[R12, #+0]
+    458          
+    459          		/* To start with there is a single free block in this region that is
+    460          		sized to take up the entire heap region minus the space taken by the
+    461          		free block structure. */
+    462          		pxFirstFreeBlockInRegion = ( BlockLink_t * ) xAlignedHeap;
+    463          		pxFirstFreeBlockInRegion->xBlockSize = xAddress - ( size_t ) pxFirstFreeBlockInRegion;
+   \       0x5C   0x1BF6             SUBS     R6,R6,R7
+   \       0x5E   0x607E             STR      R6,[R7, #+4]
+    464          		pxFirstFreeBlockInRegion->pxNextFreeBlock = pxEnd;
+   \       0x60   0x682C             LDR      R4,[R5, #+0]
+   \       0x62   0x603C             STR      R4,[R7, #+0]
+    465          
+    466          		/* If this is not the first region that makes up the entire heap space
+    467          		then link the previous region to this region. */
+    468          		if( pxPreviousFreeBlock != NULL )
+   \       0x64   0x2900             CMP      R1,#+0
+   \       0x66   0xD000             BEQ.N    ??vPortDefineHeapRegions_7
+    469          		{
+    470          			pxPreviousFreeBlock->pxNextFreeBlock = pxFirstFreeBlockInRegion;
+   \       0x68   0x600F             STR      R7,[R1, #+0]
+    471          		}
+    472          
+    473          		xTotalHeapSize += pxFirstFreeBlockInRegion->xBlockSize;
+   \                     ??vPortDefineHeapRegions_7: (+1)
+   \       0x6A   0x6879             LDR      R1,[R7, #+4]
+   \       0x6C   0x18CB             ADDS     R3,R1,R3
+    474          
+    475          		/* Move onto the next HeapRegion_t structure. */
+    476          		xDefinedRegions++;
+   \       0x6E   0x1C40             ADDS     R0,R0,#+1
+    477          		pxHeapRegion = &( pxHeapRegions[ xDefinedRegions ] );
+   \       0x70   0xEB02 0x07C0      ADD      R7,R2,R0, LSL #+3
+   \                     ??vPortDefineHeapRegions_2: (+1)
+   \       0x74   0x6879             LDR      R1,[R7, #+4]
+   \       0x76   0x2900             CMP      R1,#+0
+   \       0x78   0xD020             BEQ.N    ??vPortDefineHeapRegions_8
+   \       0x7A   0x687E             LDR      R6,[R7, #+4]
+   \       0x7C   0x683C             LDR      R4,[R7, #+0]
+   \       0x7E   0xF014 0x0F07      TST      R4,#0x7
+   \       0x82   0xD005             BEQ.N    ??vPortDefineHeapRegions_9
+   \       0x84   0x1DE4             ADDS     R4,R4,#+7
+   \       0x86   0x08E4             LSRS     R4,R4,#+3
+   \       0x88   0x00E4             LSLS     R4,R4,#+3
+   \       0x8A   0x1B36             SUBS     R6,R6,R4
+   \       0x8C   0x6839             LDR      R1,[R7, #+0]
+   \       0x8E   0x198E             ADDS     R6,R1,R6
+   \                     ??vPortDefineHeapRegions_9: (+1)
+   \       0x90   0x0027             MOVS     R7,R4
+   \       0x92   0x2800             CMP      R0,#+0
+   \       0x94   0xD0C8             BEQ.N    ??vPortDefineHeapRegions_3
+   \       0x96   0x6829             LDR      R1,[R5, #+0]
+   \       0x98   0x2900             CMP      R1,#+0
+   \       0x9A   0xD1CA             BNE.N    ??vPortDefineHeapRegions_5
+   \       0x9C   0x2050             MOVS     R0,#+80
+   \       0x9E   0xF380 0x8811      MSR      BASEPRI,R0
+   \       0xA2   0xF3BF 0x8F4F      DSB      SY
+   \       0xA6   0xF3BF 0x8F6F      ISB      SY
+   \                     ??vPortDefineHeapRegions_10: (+1)
+   \       0xAA   0xE7FE             B.N      ??vPortDefineHeapRegions_10
+   \                     ??vPortDefineHeapRegions_6: (+1)
+   \       0xAC   0x2050             MOVS     R0,#+80
+   \       0xAE   0xF380 0x8811      MSR      BASEPRI,R0
+   \       0xB2   0xF3BF 0x8F4F      DSB      SY
+   \       0xB6   0xF3BF 0x8F6F      ISB      SY
+   \                     ??vPortDefineHeapRegions_11: (+1)
+   \       0xBA   0xE7FE             B.N      ??vPortDefineHeapRegions_11
+    478          	}
+    479          
+    480          	xMinimumEverFreeBytesRemaining = xTotalHeapSize;
+   \                     ??vPortDefineHeapRegions_8: (+1)
+   \       0xBC   0x....             LDR.N    R0,??DataTable6_5
+   \       0xBE   0x6003             STR      R3,[R0, #+0]
+    481          	xFreeBytesRemaining = xTotalHeapSize;
+   \       0xC0   0x....             LDR.N    R0,??DataTable6_3
+   \       0xC2   0x6003             STR      R3,[R0, #+0]
+    482          
+    483          	/* Check something was actually defined before it is accessed. */
+    484          	configASSERT( xTotalHeapSize );
+   \       0xC4   0x2B00             CMP      R3,#+0
+   \       0xC6   0xD107             BNE.N    ??vPortDefineHeapRegions_12
+   \       0xC8   0x2050             MOVS     R0,#+80
+   \       0xCA   0xF380 0x8811      MSR      BASEPRI,R0
+   \       0xCE   0xF3BF 0x8F4F      DSB      SY
+   \       0xD2   0xF3BF 0x8F6F      ISB      SY
+   \                     ??vPortDefineHeapRegions_13: (+1)
+   \       0xD6   0xE7FE             B.N      ??vPortDefineHeapRegions_13
+    485          
+    486          	/* Work out the position of the top bit in a size_t variable. */
+    487          	xBlockAllocatedBit = ( ( size_t ) 1 ) << ( ( sizeof( size_t ) * heapBITS_PER_BYTE ) - 1 );
+   \                     ??vPortDefineHeapRegions_12: (+1)
+   \       0xD8   0xF05F 0x4000      MOVS     R0,#+2147483648
+   \       0xDC   0x....             LDR.N    R1,??DataTable6_1
+   \       0xDE   0x6008             STR      R0,[R1, #+0]
+    488          }
+   \       0xE0   0xBCF0             POP      {R4-R7}
+   \       0xE2   0x4770             BX       LR
+    489          /*-----------------------------------------------------------*/
+    490          
+
+   \                                 In section .text, align 2, keep-with-next
+    491          void vPortGetHeapStats( HeapStats_t *pxHeapStats )
+    492          {
+   \                     vPortGetHeapStats: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+    493          BlockLink_t *pxBlock;
+    494          size_t xBlocks = 0, xMaxSize = 0, xMinSize = portMAX_DELAY; /* portMAX_DELAY used as a portable way of getting the maximum value. */
+   \        0x4   0x2600             MOVS     R6,#+0
+   \        0x6   0x2700             MOVS     R7,#+0
+   \        0x8   0xF05F 0x35FF      MOVS     R5,#+4294967295
+    495          
+    496          	vTaskSuspendAll();
+   \        0xC   0x.... 0x....      BL       vTaskSuspendAll
+    497          	{
+    498          		pxBlock = xStart.pxNextFreeBlock;
+   \       0x10   0x....             LDR.N    R0,??DataTable6_4
+   \       0x12   0x6801             LDR      R1,[R0, #+0]
+    499          
+    500          		/* pxBlock will be NULL if the heap has not been initialised.  The heap
+    501          		is initialised automatically when the first allocation is made. */
+    502          		if( pxBlock != NULL )
+   \       0x14   0x2900             CMP      R1,#+0
+   \       0x16   0xD010             BEQ.N    ??vPortGetHeapStats_0
+    503          		{
+    504          			do
+    505          			{
+    506          				/* Increment the number of blocks and record the largest block seen
+    507          				so far. */
+    508          				xBlocks++;
+   \                     ??vPortGetHeapStats_1: (+1)
+   \       0x18   0x1C76             ADDS     R6,R6,#+1
+    509          
+    510          				if( pxBlock->xBlockSize > xMaxSize )
+   \       0x1A   0x6848             LDR      R0,[R1, #+4]
+   \       0x1C   0x4287             CMP      R7,R0
+   \       0x1E   0xD200             BCS.N    ??vPortGetHeapStats_2
+    511          				{
+    512          					xMaxSize = pxBlock->xBlockSize;
+   \       0x20   0x684F             LDR      R7,[R1, #+4]
+    513          				}
+    514          
+    515          				/* Heap five will have a zero sized block at the end of each
+    516          				each region - the block is only used to link to the next
+    517          				heap region so it not a real block. */
+    518          				if( pxBlock->xBlockSize != 0 )
+   \                     ??vPortGetHeapStats_2: (+1)
+   \       0x22   0x6848             LDR      R0,[R1, #+4]
+   \       0x24   0x2800             CMP      R0,#+0
+   \       0x26   0xD003             BEQ.N    ??vPortGetHeapStats_3
+    519          				{
+    520          					if( pxBlock->xBlockSize < xMinSize )
+   \       0x28   0x6848             LDR      R0,[R1, #+4]
+   \       0x2A   0x42A8             CMP      R0,R5
+   \       0x2C   0xD200             BCS.N    ??vPortGetHeapStats_3
+    521          					{
+    522          						xMinSize = pxBlock->xBlockSize;
+   \       0x2E   0x684D             LDR      R5,[R1, #+4]
+    523          					}
+    524          				}
+    525          
+    526          				/* Move to the next block in the chain until the last block is
+    527          				reached. */
+    528          				pxBlock = pxBlock->pxNextFreeBlock;
+   \                     ??vPortGetHeapStats_3: (+1)
+   \       0x30   0x6809             LDR      R1,[R1, #+0]
+    529          			} while( pxBlock != pxEnd );
+   \       0x32   0x....             LDR.N    R0,??DataTable6
+   \       0x34   0x6800             LDR      R0,[R0, #+0]
+   \       0x36   0x4281             CMP      R1,R0
+   \       0x38   0xD1EE             BNE.N    ??vPortGetHeapStats_1
+    530          		}
+    531          	}
+    532          	xTaskResumeAll();
+   \                     ??vPortGetHeapStats_0: (+1)
+   \       0x3A   0x.... 0x....      BL       xTaskResumeAll
+    533          
+    534          	pxHeapStats->xSizeOfLargestFreeBlockInBytes = xMaxSize;
+   \       0x3E   0x6067             STR      R7,[R4, #+4]
+    535          	pxHeapStats->xSizeOfSmallestFreeBlockInBytes = xMinSize;
+   \       0x40   0x60A5             STR      R5,[R4, #+8]
+    536          	pxHeapStats->xNumberOfFreeBlocks = xBlocks;
+   \       0x42   0x60E6             STR      R6,[R4, #+12]
+    537          
+    538          	taskENTER_CRITICAL();
+   \       0x44   0x.... 0x....      BL       vPortEnterCritical
+    539          	{
+    540          		pxHeapStats->xAvailableHeapSpaceInBytes = xFreeBytesRemaining;
+   \       0x48   0x....             LDR.N    R0,??DataTable6_3
+   \       0x4A   0x6800             LDR      R0,[R0, #+0]
+   \       0x4C   0x6020             STR      R0,[R4, #+0]
+    541          		pxHeapStats->xNumberOfSuccessfulAllocations = xNumberOfSuccessfulAllocations;
+   \       0x4E   0x....             LDR.N    R0,??DataTable6_6
+   \       0x50   0x6800             LDR      R0,[R0, #+0]
+   \       0x52   0x6160             STR      R0,[R4, #+20]
+    542          		pxHeapStats->xNumberOfSuccessfulFrees = xNumberOfSuccessfulFrees;
+   \       0x54   0x....             LDR.N    R0,??DataTable6_7
+   \       0x56   0x6800             LDR      R0,[R0, #+0]
+   \       0x58   0x61A0             STR      R0,[R4, #+24]
+    543          		pxHeapStats->xMinimumEverFreeBytesRemaining = xMinimumEverFreeBytesRemaining;
+   \       0x5A   0x....             LDR.N    R0,??DataTable6_5
+   \       0x5C   0x6800             LDR      R0,[R0, #+0]
+   \       0x5E   0x6120             STR      R0,[R4, #+16]
+    544          	}
+    545          	taskEXIT_CRITICAL();
+   \       0x60   0x.... 0x....      BL       vPortExitCritical
+    546          }
+   \       0x64   0xBDF1             POP      {R0,R4-R7,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6:
+   \        0x0   0x....'....        DC32     pxEnd
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_1:
+   \        0x0   0x....'....        DC32     xBlockAllocatedBit
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_2:
+   \        0x0   0x....'....        DC32     xHeapStructSize
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_3:
+   \        0x0   0x....'....        DC32     xFreeBytesRemaining
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_4:
+   \        0x0   0x....'....        DC32     xStart
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_5:
+   \        0x0   0x....'....        DC32     xMinimumEverFreeBytesRemaining
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_6:
+   \        0x0   0x....'....        DC32     xNumberOfSuccessfulAllocations
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_7:
+   \        0x0   0x....'....        DC32     xNumberOfSuccessfulFrees
+    547          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       4   prvInsertBlockIntoFreeList
+      32   pvPortMalloc
+        32   -> prvInsertBlockIntoFreeList
+        32   -> vTaskSuspendAll
+        32   -> xTaskResumeAll
+      16   vPortDefineHeapRegions
+       8   vPortFree
+         8   -> prvInsertBlockIntoFreeList
+         8   -> vTaskSuspendAll
+         8   -> xTaskResumeAll
+      24   vPortGetHeapStats
+        24   -> vPortEnterCritical
+        24   -> vPortExitCritical
+        24   -> vTaskSuspendAll
+        24   -> xTaskResumeAll
+       0   xPortGetFreeHeapSize
+       0   xPortGetMinimumEverFreeHeapSize
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+       4  ??DataTable6_1
+       4  ??DataTable6_2
+       4  ??DataTable6_3
+       4  ??DataTable6_4
+       4  ??DataTable6_5
+       4  ??DataTable6_6
+       4  ??DataTable6_7
+      94  prvInsertBlockIntoFreeList
+     236  pvPortMalloc
+       4  pxEnd
+     228  vPortDefineHeapRegions
+     122  vPortFree
+     102  vPortGetHeapStats
+       4  xBlockAllocatedBit
+       4  xFreeBytesRemaining
+       4  xHeapStructSize
+       4  xMinimumEverFreeBytesRemaining
+       4  xNumberOfSuccessfulAllocations
+       4  xNumberOfSuccessfulFrees
+       6  xPortGetFreeHeapSize
+       6  xPortGetMinimumEverFreeHeapSize
+       8  xStart
+
+ 
+  32 bytes in section .bss
+   4 bytes in section .rodata
+ 826 bytes in section .text
+ 
+ 826 bytes of CODE  memory
+   4 bytes of CONST memory
+  32 bytes of DATA  memory
+
+Errors: none
+Warnings: none

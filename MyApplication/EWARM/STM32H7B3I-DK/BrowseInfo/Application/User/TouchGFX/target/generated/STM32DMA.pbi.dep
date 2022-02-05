@@ -52,6 +52,8 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Appli
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pwr_ex.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\target\generated\STM32DMA.hpp \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\Bitmap.hpp \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\hal\Types.hpp \

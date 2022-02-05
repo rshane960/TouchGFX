@@ -1447,6 +1447,9 @@
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_it.c</name>
                 </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\User_Usart.c</name>
+                </file>
             </group>
             <group>
                 <name>TouchGFX</name>
@@ -1597,6 +1600,12 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_uart.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_uart_ex.c</name>
             </file>
         </group>
     </group>

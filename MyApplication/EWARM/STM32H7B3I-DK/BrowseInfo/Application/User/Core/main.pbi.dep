@@ -1,4 +1,14 @@
 D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Application\User\Core\main.pbi: \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Core\Inc\User_Function.h \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Core\Inc\User_Variable.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdbool.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product_string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdio.h \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Core\Inc\User_Include.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Core\Inc\mx25lm51245g_conf.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\BSP\STM32H7B3I-DK\..\Components\mx25lm51245g\mx25lm51245g.h \
@@ -19,6 +29,8 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Appli
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Core\Inc\FreeRTOSConfig.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os.h \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pwr_ex.h \
@@ -43,7 +55,6 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Appli
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc_ex.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_float_setup.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\math.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stddef.h \

@@ -1,0 +1,1439 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         05/Feb/2022  17:09:31
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode          =  thumb
+#    Endian            =  little
+#    Source file       =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ts.c
+#        [UTF-8]
+#    Command line      =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ts.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ts.c
+#        -D USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Drivers\BSP\STM32H7B3I-DK
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Drivers\BSP\STM32H7B3I-DK
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Drivers\BSP\STM32H7B3I-DK
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ts.o.d
+#    Locale            =  C
+#    List file         =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ts.lst
+#    Object file       =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ts.o
+#    Runtime model:       
+#      __CPP_Runtime   =  1
+#      __SystemLibrary =  DLib
+#      __dlib_version  =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ts.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    stm32h7b3i_discovery_ts.c
+      4            * @author  MCD Application Team
+      5            * @brief   This file provides a set of functions needed to manage the Touch
+      6            *          Screen on STM32H7B3I_DK board.
+      7            ******************************************************************************
+      8            * @attention
+      9            *
+     10            * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+     11            * All rights reserved.</center></h2>
+     12            *
+     13            * This software component is licensed by ST under BSD 3-Clause license,
+     14            * the "License"; You may not use this file except in compliance with the
+     15            * License. You may obtain a copy of the License at:
+     16            *                        opensource.org/licenses/BSD-3-Clause
+     17            *
+     18            ******************************************************************************
+     19            */
+     20          
+     21          /* File Info : -----------------------------------------------------------------
+     22                                             User NOTES
+     23          1. How To use this driver:
+     24          --------------------------
+     25             - This driver is used to drive the FT5336 touch screen module
+     26               mounted over TFT-LCD on the STM32H7B3I_DK board.
+     27          
+     28          2. Driver description:
+     29          ---------------------
+     30            + Initialization steps:
+     31               o Initialize the TS module using the BSP_TS_Init() function. This
+     32                 function includes the MSP layer hardware resources initialization and the
+     33                 communication layer configuration to start the TS use. The LCD size properties
+     34                 (x and y) are passed as parameters.
+     35               o If TS interrupt mode is desired, you must configure the TS interrupt mode
+     36                 by calling the function BSP_TS_ITConfig(). The TS interrupt mode is generated
+     37                 as an external interrupt whenever a touch is detected.
+     38                 The interrupt mode internally uses the IO functionalities driver driven by
+     39                 the IO expander, to configure the IT line.
+     40          
+     41            + Touch screen use
+     42               o The touch screen state is captured whenever the function BSP_TS_GetState() is
+     43                 used. This function returns information about the last LCD touch occurred
+     44                 in the TS_State_t structure.
+     45               o The IT is handled using the corresponding external interrupt IRQ handler,
+     46                 the user IT callback treatment is implemented on the same external interrupt
+     47                 callback.
+     48          
+     49          ------------------------------------------------------------------------------*/
+     50          
+     51          /* Includes ------------------------------------------------------------------*/
+     52          #include "stm32h7b3i_discovery_ts.h"
+     53          #include "stm32h7b3i_discovery_bus.h"
+     54          #include "../Components/Common/ts.h"
+     55          
+     56          /** @addtogroup BSP
+     57            * @{
+     58            */
+     59          
+     60          /** @addtogroup STM32H7B3I_DK
+     61            * @{
+     62            */
+     63          
+     64          /** @defgroup STM32H7B3I_DK_TS TS
+     65            * @{
+     66            */
+     67          
+     68          /** @defgroup STM32H7B3I_DK_TS_Private_Types_Definitions Private Types Definitions
+     69            * @{
+     70            */
+     71          typedef void (* BSP_EXTI_LineCallback) (void);
+     72          /**
+     73            * @}
+     74            */
+     75          
+     76          /** @defgroup STM32H7B3I_DK_TS_Private_Defines Private Types Defines
+     77            * @{
+     78            */
+     79          /**
+     80            * @}
+     81            */
+     82          
+     83          /** @defgroup STM32H7B3I_DK_TS_Private_Macros Private Macros
+     84            * @{
+     85            */
+     86          #define TS_MIN(a,b) ((a > b) ? b : a)
+     87          /**
+     88            * @}
+     89            */
+     90          /** @defgroup STM32H7B3I_DK_TS_Private_Function_Prototypes Private Function Prototypes
+     91            * @{
+     92            */
+     93          static int32_t FT5336_Probe(uint32_t Instance);
+     94          static void TS_EXTI_Callback(void);
+     95          /**
+     96            * @}
+     97            */
+     98          
+     99          /** @defgroup STM32H7B3I_DK_TS_Privates_Variables Privates Variables
+    100            * @{
+    101            */
+
+   \                                 In section .bss, align 4
+    102          static TS_Drv_t   *Ts_Drv = NULL;
+   \                     Ts_Drv:
+   \        0x0                      DS8 4
+    103          /**
+    104            * @}
+    105            */
+    106          
+    107          /** @defgroup STM32H7B3I_DK_TS_Exported_Variables Exported Variables
+    108            * @{
+    109            */
+
+   \                                 In section .bss, align 4
+    110          EXTI_HandleTypeDef hts_exti[TS_INSTANCES_NBR] = {0};
+   \                     hts_exti:
+   \        0x0                      DS8 8
+
+   \                                 In section .bss, align 4
+    111          void     *Ts_CompObj[TS_INSTANCES_NBR] = {0};
+   \                     Ts_CompObj:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+    112          TS_Ctx_t  Ts_Ctx[TS_INSTANCES_NBR]     = {0};
+   \                     Ts_Ctx:
+   \        0x0                      DS8 32
+    113          /**
+    114            * @}
+    115            */
+    116          
+    117          /** @defgroup STM32H7B3I_DK_TS_Exported_Functions Exported Functions
+    118            * @{
+    119            */
+    120          
+    121          /**
+    122            * @brief  Initializes and configures the touch screen functionalities and
+    123            *         configures all necessary hardware resources (GPIOs, I2C, clocks..).
+    124            * @param  Instance TS instance. Could be only 0.
+    125            * @param  TS_Init  TS Init structure
+    126            * @retval BSP status
+    127            */
+
+   \                                 In section .text, align 2, keep-with-next
+    128          int32_t BSP_TS_Init(uint32_t Instance, TS_Init_t *TS_Init)
+    129          {
+   \                     BSP_TS_Init: (+1)
+   \        0x0   0xB5FE             PUSH     {R1-R7,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000E             MOVS     R6,R1
+    130            int32_t ret = BSP_ERROR_NONE;
+   \        0x6   0x2500             MOVS     R5,#+0
+    131          
+    132            if((Instance >= TS_INSTANCES_NBR) || (TS_Init->Width == 0U) ||( TS_Init->Width > TS_MAX_WIDTH) ||\
+    133                                   (TS_Init->Height == 0U) ||( TS_Init->Height > TS_MAX_HEIGHT) ||\
+    134                                   (TS_Init->Accuracy > TS_MIN((TS_Init->Width), (TS_Init->Height))))
+   \        0x8   0x2C00             CMP      R4,#+0
+   \        0xA   0xD119             BNE.N    ??BSP_TS_Init_0
+   \        0xC   0x6830             LDR      R0,[R6, #+0]
+   \        0xE   0x2800             CMP      R0,#+0
+   \       0x10   0xD016             BEQ.N    ??BSP_TS_Init_0
+   \       0x12   0x6830             LDR      R0,[R6, #+0]
+   \       0x14   0xF240 0x11E1      MOVW     R1,#+481
+   \       0x18   0x4288             CMP      R0,R1
+   \       0x1A   0xD211             BCS.N    ??BSP_TS_Init_0
+   \       0x1C   0x6870             LDR      R0,[R6, #+4]
+   \       0x1E   0x2800             CMP      R0,#+0
+   \       0x20   0xD00E             BEQ.N    ??BSP_TS_Init_0
+   \       0x22   0x6870             LDR      R0,[R6, #+4]
+   \       0x24   0xF240 0x1111      MOVW     R1,#+273
+   \       0x28   0x4288             CMP      R0,R1
+   \       0x2A   0xD209             BCS.N    ??BSP_TS_Init_0
+   \       0x2C   0x6870             LDR      R0,[R6, #+4]
+   \       0x2E   0x6831             LDR      R1,[R6, #+0]
+   \       0x30   0x4288             CMP      R0,R1
+   \       0x32   0xD201             BCS.N    ??BSP_TS_Init_1
+   \       0x34   0x6870             LDR      R0,[R6, #+4]
+   \       0x36   0xE000             B.N      ??BSP_TS_Init_2
+   \                     ??BSP_TS_Init_1: (+1)
+   \       0x38   0x6830             LDR      R0,[R6, #+0]
+   \                     ??BSP_TS_Init_2: (+1)
+   \       0x3A   0x68F1             LDR      R1,[R6, #+12]
+   \       0x3C   0x4288             CMP      R0,R1
+   \       0x3E   0xD202             BCS.N    ??BSP_TS_Init_3
+    135            {
+    136              ret = BSP_ERROR_WRONG_PARAM;
+   \                     ??BSP_TS_Init_0: (+1)
+   \       0x40   0xF07F 0x0501      MVNS     R5,#+1
+   \       0x44   0xE046             B.N      ??BSP_TS_Init_4
+    137            }
+    138            else
+    139            {
+    140              if(FT5336_Probe(Instance) != BSP_ERROR_NONE)
+   \                     ??BSP_TS_Init_3: (+1)
+   \       0x46   0x0020             MOVS     R0,R4
+   \       0x48   0x.... 0x....      BL       FT5336_Probe
+   \       0x4C   0x2800             CMP      R0,#+0
+   \       0x4E   0xD002             BEQ.N    ??BSP_TS_Init_5
+    141              {
+    142                ret = BSP_ERROR_NO_INIT;
+   \       0x50   0xF05F 0x35FF      MOVS     R5,#+4294967295
+   \       0x54   0xE03E             B.N      ??BSP_TS_Init_4
+    143              }
+    144              else
+    145              {
+    146                TS_Capabilities_t Capabilities;
+    147                uint32_t i;
+    148                /* Store parameters on TS context */
+    149                Ts_Ctx[Instance].Width       = TS_Init->Width;
+   \                     ??BSP_TS_Init_5: (+1)
+   \       0x56   0x.... 0x....      LDR.W    R7,??DataTable10
+   \       0x5A   0x6830             LDR      R0,[R6, #+0]
+   \       0x5C   0x0161             LSLS     R1,R4,#+5
+   \       0x5E   0x5078             STR      R0,[R7, R1]
+    150                Ts_Ctx[Instance].Height      = TS_Init->Height;
+   \       0x60   0x6870             LDR      R0,[R6, #+4]
+   \       0x62   0x0161             LSLS     R1,R4,#+5
+   \       0x64   0x4439             ADD      R1,R7,R1
+   \       0x66   0x6048             STR      R0,[R1, #+4]
+    151                Ts_Ctx[Instance].Orientation = TS_Init->Orientation;
+   \       0x68   0x68B0             LDR      R0,[R6, #+8]
+   \       0x6A   0x0161             LSLS     R1,R4,#+5
+   \       0x6C   0x4439             ADD      R1,R7,R1
+   \       0x6E   0x6088             STR      R0,[R1, #+8]
+    152                Ts_Ctx[Instance].Accuracy    = TS_Init->Accuracy;
+   \       0x70   0x68F0             LDR      R0,[R6, #+12]
+   \       0x72   0x0161             LSLS     R1,R4,#+5
+   \       0x74   0x4439             ADD      R1,R7,R1
+   \       0x76   0x60C8             STR      R0,[R1, #+12]
+    153                /* Get capabilities to retrieve maximum values of X and Y */
+    154                if (Ts_Drv->GetCapabilities(Ts_CompObj[Instance], &Capabilities) < 0)
+   \       0x78   0x4669             MOV      R1,SP
+   \       0x7A   0x.... 0x....      LDR.W    R0,??DataTable10_1
+   \       0x7E   0xF850 0x0024      LDR      R0,[R0, R4, LSL #+2]
+   \       0x82   0x.... 0x....      LDR.W    R2,??DataTable10_2
+   \       0x86   0x6812             LDR      R2,[R2, #+0]
+   \       0x88   0x69D2             LDR      R2,[R2, #+28]
+   \       0x8A   0x4790             BLX      R2
+   \       0x8C   0x2800             CMP      R0,#+0
+   \       0x8E   0xD502             BPL.N    ??BSP_TS_Init_6
+    155                {
+    156                  ret = BSP_ERROR_COMPONENT_FAILURE;
+   \       0x90   0xF07F 0x0504      MVNS     R5,#+4
+   \       0x94   0xE01E             B.N      ??BSP_TS_Init_4
+    157                }
+    158                else
+    159                {
+    160                  /* Store maximum X and Y on context */
+    161                  Ts_Ctx[Instance].MaxX = Capabilities.MaxXl;
+   \                     ??BSP_TS_Init_6: (+1)
+   \       0x96   0x9801             LDR      R0,[SP, #+4]
+   \       0x98   0x0161             LSLS     R1,R4,#+5
+   \       0x9A   0x4439             ADD      R1,R7,R1
+   \       0x9C   0x6108             STR      R0,[R1, #+16]
+    162                  Ts_Ctx[Instance].MaxY = Capabilities.MaxYl;
+   \       0x9E   0x9802             LDR      R0,[SP, #+8]
+   \       0xA0   0x0161             LSLS     R1,R4,#+5
+   \       0xA2   0x4439             ADD      R1,R7,R1
+   \       0xA4   0x6148             STR      R0,[R1, #+20]
+    163                  /* Initialize previous position in order to always detect first touch */
+    164                  for(i = 0; i < TS_TOUCH_NBR; i++)
+   \       0xA6   0x2000             MOVS     R0,#+0
+   \       0xA8   0xE012             B.N      ??BSP_TS_Init_7
+    165                  {
+    166                    Ts_Ctx[Instance].PreviousX[i] = TS_Init->Width + TS_Init->Accuracy + 1U;
+   \                     ??BSP_TS_Init_8: (+1)
+   \       0xAA   0x0161             LSLS     R1,R4,#+5
+   \       0xAC   0x4439             ADD      R1,R7,R1
+   \       0xAE   0xEB01 0x0280      ADD      R2,R1,R0, LSL #+2
+   \       0xB2   0x6833             LDR      R3,[R6, #+0]
+   \       0xB4   0x68F1             LDR      R1,[R6, #+12]
+   \       0xB6   0x18CB             ADDS     R3,R1,R3
+   \       0xB8   0x1C5B             ADDS     R3,R3,#+1
+   \       0xBA   0x6193             STR      R3,[R2, #+24]
+    167                    Ts_Ctx[Instance].PreviousY[i] = TS_Init->Height + TS_Init->Accuracy + 1U;
+   \       0xBC   0x0161             LSLS     R1,R4,#+5
+   \       0xBE   0x4439             ADD      R1,R7,R1
+   \       0xC0   0xEB01 0x0280      ADD      R2,R1,R0, LSL #+2
+   \       0xC4   0x6873             LDR      R3,[R6, #+4]
+   \       0xC6   0x68F1             LDR      R1,[R6, #+12]
+   \       0xC8   0x18CB             ADDS     R3,R1,R3
+   \       0xCA   0x1C5B             ADDS     R3,R3,#+1
+   \       0xCC   0x61D3             STR      R3,[R2, #+28]
+    168                  }
+   \       0xCE   0x1C40             ADDS     R0,R0,#+1
+   \                     ??BSP_TS_Init_7: (+1)
+   \       0xD0   0x2800             CMP      R0,#+0
+   \       0xD2   0xD0EA             BEQ.N    ??BSP_TS_Init_8
+    169                }
+    170              }
+    171            }
+    172          
+    173            return ret;
+   \                     ??BSP_TS_Init_4: (+1)
+   \       0xD4   0x0028             MOVS     R0,R5
+   \       0xD6   0xBDFE             POP      {R1-R7,PC}
+    174          }
+    175          
+    176          /**
+    177            * @brief  De-Initializes the touch screen functionalities
+    178            * @param  Instance TS instance. Could be only 0.
+    179            * @retval BSP status
+    180            */
+
+   \                                 In section .text, align 2, keep-with-next
+    181          int32_t BSP_TS_DeInit(uint32_t Instance)
+    182          {
+   \                     BSP_TS_DeInit: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    183            int32_t ret = BSP_ERROR_NONE;
+   \        0x2   0x2400             MOVS     R4,#+0
+    184          
+    185            if(Instance >= TS_INSTANCES_NBR)
+   \        0x4   0x2800             CMP      R0,#+0
+   \        0x6   0xD002             BEQ.N    ??BSP_TS_DeInit_0
+    186            {
+    187              ret = BSP_ERROR_WRONG_PARAM;
+   \        0x8   0xF07F 0x0401      MVNS     R4,#+1
+   \        0xC   0xE00A             B.N      ??BSP_TS_DeInit_1
+    188            }
+    189            else
+    190            {
+    191              if(Ts_Drv->DeInit(Ts_CompObj[Instance]) < 0)
+   \                     ??BSP_TS_DeInit_0: (+1)
+   \        0xE   0x....             LDR.N    R1,??DataTable10_1
+   \       0x10   0xF851 0x0020      LDR      R0,[R1, R0, LSL #+2]
+   \       0x14   0x....             LDR.N    R1,??DataTable10_2
+   \       0x16   0x6809             LDR      R1,[R1, #+0]
+   \       0x18   0x6849             LDR      R1,[R1, #+4]
+   \       0x1A   0x4788             BLX      R1
+   \       0x1C   0x2800             CMP      R0,#+0
+   \       0x1E   0xD501             BPL.N    ??BSP_TS_DeInit_1
+    192              {
+    193                ret = BSP_ERROR_COMPONENT_FAILURE;
+   \       0x20   0xF07F 0x0404      MVNS     R4,#+4
+    194              }
+    195            }
+    196          
+    197            return ret;
+   \                     ??BSP_TS_DeInit_1: (+1)
+   \       0x24   0x0020             MOVS     R0,R4
+   \       0x26   0xBD10             POP      {R4,PC}
+    198          }
+    199          
+    200          /**
+    201            * @brief  Get Touch Screen instance capabilities
+    202            * @param  Instance Touch Screen instance
+    203            * @param  Capabilities pointer to Touch Screen capabilities
+    204            * @retval BSP status
+    205            */
+
+   \                                 In section .text, align 2, keep-with-next
+    206          int32_t BSP_TS_GetCapabilities(uint32_t Instance, TS_Capabilities_t *Capabilities)
+    207          {
+   \                     BSP_TS_GetCapabilities: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    208            int32_t ret = BSP_ERROR_NONE;
+   \        0x2   0x2400             MOVS     R4,#+0
+    209          
+    210            if(Instance >= TS_INSTANCES_NBR)
+   \        0x4   0x2800             CMP      R0,#+0
+   \        0x6   0xD002             BEQ.N    ??BSP_TS_GetCapabilities_0
+    211            {
+    212              ret = BSP_ERROR_WRONG_PARAM;
+   \        0x8   0xF07F 0x0401      MVNS     R4,#+1
+   \        0xC   0xE006             B.N      ??BSP_TS_GetCapabilities_1
+    213            }
+    214            else
+    215            {
+    216              (void)Ts_Drv->GetCapabilities(Ts_CompObj[Instance], Capabilities);
+   \                     ??BSP_TS_GetCapabilities_0: (+1)
+   \        0xE   0x....             LDR.N    R2,??DataTable10_1
+   \       0x10   0xF852 0x0020      LDR      R0,[R2, R0, LSL #+2]
+   \       0x14   0x....             LDR.N    R2,??DataTable10_2
+   \       0x16   0x6812             LDR      R2,[R2, #+0]
+   \       0x18   0x69D2             LDR      R2,[R2, #+28]
+   \       0x1A   0x4790             BLX      R2
+    217            }
+    218          
+    219            return ret;
+   \                     ??BSP_TS_GetCapabilities_1: (+1)
+   \       0x1C   0x0020             MOVS     R0,R4
+   \       0x1E   0xBD10             POP      {R4,PC}
+    220          }
+    221          
+    222          /**
+    223            * @brief  Configures and enables the touch screen interrupts.
+    224            * @param  Instance TS instance. Could be only 0.
+    225            * @retval BSP status
+    226            */
+
+   \                                 In section .text, align 2, keep-with-next
+    227          int32_t BSP_TS_EnableIT(uint32_t Instance)
+    228          {
+   \                     BSP_TS_EnableIT: (+1)
+   \        0x0   0xB578             PUSH     {R3-R6,LR}
+   \        0x2   0xB085             SUB      SP,SP,#+20
+   \        0x4   0x0004             MOVS     R4,R0
+    229            int32_t ret = BSP_ERROR_NONE;
+   \        0x6   0x2500             MOVS     R5,#+0
+    230            GPIO_InitTypeDef gpio_init_structure;
+    231          
+    232            if(Instance >= TS_INSTANCES_NBR)
+   \        0x8   0x2C00             CMP      R4,#+0
+   \        0xA   0xD002             BEQ.N    ??BSP_TS_EnableIT_0
+    233            {
+    234              ret = BSP_ERROR_WRONG_PARAM;
+   \        0xC   0xF07F 0x0501      MVNS     R5,#+1
+   \       0x10   0xE037             B.N      ??BSP_TS_EnableIT_1
+    235            }
+    236            else
+    237            {
+    238              /* Configure Interrupt mode for TS_INT pin falling edge : when a new touch is available */
+    239              /* TS_INT pin is active on low level on new touch available */
+    240              gpio_init_structure.Pin   = TS_INT_PIN;
+   \                     ??BSP_TS_EnableIT_0: (+1)
+   \       0x12   0x2004             MOVS     R0,#+4
+   \       0x14   0x9000             STR      R0,[SP, #+0]
+    241              gpio_init_structure.Pull  = GPIO_NOPULL;
+   \       0x16   0x2000             MOVS     R0,#+0
+   \       0x18   0x9002             STR      R0,[SP, #+8]
+    242              gpio_init_structure.Speed = GPIO_SPEED_FREQ_HIGH;
+   \       0x1A   0x2002             MOVS     R0,#+2
+   \       0x1C   0x9003             STR      R0,[SP, #+12]
+    243              gpio_init_structure.Mode  = GPIO_MODE_IT_FALLING;
+   \       0x1E   0xF45F 0x1004      MOVS     R0,#+2162688
+   \       0x22   0x9001             STR      R0,[SP, #+4]
+    244              HAL_GPIO_Init(TS_INT_GPIO_PORT, &gpio_init_structure);
+   \       0x24   0x4669             MOV      R1,SP
+   \       0x26   0x....             LDR.N    R0,??DataTable10_3
+   \       0x28   0x.... 0x....      BL       HAL_GPIO_Init
+    245          
+    246              if(Ts_Drv->EnableIT(Ts_CompObj[Instance]) < 0)
+   \       0x2C   0x....             LDR.N    R0,??DataTable10_1
+   \       0x2E   0xF850 0x0024      LDR      R0,[R0, R4, LSL #+2]
+   \       0x32   0x....             LDR.N    R1,??DataTable10_2
+   \       0x34   0x6809             LDR      R1,[R1, #+0]
+   \       0x36   0x6A09             LDR      R1,[R1, #+32]
+   \       0x38   0x4788             BLX      R1
+   \       0x3A   0x2800             CMP      R0,#+0
+   \       0x3C   0xD502             BPL.N    ??BSP_TS_EnableIT_2
+    247              {
+    248                ret = BSP_ERROR_COMPONENT_FAILURE;
+   \       0x3E   0xF07F 0x0504      MVNS     R5,#+4
+   \       0x42   0xE01E             B.N      ??BSP_TS_EnableIT_1
+    249              }
+    250              else
+    251              {
+    252                if(HAL_EXTI_GetHandle(&hts_exti[Instance], TS_EXTI_LINE) != HAL_OK)
+   \                     ??BSP_TS_EnableIT_2: (+1)
+   \       0x44   0x....             LDR.N    R6,??DataTable10_4
+   \       0x46   0x....             LDR.N    R1,??DataTable10_5
+   \       0x48   0xEB06 0x00C4      ADD      R0,R6,R4, LSL #+3
+   \       0x4C   0x.... 0x....      BL       HAL_EXTI_GetHandle
+   \       0x50   0x2800             CMP      R0,#+0
+   \       0x52   0xD002             BEQ.N    ??BSP_TS_EnableIT_3
+    253                {
+    254                  ret = BSP_ERROR_PERIPH_FAILURE;
+   \       0x54   0xF07F 0x0503      MVNS     R5,#+3
+   \       0x58   0xE013             B.N      ??BSP_TS_EnableIT_1
+    255                }
+    256                else if(HAL_EXTI_RegisterCallback(&hts_exti[Instance],  HAL_EXTI_COMMON_CB_ID, TS_EXTI_Callback) != HAL_OK)
+   \                     ??BSP_TS_EnableIT_3: (+1)
+   \       0x5A   0x.... 0x....      ADR.W    R2,TS_EXTI_Callback
+   \       0x5E   0x2100             MOVS     R1,#+0
+   \       0x60   0xEB06 0x00C4      ADD      R0,R6,R4, LSL #+3
+   \       0x64   0x.... 0x....      BL       HAL_EXTI_RegisterCallback
+   \       0x68   0x2800             CMP      R0,#+0
+   \       0x6A   0xD002             BEQ.N    ??BSP_TS_EnableIT_4
+    257                {
+    258                  ret = BSP_ERROR_PERIPH_FAILURE;
+   \       0x6C   0xF07F 0x0503      MVNS     R5,#+3
+   \       0x70   0xE007             B.N      ??BSP_TS_EnableIT_1
+    259                }
+    260                else
+    261                {
+    262                  /* Enable and set the TS_INT EXTI Interrupt to an intermediate priority */
+    263                  HAL_NVIC_SetPriority((IRQn_Type)(TS_INT_EXTI_IRQn), BSP_TS_IT_PRIORITY, 0x00);
+   \                     ??BSP_TS_EnableIT_4: (+1)
+   \       0x72   0x2200             MOVS     R2,#+0
+   \       0x74   0x210F             MOVS     R1,#+15
+   \       0x76   0x2008             MOVS     R0,#+8
+   \       0x78   0x.... 0x....      BL       HAL_NVIC_SetPriority
+    264                  HAL_NVIC_EnableIRQ((IRQn_Type)(TS_INT_EXTI_IRQn));
+   \       0x7C   0x2008             MOVS     R0,#+8
+   \       0x7E   0x.... 0x....      BL       HAL_NVIC_EnableIRQ
+    265                }
+    266              }
+    267            }
+    268          
+    269            return ret;
+   \                     ??BSP_TS_EnableIT_1: (+1)
+   \       0x82   0x0028             MOVS     R0,R5
+   \       0x84   0xB006             ADD      SP,SP,#+24
+   \       0x86   0xBD70             POP      {R4-R6,PC}
+    270          }
+    271          
+    272          /**
+    273            * @brief  Disables the touch screen interrupts.
+    274            * @param  Instance TS instance. Could be only 0.
+    275            * @retval BSP status
+    276            */
+
+   \                                 In section .text, align 2, keep-with-next
+    277          int32_t BSP_TS_DisableIT(uint32_t Instance)
+    278          {
+   \                     BSP_TS_DisableIT: (+1)
+   \        0x0   0xB530             PUSH     {R4,R5,LR}
+   \        0x2   0xB085             SUB      SP,SP,#+20
+   \        0x4   0x0004             MOVS     R4,R0
+    279            int32_t ret = BSP_ERROR_NONE;
+   \        0x6   0x2500             MOVS     R5,#+0
+    280            GPIO_InitTypeDef gpio_init_structure;
+    281          
+    282            if(Instance >= TS_INSTANCES_NBR)
+   \        0x8   0x2C00             CMP      R4,#+0
+   \        0xA   0xD002             BEQ.N    ??BSP_TS_DisableIT_0
+    283            {
+    284              ret = BSP_ERROR_WRONG_PARAM;
+   \        0xC   0xF07F 0x0501      MVNS     R5,#+1
+   \       0x10   0xE010             B.N      ??BSP_TS_DisableIT_1
+    285            }
+    286            else
+    287            {
+    288              /* Configure TS_INT_PIN low level to generate MFX_IRQ_OUT in EXTI on MCU            */
+    289              gpio_init_structure.Pin  = TS_INT_PIN;
+   \                     ??BSP_TS_DisableIT_0: (+1)
+   \       0x12   0x2004             MOVS     R0,#+4
+   \       0x14   0x9000             STR      R0,[SP, #+0]
+    290              HAL_GPIO_DeInit(TS_INT_GPIO_PORT, gpio_init_structure.Pin);
+   \       0x16   0x9900             LDR      R1,[SP, #+0]
+   \       0x18   0x....             LDR.N    R0,??DataTable10_3
+   \       0x1A   0x.... 0x....      BL       HAL_GPIO_DeInit
+    291          
+    292              /* Disable the TS in interrupt mode */
+    293              /* In that case the INT output of FT5336 when new touch is available */
+    294              /* is active on low level and directed on EXTI */
+    295              if(Ts_Drv->DisableIT(Ts_CompObj[Instance]) < 0)
+   \       0x1E   0x....             LDR.N    R0,??DataTable10_1
+   \       0x20   0xF850 0x0024      LDR      R0,[R0, R4, LSL #+2]
+   \       0x24   0x....             LDR.N    R1,??DataTable10_2
+   \       0x26   0x6809             LDR      R1,[R1, #+0]
+   \       0x28   0x6A49             LDR      R1,[R1, #+36]
+   \       0x2A   0x4788             BLX      R1
+   \       0x2C   0x2800             CMP      R0,#+0
+   \       0x2E   0xD501             BPL.N    ??BSP_TS_DisableIT_1
+    296              {
+    297                ret = BSP_ERROR_COMPONENT_FAILURE;
+   \       0x30   0xF07F 0x0504      MVNS     R5,#+4
+    298              }
+    299            }
+    300          
+    301            return ret;
+   \                     ??BSP_TS_DisableIT_1: (+1)
+   \       0x34   0x0028             MOVS     R0,R5
+   \       0x36   0xB005             ADD      SP,SP,#+20
+   \       0x38   0xBD30             POP      {R4,R5,PC}
+    302          }
+    303          
+    304          /**
+    305            * @brief  This function handles TS interrupt request.
+    306            * @param  Instance TS instance
+    307            * @retval None
+    308            */
+
+   \                                 In section .text, align 2, keep-with-next
+    309          void BSP_TS_IRQHandler(uint32_t Instance)
+    310          {
+   \                     BSP_TS_IRQHandler: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    311            HAL_EXTI_IRQHandler(&hts_exti[Instance]);
+   \        0x2   0x....             LDR.N    R1,??DataTable10_4
+   \        0x4   0xEB01 0x00C0      ADD      R0,R1,R0, LSL #+3
+   \        0x8   0x.... 0x....      BL       HAL_EXTI_IRQHandler
+    312          }
+   \        0xC   0xBD01             POP      {R0,PC}
+    313          
+    314          /**
+    315            * @brief  BSP TS Callback.
+    316            * @param  Instance : TS instance
+    317            * @retval None.
+    318            */
+
+   \                                 In section .text, align 2
+    319          __weak void BSP_TS_Callback(uint32_t Instance)
+    320          {
+    321            /* Prevent unused argument(s) compilation warning */
+    322            UNUSED(Instance);
+    323          
+    324            /* This function should be implemented by the user application.
+    325               It is called into this driver when an event on TS touch detection */
+    326          }
+   \                     BSP_TS_Callback: (+1)
+   \        0x0   0x4770             BX       LR
+    327          
+    328          /**
+    329            * @brief  Returns positions of a single touch screen.
+    330            * @param  Instance  TS instance. Could be only 0.
+    331            * @param  TS_State  Pointer to touch screen current state structure
+    332            * @retval BSP status
+    333            */
+
+   \                                 In section .text, align 2, keep-with-next
+    334          int32_t BSP_TS_GetState(uint32_t Instance, TS_State_t *TS_State)
+    335          {
+   \                     BSP_TS_GetState: (+1)
+   \        0x0   0xB57F             PUSH     {R0-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000E             MOVS     R6,R1
+    336            int32_t ret = BSP_ERROR_NONE;
+   \        0x6   0x2500             MOVS     R5,#+0
+    337            uint32_t x_oriented, y_oriented;
+    338            uint32_t x_diff, y_diff;
+    339          
+    340            if(Instance >= TS_INSTANCES_NBR)
+   \        0x8   0x2C00             CMP      R4,#+0
+   \        0xA   0xD002             BEQ.N    ??BSP_TS_GetState_0
+    341            {
+    342              ret = BSP_ERROR_WRONG_PARAM;
+   \        0xC   0xF07F 0x0501      MVNS     R5,#+1
+   \       0x10   0xE08C             B.N      ??BSP_TS_GetState_1
+    343            }
+    344            else
+    345            {
+    346              FT5336_State_t state;
+    347          
+    348              /* Get each touch coordinates */
+    349              if(Ts_Drv->GetState(Ts_CompObj[Instance], &state) < 0)
+   \                     ??BSP_TS_GetState_0: (+1)
+   \       0x12   0x4669             MOV      R1,SP
+   \       0x14   0x....             LDR.N    R0,??DataTable10_1
+   \       0x16   0xF850 0x0024      LDR      R0,[R0, R4, LSL #+2]
+   \       0x1A   0x....             LDR.N    R2,??DataTable10_2
+   \       0x1C   0x6812             LDR      R2,[R2, #+0]
+   \       0x1E   0x6912             LDR      R2,[R2, #+16]
+   \       0x20   0x4790             BLX      R2
+   \       0x22   0x2800             CMP      R0,#+0
+   \       0x24   0xD502             BPL.N    ??BSP_TS_GetState_2
+    350              {
+    351                ret = BSP_ERROR_COMPONENT_FAILURE;
+   \       0x26   0xF07F 0x0504      MVNS     R5,#+4
+   \       0x2A   0xE07F             B.N      ??BSP_TS_GetState_1
+    352              }/* Check and update the number of touches active detected */
+    353              else if(state.TouchDetected != 0U)
+   \                     ??BSP_TS_GetState_2: (+1)
+   \       0x2C   0x9800             LDR      R0,[SP, #+0]
+   \       0x2E   0x2800             CMP      R0,#+0
+   \       0x30   0xD071             BEQ.N    ??BSP_TS_GetState_3
+    354              {
+    355                x_oriented = state.TouchX;
+   \       0x32   0x9B01             LDR      R3,[SP, #+4]
+    356                y_oriented = state.TouchY;
+   \       0x34   0x9A02             LDR      R2,[SP, #+8]
+    357          
+    358                if((Ts_Ctx[Instance].Orientation & TS_SWAP_XY) == TS_SWAP_XY)
+   \       0x36   0x....             LDR.N    R1,??DataTable10
+   \       0x38   0x0160             LSLS     R0,R4,#+5
+   \       0x3A   0x4408             ADD      R0,R1,R0
+   \       0x3C   0x7A00             LDRB     R0,[R0, #+8]
+   \       0x3E   0x0700             LSLS     R0,R0,#+28
+   \       0x40   0xD501             BPL.N    ??BSP_TS_GetState_4
+    359                {
+    360                  x_oriented = state.TouchY;
+   \       0x42   0x9B02             LDR      R3,[SP, #+8]
+    361                  y_oriented = state.TouchX;
+   \       0x44   0x9A01             LDR      R2,[SP, #+4]
+    362                }
+    363          
+    364                if((Ts_Ctx[Instance].Orientation & TS_SWAP_X) == TS_SWAP_X)
+   \                     ??BSP_TS_GetState_4: (+1)
+   \       0x46   0x0160             LSLS     R0,R4,#+5
+   \       0x48   0x4408             ADD      R0,R1,R0
+   \       0x4A   0x7A00             LDRB     R0,[R0, #+8]
+   \       0x4C   0x0780             LSLS     R0,R0,#+30
+   \       0x4E   0xD505             BPL.N    ??BSP_TS_GetState_5
+    365                {
+    366                  x_oriented = Ts_Ctx[Instance].MaxX - state.TouchX - 1UL;
+   \       0x50   0x0160             LSLS     R0,R4,#+5
+   \       0x52   0x4408             ADD      R0,R1,R0
+   \       0x54   0x6900             LDR      R0,[R0, #+16]
+   \       0x56   0x9B01             LDR      R3,[SP, #+4]
+   \       0x58   0x1AC3             SUBS     R3,R0,R3
+   \       0x5A   0x1E5B             SUBS     R3,R3,#+1
+    367                }
+    368          
+    369                if((Ts_Ctx[Instance].Orientation & TS_SWAP_Y) == TS_SWAP_Y)
+   \                     ??BSP_TS_GetState_5: (+1)
+   \       0x5C   0x0160             LSLS     R0,R4,#+5
+   \       0x5E   0x4408             ADD      R0,R1,R0
+   \       0x60   0x7A00             LDRB     R0,[R0, #+8]
+   \       0x62   0x0740             LSLS     R0,R0,#+29
+   \       0x64   0xD504             BPL.N    ??BSP_TS_GetState_6
+    370                {
+    371                  y_oriented = Ts_Ctx[Instance].MaxY - state.TouchY;
+   \       0x66   0x0160             LSLS     R0,R4,#+5
+   \       0x68   0x4408             ADD      R0,R1,R0
+   \       0x6A   0x6940             LDR      R0,[R0, #+20]
+   \       0x6C   0x9A02             LDR      R2,[SP, #+8]
+   \       0x6E   0x1A82             SUBS     R2,R0,R2
+    372                }
+    373          
+    374                /* Apply boundary */
+    375                TS_State->TouchX = (x_oriented * Ts_Ctx[Instance].Width) / Ts_Ctx[Instance].MaxX;
+   \                     ??BSP_TS_GetState_6: (+1)
+   \       0x70   0x0160             LSLS     R0,R4,#+5
+   \       0x72   0x5808             LDR      R0,[R1, R0]
+   \       0x74   0x4343             MULS     R3,R0,R3
+   \       0x76   0x0160             LSLS     R0,R4,#+5
+   \       0x78   0x4408             ADD      R0,R1,R0
+   \       0x7A   0x6900             LDR      R0,[R0, #+16]
+   \       0x7C   0xFBB3 0xF0F0      UDIV     R0,R3,R0
+   \       0x80   0x6070             STR      R0,[R6, #+4]
+    376                TS_State->TouchY = (y_oriented * Ts_Ctx[Instance].Height) / Ts_Ctx[Instance].MaxY;
+   \       0x82   0x0160             LSLS     R0,R4,#+5
+   \       0x84   0x4408             ADD      R0,R1,R0
+   \       0x86   0x6840             LDR      R0,[R0, #+4]
+   \       0x88   0x4342             MULS     R2,R0,R2
+   \       0x8A   0x0160             LSLS     R0,R4,#+5
+   \       0x8C   0x4408             ADD      R0,R1,R0
+   \       0x8E   0x6940             LDR      R0,[R0, #+20]
+   \       0x90   0xFBB2 0xF0F0      UDIV     R0,R2,R0
+   \       0x94   0x60B0             STR      R0,[R6, #+8]
+    377                /* Store Current TS state */
+    378                TS_State->TouchDetected = state.TouchDetected;
+   \       0x96   0x9800             LDR      R0,[SP, #+0]
+   \       0x98   0x6030             STR      R0,[R6, #+0]
+    379          
+    380                /* Check accuracy */
+    381                x_diff = (TS_State->TouchX > Ts_Ctx[Instance].PreviousX[0])?
+    382                  (TS_State->TouchX - Ts_Ctx[Instance].PreviousX[0]):
+    383                  (Ts_Ctx[Instance].PreviousX[0] - TS_State->TouchX);
+   \       0x9A   0x0160             LSLS     R0,R4,#+5
+   \       0x9C   0x4408             ADD      R0,R1,R0
+   \       0x9E   0x6980             LDR      R0,[R0, #+24]
+   \       0xA0   0x6872             LDR      R2,[R6, #+4]
+   \       0xA2   0x4290             CMP      R0,R2
+   \       0xA4   0xD205             BCS.N    ??BSP_TS_GetState_7
+   \       0xA6   0x6872             LDR      R2,[R6, #+4]
+   \       0xA8   0x0160             LSLS     R0,R4,#+5
+   \       0xAA   0x4408             ADD      R0,R1,R0
+   \       0xAC   0x6980             LDR      R0,[R0, #+24]
+   \       0xAE   0x1A10             SUBS     R0,R2,R0
+   \       0xB0   0xE004             B.N      ??BSP_TS_GetState_8
+   \                     ??BSP_TS_GetState_7: (+1)
+   \       0xB2   0x0160             LSLS     R0,R4,#+5
+   \       0xB4   0x4408             ADD      R0,R1,R0
+   \       0xB6   0x6982             LDR      R2,[R0, #+24]
+   \       0xB8   0x6870             LDR      R0,[R6, #+4]
+   \       0xBA   0x1A10             SUBS     R0,R2,R0
+    384          
+    385                  y_diff = (TS_State->TouchY > Ts_Ctx[Instance].PreviousY[0])?
+    386                    (TS_State->TouchY - Ts_Ctx[Instance].PreviousY[0]):
+    387                    (Ts_Ctx[Instance].PreviousY[0] - TS_State->TouchY);
+   \                     ??BSP_TS_GetState_8: (+1)
+   \       0xBC   0x0162             LSLS     R2,R4,#+5
+   \       0xBE   0x440A             ADD      R2,R1,R2
+   \       0xC0   0x69D2             LDR      R2,[R2, #+28]
+   \       0xC2   0x68B3             LDR      R3,[R6, #+8]
+   \       0xC4   0x429A             CMP      R2,R3
+   \       0xC6   0xD205             BCS.N    ??BSP_TS_GetState_9
+   \       0xC8   0x68B3             LDR      R3,[R6, #+8]
+   \       0xCA   0x0162             LSLS     R2,R4,#+5
+   \       0xCC   0x440A             ADD      R2,R1,R2
+   \       0xCE   0x69D2             LDR      R2,[R2, #+28]
+   \       0xD0   0x1A9A             SUBS     R2,R3,R2
+   \       0xD2   0xE004             B.N      ??BSP_TS_GetState_10
+   \                     ??BSP_TS_GetState_9: (+1)
+   \       0xD4   0x0162             LSLS     R2,R4,#+5
+   \       0xD6   0x440A             ADD      R2,R1,R2
+   \       0xD8   0x69D3             LDR      R3,[R2, #+28]
+   \       0xDA   0x68B2             LDR      R2,[R6, #+8]
+   \       0xDC   0x1A9A             SUBS     R2,R3,R2
+    388          
+    389          
+    390                    if ((x_diff > Ts_Ctx[Instance].Accuracy) || (y_diff > Ts_Ctx[Instance].Accuracy))
+   \                     ??BSP_TS_GetState_10: (+1)
+   \       0xDE   0x0163             LSLS     R3,R4,#+5
+   \       0xE0   0x440B             ADD      R3,R1,R3
+   \       0xE2   0x68DB             LDR      R3,[R3, #+12]
+   \       0xE4   0x4283             CMP      R3,R0
+   \       0xE6   0xD304             BCC.N    ??BSP_TS_GetState_11
+   \       0xE8   0x0160             LSLS     R0,R4,#+5
+   \       0xEA   0x4408             ADD      R0,R1,R0
+   \       0xEC   0x68C0             LDR      R0,[R0, #+12]
+   \       0xEE   0x4290             CMP      R0,R2
+   \       0xF0   0xD208             BCS.N    ??BSP_TS_GetState_12
+    391                    {
+    392                      /* New touch detected */
+    393                      Ts_Ctx[Instance].PreviousX[0] = TS_State->TouchX;
+   \                     ??BSP_TS_GetState_11: (+1)
+   \       0xF2   0x6870             LDR      R0,[R6, #+4]
+   \       0xF4   0x0162             LSLS     R2,R4,#+5
+   \       0xF6   0x440A             ADD      R2,R1,R2
+   \       0xF8   0x6190             STR      R0,[R2, #+24]
+    394                      Ts_Ctx[Instance].PreviousY[0] = TS_State->TouchY;
+   \       0xFA   0x68B0             LDR      R0,[R6, #+8]
+   \       0xFC   0x0162             LSLS     R2,R4,#+5
+   \       0xFE   0x4411             ADD      R1,R1,R2
+   \      0x100   0x61C8             STR      R0,[R1, #+28]
+   \      0x102   0xE013             B.N      ??BSP_TS_GetState_1
+    395                    }
+    396                    else
+    397                    {
+    398                      TS_State->TouchX = Ts_Ctx[Instance].PreviousX[0];
+   \                     ??BSP_TS_GetState_12: (+1)
+   \      0x104   0x0160             LSLS     R0,R4,#+5
+   \      0x106   0x4408             ADD      R0,R1,R0
+   \      0x108   0x6980             LDR      R0,[R0, #+24]
+   \      0x10A   0x6070             STR      R0,[R6, #+4]
+    399                      TS_State->TouchY = Ts_Ctx[Instance].PreviousY[0];
+   \      0x10C   0x0160             LSLS     R0,R4,#+5
+   \      0x10E   0x4408             ADD      R0,R1,R0
+   \      0x110   0x69C0             LDR      R0,[R0, #+28]
+   \      0x112   0x60B0             STR      R0,[R6, #+8]
+   \      0x114   0xE00A             B.N      ??BSP_TS_GetState_1
+    400                    }
+    401              }
+    402              else
+    403              {
+    404                TS_State->TouchDetected = 0U;
+   \                     ??BSP_TS_GetState_3: (+1)
+   \      0x116   0x2000             MOVS     R0,#+0
+   \      0x118   0x6030             STR      R0,[R6, #+0]
+    405                TS_State->TouchX = Ts_Ctx[Instance].PreviousX[0];
+   \      0x11A   0x....             LDR.N    R0,??DataTable10
+   \      0x11C   0x0161             LSLS     R1,R4,#+5
+   \      0x11E   0x4401             ADD      R1,R0,R1
+   \      0x120   0x6989             LDR      R1,[R1, #+24]
+   \      0x122   0x6071             STR      R1,[R6, #+4]
+    406                TS_State->TouchY = Ts_Ctx[Instance].PreviousY[0];
+   \      0x124   0x0161             LSLS     R1,R4,#+5
+   \      0x126   0x4408             ADD      R0,R0,R1
+   \      0x128   0x69C0             LDR      R0,[R0, #+28]
+   \      0x12A   0x60B0             STR      R0,[R6, #+8]
+    407              }
+    408            }
+    409          
+    410            return ret;
+   \                     ??BSP_TS_GetState_1: (+1)
+   \      0x12C   0x0028             MOVS     R0,R5
+   \      0x12E   0xB004             ADD      SP,SP,#+16
+   \      0x130   0xBD70             POP      {R4-R6,PC}
+    411          }
+    412          
+    413          #if (USE_TS_MULTI_TOUCH > 0)
+    414          /**
+    415            * @brief  Returns positions of multi touch screen.
+    416            * @param  Instance  TS instance. Could be only 0.
+    417            * @param  TS_State  Pointer to touch screen current state structure
+    418            * @retval BSP status
+    419            */
+    420          int32_t BSP_TS_Get_MultiTouchState(uint32_t Instance, TS_MultiTouch_State_t *TS_State)
+    421          {
+    422            int32_t ret = BSP_ERROR_NONE;
+    423            uint32_t index;
+    424            uint32_t x_oriented, y_oriented;
+    425            uint32_t x_diff, y_diff;
+    426          
+    427            if(Instance >= TS_INSTANCES_NBR)
+    428            {
+    429              ret = BSP_ERROR_WRONG_PARAM;
+    430            }
+    431            else
+    432            {
+    433              FT5336_MultiTouch_State_t state;
+    434          
+    435              /* Get each touch coordinates */
+    436              if(Ts_Drv->GetMultiTouchState(Ts_CompObj[Instance], &state) < 0)
+    437              {
+    438                ret = BSP_ERROR_COMPONENT_FAILURE;
+    439              }
+    440              else
+    441              {
+    442                /* Check and update the number of touches active detected */
+    443                if(state.TouchDetected != 0U)
+    444                {
+    445                  for(index = 0; index < state.TouchDetected; index++)
+    446                  {
+    447                    x_oriented = state.TouchX[index];
+    448                    y_oriented = state.TouchY[index];
+    449          
+    450                    if((Ts_Ctx[Instance].Orientation & TS_SWAP_XY) == TS_SWAP_XY)
+    451                    {
+    452                      x_oriented = state.TouchY[index];
+    453                      y_oriented = state.TouchX[index];
+    454                    }
+    455          
+    456                    if((Ts_Ctx[Instance].Orientation & TS_SWAP_X) == TS_SWAP_X)
+    457                    {
+    458                      x_oriented = Ts_Ctx[Instance].MaxX - state.TouchX[index] - 1UL;
+    459                    }
+    460          
+    461                    if((Ts_Ctx[Instance].Orientation & TS_SWAP_Y) == TS_SWAP_Y)
+    462                    {
+    463                      y_oriented = Ts_Ctx[Instance].MaxY - state.TouchY[index];
+    464                    }
+    465          
+    466                    /* Apply boundary */
+    467                    TS_State->TouchX[index] = (x_oriented * Ts_Ctx[Instance].Width) / Ts_Ctx[Instance].MaxX;
+    468                    TS_State->TouchY[index] = (y_oriented * Ts_Ctx[Instance].Height) / Ts_Ctx[Instance].MaxY;
+    469                    /* Store Current TS state */
+    470                    TS_State->TouchDetected = state.TouchDetected;
+    471          
+    472                    /* Check accuracy */
+    473                    x_diff = (TS_State->TouchX[index] > Ts_Ctx[Instance].PreviousX[index])?
+    474                             (TS_State->TouchX[index] - Ts_Ctx[Instance].PreviousX[index]):
+    475                             (Ts_Ctx[Instance].PreviousX[index] - TS_State->TouchX[index]);
+    476          
+    477                    y_diff = (TS_State->TouchY[index] > Ts_Ctx[Instance].PreviousY[index])?
+    478                             (TS_State->TouchY[index] - Ts_Ctx[Instance].PreviousY[index]):
+    479                             (Ts_Ctx[Instance].PreviousY[index] - TS_State->TouchY[index]);
+    480          
+    481                    if ((x_diff > Ts_Ctx[Instance].Accuracy) || (y_diff > Ts_Ctx[Instance].Accuracy))
+    482                    {
+    483                      /* New touch detected */
+    484                      Ts_Ctx[Instance].PreviousX[index] = TS_State->TouchX[index];
+    485                      Ts_Ctx[Instance].PreviousY[index] = TS_State->TouchY[index];
+    486                    }
+    487                    else
+    488                    {
+    489                      TS_State->TouchX[index] = Ts_Ctx[Instance].PreviousX[index];
+    490                      TS_State->TouchY[index] = Ts_Ctx[Instance].PreviousY[index];
+    491                    }
+    492                  }
+    493                }
+    494                else
+    495                {
+    496                  TS_State->TouchDetected = 0U;
+    497                  for(index = 0; index < TS_TOUCH_NBR; index++)
+    498                  {
+    499                    TS_State->TouchX[index] = Ts_Ctx[Instance].PreviousX[index];
+    500                    TS_State->TouchY[index] = Ts_Ctx[Instance].PreviousY[index];
+    501                  }
+    502                }
+    503              }
+    504            }
+    505          
+    506            return ret;
+    507          }
+    508          #endif /* USE_TS_MULTI_TOUCH == 1 */
+    509          
+    510          #if (USE_TS_GESTURE == 1)
+    511          /**
+    512            * @brief  Update gesture Id following a touch detected.
+    513            * @param  Instance      TS instance. Could be only 0.
+    514            * @param  GestureConfig Pointer to gesture configuration structure
+    515            * @retval BSP status
+    516            */
+    517          int32_t BSP_TS_GestureConfig(uint32_t Instance, TS_Gesture_Config_t *GestureConfig)
+    518          {
+    519            int32_t ret = BSP_ERROR_NONE;
+    520          
+    521            if(Instance >= TS_INSTANCES_NBR)
+    522            {
+    523              ret = BSP_ERROR_WRONG_PARAM;
+    524            }
+    525            else
+    526            {
+    527              if(Ts_Drv->GestureConfig(Ts_CompObj[Instance], GestureConfig) < 0)
+    528              {
+    529                ret = BSP_ERROR_COMPONENT_FAILURE;
+    530              }
+    531            }
+    532          
+    533            return ret;
+    534          }
+    535          
+    536          /**
+    537            * @brief  Update gesture Id following a touch detected.
+    538            * @param  Instance   TS instance. Could be only 0.
+    539            * @param  GestureId  Pointer to gesture ID
+    540            * @retval BSP status
+    541            */
+    542          int32_t BSP_TS_GetGestureId(uint32_t Instance, uint32_t *GestureId)
+    543          {
+    544            int32_t ret = BSP_ERROR_NONE;
+    545            uint8_t tmp = 0;
+    546          
+    547            if(Instance >= TS_INSTANCES_NBR)
+    548            {
+    549              ret = BSP_ERROR_WRONG_PARAM;
+    550            }/* Get gesture Id */
+    551            else if(Ts_Drv->GetGesture(Ts_CompObj[Instance], &tmp)  < 0)
+    552            {
+    553              ret = BSP_ERROR_COMPONENT_FAILURE;
+    554            }
+    555            else
+    556            {
+    557              /* Remap gesture Id to a TS_Gesture_Id_t value */
+    558              switch(tmp)
+    559              {
+    560              case FT5336_GEST_ID_NO_GESTURE :
+    561                *GestureId = GESTURE_ID_NO_GESTURE;
+    562                break;
+    563              case FT5336_GEST_ID_MOVE_UP :
+    564                *GestureId = GESTURE_ID_MOVE_UP;
+    565                break;
+    566              case FT5336_GEST_ID_MOVE_RIGHT :
+    567                *GestureId = GESTURE_ID_MOVE_RIGHT;
+    568                break;
+    569              case FT5336_GEST_ID_MOVE_DOWN :
+    570                *GestureId = GESTURE_ID_MOVE_DOWN;
+    571                break;
+    572              case FT5336_GEST_ID_MOVE_LEFT :
+    573                *GestureId = GESTURE_ID_MOVE_LEFT;
+    574                break;
+    575              case FT5336_GEST_ID_ZOOM_IN :
+    576                *GestureId = GESTURE_ID_ZOOM_IN;
+    577                break;
+    578              case FT5336_GEST_ID_ZOOM_OUT :
+    579                *GestureId = GESTURE_ID_ZOOM_OUT;
+    580                break;
+    581              default :
+    582                *GestureId = GESTURE_ID_NO_GESTURE;
+    583                break;
+    584              }
+    585            }
+    586          
+    587            return ret;
+    588          }
+    589          #endif /* USE_TS_GESTURE == 1 */
+    590          
+    591          /**
+    592            * @brief  Set TS orientation
+    593            * @param  Instance TS instance. Could be only 0.
+    594            * @param  Orientation Orientation to be set
+    595            * @retval BSP status
+    596            */
+
+   \                                 In section .text, align 2, keep-with-next
+    597          int32_t BSP_TS_Set_Orientation(uint32_t Instance, uint32_t Orientation)
+    598          {
+    599            Ts_Ctx[Instance].Orientation = Orientation;
+   \                     BSP_TS_Set_Orientation: (+1)
+   \        0x0   0x....             LDR.N    R2,??DataTable10
+   \        0x2   0x0140             LSLS     R0,R0,#+5
+   \        0x4   0x4410             ADD      R0,R2,R0
+   \        0x6   0x6081             STR      R1,[R0, #+8]
+    600            return BSP_ERROR_NONE;
+   \        0x8   0x2000             MOVS     R0,#+0
+   \        0xA   0x4770             BX       LR
+    601          }
+    602          
+    603          /**
+    604            * @brief  Get TS orientation
+    605            * @param  Instance TS instance. Could be only 0.
+    606            * @param  Orientation Current Orientation to be returned
+    607            * @retval BSP status
+    608            */
+
+   \                                 In section .text, align 2, keep-with-next
+    609          int32_t BSP_TS_Get_Orientation(uint32_t Instance, uint32_t *Orientation)
+    610          {
+    611            *Orientation = Ts_Ctx[Instance].Orientation;
+   \                     BSP_TS_Get_Orientation: (+1)
+   \        0x0   0x....             LDR.N    R2,??DataTable10
+   \        0x2   0x0140             LSLS     R0,R0,#+5
+   \        0x4   0x4410             ADD      R0,R2,R0
+   \        0x6   0x6880             LDR      R0,[R0, #+8]
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+    612            return BSP_ERROR_NONE;
+   \        0xA   0x2000             MOVS     R0,#+0
+   \        0xC   0x4770             BX       LR
+    613          }
+    614          
+    615          /**
+    616            * @}
+    617            */
+    618          /** @defgroup STM32H7B3I_DK_TS_Private_Functions TS Private Functions
+    619            * @{
+    620            */
+    621          
+    622          /**
+    623            * @brief  Register Bus IOs if component ID is OK
+    624            * @param  Instance TS instance. Could be only 0.
+    625            * @retval BSP status
+    626            */
+
+   \                                 In section .text, align 2, keep-with-next
+    627          static int32_t FT5336_Probe(uint32_t Instance)
+    628          {
+   \                     FT5336_Probe: (+1)
+   \        0x0   0xB578             PUSH     {R3-R6,LR}
+   \        0x2   0xB087             SUB      SP,SP,#+28
+   \        0x4   0x0004             MOVS     R4,R0
+    629            int32_t ret              = BSP_ERROR_NONE;
+   \        0x6   0x2500             MOVS     R5,#+0
+    630            FT5336_IO_t              IOCtx;
+    631            static FT5336_Object_t   FT5336Obj;
+    632            uint32_t ft5336_id       = 0;
+   \        0x8   0x2000             MOVS     R0,#+0
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+    633          
+    634            /* Configure the touch screen driver */
+    635            IOCtx.Address     = TS_I2C_ADDRESS;
+   \        0xC   0x2070             MOVS     R0,#+112
+   \        0xE   0xF8AD 0x000C      STRH     R0,[SP, #+12]
+    636            IOCtx.Init        = BSP_I2C4_Init;
+   \       0x12   0x....             LDR.N    R0,??DataTable10_6
+   \       0x14   0x9001             STR      R0,[SP, #+4]
+    637            IOCtx.DeInit      = BSP_I2C4_DeInit;
+   \       0x16   0x....             LDR.N    R0,??DataTable10_7
+   \       0x18   0x9002             STR      R0,[SP, #+8]
+    638            IOCtx.ReadReg     = BSP_I2C4_ReadReg;
+   \       0x1A   0x....             LDR.N    R0,??DataTable10_8
+   \       0x1C   0x9005             STR      R0,[SP, #+20]
+    639            IOCtx.WriteReg    = BSP_I2C4_WriteReg;
+   \       0x1E   0x....             LDR.N    R0,??DataTable10_9
+   \       0x20   0x9004             STR      R0,[SP, #+16]
+    640            IOCtx.GetTick     = BSP_GetTick;
+   \       0x22   0x....             LDR.N    R0,??DataTable10_10
+   \       0x24   0x9006             STR      R0,[SP, #+24]
+    641          
+    642            if(FT5336_RegisterBusIO (&FT5336Obj, &IOCtx) != FT5336_OK)
+   \       0x26   0x....             LDR.N    R6,??DataTable10_11
+   \       0x28   0xA901             ADD      R1,SP,#+4
+   \       0x2A   0x0030             MOVS     R0,R6
+   \       0x2C   0x.... 0x....      BL       FT5336_RegisterBusIO
+   \       0x30   0x2800             CMP      R0,#+0
+   \       0x32   0xD002             BEQ.N    ??FT5336_Probe_0
+    643            {
+    644              ret = BSP_ERROR_BUS_FAILURE;
+   \       0x34   0xF07F 0x0507      MVNS     R5,#+7
+   \       0x38   0xE01D             B.N      ??FT5336_Probe_1
+    645            }
+    646            else if(FT5336_ReadID(&FT5336Obj, &ft5336_id) != FT5336_OK)
+   \                     ??FT5336_Probe_0: (+1)
+   \       0x3A   0x4669             MOV      R1,SP
+   \       0x3C   0x0030             MOVS     R0,R6
+   \       0x3E   0x.... 0x....      BL       FT5336_ReadID
+   \       0x42   0x2800             CMP      R0,#+0
+   \       0x44   0xD002             BEQ.N    ??FT5336_Probe_2
+    647            {
+    648              ret = BSP_ERROR_COMPONENT_FAILURE;
+   \       0x46   0xF07F 0x0504      MVNS     R5,#+4
+   \       0x4A   0xE014             B.N      ??FT5336_Probe_1
+    649            }
+    650            else if(ft5336_id != FT5336_ID)
+   \                     ??FT5336_Probe_2: (+1)
+   \       0x4C   0x9800             LDR      R0,[SP, #+0]
+   \       0x4E   0x2851             CMP      R0,#+81
+   \       0x50   0xD002             BEQ.N    ??FT5336_Probe_3
+    651            {
+    652              ret = BSP_ERROR_UNKNOWN_COMPONENT;
+   \       0x52   0xF07F 0x0506      MVNS     R5,#+6
+   \       0x56   0xE00E             B.N      ??FT5336_Probe_1
+    653            }
+    654            else
+    655            {
+    656              Ts_CompObj[Instance] = &FT5336Obj;
+   \                     ??FT5336_Probe_3: (+1)
+   \       0x58   0x....             LDR.N    R0,??DataTable10_1
+   \       0x5A   0xF840 0x6024      STR      R6,[R0, R4, LSL #+2]
+    657              Ts_Drv = (TS_Drv_t *) &FT5336_TS_Driver;
+   \       0x5E   0x....             LDR.N    R1,??DataTable10_2
+   \       0x60   0x....             LDR.N    R2,??DataTable10_12
+   \       0x62   0x600A             STR      R2,[R1, #+0]
+    658          
+    659              if(Ts_Drv->Init(Ts_CompObj[Instance]) != FT5336_OK)
+   \       0x64   0xF850 0x0024      LDR      R0,[R0, R4, LSL #+2]
+   \       0x68   0x6809             LDR      R1,[R1, #+0]
+   \       0x6A   0x6809             LDR      R1,[R1, #+0]
+   \       0x6C   0x4788             BLX      R1
+   \       0x6E   0x2800             CMP      R0,#+0
+   \       0x70   0xD001             BEQ.N    ??FT5336_Probe_1
+    660              {
+    661                ret = BSP_ERROR_COMPONENT_FAILURE;
+   \       0x72   0xF07F 0x0504      MVNS     R5,#+4
+    662              }
+    663            }
+    664          
+    665            return ret;
+   \                     ??FT5336_Probe_1: (+1)
+   \       0x76   0x0028             MOVS     R0,R5
+   \       0x78   0xB008             ADD      SP,SP,#+32
+   \       0x7A   0xBD70             POP      {R4-R6,PC}
+    666          }
+
+   \                                 In section .bss, align 4
+   \                     `FT5336_Probe::FT5336Obj`:
+   \        0x0                      DS8 40
+    667          
+    668          /**
+    669            * @brief  TS EXTI touch detection callbacks.
+    670            * @retval None
+    671            */
+
+   \                                 In section .text, align 4, keep-with-next
+    672          static void TS_EXTI_Callback(void)
+    673          {
+   \                     TS_EXTI_Callback: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    674            BSP_TS_Callback(0);
+   \        0x2   0x2000             MOVS     R0,#+0
+   \        0x4   0x.... 0x....      BL       BSP_TS_Callback
+    675          
+    676            /* Clear interrupt on TS driver */
+    677            if (Ts_Drv->ClearIT(Ts_CompObj) < 0)
+   \        0x8   0x....             LDR.N    R0,??DataTable10_1
+   \        0xA   0x....             LDR.N    R1,??DataTable10_2
+   \        0xC   0x6809             LDR      R1,[R1, #+0]
+   \        0xE   0x6A89             LDR      R1,[R1, #+40]
+   \       0x10   0x4788             BLX      R1
+    678            {
+    679              /* Nothing to do */
+    680            }
+    681          }
+   \       0x12   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \        0x0   0x....'....        DC32     Ts_Ctx
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_1:
+   \        0x0   0x....'....        DC32     Ts_CompObj
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_2:
+   \        0x0   0x....'....        DC32     Ts_Drv
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_3:
+   \        0x0   0x5802'1C00        DC32     0x58021c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_4:
+   \        0x0   0x....'....        DC32     hts_exti
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_5:
+   \        0x0   0x1630'0002        DC32     0x16300002
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_6:
+   \        0x0   0x....'....        DC32     BSP_I2C4_Init
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_7:
+   \        0x0   0x....'....        DC32     BSP_I2C4_DeInit
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_8:
+   \        0x0   0x....'....        DC32     BSP_I2C4_ReadReg
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_9:
+   \        0x0   0x....'....        DC32     BSP_I2C4_WriteReg
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_10:
+   \        0x0   0x....'....        DC32     BSP_GetTick
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_11:
+   \        0x0   0x....'....        DC32     `FT5336_Probe::FT5336Obj`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_12:
+   \        0x0   0x....'....        DC32     FT5336_TS_Driver
+    682          
+    683          /**
+    684            * @}
+    685            */
+    686          
+    687          
+    688          /**
+    689            * @}
+    690            */
+    691          
+    692          /**
+    693            * @}
+    694            */
+    695          
+    696          /**
+    697            * @}
+    698            */
+    699          
+    700          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   BSP_TS_Callback
+       8   BSP_TS_DeInit
+         8   -- Indirect call
+      32   BSP_TS_DisableIT
+        32   -- Indirect call
+        32   -> HAL_GPIO_DeInit
+      40   BSP_TS_EnableIT
+        40   -- Indirect call
+        40   -> HAL_EXTI_GetHandle
+        40   -> HAL_EXTI_RegisterCallback
+        40   -> HAL_GPIO_Init
+        40   -> HAL_NVIC_EnableIRQ
+        40   -> HAL_NVIC_SetPriority
+       8   BSP_TS_GetCapabilities
+         8   -- Indirect call
+      32   BSP_TS_GetState
+        32   -- Indirect call
+       0   BSP_TS_Get_Orientation
+       8   BSP_TS_IRQHandler
+         8   -> HAL_EXTI_IRQHandler
+      32   BSP_TS_Init
+        32   -- Indirect call
+        32   -> FT5336_Probe
+       0   BSP_TS_Set_Orientation
+      48   FT5336_Probe
+        48   -- Indirect call
+        48   -> FT5336_ReadID
+        48   -> FT5336_RegisterBusIO
+       8   TS_EXTI_Callback
+         8   -- Indirect call
+         8   -> BSP_TS_Callback
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable10_10
+       4  ??DataTable10_11
+       4  ??DataTable10_12
+       4  ??DataTable10_2
+       4  ??DataTable10_3
+       4  ??DataTable10_4
+       4  ??DataTable10_5
+       4  ??DataTable10_6
+       4  ??DataTable10_7
+       4  ??DataTable10_8
+       4  ??DataTable10_9
+       2  BSP_TS_Callback
+      40  BSP_TS_DeInit
+      58  BSP_TS_DisableIT
+     136  BSP_TS_EnableIT
+      32  BSP_TS_GetCapabilities
+     306  BSP_TS_GetState
+      14  BSP_TS_Get_Orientation
+      14  BSP_TS_IRQHandler
+     216  BSP_TS_Init
+      12  BSP_TS_Set_Orientation
+      40  FT5336Obj
+     124  FT5336_Probe
+      20  TS_EXTI_Callback
+       4  Ts_CompObj
+      32  Ts_Ctx
+       4  Ts_Drv
+       8  hts_exti
+
+ 
+    88 bytes in section .bss
+ 1'026 bytes in section .text
+ 
+ 1'024 bytes of CODE memory (+ 2 bytes shared)
+    88 bytes of DATA memory
+
+Errors: none
+Warnings: none

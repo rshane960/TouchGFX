@@ -1,0 +1,235 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         05/Feb/2022  17:09:46
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\gui\src\common\FrontendApplication.cpp
+#        [UTF-8]
+#    Command line                 =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\gui\common\FrontendApplication.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\gui\src\common\FrontendApplication.cpp
+#        -D USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\gui\common
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\gui\common
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\gui\common
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --c++ --no_exceptions --no_rtti --no_static_destruction
+#        --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\gui\common\FrontendApplication.o.d
+#    Locale                       =  C
+#    List file                    =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\gui\common\FrontendApplication.lst
+#    Object file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\gui\common\FrontendApplication.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  1
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\gui\src\common\FrontendApplication.cpp
+      1          #include <gui/common/FrontendApplication.hpp>
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Application::appSwitchScreen(uint8_t)
+   \                     _ZN8touchgfx11Application15appSwitchScreenEh: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Application::requestRedraw(touchgfx::Rect &)
+   \                     _ZN8touchgfx11Application13requestRedrawERNS_4RectE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF510 0x7096      ADDS     R0,R0,#+300
+   \        0x6   0x2208             MOVS     R2,#+8
+   \        0x8   0x.... 0x....      BL       __aeabi_memcpy
+   \        0xC   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::MVPApplication::handlePendingScreenTransition()
+   \                     _ZN8touchgfx14MVPApplication29handlePendingScreenTransitionEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN8touchgfx14MVPApplication31evaluatePendingScreenTransitionEv
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::MVPApplication::evaluatePendingScreenTransition()
+   \                     _ZN8touchgfx14MVPApplication31evaluatePendingScreenTransitionEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF8D4 0x013C      LDR      R0,[R4, #+316]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD012             BEQ.N    ??evaluatePendingScreenTransition_0
+   \        0xC   0xF8D4 0x013C      LDR      R0,[R4, #+316]
+   \       0x10   0xF8D4 0x113C      LDR      R1,[R4, #+316]
+   \       0x14   0x6809             LDR      R1,[R1, #+0]
+   \       0x16   0x68C9             LDR      R1,[R1, #+12]
+   \       0x18   0x4788             BLX      R1
+   \       0x1A   0x2800             CMP      R0,#+0
+   \       0x1C   0xD009             BEQ.N    ??evaluatePendingScreenTransition_0
+   \       0x1E   0xF8D4 0x013C      LDR      R0,[R4, #+316]
+   \       0x22   0xF8D4 0x113C      LDR      R1,[R4, #+316]
+   \       0x26   0x6809             LDR      R1,[R1, #+0]
+   \       0x28   0x6889             LDR      R1,[R1, #+8]
+   \       0x2A   0x4788             BLX      R1
+   \       0x2C   0x2000             MOVS     R0,#+0
+   \       0x2E   0xF8C4 0x013C      STR      R0,[R4, #+316]
+   \                     ??evaluatePendingScreenTransition_0: (+1)
+   \       0x32   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp FrontendApplication::~FrontendApplication() noexcept
+   \                     _ZN19FrontendApplicationD1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp FrontendApplication::deleter ~FrontendApplication() noexcept
+   \                     _ZN19FrontendApplicationD0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN19FrontendApplicationD1Ev
+   \        0xA   0xF44F 0x71AC      MOV      R1,#+344
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0x.... 0x....      BL       _ZdlPvj
+   \       0x14   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void FrontendApplication::handleTickEvent()
+   \                     _ZN19FrontendApplication15handleTickEventEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF8D4 0x0154      LDR      R0,[R4, #+340]
+   \        0x8   0x.... 0x....      BL       _ZN5Model4tickEv
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZN8touchgfx11Application15handleTickEventEv
+   \       0x12   0xBD10             POP      {R4,PC}
+      2          
+
+   \                                 In section .text, align 2, keep-with-next
+   \   __vfp FrontendApplication::subobject FrontendApplication(Model &, FrontendHeap &)
+   \                     _ZN19FrontendApplicationC2ER5ModelR12FrontendHeap: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN19FrontendApplicationC1ER5ModelR12FrontendHeap
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+      3          FrontendApplication::FrontendApplication(Model& m, FrontendHeap& heap)
+      4              : FrontendApplicationBase(m, heap)
+      5          {
+   \                     _ZN19FrontendApplicationC1ER5ModelR12FrontendHeap: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN23FrontendApplicationBaseC2ER5ModelR12FrontendHeap
+   \        0xA   0x....             LDR.N    R0,??DataTable1
+   \        0xC   0x6020             STR      R0,[R4, #+0]
+      6          
+      7          }
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     _ZTV19FrontendApplication+0x8
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   FrontendApplication::FrontendApplication(Model &, FrontendHeap &)
+         8   -> FrontendApplicationBase::subobject FrontendApplicationBase(Model &, FrontendHeap &)
+       8   FrontendApplication::deleter ~FrontendApplication() noexcept
+         8   -> FrontendApplication::~FrontendApplication() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+       8   FrontendApplication::handleTickEvent()
+         8   -> Model::tick()
+         8   -> touchgfx::Application::handleTickEvent()
+       8   FrontendApplication::subobject FrontendApplication(Model &, FrontendHeap &)
+         8   -> FrontendApplication::FrontendApplication(Model &, FrontendHeap &)
+       0   FrontendApplication::~FrontendApplication() noexcept
+       0   touchgfx::Application::appSwitchScreen(uint8_t)
+       8   touchgfx::Application::requestRedraw(touchgfx::Rect &)
+         8   -> __aeabi_memcpy
+       8   touchgfx::MVPApplication::evaluatePendingScreenTransition()
+         8   -- Indirect call
+       8   touchgfx::MVPApplication::handlePendingScreenTransition()
+         8   -> touchgfx::MVPApplication::evaluatePendingScreenTransition()
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+      18  FrontendApplication::FrontendApplication(Model &, FrontendHeap &)
+      22  FrontendApplication::deleter ~FrontendApplication() noexcept
+      20  FrontendApplication::handleTickEvent()
+       8  FrontendApplication::subobject FrontendApplication(Model &, FrontendHeap &)
+       2  FrontendApplication::~FrontendApplication() noexcept
+       2  touchgfx::Application::appSwitchScreen(uint8_t)
+      14  touchgfx::Application::requestRedraw(touchgfx::Rect &)
+      52  touchgfx::MVPApplication::evaluatePendingScreenTransition()
+       8  touchgfx::MVPApplication::handlePendingScreenTransition()
+     268  -- Other
+
+ 
+ 268 bytes in section .rodata
+ 150 bytes in section .text
+ 
+ 30 bytes of CODE  memory (+ 120 bytes shared)
+  0 bytes of CONST memory (+ 268 bytes shared)
+
+Errors: none
+Warnings: none

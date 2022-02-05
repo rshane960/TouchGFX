@@ -48,4 +48,6 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Drive
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pwr.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pwr_ex.h \
   D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
+  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h

@@ -1,0 +1,1576 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         05/Feb/2022  17:09:26
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode          =  thumb
+#    Endian            =  little
+#    Source file       =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\stm32h7xx_hal_msp.c
+#        [UTF-8]
+#    Command line      =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\stm32h7xx_hal_msp.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\stm32h7xx_hal_msp.c
+#        -D USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\stm32h7xx_hal_msp.o.d
+#    Locale            =  C
+#    List file         =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core\stm32h7xx_hal_msp.lst
+#    Object file       =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\stm32h7xx_hal_msp.o
+#    Runtime model:       
+#      __CPP_Runtime   =  1
+#      __SystemLibrary =  DLib
+#      __dlib_version  =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\stm32h7xx_hal_msp.c
+      1          /* USER CODE BEGIN Header */
+      2          /**
+      3            ******************************************************************************
+      4            * File Name          : stm32h7xx_hal_msp.c
+      5            * Description        : This file provides code for the MSP Initialization 
+      6            *                      and de-Initialization codes.
+      7            ******************************************************************************
+      8            * @attention
+      9            *
+     10            * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+     11            * All rights reserved.</center></h2>
+     12            *
+     13            * This software component is licensed by ST under Ultimate Liberty license
+     14            * SLA0044, the "License"; You may not use this file except in compliance with
+     15            * the License. You may obtain a copy of the License at:
+     16            *                             www.st.com/SLA0044
+     17            *
+     18            ******************************************************************************
+     19            */
+     20          /* USER CODE END Header */
+     21          
+     22          /* Includes ------------------------------------------------------------------*/
+     23          #include "main.h"
+     24          /* USER CODE BEGIN Includes */
+     25          
+     26          /* USER CODE END Includes */
+     27          
+     28          /* Private typedef -----------------------------------------------------------*/
+     29          /* USER CODE BEGIN TD */
+     30          
+     31          /* USER CODE END TD */
+     32          
+     33          /* Private define ------------------------------------------------------------*/
+     34          /* USER CODE BEGIN Define */
+     35           
+     36          /* USER CODE END Define */
+     37          
+     38          /* Private macro -------------------------------------------------------------*/
+     39          /* USER CODE BEGIN Macro */
+     40          
+     41          /* USER CODE END Macro */
+     42          
+     43          /* Private variables ---------------------------------------------------------*/
+     44          /* USER CODE BEGIN PV */
+     45          
+     46          /* USER CODE END PV */
+     47          
+     48          /* Private function prototypes -----------------------------------------------*/
+     49          /* USER CODE BEGIN PFP */
+     50          
+     51          /* USER CODE END PFP */
+     52          
+     53          /* External functions --------------------------------------------------------*/
+     54          /* USER CODE BEGIN ExternalFunctions */
+     55          
+     56          /* USER CODE END ExternalFunctions */
+     57          
+     58          /* USER CODE BEGIN 0 */
+     59          
+     60          /* USER CODE END 0 */
+     61          /**
+     62            * Initializes the Global MSP.
+     63            */
+
+   \                                 In section .text, align 2, keep-with-next
+     64          void HAL_MspInit(void)
+     65          {
+   \                     HAL_MspInit: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     66            /* USER CODE BEGIN MspInit 0 */
+     67          
+     68            /* USER CODE END MspInit 0 */
+     69          
+     70            __HAL_RCC_SYSCFG_CLK_ENABLE();
+   \        0x2   0x.... 0x....      LDR.W    R0,??DataTable12
+   \        0x6   0x6801             LDR      R1,[R0, #+0]
+   \        0x8   0xF051 0x0102      ORRS     R1,R1,#0x2
+   \        0xC   0x6001             STR      R1,[R0, #+0]
+   \        0xE   0x6800             LDR      R0,[R0, #+0]
+   \       0x10   0xF010 0x0002      ANDS     R0,R0,#0x2
+   \       0x14   0x9000             STR      R0,[SP, #+0]
+   \       0x16   0x9800             LDR      R0,[SP, #+0]
+     71          
+     72            /* System interrupt init*/
+     73            /* PendSV_IRQn interrupt configuration */
+     74            HAL_NVIC_SetPriority(PendSV_IRQn, 15, 0);
+   \       0x18   0x2200             MOVS     R2,#+0
+   \       0x1A   0x210F             MOVS     R1,#+15
+   \       0x1C   0xF07F 0x0001      MVNS     R0,#+1
+   \       0x20   0x.... 0x....      BL       HAL_NVIC_SetPriority
+     75          
+     76            /* USER CODE BEGIN MspInit 1 */
+     77          
+     78            /* USER CODE END MspInit 1 */
+     79          }
+   \       0x24   0xBD01             POP      {R0,PC}
+     80          
+     81          /**
+     82          * @brief CRC MSP Initialization
+     83          * This function configures the hardware resources used in this example
+     84          * @param hcrc: CRC handle pointer
+     85          * @retval None
+     86          */
+
+   \                                 In section .text, align 2, keep-with-next
+     87          void HAL_CRC_MspInit(CRC_HandleTypeDef* hcrc)
+     88          {
+   \                     HAL_CRC_MspInit: (+1)
+   \        0x0   0xB081             SUB      SP,SP,#+4
+     89            if(hcrc->Instance==CRC)
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x.... 0x....      LDR.W    R1,??DataTable12_1
+   \        0x8   0x4288             CMP      R0,R1
+   \        0xA   0xD10A             BNE.N    ??HAL_CRC_MspInit_0
+     90            {
+     91            /* USER CODE BEGIN CRC_MspInit 0 */
+     92          
+     93            /* USER CODE END CRC_MspInit 0 */
+     94              /* Peripheral clock enable */
+     95              __HAL_RCC_CRC_CLK_ENABLE();
+   \        0xC   0x.... 0x....      LDR.W    R0,??DataTable12_2
+   \       0x10   0x6801             LDR      R1,[R0, #+0]
+   \       0x12   0xF451 0x7100      ORRS     R1,R1,#0x200
+   \       0x16   0x6001             STR      R1,[R0, #+0]
+   \       0x18   0x6800             LDR      R0,[R0, #+0]
+   \       0x1A   0xF410 0x7000      ANDS     R0,R0,#0x200
+   \       0x1E   0x9000             STR      R0,[SP, #+0]
+   \       0x20   0x9800             LDR      R0,[SP, #+0]
+     96            /* USER CODE BEGIN CRC_MspInit 1 */
+     97          
+     98            /* USER CODE END CRC_MspInit 1 */
+     99            }
+    100          
+    101          }
+   \                     ??HAL_CRC_MspInit_0: (+1)
+   \       0x22   0xB001             ADD      SP,SP,#+4
+   \       0x24   0x4770             BX       LR
+    102          
+    103          /**
+    104          * @brief CRC MSP De-Initialization
+    105          * This function freeze the hardware resources used in this example
+    106          * @param hcrc: CRC handle pointer
+    107          * @retval None
+    108          */
+
+   \                                 In section .text, align 2, keep-with-next
+    109          void HAL_CRC_MspDeInit(CRC_HandleTypeDef* hcrc)
+    110          {
+    111            if(hcrc->Instance==CRC)
+   \                     HAL_CRC_MspDeInit: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x.... 0x....      LDR.W    R1,??DataTable12_1
+   \        0x6   0x4288             CMP      R0,R1
+   \        0x8   0xD105             BNE.N    ??HAL_CRC_MspDeInit_0
+    112            {
+    113            /* USER CODE BEGIN CRC_MspDeInit 0 */
+    114          
+    115            /* USER CODE END CRC_MspDeInit 0 */
+    116              /* Peripheral clock disable */
+    117              __HAL_RCC_CRC_CLK_DISABLE();
+   \        0xA   0x.... 0x....      LDR.W    R0,??DataTable12_2
+   \        0xE   0x6801             LDR      R1,[R0, #+0]
+   \       0x10   0xF431 0x7100      BICS     R1,R1,#0x200
+   \       0x14   0x6001             STR      R1,[R0, #+0]
+    118            /* USER CODE BEGIN CRC_MspDeInit 1 */
+    119          
+    120            /* USER CODE END CRC_MspDeInit 1 */
+    121            }
+    122          
+    123          }
+   \                     ??HAL_CRC_MspDeInit_0: (+1)
+   \       0x16   0x4770             BX       LR
+    124          
+    125          /**
+    126          * @brief DMA2D MSP Initialization
+    127          * This function configures the hardware resources used in this example
+    128          * @param hdma2d: DMA2D handle pointer
+    129          * @retval None
+    130          */
+
+   \                                 In section .text, align 2, keep-with-next
+    131          void HAL_DMA2D_MspInit(DMA2D_HandleTypeDef* hdma2d)
+    132          {
+   \                     HAL_DMA2D_MspInit: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    133            if(hdma2d->Instance==DMA2D)
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x.... 0x....      LDR.W    R1,??DataTable12_3
+   \        0x8   0x4288             CMP      R0,R1
+   \        0xA   0xD112             BNE.N    ??HAL_DMA2D_MspInit_0
+    134            {
+    135            /* USER CODE BEGIN DMA2D_MspInit 0 */
+    136          
+    137            /* USER CODE END DMA2D_MspInit 0 */
+    138              /* Peripheral clock enable */
+    139              __HAL_RCC_DMA2D_CLK_ENABLE();
+   \        0xC   0x.... 0x....      LDR.W    R0,??DataTable12_4
+   \       0x10   0x6801             LDR      R1,[R0, #+0]
+   \       0x12   0xF051 0x0110      ORRS     R1,R1,#0x10
+   \       0x16   0x6001             STR      R1,[R0, #+0]
+   \       0x18   0x6800             LDR      R0,[R0, #+0]
+   \       0x1A   0xF010 0x0010      ANDS     R0,R0,#0x10
+   \       0x1E   0x9000             STR      R0,[SP, #+0]
+   \       0x20   0x9800             LDR      R0,[SP, #+0]
+    140              /* DMA2D interrupt Init */
+    141              HAL_NVIC_SetPriority(DMA2D_IRQn, 5, 0);
+   \       0x22   0x2200             MOVS     R2,#+0
+   \       0x24   0x2105             MOVS     R1,#+5
+   \       0x26   0x205A             MOVS     R0,#+90
+   \       0x28   0x.... 0x....      BL       HAL_NVIC_SetPriority
+    142              HAL_NVIC_EnableIRQ(DMA2D_IRQn);
+   \       0x2C   0x205A             MOVS     R0,#+90
+   \       0x2E   0x.... 0x....      BL       HAL_NVIC_EnableIRQ
+    143            /* USER CODE BEGIN DMA2D_MspInit 1 */
+    144          
+    145            /* USER CODE END DMA2D_MspInit 1 */
+    146            }
+    147          
+    148          }
+   \                     ??HAL_DMA2D_MspInit_0: (+1)
+   \       0x32   0xBD01             POP      {R0,PC}
+    149          
+    150          /**
+    151          * @brief DMA2D MSP De-Initialization
+    152          * This function freeze the hardware resources used in this example
+    153          * @param hdma2d: DMA2D handle pointer
+    154          * @retval None
+    155          */
+
+   \                                 In section .text, align 2, keep-with-next
+    156          void HAL_DMA2D_MspDeInit(DMA2D_HandleTypeDef* hdma2d)
+    157          {
+   \                     HAL_DMA2D_MspDeInit: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    158            if(hdma2d->Instance==DMA2D)
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x.... 0x....      LDR.W    R1,??DataTable12_3
+   \        0x8   0x4288             CMP      R0,R1
+   \        0xA   0xD108             BNE.N    ??HAL_DMA2D_MspDeInit_0
+    159            {
+    160            /* USER CODE BEGIN DMA2D_MspDeInit 0 */
+    161          
+    162            /* USER CODE END DMA2D_MspDeInit 0 */
+    163              /* Peripheral clock disable */
+    164              __HAL_RCC_DMA2D_CLK_DISABLE();
+   \        0xC   0x.... 0x....      LDR.W    R0,??DataTable12_4
+   \       0x10   0x6801             LDR      R1,[R0, #+0]
+   \       0x12   0xF031 0x0110      BICS     R1,R1,#0x10
+   \       0x16   0x6001             STR      R1,[R0, #+0]
+    165          
+    166              /* DMA2D interrupt DeInit */
+    167              HAL_NVIC_DisableIRQ(DMA2D_IRQn);
+   \       0x18   0x205A             MOVS     R0,#+90
+   \       0x1A   0x.... 0x....      BL       HAL_NVIC_DisableIRQ
+    168            /* USER CODE BEGIN DMA2D_MspDeInit 1 */
+    169          
+    170            /* USER CODE END DMA2D_MspDeInit 1 */
+    171            }
+    172          
+    173          }
+   \                     ??HAL_DMA2D_MspDeInit_0: (+1)
+   \       0x1E   0xBD01             POP      {R0,PC}
+    174          
+    175          /**
+    176          * @brief I2C MSP Initialization
+    177          * This function configures the hardware resources used in this example
+    178          * @param hi2c: I2C handle pointer
+    179          * @retval None
+    180          */
+
+   \                                 In section .text, align 2, keep-with-next
+    181          void HAL_I2C_MspInit(I2C_HandleTypeDef* hi2c)
+    182          {
+   \                     HAL_I2C_MspInit: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0xB0B4             SUB      SP,SP,#+208
+   \        0x4   0x0004             MOVS     R4,R0
+   \        0x6   0x2214             MOVS     R2,#+20
+   \        0x8   0x2100             MOVS     R1,#+0
+   \        0xA   0xA801             ADD      R0,SP,#+4
+   \        0xC   0x.... 0x....      BL       memset
+   \       0x10   0x22B8             MOVS     R2,#+184
+   \       0x12   0x2100             MOVS     R1,#+0
+   \       0x14   0xA806             ADD      R0,SP,#+24
+   \       0x16   0x.... 0x....      BL       memset
+    183            GPIO_InitTypeDef GPIO_InitStruct = {0};
+    184            RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+    185            if(hi2c->Instance==I2C4)
+   \       0x1A   0x6820             LDR      R0,[R4, #+0]
+   \       0x1C   0x.... 0x....      LDR.W    R1,??DataTable12_5
+   \       0x20   0x4288             CMP      R0,R1
+   \       0x22   0xD130             BNE.N    ??HAL_I2C_MspInit_0
+    186            {
+    187            /* USER CODE BEGIN I2C4_MspInit 0 */
+    188          
+    189            /* USER CODE END I2C4_MspInit 0 */
+    190            /** Initializes the peripherals clock
+    191            */
+    192              PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_I2C4;
+   \       0x24   0x2010             MOVS     R0,#+16
+   \       0x26   0x9006             STR      R0,[SP, #+24]
+    193              PeriphClkInitStruct.I2c4ClockSelection = RCC_I2C4CLKSOURCE_D3PCLK1;
+   \       0x28   0x2000             MOVS     R0,#+0
+   \       0x2A   0x902D             STR      R0,[SP, #+180]
+    194              if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+   \       0x2C   0xA806             ADD      R0,SP,#+24
+   \       0x2E   0x.... 0x....      BL       HAL_RCCEx_PeriphCLKConfig
+   \       0x32   0x2800             CMP      R0,#+0
+   \       0x34   0xD001             BEQ.N    ??HAL_I2C_MspInit_1
+    195              {
+    196                Error_Handler();
+   \       0x36   0x.... 0x....      BL       Error_Handler
+    197              }
+    198          
+    199              __HAL_RCC_GPIOD_CLK_ENABLE();
+   \                     ??HAL_I2C_MspInit_1: (+1)
+   \       0x3A   0x.... 0x....      LDR.W    R0,??DataTable12_6
+   \       0x3E   0x6801             LDR      R1,[R0, #+0]
+   \       0x40   0xF051 0x0108      ORRS     R1,R1,#0x8
+   \       0x44   0x6001             STR      R1,[R0, #+0]
+   \       0x46   0x6800             LDR      R0,[R0, #+0]
+   \       0x48   0xF010 0x0008      ANDS     R0,R0,#0x8
+   \       0x4C   0x9000             STR      R0,[SP, #+0]
+   \       0x4E   0x9800             LDR      R0,[SP, #+0]
+    200              /**I2C4 GPIO Configuration
+    201              PD13     ------> I2C4_SDA
+    202              PD12     ------> I2C4_SCL
+    203              */
+    204              GPIO_InitStruct.Pin = GPIO_PIN_13|GPIO_PIN_12;
+   \       0x50   0xF44F 0x5040      MOV      R0,#+12288
+   \       0x54   0x9001             STR      R0,[SP, #+4]
+    205              GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+   \       0x56   0x2012             MOVS     R0,#+18
+   \       0x58   0x9002             STR      R0,[SP, #+8]
+    206              GPIO_InitStruct.Pull = GPIO_PULLUP;
+   \       0x5A   0x2001             MOVS     R0,#+1
+   \       0x5C   0x9003             STR      R0,[SP, #+12]
+    207              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+   \       0x5E   0x2002             MOVS     R0,#+2
+   \       0x60   0x9004             STR      R0,[SP, #+16]
+    208              GPIO_InitStruct.Alternate = GPIO_AF4_I2C4;
+   \       0x62   0x2004             MOVS     R0,#+4
+   \       0x64   0x9005             STR      R0,[SP, #+20]
+    209              HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+   \       0x66   0xA901             ADD      R1,SP,#+4
+   \       0x68   0x.... 0x....      LDR.W    R0,??DataTable12_7
+   \       0x6C   0x.... 0x....      BL       HAL_GPIO_Init
+    210          
+    211              /* Peripheral clock enable */
+    212              __HAL_RCC_I2C4_CLK_ENABLE();
+   \       0x70   0x.... 0x....      LDR.W    R0,??DataTable12
+   \       0x74   0x6801             LDR      R1,[R0, #+0]
+   \       0x76   0xF051 0x0180      ORRS     R1,R1,#0x80
+   \       0x7A   0x6001             STR      R1,[R0, #+0]
+   \       0x7C   0x6800             LDR      R0,[R0, #+0]
+   \       0x7E   0xF010 0x0080      ANDS     R0,R0,#0x80
+   \       0x82   0x9000             STR      R0,[SP, #+0]
+   \       0x84   0x9800             LDR      R0,[SP, #+0]
+    213            /* USER CODE BEGIN I2C4_MspInit 1 */
+    214          
+    215            /* USER CODE END I2C4_MspInit 1 */
+    216            }
+    217          
+    218          }
+   \                     ??HAL_I2C_MspInit_0: (+1)
+   \       0x86   0xB034             ADD      SP,SP,#+208
+   \       0x88   0xBD10             POP      {R4,PC}
+    219          
+    220          /**
+    221          * @brief I2C MSP De-Initialization
+    222          * This function freeze the hardware resources used in this example
+    223          * @param hi2c: I2C handle pointer
+    224          * @retval None
+    225          */
+
+   \                                 In section .text, align 2, keep-with-next
+    226          void HAL_I2C_MspDeInit(I2C_HandleTypeDef* hi2c)
+    227          {
+   \                     HAL_I2C_MspDeInit: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    228            if(hi2c->Instance==I2C4)
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x.... 0x....      LDR.W    R1,??DataTable12_5
+   \        0x8   0x4288             CMP      R0,R1
+   \        0xA   0xD111             BNE.N    ??HAL_I2C_MspDeInit_0
+    229            {
+    230            /* USER CODE BEGIN I2C4_MspDeInit 0 */
+    231          
+    232            /* USER CODE END I2C4_MspDeInit 0 */
+    233              /* Peripheral clock disable */
+    234              __HAL_RCC_I2C4_CLK_DISABLE();
+   \        0xC   0x.... 0x....      LDR.W    R0,??DataTable12
+   \       0x10   0x6801             LDR      R1,[R0, #+0]
+   \       0x12   0xF031 0x0180      BICS     R1,R1,#0x80
+   \       0x16   0x6001             STR      R1,[R0, #+0]
+    235          
+    236              /**I2C4 GPIO Configuration
+    237              PD13     ------> I2C4_SDA
+    238              PD12     ------> I2C4_SCL
+    239              */
+    240              HAL_GPIO_DeInit(GPIOD, GPIO_PIN_13);
+   \       0x18   0x.... 0x....      LDR.W    R4,??DataTable12_7
+   \       0x1C   0xF44F 0x5100      MOV      R1,#+8192
+   \       0x20   0x0020             MOVS     R0,R4
+   \       0x22   0x.... 0x....      BL       HAL_GPIO_DeInit
+    241          
+    242              HAL_GPIO_DeInit(GPIOD, GPIO_PIN_12);
+   \       0x26   0xF44F 0x5180      MOV      R1,#+4096
+   \       0x2A   0x0020             MOVS     R0,R4
+   \       0x2C   0x.... 0x....      BL       HAL_GPIO_DeInit
+    243          
+    244            /* USER CODE BEGIN I2C4_MspDeInit 1 */
+    245          
+    246            /* USER CODE END I2C4_MspDeInit 1 */
+    247            }
+    248          
+    249          }
+   \                     ??HAL_I2C_MspDeInit_0: (+1)
+   \       0x30   0xBD10             POP      {R4,PC}
+    250          
+    251          /**
+    252          * @brief LTDC MSP Initialization
+    253          * This function configures the hardware resources used in this example
+    254          * @param hltdc: LTDC handle pointer
+    255          * @retval None
+    256          */
+
+   \                                 In section .text, align 2, keep-with-next
+    257          void HAL_LTDC_MspInit(LTDC_HandleTypeDef* hltdc)
+    258          {
+   \                     HAL_LTDC_MspInit: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0xB0B4             SUB      SP,SP,#+208
+   \        0x4   0x0004             MOVS     R4,R0
+   \        0x6   0x2214             MOVS     R2,#+20
+   \        0x8   0x2100             MOVS     R1,#+0
+   \        0xA   0x4668             MOV      R0,SP
+   \        0xC   0x.... 0x....      BL       memset
+   \       0x10   0x22B8             MOVS     R2,#+184
+   \       0x12   0x2100             MOVS     R1,#+0
+   \       0x14   0xA806             ADD      R0,SP,#+24
+   \       0x16   0x.... 0x....      BL       memset
+    259            GPIO_InitTypeDef GPIO_InitStruct = {0};
+    260            RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+    261            if(hltdc->Instance==LTDC)
+   \       0x1A   0x6820             LDR      R0,[R4, #+0]
+   \       0x1C   0x.... 0x....      LDR.W    R1,??DataTable12_8
+   \       0x20   0x4288             CMP      R0,R1
+   \       0x22   0xD178             BNE.N    ??HAL_LTDC_MspInit_0
+    262            {
+    263            /* USER CODE BEGIN LTDC_MspInit 0 */
+    264          
+    265            /* USER CODE END LTDC_MspInit 0 */
+    266            /** Initializes the peripherals clock
+    267            */
+    268              PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC;
+   \       0x24   0xF05F 0x5000      MOVS     R0,#+536870912
+   \       0x28   0x9006             STR      R0,[SP, #+24]
+    269              PeriphClkInitStruct.PLL3.PLL3M = 24;
+   \       0x2A   0x2018             MOVS     R0,#+24
+   \       0x2C   0x900F             STR      R0,[SP, #+60]
+    270              PeriphClkInitStruct.PLL3.PLL3N = 201;
+   \       0x2E   0x20C9             MOVS     R0,#+201
+   \       0x30   0x9010             STR      R0,[SP, #+64]
+    271              PeriphClkInitStruct.PLL3.PLL3P = 2;
+   \       0x32   0x2002             MOVS     R0,#+2
+   \       0x34   0x9011             STR      R0,[SP, #+68]
+    272              PeriphClkInitStruct.PLL3.PLL3Q = 2;
+   \       0x36   0x2002             MOVS     R0,#+2
+   \       0x38   0x9012             STR      R0,[SP, #+72]
+    273              PeriphClkInitStruct.PLL3.PLL3R = 21;
+   \       0x3A   0x2015             MOVS     R0,#+21
+   \       0x3C   0x9013             STR      R0,[SP, #+76]
+    274              PeriphClkInitStruct.PLL3.PLL3RGE = RCC_PLL3VCIRANGE_0;
+   \       0x3E   0x2000             MOVS     R0,#+0
+   \       0x40   0x9014             STR      R0,[SP, #+80]
+    275              PeriphClkInitStruct.PLL3.PLL3VCOSEL = RCC_PLL3VCOMEDIUM;
+   \       0x42   0xF44F 0x7000      MOV      R0,#+512
+   \       0x46   0x9015             STR      R0,[SP, #+84]
+    276              PeriphClkInitStruct.PLL3.PLL3FRACN = 5462;
+   \       0x48   0xF241 0x5056      MOVW     R0,#+5462
+   \       0x4C   0x9016             STR      R0,[SP, #+88]
+    277              if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+   \       0x4E   0xA806             ADD      R0,SP,#+24
+   \       0x50   0x.... 0x....      BL       HAL_RCCEx_PeriphCLKConfig
+   \       0x54   0x2800             CMP      R0,#+0
+   \       0x56   0xD001             BEQ.N    ??HAL_LTDC_MspInit_1
+    278              {
+    279                Error_Handler();
+   \       0x58   0x.... 0x....      BL       Error_Handler
+    280              }
+    281          
+    282              /* Peripheral clock enable */
+    283              __HAL_RCC_LTDC_CLK_ENABLE();
+   \                     ??HAL_LTDC_MspInit_1: (+1)
+   \       0x5C   0x.... 0x....      LDR.W    R0,??DataTable12_9
+   \       0x60   0x6801             LDR      R1,[R0, #+0]
+   \       0x62   0xF051 0x0108      ORRS     R1,R1,#0x8
+   \       0x66   0x6001             STR      R1,[R0, #+0]
+   \       0x68   0x6800             LDR      R0,[R0, #+0]
+   \       0x6A   0xF010 0x0008      ANDS     R0,R0,#0x8
+   \       0x6E   0x9005             STR      R0,[SP, #+20]
+   \       0x70   0x9805             LDR      R0,[SP, #+20]
+    284          
+    285              __HAL_RCC_GPIOK_CLK_ENABLE();
+   \       0x72   0x.... 0x....      LDR.W    R0,??DataTable12_6
+   \       0x76   0x6801             LDR      R1,[R0, #+0]
+   \       0x78   0xF451 0x6180      ORRS     R1,R1,#0x400
+   \       0x7C   0x6001             STR      R1,[R0, #+0]
+   \       0x7E   0x6801             LDR      R1,[R0, #+0]
+   \       0x80   0xF411 0x6180      ANDS     R1,R1,#0x400
+   \       0x84   0x9105             STR      R1,[SP, #+20]
+   \       0x86   0x9905             LDR      R1,[SP, #+20]
+    286              __HAL_RCC_GPIOJ_CLK_ENABLE();
+   \       0x88   0x6801             LDR      R1,[R0, #+0]
+   \       0x8A   0xF451 0x7100      ORRS     R1,R1,#0x200
+   \       0x8E   0x6001             STR      R1,[R0, #+0]
+   \       0x90   0x6801             LDR      R1,[R0, #+0]
+   \       0x92   0xF411 0x7100      ANDS     R1,R1,#0x200
+   \       0x96   0x9105             STR      R1,[SP, #+20]
+   \       0x98   0x9905             LDR      R1,[SP, #+20]
+    287              __HAL_RCC_GPIOI_CLK_ENABLE();
+   \       0x9A   0x6801             LDR      R1,[R0, #+0]
+   \       0x9C   0xF451 0x7180      ORRS     R1,R1,#0x100
+   \       0xA0   0x6001             STR      R1,[R0, #+0]
+   \       0xA2   0x6800             LDR      R0,[R0, #+0]
+   \       0xA4   0xF410 0x7080      ANDS     R0,R0,#0x100
+   \       0xA8   0x9005             STR      R0,[SP, #+20]
+   \       0xAA   0x9805             LDR      R0,[SP, #+20]
+    288              /**LTDC GPIO Configuration
+    289              PK5     ------> LTDC_B6
+    290              PK6     ------> LTDC_B7
+    291              PK3     ------> LTDC_B4
+    292              PJ15     ------> LTDC_B3
+    293              PK4     ------> LTDC_B5
+    294              PJ14     ------> LTDC_B2
+    295              PK7     ------> LTDC_DE
+    296              PJ13     ------> LTDC_B1
+    297              PJ12     ------> LTDC_B0
+    298              PI12     ------> LTDC_HSYNC
+    299              PI14     ------> LTDC_CLK
+    300              PI13     ------> LTDC_VSYNC
+    301              PK2     ------> LTDC_G7
+    302              PK1     ------> LTDC_G6
+    303              PJ11     ------> LTDC_G4
+    304              PK0     ------> LTDC_G5
+    305              PJ10     ------> LTDC_G3
+    306              PJ9     ------> LTDC_G2
+    307              PJ8     ------> LTDC_G1
+    308              PJ6     ------> LTDC_R7
+    309              PJ7     ------> LTDC_G0
+    310              PI15     ------> LTDC_R0
+    311              PJ0     ------> LTDC_R1
+    312              PJ5     ------> LTDC_R6
+    313              PJ1     ------> LTDC_R2
+    314              PJ4     ------> LTDC_R5
+    315              PJ2     ------> LTDC_R3
+    316              PJ3     ------> LTDC_R4
+    317              */
+    318              GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_3|GPIO_PIN_4
+    319                                    |GPIO_PIN_7|GPIO_PIN_2|GPIO_PIN_1|GPIO_PIN_0;
+   \       0xAC   0x20FF             MOVS     R0,#+255
+   \       0xAE   0x9000             STR      R0,[SP, #+0]
+    320              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \       0xB0   0x2002             MOVS     R0,#+2
+   \       0xB2   0x9001             STR      R0,[SP, #+4]
+    321              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \       0xB4   0x2000             MOVS     R0,#+0
+   \       0xB6   0x9002             STR      R0,[SP, #+8]
+    322              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+   \       0xB8   0x2000             MOVS     R0,#+0
+   \       0xBA   0x9003             STR      R0,[SP, #+12]
+    323              GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+   \       0xBC   0x200E             MOVS     R0,#+14
+   \       0xBE   0x9004             STR      R0,[SP, #+16]
+    324              HAL_GPIO_Init(GPIOK, &GPIO_InitStruct);
+   \       0xC0   0x4669             MOV      R1,SP
+   \       0xC2   0x.... 0x....      LDR.W    R0,??DataTable12_10
+   \       0xC6   0x.... 0x....      BL       HAL_GPIO_Init
+    325          
+    326              GPIO_InitStruct.Pin = GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_12
+    327                                    |GPIO_PIN_11|GPIO_PIN_10|GPIO_PIN_9|GPIO_PIN_8
+    328                                    |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_0|GPIO_PIN_5
+    329                                    |GPIO_PIN_1|GPIO_PIN_4|GPIO_PIN_2|GPIO_PIN_3;
+   \       0xCA   0xF64F 0x70FF      MOVW     R0,#+65535
+   \       0xCE   0x9000             STR      R0,[SP, #+0]
+    330              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \       0xD0   0x2002             MOVS     R0,#+2
+   \       0xD2   0x9001             STR      R0,[SP, #+4]
+    331              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \       0xD4   0x2000             MOVS     R0,#+0
+   \       0xD6   0x9002             STR      R0,[SP, #+8]
+    332              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+   \       0xD8   0x2000             MOVS     R0,#+0
+   \       0xDA   0x9003             STR      R0,[SP, #+12]
+    333              GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+   \       0xDC   0x200E             MOVS     R0,#+14
+   \       0xDE   0x9004             STR      R0,[SP, #+16]
+    334              HAL_GPIO_Init(GPIOJ, &GPIO_InitStruct);
+   \       0xE0   0x4669             MOV      R1,SP
+   \       0xE2   0x....             LDR.N    R0,??DataTable12_11
+   \       0xE4   0x.... 0x....      BL       HAL_GPIO_Init
+    335          
+    336              GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_15;
+   \       0xE8   0xF44F 0x4070      MOV      R0,#+61440
+   \       0xEC   0x9000             STR      R0,[SP, #+0]
+    337              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \       0xEE   0x2002             MOVS     R0,#+2
+   \       0xF0   0x9001             STR      R0,[SP, #+4]
+    338              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \       0xF2   0x2000             MOVS     R0,#+0
+   \       0xF4   0x9002             STR      R0,[SP, #+8]
+    339              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+   \       0xF6   0x2000             MOVS     R0,#+0
+   \       0xF8   0x9003             STR      R0,[SP, #+12]
+    340              GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+   \       0xFA   0x200E             MOVS     R0,#+14
+   \       0xFC   0x9004             STR      R0,[SP, #+16]
+    341              HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);
+   \       0xFE   0x4669             MOV      R1,SP
+   \      0x100   0x....             LDR.N    R0,??DataTable12_12
+   \      0x102   0x.... 0x....      BL       HAL_GPIO_Init
+    342          
+    343              /* LTDC interrupt Init */
+    344              HAL_NVIC_SetPriority(LTDC_IRQn, 5, 0);
+   \      0x106   0x2200             MOVS     R2,#+0
+   \      0x108   0x2105             MOVS     R1,#+5
+   \      0x10A   0x2058             MOVS     R0,#+88
+   \      0x10C   0x.... 0x....      BL       HAL_NVIC_SetPriority
+    345              HAL_NVIC_EnableIRQ(LTDC_IRQn);
+   \      0x110   0x2058             MOVS     R0,#+88
+   \      0x112   0x.... 0x....      BL       HAL_NVIC_EnableIRQ
+    346            /* USER CODE BEGIN LTDC_MspInit 1 */
+    347          
+    348            /* USER CODE END LTDC_MspInit 1 */
+    349            }
+    350          
+    351          }
+   \                     ??HAL_LTDC_MspInit_0: (+1)
+   \      0x116   0xB034             ADD      SP,SP,#+208
+   \      0x118   0xBD10             POP      {R4,PC}
+    352          
+    353          /**
+    354          * @brief LTDC MSP De-Initialization
+    355          * This function freeze the hardware resources used in this example
+    356          * @param hltdc: LTDC handle pointer
+    357          * @retval None
+    358          */
+
+   \                                 In section .text, align 2, keep-with-next
+    359          void HAL_LTDC_MspDeInit(LTDC_HandleTypeDef* hltdc)
+    360          {
+   \                     HAL_LTDC_MspDeInit: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    361            if(hltdc->Instance==LTDC)
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x....             LDR.N    R1,??DataTable12_8
+   \        0x6   0x4288             CMP      R0,R1
+   \        0x8   0xD115             BNE.N    ??HAL_LTDC_MspDeInit_0
+    362            {
+    363            /* USER CODE BEGIN LTDC_MspDeInit 0 */
+    364          
+    365            /* USER CODE END LTDC_MspDeInit 0 */
+    366              /* Peripheral clock disable */
+    367              __HAL_RCC_LTDC_CLK_DISABLE();
+   \        0xA   0x....             LDR.N    R0,??DataTable12_9
+   \        0xC   0x6801             LDR      R1,[R0, #+0]
+   \        0xE   0xF031 0x0108      BICS     R1,R1,#0x8
+   \       0x12   0x6001             STR      R1,[R0, #+0]
+    368          
+    369              /**LTDC GPIO Configuration
+    370              PK5     ------> LTDC_B6
+    371              PK6     ------> LTDC_B7
+    372              PK3     ------> LTDC_B4
+    373              PJ15     ------> LTDC_B3
+    374              PK4     ------> LTDC_B5
+    375              PJ14     ------> LTDC_B2
+    376              PK7     ------> LTDC_DE
+    377              PJ13     ------> LTDC_B1
+    378              PJ12     ------> LTDC_B0
+    379              PI12     ------> LTDC_HSYNC
+    380              PI14     ------> LTDC_CLK
+    381              PI13     ------> LTDC_VSYNC
+    382              PK2     ------> LTDC_G7
+    383              PK1     ------> LTDC_G6
+    384              PJ11     ------> LTDC_G4
+    385              PK0     ------> LTDC_G5
+    386              PJ10     ------> LTDC_G3
+    387              PJ9     ------> LTDC_G2
+    388              PJ8     ------> LTDC_G1
+    389              PJ6     ------> LTDC_R7
+    390              PJ7     ------> LTDC_G0
+    391              PI15     ------> LTDC_R0
+    392              PJ0     ------> LTDC_R1
+    393              PJ5     ------> LTDC_R6
+    394              PJ1     ------> LTDC_R2
+    395              PJ4     ------> LTDC_R5
+    396              PJ2     ------> LTDC_R3
+    397              PJ3     ------> LTDC_R4
+    398              */
+    399              HAL_GPIO_DeInit(GPIOK, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_3|GPIO_PIN_4
+    400                                    |GPIO_PIN_7|GPIO_PIN_2|GPIO_PIN_1|GPIO_PIN_0);
+   \       0x14   0x21FF             MOVS     R1,#+255
+   \       0x16   0x....             LDR.N    R0,??DataTable12_10
+   \       0x18   0x.... 0x....      BL       HAL_GPIO_DeInit
+    401          
+    402              HAL_GPIO_DeInit(GPIOJ, GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_12
+    403                                    |GPIO_PIN_11|GPIO_PIN_10|GPIO_PIN_9|GPIO_PIN_8
+    404                                    |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_0|GPIO_PIN_5
+    405                                    |GPIO_PIN_1|GPIO_PIN_4|GPIO_PIN_2|GPIO_PIN_3);
+   \       0x1C   0xF64F 0x71FF      MOVW     R1,#+65535
+   \       0x20   0x....             LDR.N    R0,??DataTable12_11
+   \       0x22   0x.... 0x....      BL       HAL_GPIO_DeInit
+    406          
+    407              HAL_GPIO_DeInit(GPIOI, GPIO_PIN_12|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_15);
+   \       0x26   0xF44F 0x4170      MOV      R1,#+61440
+   \       0x2A   0x....             LDR.N    R0,??DataTable12_12
+   \       0x2C   0x.... 0x....      BL       HAL_GPIO_DeInit
+    408          
+    409              /* LTDC interrupt DeInit */
+    410              HAL_NVIC_DisableIRQ(LTDC_IRQn);
+   \       0x30   0x2058             MOVS     R0,#+88
+   \       0x32   0x.... 0x....      BL       HAL_NVIC_DisableIRQ
+    411            /* USER CODE BEGIN LTDC_MspDeInit 1 */
+    412          
+    413            /* USER CODE END LTDC_MspDeInit 1 */
+    414            }
+    415          
+    416          }
+   \                     ??HAL_LTDC_MspDeInit_0: (+1)
+   \       0x36   0xBD01             POP      {R0,PC}
+    417          
+    418          /**
+    419          * @brief OSPI MSP Initialization
+    420          * This function configures the hardware resources used in this example
+    421          * @param hospi: OSPI handle pointer
+    422          * @retval None
+    423          */
+
+   \                                 In section .text, align 2, keep-with-next
+    424          void HAL_OSPI_MspInit(OSPI_HandleTypeDef* hospi)
+    425          {
+   \                     HAL_OSPI_MspInit: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0xB0B4             SUB      SP,SP,#+208
+   \        0x4   0x0004             MOVS     R4,R0
+   \        0x6   0x2214             MOVS     R2,#+20
+   \        0x8   0x2100             MOVS     R1,#+0
+   \        0xA   0x4668             MOV      R0,SP
+   \        0xC   0x.... 0x....      BL       memset
+   \       0x10   0x22B8             MOVS     R2,#+184
+   \       0x12   0x2100             MOVS     R1,#+0
+   \       0x14   0xA806             ADD      R0,SP,#+24
+   \       0x16   0x.... 0x....      BL       memset
+    426            GPIO_InitTypeDef GPIO_InitStruct = {0};
+    427            RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+    428            if(hospi->Instance==OCTOSPI1)
+   \       0x1A   0x6820             LDR      R0,[R4, #+0]
+   \       0x1C   0x....             LDR.N    R1,??DataTable12_13
+   \       0x1E   0x4288             CMP      R0,R1
+   \       0x20   0xF040 0x80E4      BNE.W    ??HAL_OSPI_MspInit_0
+    429            {
+    430            /* USER CODE BEGIN OCTOSPI1_MspInit 0 */
+    431          
+    432            /* USER CODE END OCTOSPI1_MspInit 0 */
+    433            /** Initializes the peripherals clock
+    434            */
+    435              PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_OSPI;
+   \       0x24   0xF05F 0x7000      MOVS     R0,#+33554432
+   \       0x28   0x9006             STR      R0,[SP, #+24]
+    436              PeriphClkInitStruct.PLL2.PLL2M = 24;
+   \       0x2A   0x2018             MOVS     R0,#+24
+   \       0x2C   0x9007             STR      R0,[SP, #+28]
+    437              PeriphClkInitStruct.PLL2.PLL2N = 266;
+   \       0x2E   0xF44F 0x7085      MOV      R0,#+266
+   \       0x32   0x9008             STR      R0,[SP, #+32]
+    438              PeriphClkInitStruct.PLL2.PLL2P = 2;
+   \       0x34   0x2002             MOVS     R0,#+2
+   \       0x36   0x9009             STR      R0,[SP, #+36]
+    439              PeriphClkInitStruct.PLL2.PLL2Q = 2;
+   \       0x38   0x2002             MOVS     R0,#+2
+   \       0x3A   0x900A             STR      R0,[SP, #+40]
+    440              PeriphClkInitStruct.PLL2.PLL2R = 2;
+   \       0x3C   0x2002             MOVS     R0,#+2
+   \       0x3E   0x900B             STR      R0,[SP, #+44]
+    441              PeriphClkInitStruct.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_0;
+   \       0x40   0x2000             MOVS     R0,#+0
+   \       0x42   0x900C             STR      R0,[SP, #+48]
+    442              PeriphClkInitStruct.PLL2.PLL2VCOSEL = RCC_PLL2VCOMEDIUM;
+   \       0x44   0x2020             MOVS     R0,#+32
+   \       0x46   0x900D             STR      R0,[SP, #+52]
+    443              PeriphClkInitStruct.PLL2.PLL2FRACN = 0;
+   \       0x48   0x2000             MOVS     R0,#+0
+   \       0x4A   0x900E             STR      R0,[SP, #+56]
+    444              PeriphClkInitStruct.OspiClockSelection = RCC_OSPICLKSOURCE_PLL2;
+   \       0x4C   0x2020             MOVS     R0,#+32
+   \       0x4E   0x9018             STR      R0,[SP, #+96]
+    445              if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+   \       0x50   0xA806             ADD      R0,SP,#+24
+   \       0x52   0x.... 0x....      BL       HAL_RCCEx_PeriphCLKConfig
+   \       0x56   0x2800             CMP      R0,#+0
+   \       0x58   0xD001             BEQ.N    ??HAL_OSPI_MspInit_1
+    446              {
+    447                Error_Handler();
+   \       0x5A   0x.... 0x....      BL       Error_Handler
+    448              }
+    449          
+    450              /* Peripheral clock enable */
+    451              __HAL_RCC_OCTOSPIM_CLK_ENABLE();
+   \                     ??HAL_OSPI_MspInit_1: (+1)
+   \       0x5E   0x....             LDR.N    R0,??DataTable12_4
+   \       0x60   0x6801             LDR      R1,[R0, #+0]
+   \       0x62   0xF451 0x1100      ORRS     R1,R1,#0x200000
+   \       0x66   0x6001             STR      R1,[R0, #+0]
+   \       0x68   0x6801             LDR      R1,[R0, #+0]
+   \       0x6A   0xF411 0x1100      ANDS     R1,R1,#0x200000
+   \       0x6E   0x9105             STR      R1,[SP, #+20]
+   \       0x70   0x9905             LDR      R1,[SP, #+20]
+    452              __HAL_RCC_OSPI1_CLK_ENABLE();
+   \       0x72   0x6801             LDR      R1,[R0, #+0]
+   \       0x74   0xF451 0x4180      ORRS     R1,R1,#0x4000
+   \       0x78   0x6001             STR      R1,[R0, #+0]
+   \       0x7A   0x6800             LDR      R0,[R0, #+0]
+   \       0x7C   0xF410 0x4080      ANDS     R0,R0,#0x4000
+   \       0x80   0x9005             STR      R0,[SP, #+20]
+   \       0x82   0x9805             LDR      R0,[SP, #+20]
+    453          
+    454              __HAL_RCC_GPIOG_CLK_ENABLE();
+   \       0x84   0x....             LDR.N    R0,??DataTable12_6
+   \       0x86   0x6801             LDR      R1,[R0, #+0]
+   \       0x88   0xF051 0x0140      ORRS     R1,R1,#0x40
+   \       0x8C   0x6001             STR      R1,[R0, #+0]
+   \       0x8E   0x6801             LDR      R1,[R0, #+0]
+   \       0x90   0xF011 0x0140      ANDS     R1,R1,#0x40
+   \       0x94   0x9105             STR      R1,[SP, #+20]
+   \       0x96   0x9905             LDR      R1,[SP, #+20]
+    455              __HAL_RCC_GPIOD_CLK_ENABLE();
+   \       0x98   0x6801             LDR      R1,[R0, #+0]
+   \       0x9A   0xF051 0x0108      ORRS     R1,R1,#0x8
+   \       0x9E   0x6001             STR      R1,[R0, #+0]
+   \       0xA0   0x6801             LDR      R1,[R0, #+0]
+   \       0xA2   0xF011 0x0108      ANDS     R1,R1,#0x8
+   \       0xA6   0x9105             STR      R1,[SP, #+20]
+   \       0xA8   0x9905             LDR      R1,[SP, #+20]
+    456              __HAL_RCC_GPIOF_CLK_ENABLE();
+   \       0xAA   0x6801             LDR      R1,[R0, #+0]
+   \       0xAC   0xF051 0x0120      ORRS     R1,R1,#0x20
+   \       0xB0   0x6001             STR      R1,[R0, #+0]
+   \       0xB2   0x6801             LDR      R1,[R0, #+0]
+   \       0xB4   0xF011 0x0120      ANDS     R1,R1,#0x20
+   \       0xB8   0x9105             STR      R1,[SP, #+20]
+   \       0xBA   0x9905             LDR      R1,[SP, #+20]
+    457              __HAL_RCC_GPIOC_CLK_ENABLE();
+   \       0xBC   0x6801             LDR      R1,[R0, #+0]
+   \       0xBE   0xF051 0x0104      ORRS     R1,R1,#0x4
+   \       0xC2   0x6001             STR      R1,[R0, #+0]
+   \       0xC4   0x6801             LDR      R1,[R0, #+0]
+   \       0xC6   0xF011 0x0104      ANDS     R1,R1,#0x4
+   \       0xCA   0x9105             STR      R1,[SP, #+20]
+   \       0xCC   0x9905             LDR      R1,[SP, #+20]
+    458              __HAL_RCC_GPIOH_CLK_ENABLE();
+   \       0xCE   0x6801             LDR      R1,[R0, #+0]
+   \       0xD0   0xF051 0x0180      ORRS     R1,R1,#0x80
+   \       0xD4   0x6001             STR      R1,[R0, #+0]
+   \       0xD6   0x6801             LDR      R1,[R0, #+0]
+   \       0xD8   0xF011 0x0180      ANDS     R1,R1,#0x80
+   \       0xDC   0x9105             STR      R1,[SP, #+20]
+   \       0xDE   0x9905             LDR      R1,[SP, #+20]
+    459              __HAL_RCC_GPIOB_CLK_ENABLE();
+   \       0xE0   0x6801             LDR      R1,[R0, #+0]
+   \       0xE2   0xF051 0x0102      ORRS     R1,R1,#0x2
+   \       0xE6   0x6001             STR      R1,[R0, #+0]
+   \       0xE8   0x6800             LDR      R0,[R0, #+0]
+   \       0xEA   0xF010 0x0002      ANDS     R0,R0,#0x2
+   \       0xEE   0x9005             STR      R0,[SP, #+20]
+   \       0xF0   0x9805             LDR      R0,[SP, #+20]
+    460              /**OCTOSPI1 GPIO Configuration
+    461              PG9     ------> OCTOSPIM_P1_IO6
+    462              PD7     ------> OCTOSPIM_P1_IO7
+    463              PG6     ------> OCTOSPIM_P1_NCS
+    464              PF6     ------> OCTOSPIM_P1_IO3
+    465              PF7     ------> OCTOSPIM_P1_IO2
+    466              PF9     ------> OCTOSPIM_P1_IO1
+    467              PD11     ------> OCTOSPIM_P1_IO0
+    468              PC1     ------> OCTOSPIM_P1_IO4
+    469              PH3     ------> OCTOSPIM_P1_IO5
+    470              PC5     ------> OCTOSPIM_P1_DQS
+    471              PB2     ------> OCTOSPIM_P1_CLK
+    472              */
+    473              GPIO_InitStruct.Pin = GPIO_PIN_9;
+   \       0xF2   0xF44F 0x7000      MOV      R0,#+512
+   \       0xF6   0x9000             STR      R0,[SP, #+0]
+    474              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \       0xF8   0x2002             MOVS     R0,#+2
+   \       0xFA   0x9001             STR      R0,[SP, #+4]
+    475              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \       0xFC   0x2000             MOVS     R0,#+0
+   \       0xFE   0x9002             STR      R0,[SP, #+8]
+    476              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+   \      0x100   0x2003             MOVS     R0,#+3
+   \      0x102   0x9003             STR      R0,[SP, #+12]
+    477              GPIO_InitStruct.Alternate = GPIO_AF9_OCTOSPIM_P1;
+   \      0x104   0x2009             MOVS     R0,#+9
+   \      0x106   0x9004             STR      R0,[SP, #+16]
+    478              HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+   \      0x108   0x....             LDR.N    R5,??DataTable12_14
+   \      0x10A   0x4669             MOV      R1,SP
+   \      0x10C   0x0028             MOVS     R0,R5
+   \      0x10E   0x.... 0x....      BL       HAL_GPIO_Init
+    479          
+    480              GPIO_InitStruct.Pin = GPIO_PIN_7;
+   \      0x112   0x2080             MOVS     R0,#+128
+   \      0x114   0x9000             STR      R0,[SP, #+0]
+    481              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \      0x116   0x2002             MOVS     R0,#+2
+   \      0x118   0x9001             STR      R0,[SP, #+4]
+    482              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \      0x11A   0x2000             MOVS     R0,#+0
+   \      0x11C   0x9002             STR      R0,[SP, #+8]
+    483              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+   \      0x11E   0x2003             MOVS     R0,#+3
+   \      0x120   0x9003             STR      R0,[SP, #+12]
+    484              GPIO_InitStruct.Alternate = GPIO_AF10_OCTOSPIM_P1;
+   \      0x122   0x200A             MOVS     R0,#+10
+   \      0x124   0x9004             STR      R0,[SP, #+16]
+    485              HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+   \      0x126   0x....             LDR.N    R4,??DataTable12_7
+   \      0x128   0x4669             MOV      R1,SP
+   \      0x12A   0x0020             MOVS     R0,R4
+   \      0x12C   0x.... 0x....      BL       HAL_GPIO_Init
+    486          
+    487              GPIO_InitStruct.Pin = GPIO_PIN_6;
+   \      0x130   0x2040             MOVS     R0,#+64
+   \      0x132   0x9000             STR      R0,[SP, #+0]
+    488              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \      0x134   0x2002             MOVS     R0,#+2
+   \      0x136   0x9001             STR      R0,[SP, #+4]
+    489              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \      0x138   0x2000             MOVS     R0,#+0
+   \      0x13A   0x9002             STR      R0,[SP, #+8]
+    490              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+   \      0x13C   0x2003             MOVS     R0,#+3
+   \      0x13E   0x9003             STR      R0,[SP, #+12]
+    491              GPIO_InitStruct.Alternate = GPIO_AF10_OCTOSPIM_P1;
+   \      0x140   0x200A             MOVS     R0,#+10
+   \      0x142   0x9004             STR      R0,[SP, #+16]
+    492              HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+   \      0x144   0x4669             MOV      R1,SP
+   \      0x146   0x0028             MOVS     R0,R5
+   \      0x148   0x.... 0x....      BL       HAL_GPIO_Init
+    493          
+    494              GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_9;
+   \      0x14C   0xF44F 0x7030      MOV      R0,#+704
+   \      0x150   0x9000             STR      R0,[SP, #+0]
+    495              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \      0x152   0x2002             MOVS     R0,#+2
+   \      0x154   0x9001             STR      R0,[SP, #+4]
+    496              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \      0x156   0x2000             MOVS     R0,#+0
+   \      0x158   0x9002             STR      R0,[SP, #+8]
+    497              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+   \      0x15A   0x2003             MOVS     R0,#+3
+   \      0x15C   0x9003             STR      R0,[SP, #+12]
+    498              GPIO_InitStruct.Alternate = GPIO_AF10_OCTOSPIM_P1;
+   \      0x15E   0x200A             MOVS     R0,#+10
+   \      0x160   0x9004             STR      R0,[SP, #+16]
+    499              HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+   \      0x162   0x4669             MOV      R1,SP
+   \      0x164   0x....             LDR.N    R0,??DataTable12_15
+   \      0x166   0x.... 0x....      BL       HAL_GPIO_Init
+    500          
+    501              GPIO_InitStruct.Pin = GPIO_PIN_11;
+   \      0x16A   0xF44F 0x6000      MOV      R0,#+2048
+   \      0x16E   0x9000             STR      R0,[SP, #+0]
+    502              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \      0x170   0x2002             MOVS     R0,#+2
+   \      0x172   0x9001             STR      R0,[SP, #+4]
+    503              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \      0x174   0x2000             MOVS     R0,#+0
+   \      0x176   0x9002             STR      R0,[SP, #+8]
+    504              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+   \      0x178   0x2003             MOVS     R0,#+3
+   \      0x17A   0x9003             STR      R0,[SP, #+12]
+    505              GPIO_InitStruct.Alternate = GPIO_AF9_OCTOSPIM_P1;
+   \      0x17C   0x2009             MOVS     R0,#+9
+   \      0x17E   0x9004             STR      R0,[SP, #+16]
+    506              HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+   \      0x180   0x4669             MOV      R1,SP
+   \      0x182   0x0020             MOVS     R0,R4
+   \      0x184   0x.... 0x....      BL       HAL_GPIO_Init
+    507          
+    508              GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_5;
+   \      0x188   0x2022             MOVS     R0,#+34
+   \      0x18A   0x9000             STR      R0,[SP, #+0]
+    509              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \      0x18C   0x2002             MOVS     R0,#+2
+   \      0x18E   0x9001             STR      R0,[SP, #+4]
+    510              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \      0x190   0x2000             MOVS     R0,#+0
+   \      0x192   0x9002             STR      R0,[SP, #+8]
+    511              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+   \      0x194   0x2003             MOVS     R0,#+3
+   \      0x196   0x9003             STR      R0,[SP, #+12]
+    512              GPIO_InitStruct.Alternate = GPIO_AF10_OCTOSPIM_P1;
+   \      0x198   0x200A             MOVS     R0,#+10
+   \      0x19A   0x9004             STR      R0,[SP, #+16]
+    513              HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+   \      0x19C   0x4669             MOV      R1,SP
+   \      0x19E   0x....             LDR.N    R0,??DataTable12_16
+   \      0x1A0   0x.... 0x....      BL       HAL_GPIO_Init
+    514          
+    515              GPIO_InitStruct.Pin = GPIO_PIN_3;
+   \      0x1A4   0x2008             MOVS     R0,#+8
+   \      0x1A6   0x9000             STR      R0,[SP, #+0]
+    516              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \      0x1A8   0x2002             MOVS     R0,#+2
+   \      0x1AA   0x9001             STR      R0,[SP, #+4]
+    517              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \      0x1AC   0x2000             MOVS     R0,#+0
+   \      0x1AE   0x9002             STR      R0,[SP, #+8]
+    518              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+   \      0x1B0   0x2003             MOVS     R0,#+3
+   \      0x1B2   0x9003             STR      R0,[SP, #+12]
+    519              GPIO_InitStruct.Alternate = GPIO_AF9_OCTOSPIM_P1;
+   \      0x1B4   0x2009             MOVS     R0,#+9
+   \      0x1B6   0x9004             STR      R0,[SP, #+16]
+    520              HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
+   \      0x1B8   0x4669             MOV      R1,SP
+   \      0x1BA   0x....             LDR.N    R0,??DataTable12_17
+   \      0x1BC   0x.... 0x....      BL       HAL_GPIO_Init
+    521          
+    522              GPIO_InitStruct.Pin = GPIO_PIN_2;
+   \      0x1C0   0x2004             MOVS     R0,#+4
+   \      0x1C2   0x9000             STR      R0,[SP, #+0]
+    523              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \      0x1C4   0x2002             MOVS     R0,#+2
+   \      0x1C6   0x9001             STR      R0,[SP, #+4]
+    524              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \      0x1C8   0x2000             MOVS     R0,#+0
+   \      0x1CA   0x9002             STR      R0,[SP, #+8]
+    525              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+   \      0x1CC   0x2003             MOVS     R0,#+3
+   \      0x1CE   0x9003             STR      R0,[SP, #+12]
+    526              GPIO_InitStruct.Alternate = GPIO_AF9_OCTOSPIM_P1;
+   \      0x1D0   0x2009             MOVS     R0,#+9
+   \      0x1D2   0x9004             STR      R0,[SP, #+16]
+    527              HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+   \      0x1D4   0x4669             MOV      R1,SP
+   \      0x1D6   0x....             LDR.N    R0,??DataTable12_18
+   \      0x1D8   0x.... 0x....      BL       HAL_GPIO_Init
+    528          
+    529              /* OCTOSPI1 interrupt Init */
+    530              HAL_NVIC_SetPriority(OCTOSPI1_IRQn, 5, 0);
+   \      0x1DC   0x2200             MOVS     R2,#+0
+   \      0x1DE   0x2105             MOVS     R1,#+5
+   \      0x1E0   0x205C             MOVS     R0,#+92
+   \      0x1E2   0x.... 0x....      BL       HAL_NVIC_SetPriority
+    531              HAL_NVIC_EnableIRQ(OCTOSPI1_IRQn);
+   \      0x1E6   0x205C             MOVS     R0,#+92
+   \      0x1E8   0x.... 0x....      BL       HAL_NVIC_EnableIRQ
+    532            /* USER CODE BEGIN OCTOSPI1_MspInit 1 */
+    533          
+    534            /* USER CODE END OCTOSPI1_MspInit 1 */
+    535            }
+    536          
+    537          }
+   \                     ??HAL_OSPI_MspInit_0: (+1)
+   \      0x1EC   0xB035             ADD      SP,SP,#+212
+   \      0x1EE   0xBD30             POP      {R4,R5,PC}
+    538          
+    539          /**
+    540          * @brief OSPI MSP De-Initialization
+    541          * This function freeze the hardware resources used in this example
+    542          * @param hospi: OSPI handle pointer
+    543          * @retval None
+    544          */
+
+   \                                 In section .text, align 2, keep-with-next
+    545          void HAL_OSPI_MspDeInit(OSPI_HandleTypeDef* hospi)
+    546          {
+   \                     HAL_OSPI_MspDeInit: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    547            if(hospi->Instance==OCTOSPI1)
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x....             LDR.N    R1,??DataTable12_13
+   \        0x6   0x4288             CMP      R0,R1
+   \        0x8   0xD126             BNE.N    ??HAL_OSPI_MspDeInit_0
+    548            {
+    549            /* USER CODE BEGIN OCTOSPI1_MspDeInit 0 */
+    550          
+    551            /* USER CODE END OCTOSPI1_MspDeInit 0 */
+    552              /* Peripheral clock disable */
+    553              __HAL_RCC_OCTOSPIM_CLK_DISABLE();
+   \        0xA   0x....             LDR.N    R0,??DataTable12_4
+   \        0xC   0x6801             LDR      R1,[R0, #+0]
+   \        0xE   0xF431 0x1100      BICS     R1,R1,#0x200000
+   \       0x12   0x6001             STR      R1,[R0, #+0]
+    554              __HAL_RCC_OSPI1_CLK_DISABLE();
+   \       0x14   0x6801             LDR      R1,[R0, #+0]
+   \       0x16   0xF431 0x4180      BICS     R1,R1,#0x4000
+   \       0x1A   0x6001             STR      R1,[R0, #+0]
+    555          
+    556              /**OCTOSPI1 GPIO Configuration
+    557              PG9     ------> OCTOSPIM_P1_IO6
+    558              PD7     ------> OCTOSPIM_P1_IO7
+    559              PG6     ------> OCTOSPIM_P1_NCS
+    560              PF6     ------> OCTOSPIM_P1_IO3
+    561              PF7     ------> OCTOSPIM_P1_IO2
+    562              PF9     ------> OCTOSPIM_P1_IO1
+    563              PD11     ------> OCTOSPIM_P1_IO0
+    564              PC1     ------> OCTOSPIM_P1_IO4
+    565              PH3     ------> OCTOSPIM_P1_IO5
+    566              PC5     ------> OCTOSPIM_P1_DQS
+    567              PB2     ------> OCTOSPIM_P1_CLK
+    568              */
+    569              HAL_GPIO_DeInit(GPIOG, GPIO_PIN_9|GPIO_PIN_6);
+   \       0x1C   0xF44F 0x7110      MOV      R1,#+576
+   \       0x20   0x....             LDR.N    R0,??DataTable12_14
+   \       0x22   0x.... 0x....      BL       HAL_GPIO_DeInit
+    570          
+    571              HAL_GPIO_DeInit(GPIOD, GPIO_PIN_7|GPIO_PIN_11);
+   \       0x26   0xF44F 0x6108      MOV      R1,#+2176
+   \       0x2A   0x....             LDR.N    R0,??DataTable12_7
+   \       0x2C   0x.... 0x....      BL       HAL_GPIO_DeInit
+    572          
+    573              HAL_GPIO_DeInit(GPIOF, GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_9);
+   \       0x30   0xF44F 0x7130      MOV      R1,#+704
+   \       0x34   0x....             LDR.N    R0,??DataTable12_15
+   \       0x36   0x.... 0x....      BL       HAL_GPIO_DeInit
+    574          
+    575              HAL_GPIO_DeInit(GPIOC, GPIO_PIN_1|GPIO_PIN_5);
+   \       0x3A   0x2122             MOVS     R1,#+34
+   \       0x3C   0x....             LDR.N    R0,??DataTable12_16
+   \       0x3E   0x.... 0x....      BL       HAL_GPIO_DeInit
+    576          
+    577              HAL_GPIO_DeInit(GPIOH, GPIO_PIN_3);
+   \       0x42   0x2108             MOVS     R1,#+8
+   \       0x44   0x....             LDR.N    R0,??DataTable12_17
+   \       0x46   0x.... 0x....      BL       HAL_GPIO_DeInit
+    578          
+    579              HAL_GPIO_DeInit(GPIOB, GPIO_PIN_2);
+   \       0x4A   0x2104             MOVS     R1,#+4
+   \       0x4C   0x....             LDR.N    R0,??DataTable12_18
+   \       0x4E   0x.... 0x....      BL       HAL_GPIO_DeInit
+    580          
+    581              /* OCTOSPI1 interrupt DeInit */
+    582              HAL_NVIC_DisableIRQ(OCTOSPI1_IRQn);
+   \       0x52   0x205C             MOVS     R0,#+92
+   \       0x54   0x.... 0x....      BL       HAL_NVIC_DisableIRQ
+    583            /* USER CODE BEGIN OCTOSPI1_MspDeInit 1 */
+    584          
+    585            /* USER CODE END OCTOSPI1_MspDeInit 1 */
+    586            }
+    587          
+    588          }
+   \                     ??HAL_OSPI_MspDeInit_0: (+1)
+   \       0x58   0xBD01             POP      {R0,PC}
+    589          
+    590          /**
+    591          * @brief UART MSP Initialization
+    592          * This function configures the hardware resources used in this example
+    593          * @param huart: UART handle pointer
+    594          * @retval None
+    595          */
+
+   \                                 In section .text, align 2, keep-with-next
+    596          void HAL_UART_MspInit(UART_HandleTypeDef* huart)
+    597          {
+   \                     HAL_UART_MspInit: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0xB0B4             SUB      SP,SP,#+208
+   \        0x4   0x0004             MOVS     R4,R0
+   \        0x6   0x2214             MOVS     R2,#+20
+   \        0x8   0x2100             MOVS     R1,#+0
+   \        0xA   0xA801             ADD      R0,SP,#+4
+   \        0xC   0x.... 0x....      BL       memset
+   \       0x10   0x22B8             MOVS     R2,#+184
+   \       0x12   0x2100             MOVS     R1,#+0
+   \       0x14   0xA806             ADD      R0,SP,#+24
+   \       0x16   0x.... 0x....      BL       memset
+    598            GPIO_InitTypeDef GPIO_InitStruct = {0};
+    599            RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+    600            if(huart->Instance==USART1)
+   \       0x1A   0x6820             LDR      R0,[R4, #+0]
+   \       0x1C   0x....             LDR.N    R1,??DataTable12_19
+   \       0x1E   0x4288             CMP      R0,R1
+   \       0x20   0xD12D             BNE.N    ??HAL_UART_MspInit_0
+    601            {
+    602            /* USER CODE BEGIN USART1_MspInit 0 */
+    603          
+    604            /* USER CODE END USART1_MspInit 0 */
+    605            /** Initializes the peripherals clock
+    606            */
+    607              PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_USART1;
+   \       0x22   0x2001             MOVS     R0,#+1
+   \       0x24   0x9006             STR      R0,[SP, #+24]
+    608              PeriphClkInitStruct.Usart16ClockSelection = RCC_USART16910CLKSOURCE_D2PCLK2;
+   \       0x26   0x2000             MOVS     R0,#+0
+   \       0x28   0x9026             STR      R0,[SP, #+152]
+    609              if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+   \       0x2A   0xA806             ADD      R0,SP,#+24
+   \       0x2C   0x.... 0x....      BL       HAL_RCCEx_PeriphCLKConfig
+   \       0x30   0x2800             CMP      R0,#+0
+   \       0x32   0xD001             BEQ.N    ??HAL_UART_MspInit_1
+    610              {
+    611                Error_Handler();
+   \       0x34   0x.... 0x....      BL       Error_Handler
+    612              }
+    613          
+    614              /* Peripheral clock enable */
+    615              __HAL_RCC_USART1_CLK_ENABLE();
+   \                     ??HAL_UART_MspInit_1: (+1)
+   \       0x38   0x....             LDR.N    R0,??DataTable12_20
+   \       0x3A   0x6801             LDR      R1,[R0, #+0]
+   \       0x3C   0xF051 0x0110      ORRS     R1,R1,#0x10
+   \       0x40   0x6001             STR      R1,[R0, #+0]
+   \       0x42   0x6800             LDR      R0,[R0, #+0]
+   \       0x44   0xF010 0x0010      ANDS     R0,R0,#0x10
+   \       0x48   0x9000             STR      R0,[SP, #+0]
+   \       0x4A   0x9800             LDR      R0,[SP, #+0]
+    616          
+    617              __HAL_RCC_GPIOA_CLK_ENABLE();
+   \       0x4C   0x....             LDR.N    R0,??DataTable12_6
+   \       0x4E   0x6801             LDR      R1,[R0, #+0]
+   \       0x50   0xF051 0x0101      ORRS     R1,R1,#0x1
+   \       0x54   0x6001             STR      R1,[R0, #+0]
+   \       0x56   0x6800             LDR      R0,[R0, #+0]
+   \       0x58   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \       0x5C   0x9000             STR      R0,[SP, #+0]
+   \       0x5E   0x9800             LDR      R0,[SP, #+0]
+    618              /**USART1 GPIO Configuration
+    619              PA10     ------> USART1_RX
+    620              PA9     ------> USART1_TX
+    621              */
+    622              GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_9;
+   \       0x60   0xF44F 0x60C0      MOV      R0,#+1536
+   \       0x64   0x9001             STR      R0,[SP, #+4]
+    623              GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+   \       0x66   0x2002             MOVS     R0,#+2
+   \       0x68   0x9002             STR      R0,[SP, #+8]
+    624              GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \       0x6A   0x2000             MOVS     R0,#+0
+   \       0x6C   0x9003             STR      R0,[SP, #+12]
+    625              GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+   \       0x6E   0x2000             MOVS     R0,#+0
+   \       0x70   0x9004             STR      R0,[SP, #+16]
+    626              GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
+   \       0x72   0x2007             MOVS     R0,#+7
+   \       0x74   0x9005             STR      R0,[SP, #+20]
+    627              HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+   \       0x76   0xA901             ADD      R1,SP,#+4
+   \       0x78   0x....             LDR.N    R0,??DataTable12_21
+   \       0x7A   0x.... 0x....      BL       HAL_GPIO_Init
+    628          
+    629            /* USER CODE BEGIN USART1_MspInit 1 */
+    630          
+    631            /* USER CODE END USART1_MspInit 1 */
+    632            }
+    633          
+    634          }
+   \                     ??HAL_UART_MspInit_0: (+1)
+   \       0x7E   0xB034             ADD      SP,SP,#+208
+   \       0x80   0xBD10             POP      {R4,PC}
+    635          
+    636          /**
+    637          * @brief UART MSP De-Initialization
+    638          * This function freeze the hardware resources used in this example
+    639          * @param huart: UART handle pointer
+    640          * @retval None
+    641          */
+
+   \                                 In section .text, align 2, keep-with-next
+    642          void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
+    643          {
+   \                     HAL_UART_MspDeInit: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    644            if(huart->Instance==USART1)
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x....             LDR.N    R1,??DataTable12_19
+   \        0x6   0x4288             CMP      R0,R1
+   \        0x8   0xD109             BNE.N    ??HAL_UART_MspDeInit_0
+    645            {
+    646            /* USER CODE BEGIN USART1_MspDeInit 0 */
+    647          
+    648            /* USER CODE END USART1_MspDeInit 0 */
+    649              /* Peripheral clock disable */
+    650              __HAL_RCC_USART1_CLK_DISABLE();
+   \        0xA   0x....             LDR.N    R0,??DataTable12_20
+   \        0xC   0x6801             LDR      R1,[R0, #+0]
+   \        0xE   0xF031 0x0110      BICS     R1,R1,#0x10
+   \       0x12   0x6001             STR      R1,[R0, #+0]
+    651          
+    652              /**USART1 GPIO Configuration
+    653              PA10     ------> USART1_RX
+    654              PA9     ------> USART1_TX
+    655              */
+    656              HAL_GPIO_DeInit(GPIOA, GPIO_PIN_10|GPIO_PIN_9);
+   \       0x14   0xF44F 0x61C0      MOV      R1,#+1536
+   \       0x18   0x....             LDR.N    R0,??DataTable12_21
+   \       0x1A   0x.... 0x....      BL       HAL_GPIO_DeInit
+    657          
+    658            /* USER CODE BEGIN USART1_MspDeInit 1 */
+    659          
+    660            /* USER CODE END USART1_MspDeInit 1 */
+    661            }
+    662          
+    663          }
+   \                     ??HAL_UART_MspDeInit_0: (+1)
+   \       0x1E   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12:
+   \        0x0   0x5802'4554        DC32     0x58024554
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_1:
+   \        0x0   0x4002'3000        DC32     0x40023000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_2:
+   \        0x0   0x5802'4538        DC32     0x58024538
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_3:
+   \        0x0   0x5200'1000        DC32     0x52001000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_4:
+   \        0x0   0x5802'4534        DC32     0x58024534
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_5:
+   \        0x0   0x5800'1C00        DC32     0x58001c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_6:
+   \        0x0   0x5802'4540        DC32     0x58024540
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_7:
+   \        0x0   0x5802'0C00        DC32     0x58020c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_8:
+   \        0x0   0x5000'1000        DC32     0x50001000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_9:
+   \        0x0   0x5802'4544        DC32     0x58024544
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_10:
+   \        0x0   0x5802'2800        DC32     0x58022800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_11:
+   \        0x0   0x5802'2400        DC32     0x58022400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_12:
+   \        0x0   0x5802'2000        DC32     0x58022000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_13:
+   \        0x0   0x5200'5000        DC32     0x52005000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_14:
+   \        0x0   0x5802'1800        DC32     0x58021800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_15:
+   \        0x0   0x5802'1400        DC32     0x58021400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_16:
+   \        0x0   0x5802'0800        DC32     0x58020800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_17:
+   \        0x0   0x5802'1C00        DC32     0x58021c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_18:
+   \        0x0   0x5802'0400        DC32     0x58020400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_19:
+   \        0x0   0x4001'1000        DC32     0x40011000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_20:
+   \        0x0   0x5802'4550        DC32     0x58024550
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_21:
+   \        0x0   0x5802'0000        DC32     0x58020000
+    664          
+    665          /* USER CODE BEGIN 1 */
+    666          
+    667          /* USER CODE END 1 */
+    668          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   HAL_CRC_MspDeInit
+       4   HAL_CRC_MspInit
+       8   HAL_DMA2D_MspDeInit
+         8   -> HAL_NVIC_DisableIRQ
+       8   HAL_DMA2D_MspInit
+         8   -> HAL_NVIC_EnableIRQ
+         8   -> HAL_NVIC_SetPriority
+       8   HAL_I2C_MspDeInit
+         8   -> HAL_GPIO_DeInit
+     216   HAL_I2C_MspInit
+       216   -> Error_Handler
+       216   -> HAL_GPIO_Init
+       216   -> HAL_RCCEx_PeriphCLKConfig
+       216   -> memset
+       8   HAL_LTDC_MspDeInit
+         8   -> HAL_GPIO_DeInit
+         8   -> HAL_NVIC_DisableIRQ
+     216   HAL_LTDC_MspInit
+       216   -> Error_Handler
+       216   -> HAL_GPIO_Init
+       216   -> HAL_NVIC_EnableIRQ
+       216   -> HAL_NVIC_SetPriority
+       216   -> HAL_RCCEx_PeriphCLKConfig
+       216   -> memset
+       8   HAL_MspInit
+         8   -> HAL_NVIC_SetPriority
+       8   HAL_OSPI_MspDeInit
+         8   -> HAL_GPIO_DeInit
+         8   -> HAL_NVIC_DisableIRQ
+     224   HAL_OSPI_MspInit
+       224   -> Error_Handler
+       224   -> HAL_GPIO_Init
+       224   -> HAL_NVIC_EnableIRQ
+       224   -> HAL_NVIC_SetPriority
+       224   -> HAL_RCCEx_PeriphCLKConfig
+       224   -> memset
+       8   HAL_UART_MspDeInit
+         8   -> HAL_GPIO_DeInit
+     216   HAL_UART_MspInit
+       216   -> Error_Handler
+       216   -> HAL_GPIO_Init
+       216   -> HAL_RCCEx_PeriphCLKConfig
+       216   -> memset
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable12
+       4  ??DataTable12_1
+       4  ??DataTable12_10
+       4  ??DataTable12_11
+       4  ??DataTable12_12
+       4  ??DataTable12_13
+       4  ??DataTable12_14
+       4  ??DataTable12_15
+       4  ??DataTable12_16
+       4  ??DataTable12_17
+       4  ??DataTable12_18
+       4  ??DataTable12_19
+       4  ??DataTable12_2
+       4  ??DataTable12_20
+       4  ??DataTable12_21
+       4  ??DataTable12_3
+       4  ??DataTable12_4
+       4  ??DataTable12_5
+       4  ??DataTable12_6
+       4  ??DataTable12_7
+       4  ??DataTable12_8
+       4  ??DataTable12_9
+      24  HAL_CRC_MspDeInit
+      38  HAL_CRC_MspInit
+      32  HAL_DMA2D_MspDeInit
+      52  HAL_DMA2D_MspInit
+      50  HAL_I2C_MspDeInit
+     138  HAL_I2C_MspInit
+      56  HAL_LTDC_MspDeInit
+     282  HAL_LTDC_MspInit
+      38  HAL_MspInit
+      90  HAL_OSPI_MspDeInit
+     496  HAL_OSPI_MspInit
+      32  HAL_UART_MspDeInit
+     130  HAL_UART_MspInit
+
+ 
+ 1'546 bytes in section .text
+ 
+ 1'546 bytes of CODE memory
+
+Errors: none
+Warnings: none
