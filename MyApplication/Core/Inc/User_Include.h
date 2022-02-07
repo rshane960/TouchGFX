@@ -12,7 +12,6 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include <malloc.h>
 
 #include "main.h"
 #include "cmsis_os.h"

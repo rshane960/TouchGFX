@@ -1448,6 +1448,12 @@
                     <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_it.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\User_Button.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\User_Timer.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\User_Usart.c</name>
                 </file>
             </group>

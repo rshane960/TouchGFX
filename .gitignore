@@ -9,3 +9,5 @@ MyApplication/sourceInsight.si4project/cache/parse/Core_Inc_FreeRTOSConfig.h.sis
 *.sisc
 MyApplication/sourceInsight.si4project/sourceInsight.SearchResults
 *.sip_xsb
+*.pbi
+*.pbd

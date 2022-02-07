@@ -1,6 +1,6 @@
 ﻿###############################################################################
 #
-# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         05/Feb/2022  17:09:45
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         07/Feb/2022  20:39:54
 # Copyright 1999-2021 IAR Systems AB.
 #
 #    Cpu mode                     =  thumb
@@ -72,7 +72,6 @@
 #      __dlib_file_descriptor     =  1
 #      __dlib_full_locale_support =  1
 #      __dlib_version             =  6
-#      __iar_require _Printf         
 #
 ###############################################################################
 
@@ -217,19 +216,10 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
      72            .priority = (osPriority_t) osPriorityNormal,
      73          };
      74          /* Definitions for testTimer */
-
-   \                                 In section .bss, align 4
-     75          osTimerId_t testTimerHandle;
-   \                     testTimerHandle:
-   \        0x0                      DS8 4
-
-   \                                 In section .rodata, align 4
-     76          const osTimerAttr_t testTimer_attributes = {
-   \                     testTimer_attributes:
-   \        0x0   0x....'....        DC32 ?_2
-   \        0x4                      DS8 12
-     77            .name = "testTimer"
-     78          };
+     75          //osTimerId_t testTimerHandle;
+     76          //const osTimerAttr_t testTimer_attributes = {
+     77          //  .name = "testTimer"
+     78          //};
      79          /* USER CODE BEGIN PV */
      80          
      81          /* USER CODE END PV */
@@ -386,14 +376,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     164          
     165            /* Create the timer(s) */
     166            /* creation of testTimer */
-    167            testTimerHandle = osTimerNew(testTmrCallback, osTimerPeriodic, NULL, &testTimer_attributes);
-   \       0xBA   0x.... 0x....      LDR.W    R3,??DataTable11_5
-   \       0xBE   0x2200             MOVS     R2,#+0
-   \       0xC0   0x2101             MOVS     R1,#+1
-   \       0xC2   0x.... 0x....      ADR.W    R0,testTmrCallback
-   \       0xC6   0x.... 0x....      BL       osTimerNew
-   \       0xCA   0x.... 0x....      LDR.W    R1,??DataTable11_6
-   \       0xCE   0x6008             STR      R0,[R1, #+0]
+    167          //  testTimerHandle = osTimerNew(testTmrCallback, osTimerPeriodic, NULL, &testTimer_attributes);
     168          
     169            /* USER CODE BEGIN RTOS_TIMERS */
     170            /* start timers, add new ones, ... */
@@ -406,21 +389,21 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     177            /* Create the thread(s) */
     178            /* creation of defaultTask */
     179            defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
-   \       0xD0   0x.... 0x....      LDR.W    R2,??DataTable11_7
-   \       0xD4   0x2100             MOVS     R1,#+0
-   \       0xD6   0x.... 0x....      ADR.W    R0,StartDefaultTask
-   \       0xDA   0x.... 0x....      BL       osThreadNew
-   \       0xDE   0x.... 0x....      LDR.W    R1,??DataTable11_8
-   \       0xE2   0x6008             STR      R0,[R1, #+0]
+   \       0xBA   0x.... 0x....      LDR.W    R2,??DataTable11_5
+   \       0xBE   0x2100             MOVS     R1,#+0
+   \       0xC0   0x.... 0x....      ADR.W    R0,StartDefaultTask
+   \       0xC4   0x.... 0x....      BL       osThreadNew
+   \       0xC8   0x.... 0x....      LDR.W    R1,??DataTable11_6
+   \       0xCC   0x6008             STR      R0,[R1, #+0]
     180          
     181            /* creation of GUI_Task */
     182            GUI_TaskHandle = osThreadNew(TouchGFX_Task, NULL, &GUI_Task_attributes);
-   \       0xE4   0x.... 0x....      LDR.W    R2,??DataTable11_9
-   \       0xE8   0x2100             MOVS     R1,#+0
-   \       0xEA   0x.... 0x....      LDR.W    R0,??DataTable11_10
-   \       0xEE   0x.... 0x....      BL       osThreadNew
-   \       0xF2   0x.... 0x....      LDR.W    R1,??DataTable11_11
-   \       0xF6   0x6008             STR      R0,[R1, #+0]
+   \       0xCE   0x.... 0x....      LDR.W    R2,??DataTable11_7
+   \       0xD2   0x2100             MOVS     R1,#+0
+   \       0xD4   0x.... 0x....      LDR.W    R0,??DataTable11_8
+   \       0xD8   0x.... 0x....      BL       osThreadNew
+   \       0xDC   0x.... 0x....      LDR.W    R1,??DataTable11_9
+   \       0xE0   0x6008             STR      R0,[R1, #+0]
     183          
     184            /* USER CODE BEGIN RTOS_THREADS */
     185            /* add threads, ... */
@@ -432,7 +415,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     191          
     192            /* Start scheduler */
     193            osKernelStart();
-   \       0xF8   0x.... 0x....      BL       osKernelStart
+   \       0xE2   0x.... 0x....      BL       osKernelStart
     194          
     195            /* We should never get here as control is now taken by the scheduler */
     196            /* Infinite loop */
@@ -440,7 +423,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     198          
     199            while (1)
    \                     ??main_6: (+1)
-   \       0xFC   0xE7FE             B.N      ??main_6
+   \       0xE6   0xE7FE             B.N      ??main_6
     200            {
     201              /* USER CODE END WHILE */
     202          
@@ -483,7 +466,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     222            __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
    \       0x22   0x2000             MOVS     R0,#+0
    \       0x24   0x9000             STR      R0,[SP, #+0]
-   \       0x26   0x.... 0x....      LDR.W    R0,??DataTable11_12
+   \       0x26   0x.... 0x....      LDR.W    R0,??DataTable11_10
    \       0x2A   0x6801             LDR      R1,[R0, #+0]
    \       0x2C   0xF451 0x4140      ORRS     R1,R1,#0xC000
    \       0x30   0x6001             STR      R1,[R0, #+0]
@@ -500,7 +483,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     225            /** Macro to configure the PLL clock source
     226            */
     227            __HAL_RCC_PLL_PLLSOURCE_CONFIG(RCC_PLLSOURCE_HSE);
-   \       0x42   0x.... 0x....      LDR.W    R0,??DataTable11_13
+   \       0x42   0x.... 0x....      LDR.W    R0,??DataTable11_11
    \       0x46   0x2102             MOVS     R1,#+2
    \       0x48   0x6802             LDR      R2,[R0, #+0]
    \       0x4A   0xF361 0x0201      BFI      R2,R1,#+0,#+2
@@ -618,8 +601,8 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     279          
     280            /* USER CODE END CRC_Init 1 */
     281            hcrc.Instance = CRC;
-   \        0x2   0x.... 0x....      LDR.W    R0,??DataTable11_14
-   \        0x6   0x.... 0x....      LDR.W    R1,??DataTable11_15
+   \        0x2   0x.... 0x....      LDR.W    R0,??DataTable11_12
+   \        0x6   0x.... 0x....      LDR.W    R1,??DataTable11_13
    \        0xA   0x6001             STR      R1,[R0, #+0]
     282            hcrc.Init.DefaultPolynomialUse = DEFAULT_POLYNOMIAL_ENABLE;
    \        0xC   0x2100             MOVS     R1,#+0
@@ -672,8 +655,8 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     310          
     311            /* USER CODE END DMA2D_Init 1 */
     312            hdma2d.Instance = DMA2D;
-   \        0x2   0x.... 0x....      LDR.W    R4,??DataTable11_16
-   \        0x6   0x.... 0x....      LDR.W    R0,??DataTable11_17
+   \        0x2   0x.... 0x....      LDR.W    R4,??DataTable11_14
+   \        0x6   0x.... 0x....      LDR.W    R0,??DataTable11_15
    \        0xA   0x6020             STR      R0,[R4, #+0]
     313            hdma2d.Init.Mode = DMA2D_M2M;
    \        0xC   0x2000             MOVS     R0,#+0
@@ -753,11 +736,11 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     350          
     351            /* USER CODE END I2C4_Init 1 */
     352            hi2c4.Instance = I2C4;
-   \        0x2   0x.... 0x....      LDR.W    R4,??DataTable11_18
-   \        0x6   0x.... 0x....      LDR.W    R0,??DataTable11_19
+   \        0x2   0x.... 0x....      LDR.W    R4,??DataTable11_16
+   \        0x6   0x.... 0x....      LDR.W    R0,??DataTable11_17
    \        0xA   0x6020             STR      R0,[R4, #+0]
     353            hi2c4.Init.Timing = 0x30808BD0;
-   \        0xC   0x.... 0x....      LDR.W    R0,??DataTable11_20
+   \        0xC   0x.... 0x....      LDR.W    R0,??DataTable11_18
    \       0x10   0x6060             STR      R0,[R4, #+4]
     354            hi2c4.Init.OwnAddress1 = 0;
    \       0x12   0x2000             MOVS     R0,#+0
@@ -851,8 +834,8 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     398          
     399            /* USER CODE END LTDC_Init 1 */
     400            hltdc.Instance = LTDC;
-   \       0x10   0x.... 0x....      LDR.W    R4,??DataTable11_21
-   \       0x14   0x.... 0x....      LDR.W    R0,??DataTable11_22
+   \       0x10   0x.... 0x....      LDR.W    R4,??DataTable11_19
+   \       0x14   0x.... 0x....      LDR.W    R0,??DataTable11_20
    \       0x18   0x6020             STR      R0,[R4, #+0]
     401            hltdc.Init.HSPolarity = LTDC_HSPOLARITY_AL;
    \       0x1A   0x2000             MOVS     R0,#+0
@@ -1000,8 +983,8 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     461            /* USER CODE END OCTOSPI1_Init 1 */
     462            /* OCTOSPI1 parameter configuration*/
     463            hospi1.Instance = OCTOSPI1;
-   \       0x10   0x.... 0x....      LDR.W    R4,??DataTable11_23
-   \       0x14   0x.... 0x....      LDR.W    R0,??DataTable11_24
+   \       0x10   0x.... 0x....      LDR.W    R4,??DataTable11_21
+   \       0x14   0x.... 0x....      LDR.W    R0,??DataTable11_22
    \       0x18   0x6020             STR      R0,[R4, #+0]
     464            hospi1.Init.FifoThreshold = 1;
    \       0x1A   0x2001             MOVS     R0,#+1
@@ -1074,7 +1057,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
    \       0x74   0xF05F 0x1001      MOVS     R0,#+65537
    \       0x78   0x9004             STR      R0,[SP, #+16]
     488            sOspiManagerCfg.IOHighPort = HAL_OSPIM_IOPORT_1_HIGH;
-   \       0x7A   0x.... 0x....      LDR.W    R0,??DataTable11_25
+   \       0x7A   0x.... 0x....      LDR.W    R0,??DataTable11_23
    \       0x7E   0x9005             STR      R0,[SP, #+20]
     489            if (HAL_OSPIM_Config(&hospi1, &sOspiManagerCfg, HAL_OSPI_TIMEOUT_DEFAULT_VALUE) != HAL_OK)
    \       0x80   0xF241 0x3288      MOVW     R2,#+5000
@@ -1148,8 +1131,8 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     525          
     526            /* USER CODE END USART1_Init 1 */
     527            huart1.Instance = USART1;
-   \        0x2   0x....             LDR.N    R4,??DataTable11_26
-   \        0x4   0x....             LDR.N    R0,??DataTable11_27
+   \        0x2   0x....             LDR.N    R4,??DataTable11_24
+   \        0x4   0x....             LDR.N    R0,??DataTable11_25
    \        0x6   0x6020             STR      R0,[R4, #+0]
     528            huart1.Init.BaudRate = 115200;
    \        0x8   0xF45F 0x30E1      MOVS     R0,#+115200
@@ -1251,7 +1234,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     568          
     569            /* GPIO Ports Clock Enable */
     570            __HAL_RCC_GPIOK_CLK_ENABLE();
-   \       0x12   0x....             LDR.N    R0,??DataTable11_28
+   \       0x12   0x....             LDR.N    R0,??DataTable11_26
    \       0x14   0x6801             LDR      R1,[R0, #+0]
    \       0x16   0xF451 0x6180      ORRS     R1,R1,#0x400
    \       0x1A   0x6001             STR      R1,[R0, #+0]
@@ -1299,28 +1282,28 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
    \       0x78   0xF011 0x0101      ANDS     R1,R1,#0x1
    \       0x7C   0x9105             STR      R1,[SP, #+20]
    \       0x7E   0x9905             LDR      R1,[SP, #+20]
-    576            __HAL_RCC_GPIOF_CLK_ENABLE();
+    576            __HAL_RCC_GPIOC_CLK_ENABLE();
    \       0x80   0x6801             LDR      R1,[R0, #+0]
-   \       0x82   0xF051 0x0120      ORRS     R1,R1,#0x20
+   \       0x82   0xF051 0x0104      ORRS     R1,R1,#0x4
    \       0x86   0x6001             STR      R1,[R0, #+0]
    \       0x88   0x6801             LDR      R1,[R0, #+0]
-   \       0x8A   0xF011 0x0120      ANDS     R1,R1,#0x20
+   \       0x8A   0xF011 0x0104      ANDS     R1,R1,#0x4
    \       0x8E   0x9105             STR      R1,[SP, #+20]
    \       0x90   0x9905             LDR      R1,[SP, #+20]
-    577            __HAL_RCC_GPIOH_CLK_ENABLE();
+    577            __HAL_RCC_GPIOF_CLK_ENABLE();
    \       0x92   0x6801             LDR      R1,[R0, #+0]
-   \       0x94   0xF051 0x0180      ORRS     R1,R1,#0x80
+   \       0x94   0xF051 0x0120      ORRS     R1,R1,#0x20
    \       0x98   0x6001             STR      R1,[R0, #+0]
    \       0x9A   0x6801             LDR      R1,[R0, #+0]
-   \       0x9C   0xF011 0x0180      ANDS     R1,R1,#0x80
+   \       0x9C   0xF011 0x0120      ANDS     R1,R1,#0x20
    \       0xA0   0x9105             STR      R1,[SP, #+20]
    \       0xA2   0x9905             LDR      R1,[SP, #+20]
-    578            __HAL_RCC_GPIOC_CLK_ENABLE();
+    578            __HAL_RCC_GPIOH_CLK_ENABLE();
    \       0xA4   0x6801             LDR      R1,[R0, #+0]
-   \       0xA6   0xF051 0x0104      ORRS     R1,R1,#0x4
+   \       0xA6   0xF051 0x0180      ORRS     R1,R1,#0x80
    \       0xAA   0x6001             STR      R1,[R0, #+0]
    \       0xAC   0x6801             LDR      R1,[R0, #+0]
-   \       0xAE   0xF011 0x0104      ANDS     R1,R1,#0x4
+   \       0xAE   0xF011 0x0180      ANDS     R1,R1,#0x80
    \       0xB2   0x9105             STR      R1,[SP, #+20]
    \       0xB4   0x9905             LDR      R1,[SP, #+20]
     579            __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -1335,7 +1318,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     581            /*Configure GPIO pin Output Level */
     582            HAL_GPIO_WritePin(GPIOG, LED3_Pin|LED2_Pin, GPIO_PIN_RESET);
    \       0xC8   0xF640 0x0804      MOVW     R8,#+2052
-   \       0xCC   0x....             LDR.N    R7,??DataTable11_29
+   \       0xCC   0x....             LDR.N    R7,??DataTable11_27
    \       0xCE   0x2200             MOVS     R2,#+0
    \       0xD0   0x4641             MOV      R1,R8
    \       0xD2   0x0038             MOVS     R0,R7
@@ -1343,7 +1326,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     583          
     584            /*Configure GPIO pin Output Level */
     585            HAL_GPIO_WritePin(MCU_ACTIVE_GPIO_Port, MCU_ACTIVE_Pin, GPIO_PIN_RESET);
-   \       0xD8   0x....             LDR.N    R4,??DataTable11_30
+   \       0xD8   0x....             LDR.N    R4,??DataTable11_28
    \       0xDA   0x2200             MOVS     R2,#+0
    \       0xDC   0x2101             MOVS     R1,#+1
    \       0xDE   0x0020             MOVS     R0,R4
@@ -1351,7 +1334,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     586          
     587            /*Configure GPIO pin Output Level */
     588            HAL_GPIO_WritePin(GPIOA, VSYNC_FREQ_Pin|LCD_BL_CTRL_Pin|LCD_ON_OFF_Pin, GPIO_PIN_RESET);
-   \       0xE4   0x....             LDR.N    R5,??DataTable11_31
+   \       0xE4   0x....             LDR.N    R5,??DataTable11_29
    \       0xE6   0x2200             MOVS     R2,#+0
    \       0xE8   0xF241 0x0106      MOVW     R1,#+4102
    \       0xEC   0x0028             MOVS     R0,R5
@@ -1359,7 +1342,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
     589          
     590            /*Configure GPIO pin Output Level */
     591            HAL_GPIO_WritePin(GPIOB, RENDER_TIME_Pin|FRAME_RATE_Pin, GPIO_PIN_RESET);
-   \       0xF2   0x....             LDR.N    R6,??DataTable11_32
+   \       0xF2   0x....             LDR.N    R6,??DataTable11_30
    \       0xF4   0x2200             MOVS     R2,#+0
    \       0xF6   0xF44F 0x4140      MOV      R1,#+49152
    \       0xFA   0x0030             MOVS     R0,R6
@@ -1418,139 +1401,158 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
    \      0x144   0x0028             MOVS     R0,R5
    \      0x146   0x.... 0x....      BL       HAL_GPIO_Init
     613          
-    614            /*Configure GPIO pin : LCD_INT_Pin */
-    615            GPIO_InitStruct.Pin = LCD_INT_Pin;
-   \      0x14A   0x2004             MOVS     R0,#+4
-   \      0x14C   0x9000             STR      R0,[SP, #+0]
-    616            GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-   \      0x14E   0xF45F 0x1088      MOVS     R0,#+1114112
+    614            /*Configure GPIO pin : WakeupButton_Pin */
+    615            GPIO_InitStruct.Pin = WakeupButton_Pin;
+   \      0x14A   0xF44F 0x5000      MOV      R0,#+8192
+   \      0x14E   0x9000             STR      R0,[SP, #+0]
+    616            GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+   \      0x150   0x2000             MOVS     R0,#+0
    \      0x152   0x9001             STR      R0,[SP, #+4]
-    617            GPIO_InitStruct.Pull = GPIO_PULLUP;
-   \      0x154   0x2001             MOVS     R0,#+1
+    617            GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+   \      0x154   0x2002             MOVS     R0,#+2
    \      0x156   0x9002             STR      R0,[SP, #+8]
-    618            HAL_GPIO_Init(LCD_INT_GPIO_Port, &GPIO_InitStruct);
+    618            HAL_GPIO_Init(WakeupButton_GPIO_Port, &GPIO_InitStruct);
    \      0x158   0x4669             MOV      R1,SP
-   \      0x15A   0x....             LDR.N    R0,??DataTable11_33
+   \      0x15A   0x....             LDR.N    R0,??DataTable11_31
    \      0x15C   0x.... 0x....      BL       HAL_GPIO_Init
     619          
-    620            /*Configure GPIO pins : RENDER_TIME_Pin FRAME_RATE_Pin */
-    621            GPIO_InitStruct.Pin = RENDER_TIME_Pin|FRAME_RATE_Pin;
-   \      0x160   0xF44F 0x4040      MOV      R0,#+49152
-   \      0x164   0x9000             STR      R0,[SP, #+0]
-    622            GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-   \      0x166   0x2001             MOVS     R0,#+1
+    620            /*Configure GPIO pin : LCD_INT_Pin */
+    621            GPIO_InitStruct.Pin = LCD_INT_Pin;
+   \      0x160   0x2004             MOVS     R0,#+4
+   \      0x162   0x9000             STR      R0,[SP, #+0]
+    622            GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+   \      0x164   0xF45F 0x1088      MOVS     R0,#+1114112
    \      0x168   0x9001             STR      R0,[SP, #+4]
-    623            GPIO_InitStruct.Pull = GPIO_NOPULL;
-   \      0x16A   0x2000             MOVS     R0,#+0
+    623            GPIO_InitStruct.Pull = GPIO_PULLUP;
+   \      0x16A   0x2001             MOVS     R0,#+1
    \      0x16C   0x9002             STR      R0,[SP, #+8]
-    624            GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-   \      0x16E   0x2000             MOVS     R0,#+0
-   \      0x170   0x9003             STR      R0,[SP, #+12]
-    625            HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-   \      0x172   0x4669             MOV      R1,SP
-   \      0x174   0x0030             MOVS     R0,R6
-   \      0x176   0x.... 0x....      BL       HAL_GPIO_Init
-    626          
-    627            /*Configure GPIO pin : LCD_ON_OFF_Pin */
-    628            GPIO_InitStruct.Pin = LCD_ON_OFF_Pin;
-   \      0x17A   0x2004             MOVS     R0,#+4
-   \      0x17C   0x9000             STR      R0,[SP, #+0]
-    629            GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-   \      0x17E   0x2001             MOVS     R0,#+1
-   \      0x180   0x9001             STR      R0,[SP, #+4]
-    630            GPIO_InitStruct.Pull = GPIO_PULLUP;
-   \      0x182   0x2001             MOVS     R0,#+1
-   \      0x184   0x9002             STR      R0,[SP, #+8]
-    631            GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-   \      0x186   0x2000             MOVS     R0,#+0
-   \      0x188   0x9003             STR      R0,[SP, #+12]
-    632            HAL_GPIO_Init(LCD_ON_OFF_GPIO_Port, &GPIO_InitStruct);
-   \      0x18A   0x4669             MOV      R1,SP
-   \      0x18C   0x0028             MOVS     R0,R5
-   \      0x18E   0x.... 0x....      BL       HAL_GPIO_Init
-    633          
-    634            /* EXTI interrupt init*/
-    635            HAL_NVIC_SetPriority(EXTI2_IRQn, 5, 0);
-   \      0x192   0x2200             MOVS     R2,#+0
-   \      0x194   0x2105             MOVS     R1,#+5
-   \      0x196   0x2008             MOVS     R0,#+8
-   \      0x198   0x.... 0x....      BL       HAL_NVIC_SetPriority
-    636            HAL_NVIC_EnableIRQ(EXTI2_IRQn);
-   \      0x19C   0x2008             MOVS     R0,#+8
-   \      0x19E   0x.... 0x....      BL       HAL_NVIC_EnableIRQ
-    637          
-    638          }
-   \      0x1A2   0xB006             ADD      SP,SP,#+24
-   \      0x1A4   0xE8BD 0x81F0      POP      {R4-R8,PC}
+    624            HAL_GPIO_Init(LCD_INT_GPIO_Port, &GPIO_InitStruct);
+   \      0x16E   0x4669             MOV      R1,SP
+   \      0x170   0x....             LDR.N    R0,??DataTable11_32
+   \      0x172   0x.... 0x....      BL       HAL_GPIO_Init
+    625          
+    626            /*Configure GPIO pins : RENDER_TIME_Pin FRAME_RATE_Pin */
+    627            GPIO_InitStruct.Pin = RENDER_TIME_Pin|FRAME_RATE_Pin;
+   \      0x176   0xF44F 0x4040      MOV      R0,#+49152
+   \      0x17A   0x9000             STR      R0,[SP, #+0]
+    628            GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+   \      0x17C   0x2001             MOVS     R0,#+1
+   \      0x17E   0x9001             STR      R0,[SP, #+4]
+    629            GPIO_InitStruct.Pull = GPIO_NOPULL;
+   \      0x180   0x2000             MOVS     R0,#+0
+   \      0x182   0x9002             STR      R0,[SP, #+8]
+    630            GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+   \      0x184   0x2000             MOVS     R0,#+0
+   \      0x186   0x9003             STR      R0,[SP, #+12]
+    631            HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+   \      0x188   0x4669             MOV      R1,SP
+   \      0x18A   0x0030             MOVS     R0,R6
+   \      0x18C   0x.... 0x....      BL       HAL_GPIO_Init
+    632          
+    633            /*Configure GPIO pin : LCD_ON_OFF_Pin */
+    634            GPIO_InitStruct.Pin = LCD_ON_OFF_Pin;
+   \      0x190   0x2004             MOVS     R0,#+4
+   \      0x192   0x9000             STR      R0,[SP, #+0]
+    635            GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+   \      0x194   0x2001             MOVS     R0,#+1
+   \      0x196   0x9001             STR      R0,[SP, #+4]
+    636            GPIO_InitStruct.Pull = GPIO_PULLUP;
+   \      0x198   0x2001             MOVS     R0,#+1
+   \      0x19A   0x9002             STR      R0,[SP, #+8]
+    637            GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+   \      0x19C   0x2000             MOVS     R0,#+0
+   \      0x19E   0x9003             STR      R0,[SP, #+12]
+    638            HAL_GPIO_Init(LCD_ON_OFF_GPIO_Port, &GPIO_InitStruct);
+   \      0x1A0   0x4669             MOV      R1,SP
+   \      0x1A2   0x0028             MOVS     R0,R5
+   \      0x1A4   0x.... 0x....      BL       HAL_GPIO_Init
     639          
-    640          /* USER CODE BEGIN 4 */
-    641          
-    642          /* USER CODE END 4 */
+    640            /* EXTI interrupt init*/
+    641            HAL_NVIC_SetPriority(EXTI2_IRQn, 5, 0);
+   \      0x1A8   0x2200             MOVS     R2,#+0
+   \      0x1AA   0x2105             MOVS     R1,#+5
+   \      0x1AC   0x2008             MOVS     R0,#+8
+   \      0x1AE   0x.... 0x....      BL       HAL_NVIC_SetPriority
+    642            HAL_NVIC_EnableIRQ(EXTI2_IRQn);
+   \      0x1B2   0x2008             MOVS     R0,#+8
+   \      0x1B4   0x.... 0x....      BL       HAL_NVIC_EnableIRQ
     643          
-    644          /* USER CODE BEGIN Header_StartDefaultTask */
-    645          /**
-    646            * @brief  Function implementing the defaultTask thread.
-    647            * @param  argument: Not used
-    648            * @retval None
-    649            */
-    650          /* USER CODE END Header_StartDefaultTask */
+    644          }
+   \      0x1B8   0xB006             ADD      SP,SP,#+24
+   \      0x1BA   0xE8BD 0x81F0      POP      {R4-R8,PC}
+    645          
+    646          /* USER CODE BEGIN 4 */
+    647          
+    648          /* USER CODE END 4 */
+    649          
+    650          /* USER CODE BEGIN Header_StartDefaultTask */
+    651          /**
+    652            * @brief  Function implementing the defaultTask thread.
+    653            * @param  argument: Not used
+    654            * @retval None
+    655            */
+    656          /* USER CODE END Header_StartDefaultTask */
 
    \                                 In section .text, align 4, keep-with-next
-    651          void StartDefaultTask(void *argument)
-    652          {
+    657          void StartDefaultTask(void *argument)
+    658          {
    \                     StartDefaultTask: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-    653            /* USER CODE BEGIN 5 */
-    654          
-    655              osTimerStart(testTimerHandle, 1000);
-   \        0x2   0xF44F 0x717A      MOV      R1,#+1000
-   \        0x6   0x....             LDR.N    R0,??DataTable11_6
-   \        0x8   0x6800             LDR      R0,[R0, #+0]
-   \        0xA   0x.... 0x....      BL       osTimerStart
-    656          
-    657            /* Infinite loop */
-    658            for(;;)
-    659            {
-    660              osDelay(100);
-   \                     ??StartDefaultTask_0: (+1)
-   \        0xE   0x2064             MOVS     R0,#+100
-   \       0x10   0x.... 0x....      BL       osDelay
-   \       0x14   0xE7FB             B.N      ??StartDefaultTask_0
-    661            }
-    662            /* USER CODE END 5 */
-    663          }
+    659            /* USER CODE BEGIN 5 */
+    660          
+    661          //    osTimerStart(testTimerHandle, 1000);
+    662              startTimer(testTmrCallback, osTimerPeriodic, NULL, 1000);
+   \        0x2   0xF44F 0x737A      MOV      R3,#+1000
+   \        0x6   0x2200             MOVS     R2,#+0
+   \        0x8   0x2101             MOVS     R1,#+1
+   \        0xA   0x.... 0x....      ADR.W    R0,testTmrCallback
+   \        0xE   0x.... 0x....      BL       startTimer
+    663              startTimer(TimerHandleTest, osTimerPeriodic, 10, 1000);
+   \       0x12   0xF44F 0x737A      MOV      R3,#+1000
+   \       0x16   0x220A             MOVS     R2,#+10
+   \       0x18   0x2101             MOVS     R1,#+1
+   \       0x1A   0x....             LDR.N    R0,??DataTable11_33
+   \       0x1C   0x.... 0x....      BL       startTimer
     664          
-    665          /* testTmrCallback function */
+    665            /* Infinite loop */
+    666            for(;;)
+    667            {
+    668              osDelay(100);
+   \                     ??StartDefaultTask_0: (+1)
+   \       0x20   0x2064             MOVS     R0,#+100
+   \       0x22   0x.... 0x....      BL       osDelay
+   \       0x26   0xE7FB             B.N      ??StartDefaultTask_0
+    669            }
+    670            /* USER CODE END 5 */
+    671          }
+    672          
+    673          /* testTmrCallback function */
 
    \                                 In section .text, align 4, keep-with-next
-    666          void testTmrCallback(void *argument)
-    667          {
+    674          void testTmrCallback(void *argument)
+    675          {
    \                     testTmrCallback: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
-    668            /* USER CODE BEGIN testTmrCallback */
-    669              HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_2);
-   \        0x2   0x....             LDR.N    R4,??DataTable11_29
+    676            /* USER CODE BEGIN testTmrCallback */
+    677              HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_2);
+   \        0x2   0x....             LDR.N    R4,??DataTable11_27
    \        0x4   0x2104             MOVS     R1,#+4
    \        0x6   0x0020             MOVS     R0,R4
    \        0x8   0x.... 0x....      BL       HAL_GPIO_TogglePin
-    670              HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_11);
+    678              HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_11);
    \        0xC   0xF44F 0x6100      MOV      R1,#+2048
    \       0x10   0x0020             MOVS     R0,R4
    \       0x12   0x.... 0x....      BL       HAL_GPIO_TogglePin
-    671              printf("timer\r\n");
-   \       0x16   0x....             LDR.N    R0,??DataTable11_34
-   \       0x18   0x.... 0x....      BL       printf
-    672          
-    673            /* USER CODE END testTmrCallback */
-    674          }
-   \       0x1C   0xBD10             POP      {R4,PC}
-    675          
-    676          /* MPU Configuration */
-    677          
+    679            /* USER CODE END testTmrCallback */
+    680          }
+   \       0x16   0xBD10             POP      {R4,PC}
+    681          
+    682          /* MPU Configuration */
+    683          
 
    \                                 In section .text, align 2, keep-with-next
-    678          void MPU_Config(void)
-    679          {
+    684          void MPU_Config(void)
+    685          {
    \                     MPU_Config: (+1)
    \        0x0   0xB51F             PUSH     {R0-R4,LR}
    \        0x2   0x2110             MOVS     R1,#+16
@@ -1558,151 +1560,151 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
    \        0x6   0x466C             MOV      R4,SP
    \        0x8   0x0020             MOVS     R0,R4
    \        0xA   0x.... 0x....      BL       __aeabi_memset
-    680            MPU_Region_InitTypeDef MPU_InitStruct = {0};
-    681          
-    682            /* Disables the MPU */
-    683            HAL_MPU_Disable();
+    686            MPU_Region_InitTypeDef MPU_InitStruct = {0};
+    687          
+    688            /* Disables the MPU */
+    689            HAL_MPU_Disable();
    \        0xE   0x.... 0x....      BL       HAL_MPU_Disable
-    684            /** Initializes and configures the Region and the memory to be protected
-    685            */
-    686            MPU_InitStruct.Enable = MPU_REGION_ENABLE;
+    690            /** Initializes and configures the Region and the memory to be protected
+    691            */
+    692            MPU_InitStruct.Enable = MPU_REGION_ENABLE;
    \       0x12   0x2001             MOVS     R0,#+1
    \       0x14   0xF88D 0x0000      STRB     R0,[SP, #+0]
-    687            MPU_InitStruct.Number = MPU_REGION_NUMBER0;
+    693            MPU_InitStruct.Number = MPU_REGION_NUMBER0;
    \       0x18   0x2000             MOVS     R0,#+0
    \       0x1A   0xF88D 0x0001      STRB     R0,[SP, #+1]
-    688            MPU_InitStruct.BaseAddress = 0x90000000;
+    694            MPU_InitStruct.BaseAddress = 0x90000000;
    \       0x1E   0xF05F 0x4010      MOVS     R0,#+2415919104
    \       0x22   0x9001             STR      R0,[SP, #+4]
-    689            MPU_InitStruct.Size = MPU_REGION_SIZE_256MB;
+    695            MPU_InitStruct.Size = MPU_REGION_SIZE_256MB;
    \       0x24   0x201B             MOVS     R0,#+27
    \       0x26   0xF88D 0x0008      STRB     R0,[SP, #+8]
-    690            MPU_InitStruct.SubRegionDisable = 0x0;
+    696            MPU_InitStruct.SubRegionDisable = 0x0;
    \       0x2A   0x2000             MOVS     R0,#+0
    \       0x2C   0xF88D 0x0009      STRB     R0,[SP, #+9]
-    691            MPU_InitStruct.TypeExtField = MPU_TEX_LEVEL0;
+    697            MPU_InitStruct.TypeExtField = MPU_TEX_LEVEL0;
    \       0x30   0x2000             MOVS     R0,#+0
    \       0x32   0xF88D 0x000A      STRB     R0,[SP, #+10]
-    692            MPU_InitStruct.AccessPermission = MPU_REGION_NO_ACCESS;
+    698            MPU_InitStruct.AccessPermission = MPU_REGION_NO_ACCESS;
    \       0x36   0x2000             MOVS     R0,#+0
    \       0x38   0xF88D 0x000B      STRB     R0,[SP, #+11]
-    693            MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
+    699            MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
    \       0x3C   0x2001             MOVS     R0,#+1
    \       0x3E   0xF88D 0x000C      STRB     R0,[SP, #+12]
-    694            MPU_InitStruct.IsShareable = MPU_ACCESS_NOT_SHAREABLE;
+    700            MPU_InitStruct.IsShareable = MPU_ACCESS_NOT_SHAREABLE;
    \       0x42   0x2000             MOVS     R0,#+0
    \       0x44   0xF88D 0x000D      STRB     R0,[SP, #+13]
-    695            MPU_InitStruct.IsCacheable = MPU_ACCESS_NOT_CACHEABLE;
+    701            MPU_InitStruct.IsCacheable = MPU_ACCESS_NOT_CACHEABLE;
    \       0x48   0x2000             MOVS     R0,#+0
    \       0x4A   0xF88D 0x000E      STRB     R0,[SP, #+14]
-    696            MPU_InitStruct.IsBufferable = MPU_ACCESS_NOT_BUFFERABLE;
+    702            MPU_InitStruct.IsBufferable = MPU_ACCESS_NOT_BUFFERABLE;
    \       0x4E   0x2000             MOVS     R0,#+0
    \       0x50   0xF88D 0x000F      STRB     R0,[SP, #+15]
-    697          
-    698            HAL_MPU_ConfigRegion(&MPU_InitStruct);
+    703          
+    704            HAL_MPU_ConfigRegion(&MPU_InitStruct);
    \       0x54   0x4668             MOV      R0,SP
    \       0x56   0x.... 0x....      BL       HAL_MPU_ConfigRegion
-    699            /** Initializes and configures the Region and the memory to be protected
-    700            */
-    701            MPU_InitStruct.Number = MPU_REGION_NUMBER1;
+    705            /** Initializes and configures the Region and the memory to be protected
+    706            */
+    707            MPU_InitStruct.Number = MPU_REGION_NUMBER1;
    \       0x5A   0x2001             MOVS     R0,#+1
    \       0x5C   0xF88D 0x0001      STRB     R0,[SP, #+1]
-    702            MPU_InitStruct.Size = MPU_REGION_SIZE_64MB;
+    708            MPU_InitStruct.Size = MPU_REGION_SIZE_64MB;
    \       0x60   0x2019             MOVS     R0,#+25
    \       0x62   0xF88D 0x0008      STRB     R0,[SP, #+8]
-    703            MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
+    709            MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
    \       0x66   0x2003             MOVS     R0,#+3
    \       0x68   0xF88D 0x000B      STRB     R0,[SP, #+11]
-    704            MPU_InitStruct.IsCacheable = MPU_ACCESS_CACHEABLE;
+    710            MPU_InitStruct.IsCacheable = MPU_ACCESS_CACHEABLE;
    \       0x6C   0x2001             MOVS     R0,#+1
    \       0x6E   0xF88D 0x000E      STRB     R0,[SP, #+14]
-    705          
-    706            HAL_MPU_ConfigRegion(&MPU_InitStruct);
+    711          
+    712            HAL_MPU_ConfigRegion(&MPU_InitStruct);
    \       0x72   0x4668             MOV      R0,SP
    \       0x74   0x.... 0x....      BL       HAL_MPU_ConfigRegion
-    707            /** Initializes and configures the Region and the memory to be protected
-    708            */
-    709            MPU_InitStruct.Number = MPU_REGION_NUMBER2;
+    713            /** Initializes and configures the Region and the memory to be protected
+    714            */
+    715            MPU_InitStruct.Number = MPU_REGION_NUMBER2;
    \       0x78   0x2002             MOVS     R0,#+2
    \       0x7A   0xF88D 0x0001      STRB     R0,[SP, #+1]
-    710            MPU_InitStruct.BaseAddress = 0x24000000;
+    716            MPU_InitStruct.BaseAddress = 0x24000000;
    \       0x7E   0xF05F 0x5010      MOVS     R0,#+603979776
    \       0x82   0x9001             STR      R0,[SP, #+4]
-    711            MPU_InitStruct.Size = MPU_REGION_SIZE_1MB;
+    717            MPU_InitStruct.Size = MPU_REGION_SIZE_1MB;
    \       0x84   0x2013             MOVS     R0,#+19
    \       0x86   0xF88D 0x0008      STRB     R0,[SP, #+8]
-    712          
-    713            HAL_MPU_ConfigRegion(&MPU_InitStruct);
+    718          
+    719            HAL_MPU_ConfigRegion(&MPU_InitStruct);
    \       0x8A   0x4668             MOV      R0,SP
    \       0x8C   0x.... 0x....      BL       HAL_MPU_ConfigRegion
-    714            /** Initializes and configures the Region and the memory to be protected
-    715            */
-    716            MPU_InitStruct.Number = MPU_REGION_NUMBER3;
+    720            /** Initializes and configures the Region and the memory to be protected
+    721            */
+    722            MPU_InitStruct.Number = MPU_REGION_NUMBER3;
    \       0x90   0x2003             MOVS     R0,#+3
    \       0x92   0xF88D 0x0001      STRB     R0,[SP, #+1]
-    717            MPU_InitStruct.Size = MPU_REGION_SIZE_256KB;
+    723            MPU_InitStruct.Size = MPU_REGION_SIZE_256KB;
    \       0x96   0x2011             MOVS     R0,#+17
    \       0x98   0xF88D 0x0008      STRB     R0,[SP, #+8]
-    718            MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
+    724            MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
    \       0x9C   0x2001             MOVS     R0,#+1
    \       0x9E   0xF88D 0x000F      STRB     R0,[SP, #+15]
-    719          
-    720            HAL_MPU_ConfigRegion(&MPU_InitStruct);
+    725          
+    726            HAL_MPU_ConfigRegion(&MPU_InitStruct);
    \       0xA2   0x4668             MOV      R0,SP
    \       0xA4   0x.... 0x....      BL       HAL_MPU_ConfigRegion
-    721            /* Enables the MPU */
-    722            HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
+    727            /* Enables the MPU */
+    728            HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
    \       0xA8   0x2004             MOVS     R0,#+4
    \       0xAA   0x.... 0x....      BL       HAL_MPU_Enable
-    723          
-    724          }
+    729          
+    730          }
    \       0xAE   0xBD1F             POP      {R0-R4,PC}
-    725          
-    726          /**
-    727            * @brief  Period elapsed callback in non blocking mode
-    728            * @note   This function is called  when TIM6 interrupt took place, inside
-    729            * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
-    730            * a global variable "uwTick" used as application time base.
-    731            * @param  htim : TIM handle
-    732            * @retval None
-    733            */
+    731          
+    732          /**
+    733            * @brief  Period elapsed callback in non blocking mode
+    734            * @note   This function is called  when TIM6 interrupt took place, inside
+    735            * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+    736            * a global variable "uwTick" used as application time base.
+    737            * @param  htim : TIM handle
+    738            * @retval None
+    739            */
 
    \                                 In section .text, align 2, keep-with-next
-    734          void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-    735          {
+    740          void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+    741          {
    \                     HAL_TIM_PeriodElapsedCallback: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-    736            /* USER CODE BEGIN Callback 0 */
-    737          
-    738            /* USER CODE END Callback 0 */
-    739            if (htim->Instance == TIM6) {
+    742            /* USER CODE BEGIN Callback 0 */
+    743          
+    744            /* USER CODE END Callback 0 */
+    745            if (htim->Instance == TIM6) {
    \        0x2   0x6800             LDR      R0,[R0, #+0]
-   \        0x4   0x....             LDR.N    R1,??DataTable11_35
+   \        0x4   0x....             LDR.N    R1,??DataTable11_34
    \        0x6   0x4288             CMP      R0,R1
    \        0x8   0xD101             BNE.N    ??HAL_TIM_PeriodElapsedCallback_0
-    740              HAL_IncTick();
+    746              HAL_IncTick();
    \        0xA   0x.... 0x....      BL       HAL_IncTick
-    741            }
-    742            /* USER CODE BEGIN Callback 1 */
-    743          
-    744            /* USER CODE END Callback 1 */
-    745          }
+    747            }
+    748            /* USER CODE BEGIN Callback 1 */
+    749          
+    750            /* USER CODE END Callback 1 */
+    751          }
    \                     ??HAL_TIM_PeriodElapsedCallback_0: (+1)
    \        0xE   0xBD01             POP      {R0,PC}
-    746          
-    747          /**
-    748            * @brief  This function is executed in case of error occurrence.
-    749            * @retval None
-    750            */
+    752          
+    753          /**
+    754            * @brief  This function is executed in case of error occurrence.
+    755            * @retval None
+    756            */
 
    \                                 In section .text, align 2, keep-with-next
-    751          void Error_Handler(void)
-    752          {
-    753            /* USER CODE BEGIN Error_Handler_Debug */
-    754            /* User can add his own implementation to report the HAL error return state */
-    755          
-    756            /* USER CODE END Error_Handler_Debug */
-    757          }
+    757          void Error_Handler(void)
+    758          {
+    759            /* USER CODE BEGIN Error_Handler_Debug */
+    760            /* User can add his own implementation to report the HAL error return state */
+    761          
+    762            /* USER CODE END Error_Handler_Debug */
+    763          }
    \                     Error_Handler: (+1)
    \        0x0   0x4770             BX       LR
 
@@ -1728,126 +1730,122 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable11_5:
-   \        0x0   0x....'....        DC32     testTimer_attributes
-
-   \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_6:
-   \        0x0   0x....'....        DC32     testTimerHandle
-
-   \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_7:
    \        0x0   0x....'....        DC32     defaultTask_attributes
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_8:
+   \                     ??DataTable11_6:
    \        0x0   0x....'....        DC32     defaultTaskHandle
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_9:
+   \                     ??DataTable11_7:
    \        0x0   0x....'....        DC32     GUI_Task_attributes
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_10:
+   \                     ??DataTable11_8:
    \        0x0   0x....'....        DC32     TouchGFX_Task
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_11:
+   \                     ??DataTable11_9:
    \        0x0   0x....'....        DC32     GUI_TaskHandle
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_12:
+   \                     ??DataTable11_10:
    \        0x0   0x5802'4818        DC32     0x58024818
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_13:
+   \                     ??DataTable11_11:
    \        0x0   0x5802'4428        DC32     0x58024428
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_14:
+   \                     ??DataTable11_12:
    \        0x0   0x....'....        DC32     hcrc
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_15:
+   \                     ??DataTable11_13:
    \        0x0   0x4002'3000        DC32     0x40023000
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_16:
+   \                     ??DataTable11_14:
    \        0x0   0x....'....        DC32     hdma2d
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_17:
+   \                     ??DataTable11_15:
    \        0x0   0x5200'1000        DC32     0x52001000
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_18:
+   \                     ??DataTable11_16:
    \        0x0   0x....'....        DC32     hi2c4
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_19:
+   \                     ??DataTable11_17:
    \        0x0   0x5800'1C00        DC32     0x58001c00
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_20:
+   \                     ??DataTable11_18:
    \        0x0   0x3080'8BD0        DC32     0x30808bd0
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_21:
+   \                     ??DataTable11_19:
    \        0x0   0x....'....        DC32     hltdc
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_22:
+   \                     ??DataTable11_20:
    \        0x0   0x5000'1000        DC32     0x50001000
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_23:
+   \                     ??DataTable11_21:
    \        0x0   0x....'....        DC32     hospi1
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_24:
+   \                     ??DataTable11_22:
    \        0x0   0x5200'5000        DC32     0x52005000
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_25:
+   \                     ??DataTable11_23:
    \        0x0   0x0100'0001        DC32     0x1000001
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_26:
+   \                     ??DataTable11_24:
    \        0x0   0x....'....        DC32     huart1
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_27:
+   \                     ??DataTable11_25:
    \        0x0   0x4001'1000        DC32     0x40011000
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_28:
+   \                     ??DataTable11_26:
    \        0x0   0x5802'4540        DC32     0x58024540
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_29:
+   \                     ??DataTable11_27:
    \        0x0   0x5802'1800        DC32     0x58021800
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_30:
+   \                     ??DataTable11_28:
    \        0x0   0x5802'2000        DC32     0x58022000
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_31:
+   \                     ??DataTable11_29:
    \        0x0   0x5802'0000        DC32     0x58020000
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_32:
+   \                     ??DataTable11_30:
    \        0x0   0x5802'0400        DC32     0x58020400
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_33:
+   \                     ??DataTable11_31:
+   \        0x0   0x5802'0800        DC32     0x58020800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_32:
    \        0x0   0x5802'1C00        DC32     0x58021c00
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_34:
-   \        0x0   0x....'....        DC32     ?_3
+   \                     ??DataTable11_33:
+   \        0x0   0x....'....        DC32     TimerHandleTest
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable11_35:
+   \                     ??DataTable11_34:
    \        0x0   0x4000'1000        DC32     0x40001000
 
    \                                 In section .rodata, align 4
@@ -1876,47 +1874,24 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
 
    \              0x00
    \        0x9                      DS8 3
-
-   \                                 In section .rodata, align 4
-   \                     ?_2:
-   \        0x0   0x74 0x65          DC8 "testTimer"
-
-   \              0x73 0x74    
-
-   \              0x54 0x69    
-
-   \              0x6D 0x65    
-
-   \              0x72 0x00
-   \        0xA                      DS8 2
-
-   \                                 In section .rodata, align 4
-   \                     ?_3:
-   \        0x0   0x74 0x69          DC8 "timer\015\012"
-
-   \              0x6D 0x65    
-
-   \              0x72 0x0D    
-
-   \              0x0A 0x00
-    758          
-    759          #ifdef  USE_FULL_ASSERT
-    760          /**
-    761            * @brief  Reports the name of the source file and the source line number
-    762            *         where the assert_param error has occurred.
-    763            * @param  file: pointer to the source file name
-    764            * @param  line: assert_param error line source number
-    765            * @retval None
-    766            */
-    767          void assert_failed(uint8_t *file, uint32_t line)
-    768          {
-    769            /* USER CODE BEGIN 6 */
-    770            /* User can add his own implementation to report the file name and line number,
-    771               tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-    772            /* USER CODE END 6 */
-    773          }
-    774          #endif /* USE_FULL_ASSERT */
-    775          
+    764          
+    765          #ifdef  USE_FULL_ASSERT
+    766          /**
+    767            * @brief  Reports the name of the source file and the source line number
+    768            *         where the assert_param error has occurred.
+    769            * @param  file: pointer to the source file name
+    770            * @param  line: assert_param error line source number
+    771            * @retval None
+    772            */
+    773          void assert_failed(uint8_t *file, uint32_t line)
+    774          {
+    775            /* USER CODE BEGIN 6 */
+    776            /* User can add his own implementation to report the file name and line number,
+    777               tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+    778            /* USER CODE END 6 */
+    779          }
+    780          #endif /* USE_FULL_ASSERT */
+    781          
 
    Maximum stack usage in bytes:
 
@@ -1969,7 +1944,7 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
          8   -> HAL_UART_Init
        8   StartDefaultTask
          8   -> osDelay
-         8   -> osTimerStart
+         8   -> startTimer
      120   SystemClock_Config
        120   -> Error_Handler
        120   -> HAL_PWREx_ConfigSupply
@@ -1991,10 +1966,8 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
         16   -> osKernelInitialize
         16   -> osKernelStart
         16   -> osThreadNew
-        16   -> osTimerNew
        8   testTmrCallback
          8   -> HAL_GPIO_TogglePin
-         8   -> printf
 
 
    Section sizes:
@@ -2030,7 +2003,6 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
        4  ??DataTable11_32
        4  ??DataTable11_33
        4  ??DataTable11_34
-       4  ??DataTable11_35
        4  ??DataTable11_4
        4  ??DataTable11_5
        4  ??DataTable11_6
@@ -2039,8 +2011,6 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
        4  ??DataTable11_9
       12  ?_0
       12  ?_1
-      12  ?_2
-       8  ?_3
        2  Error_Handler
        4  GUI_TaskHandle
       36  GUI_Task_attributes
@@ -2048,12 +2018,12 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
      176  MPU_Config
       46  MX_CRC_Init
       84  MX_DMA2D_Init
-     424  MX_GPIO_Init
+     446  MX_GPIO_Init
       96  MX_I2C4_Init
      202  MX_LTDC_Init
      200  MX_OCTOSPI1_Init
      112  MX_USART1_UART_Init
-      22  StartDefaultTask
+      40  StartDefaultTask
      198  SystemClock_Config
        4  defaultTaskHandle
       36  defaultTask_attributes
@@ -2063,19 +2033,17 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\main.c
      168  hltdc
       96  hospi1
      144  huart1
-     254  main
-       4  testTimerHandle
-      16  testTimer_attributes
-      30  testTmrCallback
+     232  main
+      24  testTmrCallback
 
  
-   636 bytes in section .bss
-   132 bytes in section .rodata
- 2'006 bytes in section .text
+   632 bytes in section .bss
+    96 bytes in section .rodata
+ 2'014 bytes in section .text
  
- 2'006 bytes of CODE  memory
-   132 bytes of CONST memory
-   636 bytes of DATA  memory
+ 2'014 bytes of CODE  memory
+    96 bytes of CONST memory
+   632 bytes of DATA  memory
 
 Errors: none
 Warnings: none

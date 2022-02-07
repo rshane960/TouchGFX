@@ -1,0 +1,167 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         07/Feb/2022  20:39:37
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Button.c
+#        [UTF-8]
+#    Command line                 =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Button.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Button.c -D
+#        USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Button.o.d
+#    Locale                       =  C
+#    List file                    =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core\User_Button.lst
+#    Object file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Button.o
+#    Runtime model:                  
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  1
+#      __dlib_full_locale_support =  1
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Button.c
+      1          
+      2          #include "User_Include.h"
+      3          
+      4          
+
+   \                                 In section .data, align 4
+      5          button_table_t button_table[1] = 
+   \                     button_table:
+   \        0x0   0x5802'0800        DC32 0x5802'0800
+   \        0x4   0x2000             DC16 8'192
+   \        0x6   0x01               DC8 1
+   \        0x7                      DS8 1
+      6          {
+      7              {WakeupButton_GPIO_Port, WakeupButton_Pin, GPIO_PIN_SET}
+      8          };
+      9          
+     10          bool buttonGetPressed(uint8_t ch);
+     11          
+     12          
+     13          /*=========================================================
+     14          Function_name   : buttonGetPressed
+     15          Description     : 
+     16          Caller          : 
+     17          Ver 1.0
+     18          =========================================================*/	
+
+   \                                 In section .text, align 4, keep-with-next
+     19          bool buttonGetPressed(uint8_t ch)
+     20          {
+   \                     buttonGetPressed: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0005             MOVS     R5,R0
+     21              bool result = false;
+   \        0x4   0x2400             MOVS     R4,#+0
+     22          
+     23              if(HAL_GPIO_ReadPin(button_table[ch].port, button_table[ch].pin) == button_table[ch].state)
+   \        0x6   0x4E0B             LDR.N    R6,??buttonGetPressed_0
+   \        0x8   0x0028             MOVS     R0,R5
+   \        0xA   0xB2C0             UXTB     R0,R0
+   \        0xC   0xEB06 0x00C0      ADD      R0,R6,R0, LSL #+3
+   \       0x10   0x8881             LDRH     R1,[R0, #+4]
+   \       0x12   0x0028             MOVS     R0,R5
+   \       0x14   0xB2C0             UXTB     R0,R0
+   \       0x16   0xF856 0x0030      LDR      R0,[R6, R0, LSL #+3]
+   \       0x1A   0x.... 0x....      BL       HAL_GPIO_ReadPin
+   \       0x1E   0xB2ED             UXTB     R5,R5
+   \       0x20   0xEB06 0x01C5      ADD      R1,R6,R5, LSL #+3
+   \       0x24   0x7989             LDRB     R1,[R1, #+6]
+   \       0x26   0xB2C0             UXTB     R0,R0
+   \       0x28   0x4288             CMP      R0,R1
+   \       0x2A   0xD100             BNE.N    ??buttonGetPressed_1
+     24                  result = true;
+   \       0x2C   0x2401             MOVS     R4,#+1
+     25          
+     26              return result;
+   \                     ??buttonGetPressed_1: (+1)
+   \       0x2E   0x0020             MOVS     R0,R4
+   \       0x30   0xB2C0             UXTB     R0,R0
+   \       0x32   0xBD70             POP      {R4-R6,PC}
+   \                     ??buttonGetPressed_0:
+   \       0x34   0x....'....        DC32     button_table
+     27          }
+     28          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   buttonGetPressed
+        16   -> HAL_GPIO_ReadPin
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      56  buttonGetPressed
+       8  button_table
+
+ 
+  8 bytes in section .data
+ 56 bytes in section .text
+ 
+ 56 bytes of CODE memory
+  8 bytes of DATA memory
+
+Errors: none
+Warnings: none

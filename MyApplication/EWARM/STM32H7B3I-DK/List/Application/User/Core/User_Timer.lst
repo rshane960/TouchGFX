@@ -1,0 +1,352 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         07/Feb/2022  20:39:37
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Timer.c
+#        [UTF-8]
+#    Command line                 =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Timer.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Timer.c -D
+#        USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Timer.o.d
+#    Locale                       =  C
+#    List file                    =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core\User_Timer.lst
+#    Object file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Timer.o
+#    Runtime model:                  
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  1
+#      __dlib_full_locale_support =  1
+#      __dlib_version             =  6
+#      __iar_require _Printf         
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Timer.c
+      1          
+      2          #include "User_Include.h"
+      3          
+      4          size_t startTimer(osTimerFunc_t func, osTimerType_t type, size_t userdata, uint32_t period);
+      5          void stopTimer(size_t id);
+      6          void TimerHandleTest(void *argument);
+      7          
+
+   \                                 In section .bss, align 4
+      8          tmNode *gHeadTm = NULL;
+   \                     gHeadTm:
+   \        0x0                      DS8 4
+      9          
+     10          /*=========================================================
+     11          Function_name   : StartTimer
+     12          Description     : 
+     13          Caller          : 
+     14          Ver 1.0
+     15          =========================================================*/	
+
+   \                                 In section .text, align 2, keep-with-next
+     16          size_t startTimer(osTimerFunc_t func, osTimerType_t type, size_t userdata, uint32_t period)
+     17          {
+   \                     startTimer: (+1)
+   \        0x0   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \        0x4   0x0004             MOVS     R4,R0
+   \        0x6   0x000D             MOVS     R5,R1
+   \        0x8   0x0016             MOVS     R6,R2
+   \        0xA   0x001F             MOVS     R7,R3
+     18              tmNode *newTm = (tmNode*)malloc(sizeof(tmNode));
+   \        0xC   0x201C             MOVS     R0,#+28
+   \        0xE   0x.... 0x....      BL       malloc
+   \       0x12   0x4680             MOV      R8,R0
+     19          
+     20              newTm->id = (size_t)newTm;
+   \       0x14   0xF8C8 0x8010      STR      R8,[R8, #+16]
+     21              newTm->data = NULL;
+   \       0x18   0x2000             MOVS     R0,#+0
+   \       0x1A   0xF8C8 0x0018      STR      R0,[R8, #+24]
+     22              newTm->usernumber = userdata;
+   \       0x1E   0xF8C8 0x6014      STR      R6,[R8, #+20]
+     23              newTm->osTmFunc = func;
+   \       0x22   0xF8C8 0x400C      STR      R4,[R8, #+12]
+     24              newTm->osTmType = type;
+   \       0x26   0xF888 0x5008      STRB     R5,[R8, #+8]
+     25              newTm->osTmId = osTimerNew(newTm->osTmFunc, newTm->osTmType, (void*)newTm->id, NULL);
+   \       0x2A   0x2300             MOVS     R3,#+0
+   \       0x2C   0xF8D8 0x2010      LDR      R2,[R8, #+16]
+   \       0x30   0xF898 0x1008      LDRB     R1,[R8, #+8]
+   \       0x34   0xF8D8 0x000C      LDR      R0,[R8, #+12]
+   \       0x38   0x.... 0x....      BL       osTimerNew
+   \       0x3C   0xF8C8 0x0004      STR      R0,[R8, #+4]
+     26              osTimerStart(newTm->osTmId, period);
+   \       0x40   0x0039             MOVS     R1,R7
+   \       0x42   0xF8D8 0x0004      LDR      R0,[R8, #+4]
+   \       0x46   0x.... 0x....      BL       osTimerStart
+     27              
+     28              newTm->next = gHeadTm;
+   \       0x4A   0x....             LDR.N    R0,??DataTable2
+   \       0x4C   0x6801             LDR      R1,[R0, #+0]
+   \       0x4E   0xF8C8 0x1000      STR      R1,[R8, #+0]
+     29              gHeadTm = newTm;
+   \       0x52   0xF8C0 0x8000      STR      R8,[R0, #+0]
+     30          
+     31              return newTm->id;
+   \       0x56   0xF8D8 0x0010      LDR      R0,[R8, #+16]
+   \       0x5A   0xE8BD 0x81F0      POP      {R4-R8,PC}
+     32          }
+     33          
+     34          /*=========================================================
+     35          Function_name   : StopTimer
+     36          Description     : 
+     37          Caller          : 
+     38          Ver 1.0
+     39          =========================================================*/	
+
+   \                                 In section .text, align 2, keep-with-next
+     40          void stopTimer(size_t id)
+     41          {
+   \                     stopTimer: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     42              tmNode *p = gHeadTm;
+   \        0x2   0x....             LDR.N    R1,??DataTable2
+   \        0x4   0x680C             LDR      R4,[R1, #+0]
+   \        0x6   0xE000             B.N      ??stopTimer_0
+     43          
+     44              while(p!=NULL)
+     45              {
+     46                  if(p->id == id)
+     47                  {
+     48                      osTimerStop(p->osTmId);
+     49                      osTimerDelete(p->osTmId);
+     50                      free(p);
+     51                      break;
+     52                  }
+     53                  else
+     54                      p = p->next;
+   \                     ??stopTimer_1: (+1)
+   \        0x8   0x6824             LDR      R4,[R4, #+0]
+   \                     ??stopTimer_0: (+1)
+   \        0xA   0x2C00             CMP      R4,#+0
+   \        0xC   0xD00B             BEQ.N    ??stopTimer_2
+   \        0xE   0x6921             LDR      R1,[R4, #+16]
+   \       0x10   0x4281             CMP      R1,R0
+   \       0x12   0xD1F9             BNE.N    ??stopTimer_1
+   \       0x14   0x6860             LDR      R0,[R4, #+4]
+   \       0x16   0x.... 0x....      BL       osTimerStop
+   \       0x1A   0x6860             LDR      R0,[R4, #+4]
+   \       0x1C   0x.... 0x....      BL       osTimerDelete
+   \       0x20   0x0020             MOVS     R0,R4
+   \       0x22   0x.... 0x....      BL       free
+     55              }
+     56          }
+   \                     ??stopTimer_2: (+1)
+   \       0x26   0xBD10             POP      {R4,PC}
+     57          
+     58          /*=========================================================
+     59          Function_name   : TimerHandleTest
+     60          Description     : 
+     61          Caller          : 
+     62          Ver 1.0
+     63          =========================================================*/	
+
+   \                                 In section .text, align 2, keep-with-next
+     64          void TimerHandleTest(void *argument)
+     65          {
+   \                     TimerHandleTest: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     66              tmNode *p = (tmNode*)argument;
+     67          
+     68              if(p->usernumber)
+   \        0x4   0x6960             LDR      R0,[R4, #+20]
+   \        0x6   0x2800             CMP      R0,#+0
+   \        0x8   0xD00C             BEQ.N    ??TimerHandleTest_0
+     69              {
+     70                  p->usernumber--;
+   \        0xA   0x6960             LDR      R0,[R4, #+20]
+   \        0xC   0x1E40             SUBS     R0,R0,#+1
+   \        0xE   0x6160             STR      R0,[R4, #+20]
+     71          
+     72                  if(!p->usernumber)
+   \       0x10   0x6960             LDR      R0,[R4, #+20]
+   \       0x12   0x2800             CMP      R0,#+0
+   \       0x14   0xD106             BNE.N    ??TimerHandleTest_0
+     73                  {
+     74                      stopTimer(p->id);
+   \       0x16   0x6920             LDR      R0,[R4, #+16]
+   \       0x18   0x.... 0x....      BL       stopTimer
+     75                      printf("\r\n[ %s ]  Stop timer\r\n", __func__);
+   \       0x1C   0x....             LDR.N    R1,??DataTable2_1
+   \       0x1E   0x....             LDR.N    R0,??DataTable2_2
+   \       0x20   0x.... 0x....      BL       printf
+     76                  }
+     77              }
+     78          
+     79              printf("\r\n[ %s ]  %d \r\n", __func__, p->usernumber);
+   \                     ??TimerHandleTest_0: (+1)
+   \       0x24   0x6962             LDR      R2,[R4, #+20]
+   \       0x26   0x....             LDR.N    R1,??DataTable2_1
+   \       0x28   0x....             LDR.N    R0,??DataTable2_3
+   \       0x2A   0x.... 0x....      BL       printf
+     80          
+     81          }
+   \       0x2E   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \        0x0   0x....'....        DC32     gHeadTm
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \        0x0   0x....'....        DC32     `TimerHandleTest::__func__`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \        0x0   0x....'....        DC32     ?_1
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \        0x0   0x0D 0x0A          DC8 "\015\012[ %s ]  Stop timer\015\012"
+
+   \              0x5B 0x20    
+
+   \              0x25 0x73    
+
+   \              0x20 0x5D    
+
+   \              0x20 0x20    
+
+   \              0x53 0x74    
+
+   \              0x6F 0x70    
+
+   \              0x20 0x74    
+
+   \              0x69 0x6D    
+
+   \              0x65 0x72    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x17                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \        0x0   0x0D 0x0A          DC8 "\015\012[ %s ]  %d \015\012"
+
+   \              0x5B 0x20    
+
+   \              0x25 0x73    
+
+   \              0x20 0x5D    
+
+   \              0x20 0x20    
+
+   \              0x25 0x64    
+
+   \              0x20 0x0D    
+
+   \              0x0A 0x00
+     82          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   TimerHandleTest
+         8   -> printf
+         8   -> stopTimer
+      24   startTimer
+        24   -> malloc
+        24   -> osTimerNew
+        24   -> osTimerStart
+       8   stopTimer
+         8   -> free
+         8   -> osTimerDelete
+         8   -> osTimerStop
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+      24  ?_0
+      16  ?_1
+      48  TimerHandleTest
+       4  gHeadTm
+      94  startTimer
+      40  stopTimer
+      16  -- Other
+
+ 
+   4 bytes in section .bss
+  56 bytes in section .rodata
+ 198 bytes in section .text
+ 
+ 198 bytes of CODE  memory
+  56 bytes of CONST memory
+   4 bytes of DATA  memory
+
+Errors: none
+Warnings: none

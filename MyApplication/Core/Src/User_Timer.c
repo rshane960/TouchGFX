@@ -22,7 +22,7 @@ size_t startTimer(osTimerFunc_t func, osTimerType_t type, size_t userdata, uint3
     newTm->usernumber = userdata;
     newTm->osTmFunc = func;
     newTm->osTmType = type;
-    newTm->osTmId = osTimerNew(newTm->tmFunc, newTm->tmType, (void*)newTm->id, NULL);
+    newTm->osTmId = osTimerNew(newTm->osTmFunc, newTm->osTmType, (void*)newTm->id, NULL);
     osTimerStart(newTm->osTmId, period);
     
     newTm->next = gHeadTm;
@@ -46,7 +46,7 @@ void stopTimer(size_t id)
         if(p->id == id)
         {
             osTimerStop(p->osTmId);
-            osTimerDelete(p->osTmId)
+            osTimerDelete(p->osTmId);
             free(p);
             break;
         }
@@ -65,7 +65,7 @@ void TimerHandleTest(void *argument)
 {
     tmNode *p = (tmNode*)argument;
 
-    if(!p->usernumber)
+    if(p->usernumber)
     {
         p->usernumber--;
 

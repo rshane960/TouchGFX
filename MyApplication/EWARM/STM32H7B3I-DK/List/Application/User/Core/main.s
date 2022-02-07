@@ -1,6 +1,6 @@
 ﻿///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM        05/Feb/2022  17:09:45
+// IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM        07/Feb/2022  20:39:54
 // Copyright 1999-2021 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
@@ -73,7 +73,6 @@
         RTMODEL "__dlib_file_descriptor", "1"
         RTMODEL "__dlib_full_locale_support", "1"
         RTMODEL "__dlib_version", "6"
-        RTMODEL "__iar_require _Printf", ""
         AAPCS BASE,INTERWORK,VFP
         PRESERVE8
         REQUIRE8
@@ -111,15 +110,14 @@
         EXTERN HAL_UARTEx_SetTxFifoThreshold
         EXTERN HAL_UART_Init
         EXTERN MX_TouchGFX_Init
+        EXTERN TimerHandleTest
         EXTERN TouchGFX_Task
         EXTERN __aeabi_memset
         EXTERN osDelay
         EXTERN osKernelInitialize
         EXTERN osKernelStart
         EXTERN osThreadNew
-        EXTERN osTimerNew
-        EXTERN osTimerStart
-        EXTERN printf
+        EXTERN startTimer
 
         PUBLIC Error_Handler
         PUBLIC GUI_TaskHandle
@@ -136,8 +134,6 @@
         PUBLIC hospi1
         PUBLIC huart1
         PUBLIC main
-        PUBLIC testTimerHandle
-        PUBLIC testTimer_attributes
         PUBLIC testTmrCallback
         
           CFI Names cfiNames0
@@ -300,20 +296,6 @@ defaultTaskHandle:
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         DATA
-?_2:
-        DATA8
-        DC8 "testTimer"
-        DATA16
-        DS8 2
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-?_3:
-        DATA8
-        DC8 "timer\015\012"
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
 //   62 const osThreadAttr_t defaultTask_attributes = {
 defaultTask_attributes:
         DATA32
@@ -345,23 +327,10 @@ GUI_Task_attributes:
 //   72   .priority = (osPriority_t) osPriorityNormal,
 //   73 };
 //   74 /* Definitions for testTimer */
-
-        SECTION `.bss`:DATA:REORDER:NOROOT(2)
-        DATA
-//   75 osTimerId_t testTimerHandle;
-testTimerHandle:
-        DS8 4
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-//   76 const osTimerAttr_t testTimer_attributes = {
-testTimer_attributes:
-        DATA32
-        DC32 ?_2
-        DATA
-        DS8 12
-//   77   .name = "testTimer"
-//   78 };
+//   75 //osTimerId_t testTimerHandle;
+//   76 //const osTimerAttr_t testTimer_attributes = {
+//   77 //  .name = "testTimer"
+//   78 //};
 //   79 /* USER CODE BEGIN PV */
 //   80 
 //   81 /* USER CODE END PV */
@@ -537,15 +506,7 @@ main:
 //  164 
 //  165   /* Create the timer(s) */
 //  166   /* creation of testTimer */
-//  167   testTimerHandle = osTimerNew(testTmrCallback, osTimerPeriodic, NULL, &testTimer_attributes);
-        LDR.W    R3,??DataTable11_5
-        MOVS     R2,#+0         
-        MOVS     R1,#+1         
-        ADR.W    R0,testTmrCallback
-          CFI FunCall osTimerNew
-        BL       osTimerNew     
-        LDR.W    R1,??DataTable11_6
-        STR      R0,[R1, #+0]   
+//  167 //  testTimerHandle = osTimerNew(testTmrCallback, osTimerPeriodic, NULL, &testTimer_attributes);
 //  168 
 //  169   /* USER CODE BEGIN RTOS_TIMERS */
 //  170   /* start timers, add new ones, ... */
@@ -558,22 +519,22 @@ main:
 //  177   /* Create the thread(s) */
 //  178   /* creation of defaultTask */
 //  179   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
-        LDR.W    R2,??DataTable11_7
+        LDR.W    R2,??DataTable11_5
         MOVS     R1,#+0         
         ADR.W    R0,StartDefaultTask
           CFI FunCall osThreadNew
         BL       osThreadNew    
-        LDR.W    R1,??DataTable11_8
+        LDR.W    R1,??DataTable11_6
         STR      R0,[R1, #+0]   
 //  180 
 //  181   /* creation of GUI_Task */
 //  182   GUI_TaskHandle = osThreadNew(TouchGFX_Task, NULL, &GUI_Task_attributes);
-        LDR.W    R2,??DataTable11_9
+        LDR.W    R2,??DataTable11_7
         MOVS     R1,#+0         
-        LDR.W    R0,??DataTable11_10
+        LDR.W    R0,??DataTable11_8
           CFI FunCall osThreadNew
         BL       osThreadNew    
-        LDR.W    R1,??DataTable11_11
+        LDR.W    R1,??DataTable11_9
         STR      R0,[R1, #+0]   
 //  183 
 //  184   /* USER CODE BEGIN RTOS_THREADS */
@@ -649,7 +610,7 @@ SystemClock_Config:
 //  222   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
         MOVS     R0,#+0         
         STR      R0,[SP, #+0]   
-        LDR.W    R0,??DataTable11_12
+        LDR.W    R0,??DataTable11_10
         LDR      R1,[R0, #+0]   
         ORRS     R1,R1,#0xC000  
         STR      R1,[R0, #+0]   
@@ -666,7 +627,7 @@ SystemClock_Config:
 //  225   /** Macro to configure the PLL clock source
 //  226   */
 //  227   __HAL_RCC_PLL_PLLSOURCE_CONFIG(RCC_PLLSOURCE_HSE);
-        LDR.W    R0,??DataTable11_13
+        LDR.W    R0,??DataTable11_11
         MOVS     R1,#+2         
         LDR      R2,[R0, #+0]   
         BFI      R2,R1,#+0,#+2  
@@ -795,8 +756,8 @@ MX_CRC_Init:
 //  279 
 //  280   /* USER CODE END CRC_Init 1 */
 //  281   hcrc.Instance = CRC;
-        LDR.W    R0,??DataTable11_14
-        LDR.W    R1,??DataTable11_15
+        LDR.W    R0,??DataTable11_12
+        LDR.W    R1,??DataTable11_13
         STR      R1,[R0, #+0]   
 //  282   hcrc.Init.DefaultPolynomialUse = DEFAULT_POLYNOMIAL_ENABLE;
         MOVS     R1,#+0         
@@ -858,8 +819,8 @@ MX_DMA2D_Init:
 //  310 
 //  311   /* USER CODE END DMA2D_Init 1 */
 //  312   hdma2d.Instance = DMA2D;
-        LDR.W    R4,??DataTable11_16
-        LDR.W    R0,??DataTable11_17
+        LDR.W    R4,??DataTable11_14
+        LDR.W    R0,??DataTable11_15
         STR      R0,[R4, #+0]   
 //  313   hdma2d.Init.Mode = DMA2D_M2M;
         MOVS     R0,#+0         
@@ -950,11 +911,11 @@ MX_I2C4_Init:
 //  350 
 //  351   /* USER CODE END I2C4_Init 1 */
 //  352   hi2c4.Instance = I2C4;
-        LDR.W    R4,??DataTable11_18
-        LDR.W    R0,??DataTable11_19
+        LDR.W    R4,??DataTable11_16
+        LDR.W    R0,??DataTable11_17
         STR      R0,[R4, #+0]   
 //  353   hi2c4.Init.Timing = 0x30808BD0;
-        LDR.W    R0,??DataTable11_20
+        LDR.W    R0,??DataTable11_18
         STR      R0,[R4, #+4]   
 //  354   hi2c4.Init.OwnAddress1 = 0;
         MOVS     R0,#+0         
@@ -1063,8 +1024,8 @@ MX_LTDC_Init:
 //  398 
 //  399   /* USER CODE END LTDC_Init 1 */
 //  400   hltdc.Instance = LTDC;
-        LDR.W    R4,??DataTable11_21
-        LDR.W    R0,??DataTable11_22
+        LDR.W    R4,??DataTable11_19
+        LDR.W    R0,??DataTable11_20
         STR      R0,[R4, #+0]   
 //  401   hltdc.Init.HSPolarity = LTDC_HSPOLARITY_AL;
         MOVS     R0,#+0         
@@ -1226,8 +1187,8 @@ MX_OCTOSPI1_Init:
 //  461   /* USER CODE END OCTOSPI1_Init 1 */
 //  462   /* OCTOSPI1 parameter configuration*/
 //  463   hospi1.Instance = OCTOSPI1;
-        LDR.W    R4,??DataTable11_23
-        LDR.W    R0,??DataTable11_24
+        LDR.W    R4,??DataTable11_21
+        LDR.W    R0,??DataTable11_22
         STR      R0,[R4, #+0]   
 //  464   hospi1.Init.FifoThreshold = 1;
         MOVS     R0,#+1         
@@ -1302,7 +1263,7 @@ MX_OCTOSPI1_Init:
         MOVS     R0,#+65537     
         STR      R0,[SP, #+16]  
 //  488   sOspiManagerCfg.IOHighPort = HAL_OSPIM_IOPORT_1_HIGH;
-        LDR.W    R0,??DataTable11_25
+        LDR.W    R0,??DataTable11_23
         STR      R0,[SP, #+20]  
 //  489   if (HAL_OSPIM_Config(&hospi1, &sOspiManagerCfg, HAL_OSPI_TIMEOUT_DEFAULT_VALUE) != HAL_OK)
         MOVW     R2,#+5000      
@@ -1391,8 +1352,8 @@ MX_USART1_UART_Init:
 //  525 
 //  526   /* USER CODE END USART1_Init 1 */
 //  527   huart1.Instance = USART1;
-        LDR.N    R4,??DataTable11_26
-        LDR.N    R0,??DataTable11_27
+        LDR.N    R4,??DataTable11_24
+        LDR.N    R0,??DataTable11_25
         STR      R0,[R4, #+0]   
 //  528   huart1.Init.BaudRate = 115200;
         MOVS     R0,#+115200    
@@ -1515,7 +1476,7 @@ MX_GPIO_Init:
 //  568 
 //  569   /* GPIO Ports Clock Enable */
 //  570   __HAL_RCC_GPIOK_CLK_ENABLE();
-        LDR.N    R0,??DataTable11_28
+        LDR.N    R0,??DataTable11_26
         LDR      R1,[R0, #+0]   
         ORRS     R1,R1,#0x400   
         STR      R1,[R0, #+0]   
@@ -1563,7 +1524,15 @@ MX_GPIO_Init:
         ANDS     R1,R1,#0x1     
         STR      R1,[SP, #+20]  
         LDR      R1,[SP, #+20]  
-//  576   __HAL_RCC_GPIOF_CLK_ENABLE();
+//  576   __HAL_RCC_GPIOC_CLK_ENABLE();
+        LDR      R1,[R0, #+0]   
+        ORRS     R1,R1,#0x4     
+        STR      R1,[R0, #+0]   
+        LDR      R1,[R0, #+0]   
+        ANDS     R1,R1,#0x4     
+        STR      R1,[SP, #+20]  
+        LDR      R1,[SP, #+20]  
+//  577   __HAL_RCC_GPIOF_CLK_ENABLE();
         LDR      R1,[R0, #+0]   
         ORRS     R1,R1,#0x20    
         STR      R1,[R0, #+0]   
@@ -1571,20 +1540,12 @@ MX_GPIO_Init:
         ANDS     R1,R1,#0x20    
         STR      R1,[SP, #+20]  
         LDR      R1,[SP, #+20]  
-//  577   __HAL_RCC_GPIOH_CLK_ENABLE();
+//  578   __HAL_RCC_GPIOH_CLK_ENABLE();
         LDR      R1,[R0, #+0]   
         ORRS     R1,R1,#0x80    
         STR      R1,[R0, #+0]   
         LDR      R1,[R0, #+0]   
         ANDS     R1,R1,#0x80    
-        STR      R1,[SP, #+20]  
-        LDR      R1,[SP, #+20]  
-//  578   __HAL_RCC_GPIOC_CLK_ENABLE();
-        LDR      R1,[R0, #+0]   
-        ORRS     R1,R1,#0x4     
-        STR      R1,[R0, #+0]   
-        LDR      R1,[R0, #+0]   
-        ANDS     R1,R1,#0x4     
         STR      R1,[SP, #+20]  
         LDR      R1,[SP, #+20]  
 //  579   __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -1599,7 +1560,7 @@ MX_GPIO_Init:
 //  581   /*Configure GPIO pin Output Level */
 //  582   HAL_GPIO_WritePin(GPIOG, LED3_Pin|LED2_Pin, GPIO_PIN_RESET);
         MOVW     R8,#+2052      
-        LDR.N    R7,??DataTable11_29
+        LDR.N    R7,??DataTable11_27
         MOVS     R2,#+0         
         MOV      R1,R8          
         MOVS     R0,R7          
@@ -1608,7 +1569,7 @@ MX_GPIO_Init:
 //  583 
 //  584   /*Configure GPIO pin Output Level */
 //  585   HAL_GPIO_WritePin(MCU_ACTIVE_GPIO_Port, MCU_ACTIVE_Pin, GPIO_PIN_RESET);
-        LDR.N    R4,??DataTable11_30
+        LDR.N    R4,??DataTable11_28
         MOVS     R2,#+0         
         MOVS     R1,#+1         
         MOVS     R0,R4          
@@ -1617,7 +1578,7 @@ MX_GPIO_Init:
 //  586 
 //  587   /*Configure GPIO pin Output Level */
 //  588   HAL_GPIO_WritePin(GPIOA, VSYNC_FREQ_Pin|LCD_BL_CTRL_Pin|LCD_ON_OFF_Pin, GPIO_PIN_RESET);
-        LDR.N    R5,??DataTable11_31
+        LDR.N    R5,??DataTable11_29
         MOVS     R2,#+0         
         MOVW     R1,#+4102      
         MOVS     R0,R5          
@@ -1626,7 +1587,7 @@ MX_GPIO_Init:
 //  589 
 //  590   /*Configure GPIO pin Output Level */
 //  591   HAL_GPIO_WritePin(GPIOB, RENDER_TIME_Pin|FRAME_RATE_Pin, GPIO_PIN_RESET);
-        LDR.N    R6,??DataTable11_32
+        LDR.N    R6,??DataTable11_30
         MOVS     R2,#+0         
         MOV      R1,#+49152     
         MOVS     R0,R6          
@@ -1689,167 +1650,187 @@ MX_GPIO_Init:
           CFI FunCall HAL_GPIO_Init
         BL       HAL_GPIO_Init  
 //  613 
-//  614   /*Configure GPIO pin : LCD_INT_Pin */
-//  615   GPIO_InitStruct.Pin = LCD_INT_Pin;
-        MOVS     R0,#+4         
+//  614   /*Configure GPIO pin : WakeupButton_Pin */
+//  615   GPIO_InitStruct.Pin = WakeupButton_Pin;
+        MOV      R0,#+8192      
         STR      R0,[SP, #+0]   
-//  616   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-        MOVS     R0,#+1114112   
+//  616   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+        MOVS     R0,#+0         
         STR      R0,[SP, #+4]   
-//  617   GPIO_InitStruct.Pull = GPIO_PULLUP;
-        MOVS     R0,#+1         
+//  617   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+        MOVS     R0,#+2         
         STR      R0,[SP, #+8]   
-//  618   HAL_GPIO_Init(LCD_INT_GPIO_Port, &GPIO_InitStruct);
+//  618   HAL_GPIO_Init(WakeupButton_GPIO_Port, &GPIO_InitStruct);
         MOV      R1,SP          
-        LDR.N    R0,??DataTable11_33
+        LDR.N    R0,??DataTable11_31
           CFI FunCall HAL_GPIO_Init
         BL       HAL_GPIO_Init  
 //  619 
-//  620   /*Configure GPIO pins : RENDER_TIME_Pin FRAME_RATE_Pin */
-//  621   GPIO_InitStruct.Pin = RENDER_TIME_Pin|FRAME_RATE_Pin;
+//  620   /*Configure GPIO pin : LCD_INT_Pin */
+//  621   GPIO_InitStruct.Pin = LCD_INT_Pin;
+        MOVS     R0,#+4         
+        STR      R0,[SP, #+0]   
+//  622   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+        MOVS     R0,#+1114112   
+        STR      R0,[SP, #+4]   
+//  623   GPIO_InitStruct.Pull = GPIO_PULLUP;
+        MOVS     R0,#+1         
+        STR      R0,[SP, #+8]   
+//  624   HAL_GPIO_Init(LCD_INT_GPIO_Port, &GPIO_InitStruct);
+        MOV      R1,SP          
+        LDR.N    R0,??DataTable11_32
+          CFI FunCall HAL_GPIO_Init
+        BL       HAL_GPIO_Init  
+//  625 
+//  626   /*Configure GPIO pins : RENDER_TIME_Pin FRAME_RATE_Pin */
+//  627   GPIO_InitStruct.Pin = RENDER_TIME_Pin|FRAME_RATE_Pin;
         MOV      R0,#+49152     
         STR      R0,[SP, #+0]   
-//  622   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+//  628   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
         MOVS     R0,#+1         
         STR      R0,[SP, #+4]   
-//  623   GPIO_InitStruct.Pull = GPIO_NOPULL;
+//  629   GPIO_InitStruct.Pull = GPIO_NOPULL;
         MOVS     R0,#+0         
         STR      R0,[SP, #+8]   
-//  624   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+//  630   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
         MOVS     R0,#+0         
         STR      R0,[SP, #+12]  
-//  625   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+//  631   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
         MOV      R1,SP          
         MOVS     R0,R6          
           CFI FunCall HAL_GPIO_Init
         BL       HAL_GPIO_Init  
-//  626 
-//  627   /*Configure GPIO pin : LCD_ON_OFF_Pin */
-//  628   GPIO_InitStruct.Pin = LCD_ON_OFF_Pin;
+//  632 
+//  633   /*Configure GPIO pin : LCD_ON_OFF_Pin */
+//  634   GPIO_InitStruct.Pin = LCD_ON_OFF_Pin;
         MOVS     R0,#+4         
         STR      R0,[SP, #+0]   
-//  629   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+//  635   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
         MOVS     R0,#+1         
         STR      R0,[SP, #+4]   
-//  630   GPIO_InitStruct.Pull = GPIO_PULLUP;
+//  636   GPIO_InitStruct.Pull = GPIO_PULLUP;
         MOVS     R0,#+1         
         STR      R0,[SP, #+8]   
-//  631   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+//  637   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
         MOVS     R0,#+0         
         STR      R0,[SP, #+12]  
-//  632   HAL_GPIO_Init(LCD_ON_OFF_GPIO_Port, &GPIO_InitStruct);
+//  638   HAL_GPIO_Init(LCD_ON_OFF_GPIO_Port, &GPIO_InitStruct);
         MOV      R1,SP          
         MOVS     R0,R5          
           CFI FunCall HAL_GPIO_Init
         BL       HAL_GPIO_Init  
-//  633 
-//  634   /* EXTI interrupt init*/
-//  635   HAL_NVIC_SetPriority(EXTI2_IRQn, 5, 0);
+//  639 
+//  640   /* EXTI interrupt init*/
+//  641   HAL_NVIC_SetPriority(EXTI2_IRQn, 5, 0);
         MOVS     R2,#+0         
         MOVS     R1,#+5         
         MOVS     R0,#+8         
           CFI FunCall HAL_NVIC_SetPriority
         BL       HAL_NVIC_SetPriority
-//  636   HAL_NVIC_EnableIRQ(EXTI2_IRQn);
+//  642   HAL_NVIC_EnableIRQ(EXTI2_IRQn);
         MOVS     R0,#+8         
           CFI FunCall HAL_NVIC_EnableIRQ
         BL       HAL_NVIC_EnableIRQ
-//  637 
-//  638 }
+//  643 
+//  644 }
         ADD      SP,SP,#+24     
           CFI CFA R13+24
         POP      {R4-R8,PC}     
           CFI EndBlock cfiBlock8
-//  639 
-//  640 /* USER CODE BEGIN 4 */
-//  641 
-//  642 /* USER CODE END 4 */
-//  643 
-//  644 /* USER CODE BEGIN Header_StartDefaultTask */
-//  645 /**
-//  646   * @brief  Function implementing the defaultTask thread.
-//  647   * @param  argument: Not used
-//  648   * @retval None
-//  649   */
-//  650 /* USER CODE END Header_StartDefaultTask */
+//  645 
+//  646 /* USER CODE BEGIN 4 */
+//  647 
+//  648 /* USER CODE END 4 */
+//  649 
+//  650 /* USER CODE BEGIN Header_StartDefaultTask */
+//  651 /**
+//  652   * @brief  Function implementing the defaultTask thread.
+//  653   * @param  argument: Not used
+//  654   * @retval None
+//  655   */
+//  656 /* USER CODE END Header_StartDefaultTask */
 
         SECTION `.text`:CODE:NOROOT(2)
           CFI Block cfiBlock9 Using cfiCommon0
           CFI Function StartDefaultTask
         THUMB
-//  651 void StartDefaultTask(void *argument)
-//  652 {
+//  657 void StartDefaultTask(void *argument)
+//  658 {
 StartDefaultTask:
         PUSH     {R7,LR}        
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//  653   /* USER CODE BEGIN 5 */
-//  654 
-//  655     osTimerStart(testTimerHandle, 1000);
-        MOV      R1,#+1000      
-        LDR.N    R0,??DataTable11_6
-        LDR      R0,[R0, #+0]   
-          CFI FunCall osTimerStart
-        BL       osTimerStart   
-//  656 
-//  657   /* Infinite loop */
-//  658   for(;;)
-//  659   {
-//  660     osDelay(100);
+//  659   /* USER CODE BEGIN 5 */
+//  660 
+//  661 //    osTimerStart(testTimerHandle, 1000);
+//  662     startTimer(testTmrCallback, osTimerPeriodic, NULL, 1000);
+        MOV      R3,#+1000      
+        MOVS     R2,#+0         
+        MOVS     R1,#+1         
+        ADR.W    R0,testTmrCallback
+          CFI FunCall startTimer
+        BL       startTimer     
+//  663     startTimer(TimerHandleTest, osTimerPeriodic, 10, 1000);
+        MOV      R3,#+1000      
+        MOVS     R2,#+10        
+        MOVS     R1,#+1         
+        LDR.N    R0,??DataTable11_33
+          CFI FunCall startTimer
+        BL       startTimer     
+//  664 
+//  665   /* Infinite loop */
+//  666   for(;;)
+//  667   {
+//  668     osDelay(100);
 ??StartDefaultTask_0:
         MOVS     R0,#+100       
           CFI FunCall osDelay
         BL       osDelay        
         B.N      ??StartDefaultTask_0
-//  661   }
-//  662   /* USER CODE END 5 */
-//  663 }
+//  669   }
+//  670   /* USER CODE END 5 */
+//  671 }
           CFI EndBlock cfiBlock9
-//  664 
-//  665 /* testTmrCallback function */
+//  672 
+//  673 /* testTmrCallback function */
 
         SECTION `.text`:CODE:NOROOT(2)
           CFI Block cfiBlock10 Using cfiCommon0
           CFI Function testTmrCallback
         THUMB
-//  666 void testTmrCallback(void *argument)
-//  667 {
+//  674 void testTmrCallback(void *argument)
+//  675 {
 testTmrCallback:
         PUSH     {R4,LR}        
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-//  668   /* USER CODE BEGIN testTmrCallback */
-//  669     HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_2);
-        LDR.N    R4,??DataTable11_29
+//  676   /* USER CODE BEGIN testTmrCallback */
+//  677     HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_2);
+        LDR.N    R4,??DataTable11_27
         MOVS     R1,#+4         
         MOVS     R0,R4          
           CFI FunCall HAL_GPIO_TogglePin
         BL       HAL_GPIO_TogglePin
-//  670     HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_11);
+//  678     HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_11);
         MOV      R1,#+2048      
         MOVS     R0,R4          
           CFI FunCall HAL_GPIO_TogglePin
         BL       HAL_GPIO_TogglePin
-//  671     printf("timer\r\n");
-        LDR.N    R0,??DataTable11_34
-          CFI FunCall printf
-        BL       printf         
-//  672 
-//  673   /* USER CODE END testTmrCallback */
-//  674 }
+//  679   /* USER CODE END testTmrCallback */
+//  680 }
         POP      {R4,PC}        
           CFI EndBlock cfiBlock10
-//  675 
-//  676 /* MPU Configuration */
-//  677 
+//  681 
+//  682 /* MPU Configuration */
+//  683 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock11 Using cfiCommon0
           CFI Function MPU_Config
         THUMB
-//  678 void MPU_Config(void)
-//  679 {
+//  684 void MPU_Config(void)
+//  685 {
 MPU_Config:
         PUSH     {R0-R4,LR}     
           CFI R14 Frame(CFA, -4)
@@ -1861,148 +1842,148 @@ MPU_Config:
         MOVS     R0,R4          
           CFI FunCall __aeabi_memset
         BL       __aeabi_memset 
-//  680   MPU_Region_InitTypeDef MPU_InitStruct = {0};
-//  681 
-//  682   /* Disables the MPU */
-//  683   HAL_MPU_Disable();
+//  686   MPU_Region_InitTypeDef MPU_InitStruct = {0};
+//  687 
+//  688   /* Disables the MPU */
+//  689   HAL_MPU_Disable();
           CFI FunCall HAL_MPU_Disable
         BL       HAL_MPU_Disable
-//  684   /** Initializes and configures the Region and the memory to be protected
-//  685   */
-//  686   MPU_InitStruct.Enable = MPU_REGION_ENABLE;
+//  690   /** Initializes and configures the Region and the memory to be protected
+//  691   */
+//  692   MPU_InitStruct.Enable = MPU_REGION_ENABLE;
         MOVS     R0,#+1         
         STRB     R0,[SP, #+0]   
-//  687   MPU_InitStruct.Number = MPU_REGION_NUMBER0;
+//  693   MPU_InitStruct.Number = MPU_REGION_NUMBER0;
         MOVS     R0,#+0         
         STRB     R0,[SP, #+1]   
-//  688   MPU_InitStruct.BaseAddress = 0x90000000;
+//  694   MPU_InitStruct.BaseAddress = 0x90000000;
         MOVS     R0,#+2415919104
         STR      R0,[SP, #+4]   
-//  689   MPU_InitStruct.Size = MPU_REGION_SIZE_256MB;
+//  695   MPU_InitStruct.Size = MPU_REGION_SIZE_256MB;
         MOVS     R0,#+27        
         STRB     R0,[SP, #+8]   
-//  690   MPU_InitStruct.SubRegionDisable = 0x0;
+//  696   MPU_InitStruct.SubRegionDisable = 0x0;
         MOVS     R0,#+0         
         STRB     R0,[SP, #+9]   
-//  691   MPU_InitStruct.TypeExtField = MPU_TEX_LEVEL0;
+//  697   MPU_InitStruct.TypeExtField = MPU_TEX_LEVEL0;
         MOVS     R0,#+0         
         STRB     R0,[SP, #+10]  
-//  692   MPU_InitStruct.AccessPermission = MPU_REGION_NO_ACCESS;
+//  698   MPU_InitStruct.AccessPermission = MPU_REGION_NO_ACCESS;
         MOVS     R0,#+0         
         STRB     R0,[SP, #+11]  
-//  693   MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
+//  699   MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
         MOVS     R0,#+1         
         STRB     R0,[SP, #+12]  
-//  694   MPU_InitStruct.IsShareable = MPU_ACCESS_NOT_SHAREABLE;
+//  700   MPU_InitStruct.IsShareable = MPU_ACCESS_NOT_SHAREABLE;
         MOVS     R0,#+0         
         STRB     R0,[SP, #+13]  
-//  695   MPU_InitStruct.IsCacheable = MPU_ACCESS_NOT_CACHEABLE;
+//  701   MPU_InitStruct.IsCacheable = MPU_ACCESS_NOT_CACHEABLE;
         MOVS     R0,#+0         
         STRB     R0,[SP, #+14]  
-//  696   MPU_InitStruct.IsBufferable = MPU_ACCESS_NOT_BUFFERABLE;
+//  702   MPU_InitStruct.IsBufferable = MPU_ACCESS_NOT_BUFFERABLE;
         MOVS     R0,#+0         
         STRB     R0,[SP, #+15]  
-//  697 
-//  698   HAL_MPU_ConfigRegion(&MPU_InitStruct);
+//  703 
+//  704   HAL_MPU_ConfigRegion(&MPU_InitStruct);
         MOV      R0,SP          
           CFI FunCall HAL_MPU_ConfigRegion
         BL       HAL_MPU_ConfigRegion
-//  699   /** Initializes and configures the Region and the memory to be protected
-//  700   */
-//  701   MPU_InitStruct.Number = MPU_REGION_NUMBER1;
+//  705   /** Initializes and configures the Region and the memory to be protected
+//  706   */
+//  707   MPU_InitStruct.Number = MPU_REGION_NUMBER1;
         MOVS     R0,#+1         
         STRB     R0,[SP, #+1]   
-//  702   MPU_InitStruct.Size = MPU_REGION_SIZE_64MB;
+//  708   MPU_InitStruct.Size = MPU_REGION_SIZE_64MB;
         MOVS     R0,#+25        
         STRB     R0,[SP, #+8]   
-//  703   MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
+//  709   MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
         MOVS     R0,#+3         
         STRB     R0,[SP, #+11]  
-//  704   MPU_InitStruct.IsCacheable = MPU_ACCESS_CACHEABLE;
+//  710   MPU_InitStruct.IsCacheable = MPU_ACCESS_CACHEABLE;
         MOVS     R0,#+1         
         STRB     R0,[SP, #+14]  
-//  705 
-//  706   HAL_MPU_ConfigRegion(&MPU_InitStruct);
+//  711 
+//  712   HAL_MPU_ConfigRegion(&MPU_InitStruct);
         MOV      R0,SP          
           CFI FunCall HAL_MPU_ConfigRegion
         BL       HAL_MPU_ConfigRegion
-//  707   /** Initializes and configures the Region and the memory to be protected
-//  708   */
-//  709   MPU_InitStruct.Number = MPU_REGION_NUMBER2;
+//  713   /** Initializes and configures the Region and the memory to be protected
+//  714   */
+//  715   MPU_InitStruct.Number = MPU_REGION_NUMBER2;
         MOVS     R0,#+2         
         STRB     R0,[SP, #+1]   
-//  710   MPU_InitStruct.BaseAddress = 0x24000000;
+//  716   MPU_InitStruct.BaseAddress = 0x24000000;
         MOVS     R0,#+603979776 
         STR      R0,[SP, #+4]   
-//  711   MPU_InitStruct.Size = MPU_REGION_SIZE_1MB;
+//  717   MPU_InitStruct.Size = MPU_REGION_SIZE_1MB;
         MOVS     R0,#+19        
         STRB     R0,[SP, #+8]   
-//  712 
-//  713   HAL_MPU_ConfigRegion(&MPU_InitStruct);
+//  718 
+//  719   HAL_MPU_ConfigRegion(&MPU_InitStruct);
         MOV      R0,SP          
           CFI FunCall HAL_MPU_ConfigRegion
         BL       HAL_MPU_ConfigRegion
-//  714   /** Initializes and configures the Region and the memory to be protected
-//  715   */
-//  716   MPU_InitStruct.Number = MPU_REGION_NUMBER3;
+//  720   /** Initializes and configures the Region and the memory to be protected
+//  721   */
+//  722   MPU_InitStruct.Number = MPU_REGION_NUMBER3;
         MOVS     R0,#+3         
         STRB     R0,[SP, #+1]   
-//  717   MPU_InitStruct.Size = MPU_REGION_SIZE_256KB;
+//  723   MPU_InitStruct.Size = MPU_REGION_SIZE_256KB;
         MOVS     R0,#+17        
         STRB     R0,[SP, #+8]   
-//  718   MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
+//  724   MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
         MOVS     R0,#+1         
         STRB     R0,[SP, #+15]  
-//  719 
-//  720   HAL_MPU_ConfigRegion(&MPU_InitStruct);
+//  725 
+//  726   HAL_MPU_ConfigRegion(&MPU_InitStruct);
         MOV      R0,SP          
           CFI FunCall HAL_MPU_ConfigRegion
         BL       HAL_MPU_ConfigRegion
-//  721   /* Enables the MPU */
-//  722   HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
+//  727   /* Enables the MPU */
+//  728   HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
         MOVS     R0,#+4         
           CFI FunCall HAL_MPU_Enable
         BL       HAL_MPU_Enable 
-//  723 
-//  724 }
+//  729 
+//  730 }
         POP      {R0-R4,PC}     
           CFI EndBlock cfiBlock11
-//  725 
-//  726 /**
-//  727   * @brief  Period elapsed callback in non blocking mode
-//  728   * @note   This function is called  when TIM6 interrupt took place, inside
-//  729   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
-//  730   * a global variable "uwTick" used as application time base.
-//  731   * @param  htim : TIM handle
-//  732   * @retval None
-//  733   */
+//  731 
+//  732 /**
+//  733   * @brief  Period elapsed callback in non blocking mode
+//  734   * @note   This function is called  when TIM6 interrupt took place, inside
+//  735   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+//  736   * a global variable "uwTick" used as application time base.
+//  737   * @param  htim : TIM handle
+//  738   * @retval None
+//  739   */
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock12 Using cfiCommon0
           CFI Function HAL_TIM_PeriodElapsedCallback
         THUMB
-//  734 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-//  735 {
+//  740 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//  741 {
 HAL_TIM_PeriodElapsedCallback:
         PUSH     {R7,LR}        
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//  736   /* USER CODE BEGIN Callback 0 */
-//  737 
-//  738   /* USER CODE END Callback 0 */
-//  739   if (htim->Instance == TIM6) {
+//  742   /* USER CODE BEGIN Callback 0 */
+//  743 
+//  744   /* USER CODE END Callback 0 */
+//  745   if (htim->Instance == TIM6) {
         LDR      R0,[R0, #+0]   
-        LDR.N    R1,??DataTable11_35
+        LDR.N    R1,??DataTable11_34
         CMP      R0,R1          
         BNE.N    ??HAL_TIM_PeriodElapsedCallback_0
-//  740     HAL_IncTick();
+//  746     HAL_IncTick();
           CFI FunCall HAL_IncTick
         BL       HAL_IncTick    
-//  741   }
-//  742   /* USER CODE BEGIN Callback 1 */
-//  743 
-//  744   /* USER CODE END Callback 1 */
-//  745 }
+//  747   }
+//  748   /* USER CODE BEGIN Callback 1 */
+//  749 
+//  750   /* USER CODE END Callback 1 */
+//  751 }
 ??HAL_TIM_PeriodElapsedCallback_0:
         POP      {R0,PC}        
           CFI EndBlock cfiBlock12
@@ -2047,235 +2028,228 @@ HAL_TIM_PeriodElapsedCallback:
         DATA
 ??DataTable11_5:
         DATA32
-        DC32     testTimer_attributes
+        DC32     defaultTask_attributes
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_6:
         DATA32
-        DC32     testTimerHandle
+        DC32     defaultTaskHandle
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_7:
         DATA32
-        DC32     defaultTask_attributes
+        DC32     GUI_Task_attributes
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_8:
         DATA32
-        DC32     defaultTaskHandle
+        DC32     TouchGFX_Task  
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_9:
         DATA32
-        DC32     GUI_Task_attributes
+        DC32     GUI_TaskHandle 
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_10:
         DATA32
-        DC32     TouchGFX_Task  
+        DC32     0x58024818     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_11:
         DATA32
-        DC32     GUI_TaskHandle 
+        DC32     0x58024428     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_12:
         DATA32
-        DC32     0x58024818     
+        DC32     hcrc           
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_13:
         DATA32
-        DC32     0x58024428     
+        DC32     0x40023000     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_14:
         DATA32
-        DC32     hcrc           
+        DC32     hdma2d         
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_15:
         DATA32
-        DC32     0x40023000     
+        DC32     0x52001000     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_16:
         DATA32
-        DC32     hdma2d         
+        DC32     hi2c4          
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_17:
         DATA32
-        DC32     0x52001000     
+        DC32     0x58001c00     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_18:
         DATA32
-        DC32     hi2c4          
+        DC32     0x30808bd0     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_19:
         DATA32
-        DC32     0x58001c00     
+        DC32     hltdc          
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_20:
         DATA32
-        DC32     0x30808bd0     
+        DC32     0x50001000     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_21:
         DATA32
-        DC32     hltdc          
+        DC32     hospi1         
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_22:
         DATA32
-        DC32     0x50001000     
+        DC32     0x52005000     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_23:
         DATA32
-        DC32     hospi1         
+        DC32     0x1000001      
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_24:
         DATA32
-        DC32     0x52005000     
+        DC32     huart1         
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_25:
         DATA32
-        DC32     0x1000001      
+        DC32     0x40011000     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_26:
         DATA32
-        DC32     huart1         
+        DC32     0x58024540     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_27:
         DATA32
-        DC32     0x40011000     
+        DC32     0x58021800     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_28:
         DATA32
-        DC32     0x58024540     
+        DC32     0x58022000     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_29:
         DATA32
-        DC32     0x58021800     
+        DC32     0x58020000     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_30:
         DATA32
-        DC32     0x58022000     
+        DC32     0x58020400     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_31:
         DATA32
-        DC32     0x58020000     
+        DC32     0x58020800     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_32:
         DATA32
-        DC32     0x58020400     
+        DC32     0x58021c00     
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_33:
         DATA32
-        DC32     0x58021c00     
+        DC32     TimerHandleTest
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable11_34:
         DATA32
-        DC32     ?_3            
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable11_35:
-        DATA32
         DC32     0x40001000     
-//  746 
-//  747 /**
-//  748   * @brief  This function is executed in case of error occurrence.
-//  749   * @retval None
-//  750   */
+//  752 
+//  753 /**
+//  754   * @brief  This function is executed in case of error occurrence.
+//  755   * @retval None
+//  756   */
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock13 Using cfiCommon0
           CFI Function Error_Handler
           CFI NoCalls
         THUMB
-//  751 void Error_Handler(void)
-//  752 {
-//  753   /* USER CODE BEGIN Error_Handler_Debug */
-//  754   /* User can add his own implementation to report the HAL error return state */
-//  755 
-//  756   /* USER CODE END Error_Handler_Debug */
-//  757 }
+//  757 void Error_Handler(void)
+//  758 {
+//  759   /* USER CODE BEGIN Error_Handler_Debug */
+//  760   /* User can add his own implementation to report the HAL error return state */
+//  761 
+//  762   /* USER CODE END Error_Handler_Debug */
+//  763 }
 Error_Handler:
         BX       LR             
           CFI EndBlock cfiBlock13
@@ -2286,32 +2260,32 @@ Error_Handler:
         DC32 0
 
         END
-//  758 
-//  759 #ifdef  USE_FULL_ASSERT
-//  760 /**
-//  761   * @brief  Reports the name of the source file and the source line number
-//  762   *         where the assert_param error has occurred.
-//  763   * @param  file: pointer to the source file name
-//  764   * @param  line: assert_param error line source number
-//  765   * @retval None
-//  766   */
-//  767 void assert_failed(uint8_t *file, uint32_t line)
-//  768 {
-//  769   /* USER CODE BEGIN 6 */
-//  770   /* User can add his own implementation to report the file name and line number,
-//  771      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-//  772   /* USER CODE END 6 */
-//  773 }
-//  774 #endif /* USE_FULL_ASSERT */
-//  775 
+//  764 
+//  765 #ifdef  USE_FULL_ASSERT
+//  766 /**
+//  767   * @brief  Reports the name of the source file and the source line number
+//  768   *         where the assert_param error has occurred.
+//  769   * @param  file: pointer to the source file name
+//  770   * @param  line: assert_param error line source number
+//  771   * @retval None
+//  772   */
+//  773 void assert_failed(uint8_t *file, uint32_t line)
+//  774 {
+//  775   /* USER CODE BEGIN 6 */
+//  776   /* User can add his own implementation to report the file name and line number,
+//  777      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+//  778   /* USER CODE END 6 */
+//  779 }
+//  780 #endif /* USE_FULL_ASSERT */
+//  781 
 // 
-//   636 bytes in section .bss
-//   132 bytes in section .rodata
-// 2'006 bytes in section .text
+//   632 bytes in section .bss
+//    96 bytes in section .rodata
+// 2'014 bytes in section .text
 // 
-// 2'006 bytes of CODE  memory
-//   132 bytes of CONST memory
-//   636 bytes of DATA  memory
+// 2'014 bytes of CODE  memory
+//    96 bytes of CONST memory
+//   632 bytes of DATA  memory
 //
 //Errors: none
 //Warnings: none
