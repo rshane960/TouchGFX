@@ -64,6 +64,8 @@ void Error_Handler(void);
 #define MCU_ACTIVE_GPIO_Port GPIOI
 #define VSYNC_FREQ_Pin GPIO_PIN_12
 #define VSYNC_FREQ_GPIO_Port GPIOA
+#define WakeupButton_Pin GPIO_PIN_13
+#define WakeupButton_GPIO_Port GPIOC
 #define LED2_Pin GPIO_PIN_2
 #define LED2_GPIO_Port GPIOG
 #define LCD_INT_Pin GPIO_PIN_2

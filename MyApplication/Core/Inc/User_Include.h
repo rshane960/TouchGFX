@@ -12,8 +12,12 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include <malloc.h>
 
 #include "main.h"
+#include "cmsis_os.h"
+#include "User_Timer.h"
+#include "User_Button.h"
 #include "User_Variable.h"
 #include "User_Function.h"
 

@@ -72,10 +72,10 @@ const osThreadAttr_t GUI_Task_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for testTimer */
-osTimerId_t testTimerHandle;
-const osTimerAttr_t testTimer_attributes = {
-  .name = "testTimer"
-};
+//osTimerId_t testTimerHandle;
+//const osTimerAttr_t testTimer_attributes = {
+//  .name = "testTimer"
+//};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -164,7 +164,7 @@ int main(void)
 
   /* Create the timer(s) */
   /* creation of testTimer */
-  testTimerHandle = osTimerNew(testTmrCallback, osTimerPeriodic, NULL, &testTimer_attributes);
+//  testTimerHandle = osTimerNew(testTmrCallback, osTimerPeriodic, NULL, &testTimer_attributes);
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
@@ -573,9 +573,9 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOJ_CLK_ENABLE();
   __HAL_RCC_GPIOI_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
@@ -610,6 +610,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : WakeupButton_Pin */
+  GPIO_InitStruct.Pin = WakeupButton_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(WakeupButton_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LCD_INT_Pin */
   GPIO_InitStruct.Pin = LCD_INT_Pin;
@@ -652,7 +658,9 @@ void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
 
-    osTimerStart(testTimerHandle, 1000);
+//    osTimerStart(testTimerHandle, 1000);
+    startTimer(testTmrCallback, osTimerPeriodic, NULL, 1000);
+    startTimer(TimerHandleTest, osTimerPeriodic, 10, 1000);
 
   /* Infinite loop */
   for(;;)
@@ -668,8 +676,6 @@ void testTmrCallback(void *argument)
   /* USER CODE BEGIN testTmrCallback */
     HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_2);
     HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_11);
-    printf("timer\r\n");
-
   /* USER CODE END testTmrCallback */
 }
 
