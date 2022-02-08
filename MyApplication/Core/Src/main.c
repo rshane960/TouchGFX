@@ -77,7 +77,12 @@ const osThreadAttr_t GUI_Task_attributes = {
 //  .name = "testTimer"
 //};
 /* USER CODE BEGIN PV */
-
+osThreadId_t buttonReadTaskHandle;
+const osThreadAttr_t buttonReadTask_attributes = {
+  .name = "buttonReadTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -183,6 +188,7 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  buttonReadTaskHandle = osThreadNew(ButtonReadTask, NULL, &buttonReadTask_attributes);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -657,8 +663,6 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-
-//    osTimerStart(testTimerHandle, 1000);
     startTimer(testTmrCallback, osTimerPeriodic, NULL, 1000);
     startTimer(TimerHandleTest, osTimerPeriodic, 10, 1000);
 

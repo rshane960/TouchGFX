@@ -1,7 +1,7 @@
-D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\TouchGFX\generated\fonts\Kerning_verdana_20_4bpp.pbi: \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\generated\fonts\src\Kerning_verdana_20_4bpp.cpp \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\Font.hpp \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\hal\Types.hpp \
+D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\TouchGFX\generated\fonts\Kerning_verdana_20_4bpp.pbi: \
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\TouchGFX\generated\fonts\src\Kerning_verdana_20_4bpp.cpp \
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\Font.hpp \
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\hal\Types.hpp \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\assert.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
@@ -9,6 +9,6 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Touch
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Full.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\hal\Config.hpp \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\Unicode.hpp \
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\hal\Config.hpp \
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\..\Middlewares\ST\touchgfx\framework\include\touchgfx\Unicode.hpp \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdarg.h

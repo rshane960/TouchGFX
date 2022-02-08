@@ -1,7 +1,7 @@
-D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Drivers\BSP\Components\ft5336.pbi: \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\Drivers\BSP\Components\ft5336\ft5336.c \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\Drivers\BSP\Components\ft5336\ft5336.h \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\Drivers\BSP\Components\ft5336\ft5336_reg.h \
+D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Drivers\BSP\Components\ft5336.pbi: \
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\Drivers\BSP\Components\ft5336\ft5336.c \
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\Drivers\BSP\Components\ft5336\ft5336.h \
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\Drivers\BSP\Components\ft5336\ft5336_reg.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
@@ -10,4 +10,4 @@ D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\BrowseInfo\Drive
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stddef.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
-  D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\..\Core\Inc\ft5336_conf.h
+  D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\..\Core\Inc\ft5336_conf.h

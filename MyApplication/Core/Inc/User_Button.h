@@ -21,6 +21,13 @@ typedef struct
     uint32_t pre_time;
 }button_obj_t;
 
+typedef enum
+{
+    IDLE = 0,
+    PUSH,
+    RPTPUSH
+}button_state;
+
 #ifdef __cplusplus
  }
 #endif

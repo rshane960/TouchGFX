@@ -1107,6 +1107,9 @@
                     <name>$PROJ_DIR$\..\Core\Src\User_Button.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\User_Creation_Task.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\User_Timer.c</name>
                 </file>
                 <file>
