@@ -1,0 +1,325 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         08/Feb/2022  20:54:04
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Button.c
+#        [UTF-8]
+#    Command line                 =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Button.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Button.c -D
+#        USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Button.o.d
+#    Locale                       =  C
+#    List file                    =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core\User_Button.lst
+#    Object file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Button.o
+#    Runtime model:                  
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  1
+#      __dlib_full_locale_support =  1
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Button.c
+      1          
+      2          #include "User_Include.h"
+      3          
+      4          
+
+   \                                 In section .data, align 4
+      5          button_table_t button_table[1] = 
+   \                     button_table:
+   \        0x0   0x5802'0800        DC32 0x5802'0800
+   \        0x4   0x2000             DC16 8'192
+   \        0x6   0x01               DC8 1
+   \        0x7                      DS8 1
+      6          {
+      7              {WakeupButton_GPIO_Port, WakeupButton_Pin, GPIO_PIN_SET}
+      8          };
+      9          
+     10          void buttonCreated(button_obj_t *p, uint8_t ch, uint32_t repeatTime);
+     11          bool buttonGetPressed(uint8_t ch);
+     12          bool buttonGetClicked(button_obj_t *p, uint32_t pressedTime);
+     13          
+     14          /*=========================================================
+     15          Function_name   : buttonCreated
+     16          Description     : 
+     17          Caller          : 
+     18          Ver 1.0
+     19          =========================================================*/	
+
+   \                                 In section .text, align 2, keep-with-next
+     20          void buttonCreated(button_obj_t *p, uint8_t ch, uint32_t repeatTime)
+     21          {
+   \                     buttonCreated: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     22              p->ch = ch;
+   \        0x4   0x7021             STRB     R1,[R4, #+0]
+     23              p->state = IDLE;
+   \        0x6   0x2000             MOVS     R0,#+0
+   \        0x8   0x7060             STRB     R0,[R4, #+1]
+     24              p->repeat_time = repeatTime;
+   \        0xA   0x6062             STR      R2,[R4, #+4]
+     25              p->pre_time = xTaskGetTickCount();
+   \        0xC   0x.... 0x....      BL       xTaskGetTickCount
+   \       0x10   0x60A0             STR      R0,[R4, #+8]
+     26          }
+   \       0x12   0xBD10             POP      {R4,PC}
+     27          
+     28          /*=========================================================
+     29          Function_name   : buttonGetPressed
+     30          Description     : 
+     31          Caller          : 
+     32          Ver 1.0
+     33          =========================================================*/	
+
+   \                                 In section .text, align 2, keep-with-next
+     34          bool buttonGetPressed(uint8_t ch)
+     35          {
+   \                     buttonGetPressed: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0005             MOVS     R5,R0
+     36              bool result = false;
+   \        0x4   0x2400             MOVS     R4,#+0
+     37          
+     38              if(HAL_GPIO_ReadPin(button_table[ch].port, button_table[ch].pin) == button_table[ch].state)
+   \        0x6   0x....             LDR.N    R6,??DataTable1
+   \        0x8   0x0028             MOVS     R0,R5
+   \        0xA   0xB2C0             UXTB     R0,R0
+   \        0xC   0xEB06 0x00C0      ADD      R0,R6,R0, LSL #+3
+   \       0x10   0x8881             LDRH     R1,[R0, #+4]
+   \       0x12   0x0028             MOVS     R0,R5
+   \       0x14   0xB2C0             UXTB     R0,R0
+   \       0x16   0xF856 0x0030      LDR      R0,[R6, R0, LSL #+3]
+   \       0x1A   0x.... 0x....      BL       HAL_GPIO_ReadPin
+   \       0x1E   0xB2ED             UXTB     R5,R5
+   \       0x20   0xEB06 0x01C5      ADD      R1,R6,R5, LSL #+3
+   \       0x24   0x7989             LDRB     R1,[R1, #+6]
+   \       0x26   0xB2C0             UXTB     R0,R0
+   \       0x28   0x4288             CMP      R0,R1
+   \       0x2A   0xD100             BNE.N    ??buttonGetPressed_0
+     39                  result = true;
+   \       0x2C   0x2401             MOVS     R4,#+1
+     40          
+     41              return result;
+   \                     ??buttonGetPressed_0: (+1)
+   \       0x2E   0x0020             MOVS     R0,R4
+   \       0x30   0xB2C0             UXTB     R0,R0
+   \       0x32   0xBD70             POP      {R4-R6,PC}
+     42          }
+     43          
+     44          /*=========================================================
+     45          Function_name   : buttonGetClicked
+     46          Description     : 
+     47          Caller          : 
+     48          Ver 1.0
+     49          =========================================================*/	
+
+   \                                 In section .text, align 2, keep-with-next
+     50          bool buttonGetClicked(button_obj_t *p, uint32_t pressedTime)
+     51          {
+   \                     buttonGetClicked: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000E             MOVS     R6,R1
+     52              bool result = false;
+   \        0x6   0x2500             MOVS     R5,#+0
+     53          
+     54              switch(p->state)
+   \        0x8   0x7860             LDRB     R0,[R4, #+1]
+   \        0xA   0x2800             CMP      R0,#+0
+   \        0xC   0xD003             BEQ.N    ??buttonGetClicked_0
+   \        0xE   0x2802             CMP      R0,#+2
+   \       0x10   0xD021             BEQ.N    ??buttonGetClicked_1
+   \       0x12   0xD30B             BCC.N    ??buttonGetClicked_2
+   \       0x14   0xE033             B.N      ??buttonGetClicked_3
+     55              {
+     56                  case IDLE :
+     57                      if(buttonGetPressed(p->ch) == true)
+   \                     ??buttonGetClicked_0: (+1)
+   \       0x16   0x7820             LDRB     R0,[R4, #+0]
+   \       0x18   0x.... 0x....      BL       buttonGetPressed
+   \       0x1C   0x2801             CMP      R0,#+1
+   \       0x1E   0xD104             BNE.N    ??buttonGetClicked_4
+     58                      {
+     59                          p->state = PUSH;
+   \       0x20   0x2001             MOVS     R0,#+1
+   \       0x22   0x7060             STRB     R0,[R4, #+1]
+     60                          p->pre_time = xTaskGetTickCount();
+   \       0x24   0x.... 0x....      BL       xTaskGetTickCount
+   \       0x28   0x60A0             STR      R0,[R4, #+8]
+     61                      }
+     62                      break;
+   \                     ??buttonGetClicked_4: (+1)
+   \       0x2A   0xE028             B.N      ??buttonGetClicked_3
+     63          
+     64                  case PUSH :
+     65                      if(buttonGetPressed(p->ch) == true)
+   \                     ??buttonGetClicked_2: (+1)
+   \       0x2C   0x7820             LDRB     R0,[R4, #+0]
+   \       0x2E   0x.... 0x....      BL       buttonGetPressed
+   \       0x32   0x2801             CMP      R0,#+1
+   \       0x34   0xD10C             BNE.N    ??buttonGetClicked_5
+     66                      {
+     67                          if((xTaskGetTickCount() - p->pre_time) >= pressedTime)
+   \       0x36   0x.... 0x....      BL       xTaskGetTickCount
+   \       0x3A   0x68A1             LDR      R1,[R4, #+8]
+   \       0x3C   0x1A40             SUBS     R0,R0,R1
+   \       0x3E   0x42B0             CMP      R0,R6
+   \       0x40   0xD308             BCC.N    ??buttonGetClicked_6
+     68                          {
+     69                              p->state = RPTPUSH;
+   \       0x42   0x2002             MOVS     R0,#+2
+   \       0x44   0x7060             STRB     R0,[R4, #+1]
+     70                              p->pre_time = xTaskGetTickCount();
+   \       0x46   0x.... 0x....      BL       xTaskGetTickCount
+   \       0x4A   0x60A0             STR      R0,[R4, #+8]
+     71                              result = true;
+   \       0x4C   0x2501             MOVS     R5,#+1
+   \       0x4E   0xE001             B.N      ??buttonGetClicked_6
+     72                          }
+     73                      }
+     74                      else
+     75                          p->state = IDLE;
+   \                     ??buttonGetClicked_5: (+1)
+   \       0x50   0x2000             MOVS     R0,#+0
+   \       0x52   0x7060             STRB     R0,[R4, #+1]
+     76                      break;
+   \                     ??buttonGetClicked_6: (+1)
+   \       0x54   0xE013             B.N      ??buttonGetClicked_3
+     77          
+     78                  case RPTPUSH :
+     79                      if(buttonGetPressed(p->ch) == true)
+   \                     ??buttonGetClicked_1: (+1)
+   \       0x56   0x7820             LDRB     R0,[R4, #+0]
+   \       0x58   0x.... 0x....      BL       buttonGetPressed
+   \       0x5C   0x2801             CMP      R0,#+1
+   \       0x5E   0xD10C             BNE.N    ??buttonGetClicked_7
+     80                      {
+     81                          if((xTaskGetTickCount() - p->pre_time) >= p->repeat_time)
+   \       0x60   0x.... 0x....      BL       xTaskGetTickCount
+   \       0x64   0x68A1             LDR      R1,[R4, #+8]
+   \       0x66   0x1A40             SUBS     R0,R0,R1
+   \       0x68   0x6861             LDR      R1,[R4, #+4]
+   \       0x6A   0x4288             CMP      R0,R1
+   \       0x6C   0xD307             BCC.N    ??buttonGetClicked_8
+     82                          {
+     83                              p->state = PUSH;
+   \       0x6E   0x2001             MOVS     R0,#+1
+   \       0x70   0x7060             STRB     R0,[R4, #+1]
+     84                              p->pre_time = xTaskGetTickCount();
+   \       0x72   0x.... 0x....      BL       xTaskGetTickCount
+   \       0x76   0x60A0             STR      R0,[R4, #+8]
+   \       0x78   0xE001             B.N      ??buttonGetClicked_8
+     85                          }
+     86                      }
+     87                      else
+     88                          p->state = IDLE;
+   \                     ??buttonGetClicked_7: (+1)
+   \       0x7A   0x2000             MOVS     R0,#+0
+   \       0x7C   0x7060             STRB     R0,[R4, #+1]
+     89                      break;
+     90              }
+     91          
+     92              return result;
+   \                     ??buttonGetClicked_8: (+1)
+   \                     ??buttonGetClicked_3: (+1)
+   \       0x7E   0x0028             MOVS     R0,R5
+   \       0x80   0xB2C0             UXTB     R0,R0
+   \       0x82   0xBD70             POP      {R4-R6,PC}
+     93          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     button_table
+     94          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   buttonCreated
+         8   -> xTaskGetTickCount
+      16   buttonGetClicked
+        16   -> buttonGetPressed
+        16   -> xTaskGetTickCount
+      16   buttonGetPressed
+        16   -> HAL_GPIO_ReadPin
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+      20  buttonCreated
+     132  buttonGetClicked
+      52  buttonGetPressed
+       8  button_table
+
+ 
+   8 bytes in section .data
+ 208 bytes in section .text
+ 
+ 208 bytes of CODE memory
+   8 bytes of DATA memory
+
+Errors: none
+Warnings: none

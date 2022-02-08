@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\settings\STM32H7B3I-DK.STM32H7B3I-DK.general.xcl" --backend -f "D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\settings\STM32H7B3I-DK.STM32H7B3I-DK.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\settings\STM32H7B3I-DK.STM32H7B3I-DK.general.xcl" --backend -f "D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\settings\STM32H7B3I-DK.STM32H7B3I-DK.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\settings\STM32H7B3I-DK.STM32H7B3I-DK.general.xcl" "--debug_file=%~1" --backend -f "D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\settings\STM32H7B3I-DK.STM32H7B3I-DK.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\settings\STM32H7B3I-DK.STM32H7B3I-DK.general.xcl" "--debug_file=%~1" --backend -f "D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\settings\STM32H7B3I-DK.STM32H7B3I-DK.driver.xcl" 
 
 @echo off 
 :end

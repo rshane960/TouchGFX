@@ -1,0 +1,729 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         08/Feb/2022  20:54:07
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\target\TouchGFXHAL.cpp
+#        [UTF-8]
+#    Command line                 =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\TouchGFXHAL.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\target\TouchGFXHAL.cpp
+#        -D USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --c++ --no_exceptions --no_rtti --no_static_destruction
+#        --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\TouchGFXHAL.o.d
+#    Locale                       =  C
+#    List file                    =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target\TouchGFXHAL.lst
+#    Object file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\TouchGFXHAL.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  1
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\target\TouchGFXHAL.cpp
+      1          /**
+      2            ******************************************************************************
+      3            * File Name          : TouchGFXHAL.cpp
+      4            ******************************************************************************
+      5            * This file is generated by TouchGFX Generator 4.18.1.
+      6            ******************************************************************************
+      7            * @attention
+      8            *
+      9            * Copyright (c) 2022 STMicroelectronics.
+     10            * All rights reserved.
+     11            *
+     12            * This software is licensed under terms that can be found in the LICENSE file
+     13            * in the root directory of this software component.
+     14            * If no LICENSE file comes with this software, it is provided AS-IS.
+     15            *
+     16            ******************************************************************************
+     17            */
+     18          #include <TouchGFXHAL.hpp>
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::HAL::setDisplayOrientation(touchgfx::DisplayOrientation)
+   \                     _ZN8touchgfx3HAL21setDisplayOrientationENS_18DisplayOrientationE: (+1)
+   \        0x0   0xF880 0x1074      STRB     R1,[R0, #+116]
+   \        0x4   0x2101             MOVS     R1,#+1
+   \        0x6   0xF880 0x1075      STRB     R1,[R0, #+117]
+   \        0xA   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::HAL::setFrameBufferSize(uint16_t, uint16_t)
+   \                     _ZN8touchgfx3HAL18setFrameBufferSizeEtt: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x000D             MOVS     R5,R1
+   \        0x4   0x0014             MOVS     R4,R2
+   \        0x6   0x0028             MOVS     R0,R5
+   \        0x8   0x490B             LDR.N    R1,??setFrameBufferSize_0
+   \        0xA   0x8809             LDRH     R1,[R1, #+0]
+   \        0xC   0xB280             UXTH     R0,R0
+   \        0xE   0x4288             CMP      R0,R1
+   \       0x10   0xD305             BCC.N    ??setFrameBufferSize_1
+   \       0x12   0x0020             MOVS     R0,R4
+   \       0x14   0x4909             LDR.N    R1,??setFrameBufferSize_0+0x4
+   \       0x16   0x8809             LDRH     R1,[R1, #+0]
+   \       0x18   0xB280             UXTH     R0,R0
+   \       0x1A   0x4288             CMP      R0,R1
+   \       0x1C   0xD206             BCS.N    ??setFrameBufferSize_2
+   \                     ??setFrameBufferSize_1: (+1)
+   \       0x1E   0x229E             MOVS     R2,#+158
+   \       0x20   0x4907             LDR.N    R1,??setFrameBufferSize_0+0x8
+   \       0x22   0x4808             LDR.N    R0,??setFrameBufferSize_0+0xC
+   \       0x24   0x.... 0x....      BL       __aeabi_assert
+   \       0x28   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??setFrameBufferSize_2: (+1)
+   \       0x2C   0x4806             LDR.N    R0,??setFrameBufferSize_0+0x10
+   \       0x2E   0x8005             STRH     R5,[R0, #+0]
+   \       0x30   0x4806             LDR.N    R0,??setFrameBufferSize_0+0x14
+   \       0x32   0x8004             STRH     R4,[R0, #+0]
+   \       0x34   0xBD31             POP      {R0,R4,R5,PC}
+   \       0x36   0xBF00             Nop
+   \                     ??setFrameBufferSize_0:
+   \       0x38   0x....'....        DC32     _ZN8touchgfx3HAL13DISPLAY_WIDTHE
+   \       0x3C   0x....'....        DC32     _ZN8touchgfx3HAL14DISPLAY_HEIGHTE
+   \       0x40   0x....'....        DC32     _ZZN8touchgfx3HAL18setFrameBufferSizeEttEs_1
+   \       0x44   0x....'....        DC32     _ZZN8touchgfx3HAL18setFrameBufferSizeEttEs_0
+   \       0x48   0x....'....        DC32     _ZN8touchgfx3HAL18FRAME_BUFFER_WIDTHE
+   \       0x4C   0x....'....        DC32     _ZN8touchgfx3HAL19FRAME_BUFFER_HEIGHTE
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::BlitOperations touchgfx::HAL::getBlitCaps()
+   \                     _ZN8touchgfx3HAL11getBlitCapsEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0001             MOVS     R1,R0
+   \        0x4   0xF891 0x0077      LDRB     R0,[R1, #+119]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD005             BEQ.N    ??getBlitCaps_0
+   \        0xC   0x6848             LDR      R0,[R1, #+4]
+   \        0xE   0x6849             LDR      R1,[R1, #+4]
+   \       0x10   0x6809             LDR      R1,[R1, #+0]
+   \       0x12   0x6809             LDR      R1,[R1, #+0]
+   \       0x14   0x4788             BLX      R1
+   \       0x16   0xE000             B.N      ??getBlitCaps_1
+   \                     ??getBlitCaps_0: (+1)
+   \       0x18   0x2000             MOVS     R0,#+0
+   \                     ??getBlitCaps_1: (+1)
+   \       0x1A   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::HAL::backPorchExited()
+   \                     _ZN8touchgfx3HAL15backPorchExitedEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx3HAL16swapFrameBuffersEv
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0x6821             LDR      R1,[R4, #+0]
+   \        0xE   0xF8D1 0x10A4      LDR      R1,[R1, #+164]
+   \       0x12   0x4788             BLX      R1
+   \       0x14   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp bool touchgfx::HAL::sampleKey(uint8_t &)
+   \                     _ZN8touchgfx3HAL9sampleKeyERh: (+1)
+   \        0x0   0x2000             MOVS     R0,#+0
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::HAL::setFrameBufferStartAddresses(void *, void *, void *)
+   \                     _ZN8touchgfx3HAL28setFrameBufferStartAddressesEPvS1_S1_: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0007             MOVS     R7,R0
+   \        0x4   0x000E             MOVS     R6,R1
+   \        0x6   0x0015             MOVS     R5,R2
+   \        0x8   0x001C             MOVS     R4,R3
+   \        0xA   0x2E00             CMP      R6,#+0
+   \        0xC   0xD107             BNE.N    ??setFrameBufferStartAddresses_1
+   \        0xE   0xF44F 0x722B      MOV      R2,#+684
+   \       0x12   0x490E             LDR.N    R1,??setFrameBufferStartAddresses_0
+   \       0x14   0x480E             LDR.N    R0,??setFrameBufferStartAddresses_0+0x4
+   \       0x16   0x.... 0x....      BL       __aeabi_assert
+   \       0x1A   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??setFrameBufferStartAddresses_1: (+1)
+   \       0x1E   0x63FE             STR      R6,[R7, #+60]
+   \       0x20   0x643D             STR      R5,[R7, #+64]
+   \       0x22   0x647C             STR      R4,[R7, #+68]
+   \       0x24   0x2D00             CMP      R5,#+0
+   \       0x26   0xD003             BEQ.N    ??setFrameBufferStartAddresses_2
+   \       0x28   0x2001             MOVS     R0,#+1
+   \       0x2A   0x490A             LDR.N    R1,??setFrameBufferStartAddresses_0+0x8
+   \       0x2C   0x7008             STRB     R0,[R1, #+0]
+   \       0x2E   0xE002             B.N      ??setFrameBufferStartAddresses_3
+   \                     ??setFrameBufferStartAddresses_2: (+1)
+   \       0x30   0x2000             MOVS     R0,#+0
+   \       0x32   0x4908             LDR.N    R1,??setFrameBufferStartAddresses_0+0x8
+   \       0x34   0x7008             STRB     R0,[R1, #+0]
+   \                     ??setFrameBufferStartAddresses_3: (+1)
+   \       0x36   0x2C00             CMP      R4,#+0
+   \       0x38   0xD003             BEQ.N    ??setFrameBufferStartAddresses_4
+   \       0x3A   0x2001             MOVS     R0,#+1
+   \       0x3C   0x4906             LDR.N    R1,??setFrameBufferStartAddresses_0+0xC
+   \       0x3E   0x7008             STRB     R0,[R1, #+0]
+   \       0x40   0xE002             B.N      ??setFrameBufferStartAddresses_5
+   \                     ??setFrameBufferStartAddresses_4: (+1)
+   \       0x42   0x2000             MOVS     R0,#+0
+   \       0x44   0x4904             LDR.N    R1,??setFrameBufferStartAddresses_0+0xC
+   \       0x46   0x7008             STRB     R0,[R1, #+0]
+   \                     ??setFrameBufferStartAddresses_5: (+1)
+   \       0x48   0xBDF1             POP      {R0,R4-R7,PC}
+   \       0x4A   0xBF00             Nop
+   \                     ??setFrameBufferStartAddresses_0:
+   \       0x4C   0x....'....        DC32     _ZZN8touchgfx3HAL28setFrameBufferStartAddressesEPvS1_S1_Es_1
+   \       0x50   0x....'....        DC32     _ZZN8touchgfx3HAL28setFrameBufferStartAddressesEPvS1_S1_Es_0
+   \       0x54   0x....'....        DC32     _ZN8touchgfx3HAL20USE_DOUBLE_BUFFERINGE
+   \       0x58   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::FlashDataReader *touchgfx::HAL::getFlashDataReader() const
+   \                     _ZNK8touchgfx3HAL18getFlashDataReaderEv: (+1)
+   \        0x0   0x2000             MOVS     R0,#+0
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::HAL::taskDelay(uint16_t)
+   \                     _ZN8touchgfx3HAL9taskDelayEt: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0002             MOVS     R2,R0
+   \        0x4   0x0008             MOVS     R0,R1
+   \        0x6   0x6B91             LDR      R1,[R2, #+56]
+   \        0x8   0x2900             CMP      R1,#+0
+   \        0xA   0xD002             BEQ.N    ??taskDelay_0
+   \        0xC   0xB280             UXTH     R0,R0
+   \        0xE   0x6B91             LDR      R1,[R2, #+56]
+   \       0x10   0x4788             BLX      R1
+   \                     ??taskDelay_0: (+1)
+   \       0x12   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp uint16_t touchgfx::HAL::getTFTCurrentLine()
+   \                     _ZN8touchgfx3HAL17getTFTCurrentLineEv: (+1)
+   \        0x0   0xF64F 0x70FF      MOVW     R0,#+65535
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::DMAType touchgfx::HAL::getDMAType()
+   \                     _ZN8touchgfx3HAL10getDMATypeEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0001             MOVS     R1,R0
+   \        0x4   0x6848             LDR      R0,[R1, #+4]
+   \        0x6   0x6849             LDR      R1,[R1, #+4]
+   \        0x8   0x6809             LDR      R1,[R1, #+0]
+   \        0xA   0x6989             LDR      R1,[R1, #+24]
+   \        0xC   0x4788             BLX      R1
+   \        0xE   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::HAL::performDisplayOrientationChange()
+   \                     _ZN8touchgfx3HAL31performDisplayOrientationChangeEv: (+1)
+   \        0x0   0xB410             PUSH     {R4}
+   \        0x2   0xF890 0x1074      LDRB     R1,[R0, #+116]
+   \        0x6   0xF890 0x0034      LDRB     R0,[R0, #+52]
+   \        0xA   0x4281             CMP      R1,R0
+   \        0xC   0xD00C             BEQ.N    ??performDisplayOrientationChange_1
+   \        0xE   0x490D             LDR.N    R1,??performDisplayOrientationChange_0
+   \       0x10   0x7808             LDRB     R0,[R1, #+0]
+   \       0x12   0x2800             CMP      R0,#+0
+   \       0x14   0xD114             BNE.N    ??performDisplayOrientationChange_2
+   \       0x16   0x480C             LDR.N    R0,??performDisplayOrientationChange_0+0x4
+   \       0x18   0x8803             LDRH     R3,[R0, #+0]
+   \       0x1A   0x4A0C             LDR.N    R2,??performDisplayOrientationChange_0+0x8
+   \       0x1C   0x8814             LDRH     R4,[R2, #+0]
+   \       0x1E   0x8004             STRH     R4,[R0, #+0]
+   \       0x20   0x8013             STRH     R3,[R2, #+0]
+   \       0x22   0x2001             MOVS     R0,#+1
+   \       0x24   0x7008             STRB     R0,[R1, #+0]
+   \       0x26   0xE00B             B.N      ??performDisplayOrientationChange_2
+   \                     ??performDisplayOrientationChange_1: (+1)
+   \       0x28   0x4906             LDR.N    R1,??performDisplayOrientationChange_0
+   \       0x2A   0x7808             LDRB     R0,[R1, #+0]
+   \       0x2C   0x2800             CMP      R0,#+0
+   \       0x2E   0xD007             BEQ.N    ??performDisplayOrientationChange_2
+   \       0x30   0x4805             LDR.N    R0,??performDisplayOrientationChange_0+0x4
+   \       0x32   0x8803             LDRH     R3,[R0, #+0]
+   \       0x34   0x4A05             LDR.N    R2,??performDisplayOrientationChange_0+0x8
+   \       0x36   0x8814             LDRH     R4,[R2, #+0]
+   \       0x38   0x8004             STRH     R4,[R0, #+0]
+   \       0x3A   0x8013             STRH     R3,[R2, #+0]
+   \       0x3C   0x2000             MOVS     R0,#+0
+   \       0x3E   0x7008             STRB     R0,[R1, #+0]
+   \                     ??performDisplayOrientationChange_2: (+1)
+   \       0x40   0xBC10             POP      {R4}
+   \       0x42   0x4770             BX       LR
+   \                     ??performDisplayOrientationChange_0:
+   \       0x44   0x....'....        DC32     _ZN8touchgfx3HAL16DISPLAY_ROTATIONE
+   \       0x48   0x....'....        DC32     _ZN8touchgfx3HAL14DISPLAY_HEIGHTE
+   \       0x4C   0x....'....        DC32     _ZN8touchgfx3HAL13DISPLAY_WIDTHE
+
+   \                                 In section .text, align 2
+   \   __vfp void TouchGFXGeneratedHAL::flushFrameBuffer()
+   \                     _ZN20TouchGFXGeneratedHAL16flushFrameBufferEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN8touchgfx3HAL16flushFrameBufferEv
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp TouchGFXHAL::deleter ~TouchGFXHAL() noexcept
+   \                     _ZN11TouchGFXHALD0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN11TouchGFXHALD1Ev
+   \        0xA   0x217C             MOVS     R1,#+124
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZdlPvj
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp TouchGFXHAL::~TouchGFXHAL() noexcept
+   \                     _ZN11TouchGFXHALD1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void TouchGFXHAL::flushFrameBuffer()
+   \                     _ZN11TouchGFXHAL16flushFrameBufferEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN20TouchGFXGeneratedHAL16flushFrameBufferEv
+   \        0x6   0xBD01             POP      {R0,PC}
+     19          
+     20          /* USER CODE BEGIN TouchGFXHAL.cpp */
+     21          
+     22          #include <touchgfx/hal/OSWrappers.hpp>
+     23          #include "stm32h7xx.h"
+     24          
+     25          using namespace touchgfx;
+     26          
+
+   \                                 In section .text, align 2, keep-with-next
+     27          void TouchGFXHAL::initialize()
+     28          {
+   \                     _ZN11TouchGFXHAL10initializeEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     29              // Calling parent implementation of initialize().
+     30              //
+     31              // To overwrite the generated implementation, omit call to parent function
+     32              // and implemented needed functionality here.
+     33              // Please note, HAL::initialize() must be called to initialize the framework.
+     34          
+     35              TouchGFXGeneratedHAL::initialize();
+   \        0x2   0x.... 0x....      BL       _ZN20TouchGFXGeneratedHAL10initializeEv
+     36          }
+   \        0x6   0xBD01             POP      {R0,PC}
+     37          
+
+   \                                 In section .text, align 2, keep-with-next
+     38          void TouchGFXHAL::taskEntry()
+     39          {
+   \                     _ZN11TouchGFXHAL9taskEntryEv: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     40              enableLCDControllerInterrupt();
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x6821             LDR      R1,[R4, #+0]
+   \        0x8   0x6FC9             LDR      R1,[R1, #+124]
+   \        0xA   0x4788             BLX      R1
+     41              enableInterrupts();
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x6821             LDR      R1,[R4, #+0]
+   \       0x10   0x6F49             LDR      R1,[R1, #+116]
+   \       0x12   0x4788             BLX      R1
+     42          
+     43              OSWrappers::waitForVSync();
+   \       0x14   0x.... 0x....      BL       _ZN8touchgfx10OSWrappers12waitForVSyncEv
+     44              backPorchExited();
+   \       0x18   0x0020             MOVS     R0,R4
+   \       0x1A   0x6821             LDR      R1,[R4, #+0]
+   \       0x1C   0x6EC9             LDR      R1,[R1, #+108]
+   \       0x1E   0x4788             BLX      R1
+     45          
+     46              // Turning on display after first frame is rendered
+     47              HAL_GPIO_WritePin(GPIOK, GPIO_PIN_7, GPIO_PIN_RESET);
+   \       0x20   0x2200             MOVS     R2,#+0
+   \       0x22   0x2180             MOVS     R1,#+128
+   \       0x24   0x....             LDR.N    R0,??DataTable2
+   \       0x26   0x.... 0x....      BL       HAL_GPIO_WritePin
+     48              /* Assert display enable LCD_DISP_CTRL pin */
+     49              HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
+   \       0x2A   0x....             LDR.N    R5,??DataTable2_1
+   \       0x2C   0x2201             MOVS     R2,#+1
+   \       0x2E   0x2104             MOVS     R1,#+4
+   \       0x30   0x0028             MOVS     R0,R5
+   \       0x32   0x.... 0x....      BL       HAL_GPIO_WritePin
+     50              /* Assert back light LCD_BL_CTRL pin */
+     51              HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+   \       0x36   0x2201             MOVS     R2,#+1
+   \       0x38   0x2102             MOVS     R1,#+2
+   \       0x3A   0x0028             MOVS     R0,R5
+   \       0x3C   0x.... 0x....      BL       HAL_GPIO_WritePin
+     52          
+     53              for (;;)
+     54              {
+     55                  OSWrappers::waitForVSync();
+   \                     ??taskEntry_0: (+1)
+   \       0x40   0x.... 0x....      BL       _ZN8touchgfx10OSWrappers12waitForVSyncEv
+     56                  backPorchExited();
+   \       0x44   0x0020             MOVS     R0,R4
+   \       0x46   0x6821             LDR      R1,[R4, #+0]
+   \       0x48   0x6EC9             LDR      R1,[R1, #+108]
+   \       0x4A   0x4788             BLX      R1
+   \       0x4C   0xE7F8             B.N      ??taskEntry_0
+     57              }
+     58          }
+     59          
+     60          /**
+     61           * Gets the frame buffer address used by the TFT controller.
+     62           *
+     63           * @return The address of the frame buffer currently being displayed on the TFT.
+     64           */
+
+   \                                 In section .text, align 2, keep-with-next
+     65          uint16_t* TouchGFXHAL::getTFTFrameBuffer() const
+     66          {
+   \                     _ZNK11TouchGFXHAL17getTFTFrameBufferEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     67              // Calling parent implementation of getTFTFrameBuffer().
+     68              //
+     69              // To overwrite the generated implementation, omit call to parent function
+     70              // and implemented needed functionality here.
+     71          
+     72              return TouchGFXGeneratedHAL::getTFTFrameBuffer();
+   \        0x2   0x.... 0x....      BL       _ZNK20TouchGFXGeneratedHAL17getTFTFrameBufferEv
+   \        0x6   0xBD02             POP      {R1,PC}
+     73          }
+     74          
+     75          /**
+     76           * Sets the frame buffer address used by the TFT controller.
+     77           *
+     78           * @param [in] address New frame buffer address.
+     79           */
+
+   \                                 In section .text, align 2, keep-with-next
+     80          void TouchGFXHAL::setTFTFrameBuffer(uint16_t* address)
+     81          {
+   \                     _ZN11TouchGFXHAL17setTFTFrameBufferEPt: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     82              // Calling parent implementation of setTFTFrameBuffer(uint16_t* address).
+     83              //
+     84              // To overwrite the generated implementation, omit call to parent function
+     85              // and implemented needed functionality here.
+     86          
+     87              TouchGFXGeneratedHAL::setTFTFrameBuffer(address);
+   \        0x2   0x.... 0x....      BL       _ZN20TouchGFXGeneratedHAL17setTFTFrameBufferEPt
+     88          }
+   \        0x6   0xBD01             POP      {R0,PC}
+     89          
+     90          /**
+     91           * This function is called whenever the framework has performed a partial draw.
+     92           *
+     93           * @param rect The area of the screen that has been drawn, expressed in absolute coordinates.
+     94           *
+     95           * @see flushFrameBuffer().
+     96           */
+
+   \                                 In section .text, align 2, keep-with-next
+     97          void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
+     98          {
+   \                     _ZN11TouchGFXHAL16flushFrameBufferERKN8touchgfx4RectE: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     99              // Calling parent implementation of flushFrameBuffer(const touchgfx::Rect& rect).
+    100              //
+    101              // To overwrite the generated implementation, omit call to parent function
+    102              // and implemented needed functionality here.
+    103              // Please note, HAL::flushFrameBuffer(const touchgfx::Rect& rect) must
+    104              // be called to notify the touchgfx framework that flush has been performed.
+    105          
+    106              TouchGFXGeneratedHAL::flushFrameBuffer(rect);
+   \        0x2   0x.... 0x....      BL       _ZN20TouchGFXGeneratedHAL16flushFrameBufferERKN8touchgfx4RectE
+    107          
+    108              // If the framebuffer is placed in Write Through cached memory (e.g. SRAM) then we need
+    109              // to flush the Dcache to make sure framebuffer is correct in RAM. That's done
+    110              // using SCB_CleanInvalidateDCache().
+    111          
+    112              SCB_CleanInvalidateDCache();
+   \        0x6   0x2000             MOVS     R0,#+0
+   \        0x8   0x....             LDR.N    R1,??DataTable2_2
+   \        0xA   0x6008             STR      R0,[R1, #+0]
+   \        0xC   0xF3BF 0x8F4F      DSB      SY
+   \       0x10   0x....             LDR.N    R0,??DataTable2_3
+   \       0x12   0x6801             LDR      R1,[R0, #+0]
+   \       0x14   0xF3C1 0x324E      UBFX     R2,R1,#+13,#+15
+   \                     ??flushFrameBuffer_0: (+1)
+   \       0x18   0xF3C1 0x03C9      UBFX     R3,R1,#+3,#+10
+   \                     ??flushFrameBuffer_1: (+1)
+   \       0x1C   0xF643 0x70E0      MOVW     R0,#+16352
+   \       0x20   0xEA10 0x1042      ANDS     R0,R0,R2, LSL #+5
+   \       0x24   0xEA50 0x7083      ORRS     R0,R0,R3, LSL #+30
+   \       0x28   0x....             LDR.N    R4,??DataTable2_4
+   \       0x2A   0x6020             STR      R0,[R4, #+0]
+   \       0x2C   0x0018             MOVS     R0,R3
+   \       0x2E   0x1E43             SUBS     R3,R0,#+1
+   \       0x30   0x2800             CMP      R0,#+0
+   \       0x32   0xD1F3             BNE.N    ??flushFrameBuffer_1
+   \       0x34   0x0010             MOVS     R0,R2
+   \       0x36   0x1E42             SUBS     R2,R0,#+1
+   \       0x38   0x2800             CMP      R0,#+0
+   \       0x3A   0xD1ED             BNE.N    ??flushFrameBuffer_0
+   \       0x3C   0xF3BF 0x8F4F      DSB      SY
+   \       0x40   0xF3BF 0x8F6F      ISB      SY
+    113          }
+   \       0x44   0xBD10             POP      {R4,PC}
+    114          
+    115          /**
+    116           * Configures the interrupts relevant for TouchGFX. This primarily entails setting
+    117           * the interrupt priorities for the DMA and LCD interrupts.
+    118           */
+
+   \                                 In section .text, align 2, keep-with-next
+    119          void TouchGFXHAL::configureInterrupts()
+    120          {
+   \                     _ZN11TouchGFXHAL19configureInterruptsEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    121              // Calling parent implementation of configureInterrupts().
+    122              //
+    123              // To overwrite the generated implementation, omit call to parent function
+    124              // and implemented needed functionality here.
+    125          
+    126              TouchGFXGeneratedHAL::configureInterrupts();
+   \        0x2   0x.... 0x....      BL       _ZN20TouchGFXGeneratedHAL19configureInterruptsEv
+    127          }
+   \        0x6   0xBD01             POP      {R0,PC}
+    128          
+    129          /**
+    130           * Used for enabling interrupts set in configureInterrupts()
+    131           */
+
+   \                                 In section .text, align 2, keep-with-next
+    132          void TouchGFXHAL::enableInterrupts()
+    133          {
+   \                     _ZN11TouchGFXHAL16enableInterruptsEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    134              // Calling parent implementation of enableInterrupts().
+    135              //
+    136              // To overwrite the generated implementation, omit call to parent function
+    137              // and implemented needed functionality here.
+    138          
+    139              TouchGFXGeneratedHAL::enableInterrupts();
+   \        0x2   0x.... 0x....      BL       _ZN20TouchGFXGeneratedHAL16enableInterruptsEv
+    140          }
+   \        0x6   0xBD01             POP      {R0,PC}
+    141          
+    142          /**
+    143           * Used for disabling interrupts set in configureInterrupts()
+    144           */
+
+   \                                 In section .text, align 2, keep-with-next
+    145          void TouchGFXHAL::disableInterrupts()
+    146          {
+   \                     _ZN11TouchGFXHAL17disableInterruptsEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    147              // Calling parent implementation of disableInterrupts().
+    148              //
+    149              // To overwrite the generated implementation, omit call to parent function
+    150              // and implemented needed functionality here.
+    151          
+    152              TouchGFXGeneratedHAL::disableInterrupts();
+   \        0x2   0x.... 0x....      BL       _ZN20TouchGFXGeneratedHAL17disableInterruptsEv
+    153          }
+   \        0x6   0xBD01             POP      {R0,PC}
+    154          
+    155          /**
+    156           * Configure the LCD controller to fire interrupts at VSYNC. Called automatically
+    157           * once TouchGFX initialization has completed.
+    158           */
+
+   \                                 In section .text, align 2, keep-with-next
+    159          void TouchGFXHAL::enableLCDControllerInterrupt()
+    160          {
+   \                     _ZN11TouchGFXHAL28enableLCDControllerInterruptEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    161              // Calling parent implementation of enableLCDControllerInterrupt().
+    162              //
+    163              // To overwrite the generated implementation, omit call to parent function
+    164              // and implemented needed functionality here.
+    165          
+    166              TouchGFXGeneratedHAL::enableLCDControllerInterrupt();
+   \        0x2   0x.... 0x....      BL       _ZN20TouchGFXGeneratedHAL28enableLCDControllerInterruptEv
+    167          }
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \        0x0   0x5802'2800        DC32     0x58022800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \        0x0   0x5802'0000        DC32     0x58020000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \        0x0   0xE000'ED84        DC32     0xe000ed84
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \        0x0   0xE000'ED80        DC32     0xe000ed80
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_4:
+   \        0x0   0xE000'EF74        DC32     0xe000ef74
+    168          
+    169          /* USER CODE END TouchGFXHAL.cpp */
+    170          
+    171          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   TouchGFXGeneratedHAL::flushFrameBuffer()
+         8   -> touchgfx::HAL::flushFrameBuffer()
+       8   TouchGFXHAL::configureInterrupts()
+         8   -> TouchGFXGeneratedHAL::configureInterrupts()
+       8   TouchGFXHAL::deleter ~TouchGFXHAL() noexcept
+         8   -> TouchGFXHAL::~TouchGFXHAL() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+       8   TouchGFXHAL::disableInterrupts()
+         8   -> TouchGFXGeneratedHAL::disableInterrupts()
+       8   TouchGFXHAL::enableInterrupts()
+         8   -> TouchGFXGeneratedHAL::enableInterrupts()
+       8   TouchGFXHAL::enableLCDControllerInterrupt()
+         8   -> TouchGFXGeneratedHAL::enableLCDControllerInterrupt()
+       8   TouchGFXHAL::flushFrameBuffer()
+         8   -> TouchGFXGeneratedHAL::flushFrameBuffer()
+       8   TouchGFXHAL::flushFrameBuffer(touchgfx::Rect const &)
+         8   -> TouchGFXGeneratedHAL::flushFrameBuffer(touchgfx::Rect const &)
+       8   TouchGFXHAL::getTFTFrameBuffer() const
+         8   -> TouchGFXGeneratedHAL::getTFTFrameBuffer() const
+       8   TouchGFXHAL::initialize()
+         8   -> TouchGFXGeneratedHAL::initialize()
+       8   TouchGFXHAL::setTFTFrameBuffer(uint16_t *)
+         8   -> TouchGFXGeneratedHAL::setTFTFrameBuffer(uint16_t *)
+      16   TouchGFXHAL::taskEntry()
+        16   -- Indirect call
+        16   -> HAL_GPIO_WritePin
+        16   -> touchgfx::OSWrappers::waitForVSync()
+       0   TouchGFXHAL::~TouchGFXHAL() noexcept
+       8   touchgfx::HAL::backPorchExited()
+         8   -- Indirect call
+         8   -> touchgfx::HAL::swapFrameBuffers()
+       8   touchgfx::HAL::getBlitCaps()
+         8   -- Indirect call
+       8   touchgfx::HAL::getDMAType()
+         8   -- Indirect call
+       0   touchgfx::HAL::getFlashDataReader() const
+       0   touchgfx::HAL::getTFTCurrentLine()
+       4   touchgfx::HAL::performDisplayOrientationChange()
+       0   touchgfx::HAL::sampleKey(uint8_t &)
+       0   touchgfx::HAL::setDisplayOrientation(touchgfx::DisplayOrientation)
+      16   touchgfx::HAL::setFrameBufferSize(uint16_t, uint16_t)
+        16   -> __aeabi_assert
+        16   -> __iar_EmptyStepPoint
+      24   touchgfx::HAL::setFrameBufferStartAddresses(void *, void *, void *)
+        24   -> __aeabi_assert
+        24   -> __iar_EmptyStepPoint
+       8   touchgfx::HAL::taskDelay(uint16_t)
+         8   -- Indirect call
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+       4  ??DataTable2_4
+       8  TouchGFXGeneratedHAL::flushFrameBuffer()
+       8  TouchGFXHAL::configureInterrupts()
+      20  TouchGFXHAL::deleter ~TouchGFXHAL() noexcept
+       8  TouchGFXHAL::disableInterrupts()
+       8  TouchGFXHAL::enableInterrupts()
+       8  TouchGFXHAL::enableLCDControllerInterrupt()
+       8  TouchGFXHAL::flushFrameBuffer()
+      70  TouchGFXHAL::flushFrameBuffer(touchgfx::Rect const &)
+       8  TouchGFXHAL::getTFTFrameBuffer() const
+       8  TouchGFXHAL::initialize()
+       8  TouchGFXHAL::setTFTFrameBuffer(uint16_t *)
+      78  TouchGFXHAL::taskEntry()
+       2  TouchGFXHAL::~TouchGFXHAL() noexcept
+      22  touchgfx::HAL::backPorchExited()
+      28  touchgfx::HAL::getBlitCaps()
+      16  touchgfx::HAL::getDMAType()
+       4  touchgfx::HAL::getFlashDataReader() const
+       6  touchgfx::HAL::getTFTCurrentLine()
+      80  touchgfx::HAL::performDisplayOrientationChange()
+       4  touchgfx::HAL::sampleKey(uint8_t &)
+      12  touchgfx::HAL::setDisplayOrientation(touchgfx::DisplayOrientation)
+      80  touchgfx::HAL::setFrameBufferSize(uint16_t, uint16_t)
+      92  touchgfx::HAL::setFrameBufferStartAddresses(void *, void *, void *)
+      20  touchgfx::HAL::taskDelay(uint16_t)
+     624  -- Other
+
+ 
+ 624 bytes in section .rodata
+ 626 bytes in section .text
+ 
+ 224 bytes of CODE  memory (+ 402 bytes shared)
+   0 bytes of CONST memory (+ 624 bytes shared)
+
+Errors: none
+Warnings: none

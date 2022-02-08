@@ -16,7 +16,7 @@ void ButtonReadTask(void *argument)
     button_obj_t userBtn;
 
     DBGPRINT("/==========================================/\r\n");
-    DBGPRINT("/=== [ %s ]  Start Button Read Task ========\r\n", __func__);
+    DBGPRINT("/=== [ %s ]\r\n", __func__);
     DBGPRINT("/==========================================/\r\n");
 
     buttonCreated(&userBtn, 0, 200);

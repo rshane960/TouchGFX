@@ -1,0 +1,159 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         08/Feb/2022  20:54:05
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Usart.c
+#        [UTF-8]
+#    Command line                 =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Usart.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Usart.c -D
+#        USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Usart.o.d
+#    Locale                       =  C
+#    List file                    =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\Core\User_Usart.lst
+#    Object file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\Core\User_Usart.o
+#    Runtime model:                  
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  1
+#      __dlib_full_locale_support =  1
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\Core\Src\User_Usart.c
+      1          
+      2          #include "User_Include.h"
+      3          
+      4          
+
+   \                                 In section .text, align 4, keep-with-next
+      5          size_t __write(int handle, uint8_t *buf, size_t bufSize)
+      6          { 
+   \                     __write: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x000D             MOVS     R5,R1
+   \        0x4   0x0014             MOVS     R4,R2
+      7              size_t nChars = 0; 
+   \        0x6   0x2600             MOVS     R6,#+0
+      8              if(handle == -1) return 0;
+   \        0x8   0xF110 0x0F01      CMN      R0,#+1
+   \        0xC   0xD101             BNE.N    ??__write_1
+   \        0xE   0x2000             MOVS     R0,#+0
+   \       0x10   0xE012             B.N      ??__write_2
+      9              else if(handle != 1 && handle != 2) return -1;
+   \                     ??__write_1: (+1)
+   \       0x12   0x2801             CMP      R0,#+1
+   \       0x14   0xD00D             BEQ.N    ??__write_3
+   \       0x16   0x2802             CMP      R0,#+2
+   \       0x18   0xD00B             BEQ.N    ??__write_3
+   \       0x1A   0xF05F 0x30FF      MOVS     R0,#+4294967295
+   \       0x1E   0xE00B             B.N      ??__write_2
+     10           
+     11              for(;bufSize> 0; --bufSize)
+     12              {
+     13                  HAL_UART_Transmit(&huart1, buf, 1 ,1);
+   \                     ??__write_4: (+1)
+   \       0x20   0x2301             MOVS     R3,#+1
+   \       0x22   0x2201             MOVS     R2,#+1
+   \       0x24   0x0029             MOVS     R1,R5
+   \       0x26   0x4805             LDR.N    R0,??__write_0
+   \       0x28   0x.... 0x....      BL       HAL_UART_Transmit
+     14                  ++buf;
+   \       0x2C   0x1C6D             ADDS     R5,R5,#+1
+     15                  ++nChars;
+   \       0x2E   0x1C76             ADDS     R6,R6,#+1
+     16              } 
+   \       0x30   0x1E64             SUBS     R4,R4,#+1
+   \                     ??__write_3: (+1)
+   \       0x32   0x2C00             CMP      R4,#+0
+   \       0x34   0xD1F4             BNE.N    ??__write_4
+     17           
+     18              return nChars;
+   \       0x36   0x0030             MOVS     R0,R6
+   \                     ??__write_2: (+1)
+   \       0x38   0xBD70             POP      {R4-R6,PC}
+   \       0x3A   0xBF00             Nop
+   \                     ??__write_0:
+   \       0x3C   0x....'....        DC32     huart1
+     19          
+     20          }
+     21          
+     22          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   __write
+        16   -> HAL_UART_Transmit
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      64  __write
+
+ 
+ 64 bytes in section .text
+ 
+ 64 bytes of CODE memory
+
+Errors: none
+Warnings: none

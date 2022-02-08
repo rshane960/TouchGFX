@@ -1,0 +1,2444 @@
+﻿###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         08/Feb/2022  20:54:22
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\generated\gui_generated\src\common\FrontendApplicationBase.cpp
+#        [UTF-8]
+#    Command line                 =
+#        -f
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\gui_generated\FrontendApplicationBase.o.rsp
+#        (D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\generated\gui_generated\src\common\FrontendApplicationBase.cpp
+#        -D USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\gui_generated
+#        -lA
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\gui_generated
+#        -o
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\gui_generated
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Full.h" -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+#        -I
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+#        -Ol --c++ --no_exceptions --no_rtti --no_static_destruction
+#        --source_encoding utf8 --text_out utf8 --utf8_text_in)
+#        --dependencies=n
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\gui_generated\FrontendApplicationBase.o.d
+#    Locale                       =  C
+#    List file                    =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\gui_generated\FrontendApplicationBase.lst
+#    Object file                  =
+#        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\gui_generated\FrontendApplicationBase.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  1
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\generated\gui_generated\src\common\FrontendApplicationBase.cpp
+      1          /*********************************************************************************/
+      2          /********** THIS FILE IS GENERATED BY TOUCHGFX DESIGNER, DO NOT MODIFY ***********/
+      3          /*********************************************************************************/
+      4          #include <new>
+
+   \                                 In section .text, align 2
+   \   __vfp void *operator new(unsigned int, void *) noexcept
+   \                     _ZnwjPv: (+1)
+   \        0x0   0x0008             MOVS     R0,R1
+   \        0x2   0x4770             BX       LR
+      5          #include <gui_generated/common/FrontendApplicationBase.hpp>
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Application::appSwitchScreen(uint8_t)
+   \                     _ZN8touchgfx11Application15appSwitchScreenEh: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Application::requestRedraw(touchgfx::Rect &)
+   \                     _ZN8touchgfx11Application13requestRedrawERNS_4RectE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF510 0x7096      ADDS     R0,R0,#+300
+   \        0x6   0x2208             MOVS     R2,#+8
+   \        0x8   0x.... 0x....      BL       __aeabi_memcpy
+   \        0xC   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::GenericCallback<touchgfx::Drawable &>::subobject GenericCallback() noexcept
+   \                     _ZN8touchgfx15GenericCallbackIRNS_8DrawableEvvEC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN8touchgfx15GenericCallbackIRNS_8DrawableEvvEC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::GenericCallback<touchgfx::Drawable &>::GenericCallback() noexcept
+   \                     _ZN8touchgfx15GenericCallbackIRNS_8DrawableEvvEC1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::GenericCallback<void>::subobject GenericCallback() noexcept
+   \                     _ZN8touchgfx15GenericCallbackIvvvEC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN8touchgfx15GenericCallbackIvvvEC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::GenericCallback<void>::GenericCallback() noexcept
+   \                     _ZN8touchgfx15GenericCallbackIvvvEC1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::GenericCallback<void> &touchgfx::GenericCallback<void>::operator=(touchgfx::GenericCallback<void> const &) noexcept
+   \                     _ZN8touchgfx15GenericCallbackIvvvEaSERKS1_: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Callback<FrontendApplicationBase>::deleter ~Callback() noexcept
+   \                     _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvED0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvED1Ev
+   \        0xA   0x2110             MOVS     R1,#+16
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZdlPvj
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::deleter ~Callback() noexcept
+   \                     _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvED0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvED1Ev
+   \        0xA   0x2110             MOVS     R1,#+16
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZdlPvj
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::deleter ~Callback() noexcept
+   \                     _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvED0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvED1Ev
+   \        0xA   0x2110             MOVS     R1,#+16
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZdlPvj
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Callback<FrontendApplicationBase>::~Callback() noexcept
+   \                     _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvED1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Callback<FrontendApplicationBase> &touchgfx::Callback<FrontendApplicationBase>::operator=(touchgfx::Callback<FrontendApplicationBase> &&) noexcept
+   \                     _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEaSEOS2_: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0029             MOVS     R1,R5
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x.... 0x....      BL       _ZN8touchgfx15GenericCallbackIvvvEaSERKS1_
+   \        0xE   0x6868             LDR      R0,[R5, #+4]
+   \       0x10   0x6060             STR      R0,[R4, #+4]
+   \       0x12   0xE9D5 0x0102      LDRD     R0,R1,[R5, #+8]
+   \       0x16   0xE9C4 0x0102      STRD     R0,R1,[R4, #+8]
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xBD32             POP      {R1,R4,R5,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::~Callback() noexcept
+   \                     _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvED1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::~Callback() noexcept
+   \                     _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvED1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::EAST> *, void (touchgfx::SlideTransition<touchgfx::EAST>::*)(touchgfx::Drawable &))
+   \                     _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvEC1EPS3_MS3_FvS5_E: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x000F             MOVS     R7,R1
+   \        0x6   0x0014             MOVS     R4,R2
+   \        0x8   0x001D             MOVS     R5,R3
+   \        0xA   0x0030             MOVS     R0,R6
+   \        0xC   0x.... 0x....      BL       _ZN8touchgfx15GenericCallbackIRNS_8DrawableEvvEC2Ev
+   \       0x10   0x4803             LDR.N    R0,??Callback_0
+   \       0x12   0x6030             STR      R0,[R6, #+0]
+   \       0x14   0x6077             STR      R7,[R6, #+4]
+   \       0x16   0xE9C6 0x4502      STRD     R4,R5,[R6, #+8]
+   \       0x1A   0x0030             MOVS     R0,R6
+   \       0x1C   0xBDF2             POP      {R1,R4-R7,PC}
+   \       0x1E   0xBF00             Nop
+   \                     ??Callback_0:
+   \       0x20   0x....'....        DC32     _ZTVN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvEE+0x8
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::WEST> *, void (touchgfx::SlideTransition<touchgfx::WEST>::*)(touchgfx::Drawable &))
+   \                     _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvEC1EPS3_MS3_FvS5_E: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x000F             MOVS     R7,R1
+   \        0x6   0x0014             MOVS     R4,R2
+   \        0x8   0x001D             MOVS     R5,R3
+   \        0xA   0x0030             MOVS     R0,R6
+   \        0xC   0x.... 0x....      BL       _ZN8touchgfx15GenericCallbackIRNS_8DrawableEvvEC2Ev
+   \       0x10   0x4803             LDR.N    R0,??Callback_1
+   \       0x12   0x6030             STR      R0,[R6, #+0]
+   \       0x14   0x6077             STR      R7,[R6, #+4]
+   \       0x16   0xE9C6 0x4502      STRD     R4,R5,[R6, #+8]
+   \       0x1A   0x0030             MOVS     R0,R6
+   \       0x1C   0xBDF2             POP      {R1,R4-R7,PC}
+   \       0x1E   0xBF00             Nop
+   \                     ??Callback_1:
+   \       0x20   0x....'....        DC32     _ZTVN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvEE+0x8
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::execute(touchgfx::Drawable &)
+   \                     _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvE7executeES5_: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x6842             LDR      R2,[R0, #+4]
+   \        0x4   0x68C3             LDR      R3,[R0, #+12]
+   \        0x6   0x105B             ASRS     R3,R3,#+1
+   \        0x8   0x441A             ADD      R2,R2,R3
+   \        0xA   0x7B03             LDRB     R3,[R0, #+12]
+   \        0xC   0x07DB             LSLS     R3,R3,#+31
+   \        0xE   0xD401             BMI.N    ??execute_0
+   \       0x10   0x6883             LDR      R3,[R0, #+8]
+   \       0x12   0xE002             B.N      ??execute_1
+   \                     ??execute_0: (+1)
+   \       0x14   0x6813             LDR      R3,[R2, #+0]
+   \       0x16   0x6880             LDR      R0,[R0, #+8]
+   \       0x18   0x581B             LDR      R3,[R3, R0]
+   \                     ??execute_1: (+1)
+   \       0x1A   0x0010             MOVS     R0,R2
+   \       0x1C   0x4798             BLX      R3
+   \       0x1E   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::execute(touchgfx::Drawable &)
+   \                     _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvE7executeES5_: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x6842             LDR      R2,[R0, #+4]
+   \        0x4   0x68C3             LDR      R3,[R0, #+12]
+   \        0x6   0x105B             ASRS     R3,R3,#+1
+   \        0x8   0x441A             ADD      R2,R2,R3
+   \        0xA   0x7B03             LDRB     R3,[R0, #+12]
+   \        0xC   0x07DB             LSLS     R3,R3,#+31
+   \        0xE   0xD401             BMI.N    ??execute_2
+   \       0x10   0x6883             LDR      R3,[R0, #+8]
+   \       0x12   0xE002             B.N      ??execute_3
+   \                     ??execute_2: (+1)
+   \       0x14   0x6813             LDR      R3,[R2, #+0]
+   \       0x16   0x6880             LDR      R0,[R0, #+8]
+   \       0x18   0x581B             LDR      R3,[R3, R0]
+   \                     ??execute_3: (+1)
+   \       0x1A   0x0010             MOVS     R0,R2
+   \       0x1C   0x4798             BLX      R3
+   \       0x1E   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp bool touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::isValid() const
+   \                     _ZNK8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvE7isValidEv: (+1)
+   \        0x0   0x6841             LDR      R1,[R0, #+4]
+   \        0x2   0x2900             CMP      R1,#+0
+   \        0x4   0xD00A             BEQ.N    ??isValid_0
+   \        0x6   0x6881             LDR      R1,[R0, #+8]
+   \        0x8   0x2900             CMP      R1,#+0
+   \        0xA   0xD105             BNE.N    ??isValid_1
+   \        0xC   0x7B01             LDRB     R1,[R0, #+12]
+   \        0xE   0x07C9             LSLS     R1,R1,#+31
+   \       0x10   0xD504             BPL.N    ??isValid_0
+   \       0x12   0x68C0             LDR      R0,[R0, #+12]
+   \       0x14   0x2800             CMP      R0,#+0
+   \       0x16   0xD001             BEQ.N    ??isValid_0
+   \                     ??isValid_1: (+1)
+   \       0x18   0x2001             MOVS     R0,#+1
+   \       0x1A   0xE000             B.N      ??isValid_2
+   \                     ??isValid_0: (+1)
+   \       0x1C   0x2000             MOVS     R0,#+0
+   \                     ??isValid_2: (+1)
+   \       0x1E   0xB2C0             UXTB     R0,R0
+   \       0x20   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp bool touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::isValid() const
+   \                     _ZNK8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvE7isValidEv: (+1)
+   \        0x0   0x6841             LDR      R1,[R0, #+4]
+   \        0x2   0x2900             CMP      R1,#+0
+   \        0x4   0xD00A             BEQ.N    ??isValid_3
+   \        0x6   0x6881             LDR      R1,[R0, #+8]
+   \        0x8   0x2900             CMP      R1,#+0
+   \        0xA   0xD105             BNE.N    ??isValid_4
+   \        0xC   0x7B01             LDRB     R1,[R0, #+12]
+   \        0xE   0x07C9             LSLS     R1,R1,#+31
+   \       0x10   0xD504             BPL.N    ??isValid_3
+   \       0x12   0x68C0             LDR      R0,[R0, #+12]
+   \       0x14   0x2800             CMP      R0,#+0
+   \       0x16   0xD001             BEQ.N    ??isValid_3
+   \                     ??isValid_4: (+1)
+   \       0x18   0x2001             MOVS     R0,#+1
+   \       0x1A   0xE000             B.N      ??isValid_5
+   \                     ??isValid_3: (+1)
+   \       0x1C   0x2000             MOVS     R0,#+0
+   \                     ??isValid_5: (+1)
+   \       0x1E   0xB2C0             UXTB     R0,R0
+   \       0x20   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::Callback<FrontendApplicationBase>::Callback()
+   \                     _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx15GenericCallbackIvvvEC2Ev
+   \        0xA   0x4805             LDR.N    R0,??Callback_2
+   \        0xC   0x6020             STR      R0,[R4, #+0]
+   \        0xE   0x2000             MOVS     R0,#+0
+   \       0x10   0x6060             STR      R0,[R4, #+4]
+   \       0x12   0x4804             LDR.N    R0,??Callback_2+0x4
+   \       0x14   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x18   0xE9C4 0x2302      STRD     R2,R3,[R4, #+8]
+   \       0x1C   0x0020             MOVS     R0,R4
+   \       0x1E   0xBD10             POP      {R4,PC}
+   \                     ??Callback_2:
+   \       0x20   0x....'....        DC32     _ZTVN8touchgfx8CallbackI23FrontendApplicationBasevvvEE+0x8
+   \       0x24   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::Callback<FrontendApplicationBase>::Callback(FrontendApplicationBase *, void (FrontendApplicationBase::*)())
+   \                     _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEC1EPS1_MS1_FvvE: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x000F             MOVS     R7,R1
+   \        0x6   0x0014             MOVS     R4,R2
+   \        0x8   0x001D             MOVS     R5,R3
+   \        0xA   0x0030             MOVS     R0,R6
+   \        0xC   0x.... 0x....      BL       _ZN8touchgfx15GenericCallbackIvvvEC2Ev
+   \       0x10   0x4803             LDR.N    R0,??Callback_3
+   \       0x12   0x6030             STR      R0,[R6, #+0]
+   \       0x14   0x6077             STR      R7,[R6, #+4]
+   \       0x16   0xE9C6 0x4502      STRD     R4,R5,[R6, #+8]
+   \       0x1A   0x0030             MOVS     R0,R6
+   \       0x1C   0xBDF2             POP      {R1,R4-R7,PC}
+   \       0x1E   0xBF00             Nop
+   \                     ??Callback_3:
+   \       0x20   0x....'....        DC32     _ZTVN8touchgfx8CallbackI23FrontendApplicationBasevvvEE+0x8
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Callback<FrontendApplicationBase>::execute()
+   \                     _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvE7executeEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x6841             LDR      R1,[R0, #+4]
+   \        0x4   0x68C2             LDR      R2,[R0, #+12]
+   \        0x6   0x1052             ASRS     R2,R2,#+1
+   \        0x8   0x4411             ADD      R1,R1,R2
+   \        0xA   0x7B02             LDRB     R2,[R0, #+12]
+   \        0xC   0x07D2             LSLS     R2,R2,#+31
+   \        0xE   0xD401             BMI.N    ??execute_4
+   \       0x10   0x6882             LDR      R2,[R0, #+8]
+   \       0x12   0xE002             B.N      ??execute_5
+   \                     ??execute_4: (+1)
+   \       0x14   0x680A             LDR      R2,[R1, #+0]
+   \       0x16   0x6880             LDR      R0,[R0, #+8]
+   \       0x18   0x5812             LDR      R2,[R2, R0]
+   \                     ??execute_5: (+1)
+   \       0x1A   0x0008             MOVS     R0,R1
+   \       0x1C   0x4790             BLX      R2
+   \       0x1E   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp bool touchgfx::Callback<FrontendApplicationBase>::isValid() const
+   \                     _ZNK8touchgfx8CallbackI23FrontendApplicationBasevvvE7isValidEv: (+1)
+   \        0x0   0x6841             LDR      R1,[R0, #+4]
+   \        0x2   0x2900             CMP      R1,#+0
+   \        0x4   0xD00A             BEQ.N    ??isValid_6
+   \        0x6   0x6881             LDR      R1,[R0, #+8]
+   \        0x8   0x2900             CMP      R1,#+0
+   \        0xA   0xD105             BNE.N    ??isValid_7
+   \        0xC   0x7B01             LDRB     R1,[R0, #+12]
+   \        0xE   0x07C9             LSLS     R1,R1,#+31
+   \       0x10   0xD504             BPL.N    ??isValid_6
+   \       0x12   0x68C0             LDR      R0,[R0, #+12]
+   \       0x14   0x2800             CMP      R0,#+0
+   \       0x16   0xD001             BEQ.N    ??isValid_6
+   \                     ??isValid_7: (+1)
+   \       0x18   0x2001             MOVS     R0,#+1
+   \       0x1A   0xE000             B.N      ??isValid_8
+   \                     ??isValid_6: (+1)
+   \       0x1C   0x2000             MOVS     R0,#+0
+   \                     ??isValid_8: (+1)
+   \       0x1E   0xB2C0             UXTB     R0,R0
+   \       0x20   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)
+   \                     _ZN8touchgfx8Drawable11setPositionEssss: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x001D             MOVS     R5,R3
+   \        0x6   0xF9BD 0x6010      LDRSH    R6,[SP, #+16]
+   \        0xA   0xB212             SXTH     R2,R2
+   \        0xC   0xB209             SXTH     R1,R1
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0x.... 0x....      BL       _ZN8touchgfx8Drawable5setXYEss
+   \       0x14   0x0032             MOVS     R2,R6
+   \       0x16   0xB212             SXTH     R2,R2
+   \       0x18   0x0029             MOVS     R1,R5
+   \       0x1A   0xB209             SXTH     R1,R1
+   \       0x1C   0x0020             MOVS     R0,R4
+   \       0x1E   0x.... 0x....      BL       _ZN8touchgfx8Drawable14setWidthHeightEss
+   \       0x22   0xBD70             POP      {R4-R6,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp int16_t touchgfx::Drawable::getX() const
+   \                     _ZNK8touchgfx8Drawable4getXEv: (+1)
+   \        0x0   0xF9B0 0x0004      LDRSH    R0,[R0, #+4]
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Drawable::setXY(int16_t, int16_t)
+   \                     _ZN8touchgfx8Drawable5setXYEss: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0015             MOVS     R5,R2
+   \        0x6   0xB209             SXTH     R1,R1
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x6822             LDR      R2,[R4, #+0]
+   \        0xC   0x6AD2             LDR      R2,[R2, #+44]
+   \        0xE   0x4790             BLX      R2
+   \       0x10   0x0029             MOVS     R1,R5
+   \       0x12   0xB209             SXTH     R1,R1
+   \       0x14   0x0020             MOVS     R0,R4
+   \       0x16   0x6822             LDR      R2,[R4, #+0]
+   \       0x18   0x6B12             LDR      R2,[R2, #+48]
+   \       0x1A   0x4790             BLX      R2
+   \       0x1C   0xBD31             POP      {R0,R4,R5,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)
+   \                     _ZN8touchgfx8Drawable14setWidthHeightEss: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0015             MOVS     R5,R2
+   \        0x6   0xB209             SXTH     R1,R1
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x6822             LDR      R2,[R4, #+0]
+   \        0xC   0x6B52             LDR      R2,[R2, #+52]
+   \        0xE   0x4790             BLX      R2
+   \       0x10   0x0029             MOVS     R1,R5
+   \       0x12   0xB209             SXTH     R1,R1
+   \       0x14   0x0020             MOVS     R0,R4
+   \       0x16   0x6822             LDR      R2,[R4, #+0]
+   \       0x18   0x6B92             LDR      R2,[R2, #+56]
+   \       0x1A   0x4790             BLX      R2
+   \       0x1C   0xBD31             POP      {R0,R4,R5,PC}
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::HAL *touchgfx::HAL::getInstance()
+   \                     _ZN8touchgfx3HAL11getInstanceEv: (+1)
+   \        0x0   0x4801             LDR.N    R0,??getInstance_0
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+   \        0x6   0xBF00             Nop
+   \                     ??getInstance_0:
+   \        0x8   0x....'....        DC32     _ZN8touchgfx3HAL8instanceE
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::LCD &touchgfx::HAL::lcd()
+   \                     _ZN8touchgfx3HAL3lcdEv: (+1)
+   \        0x0   0x4907             LDR.N    R1,??lcd_0
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF890 0x0076      LDRB     R0,[R0, #+118]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD006             BEQ.N    ??lcd_1
+   \        0xC   0x6808             LDR      R0,[R1, #+0]
+   \        0xE   0x6CC0             LDR      R0,[R0, #+76]
+   \       0x10   0x2800             CMP      R0,#+0
+   \       0x12   0xD002             BEQ.N    ??lcd_1
+   \       0x14   0x6808             LDR      R0,[R1, #+0]
+   \       0x16   0x6CC0             LDR      R0,[R0, #+76]
+   \       0x18   0xE001             B.N      ??lcd_2
+   \                     ??lcd_1: (+1)
+   \       0x1A   0x6808             LDR      R0,[R1, #+0]
+   \       0x1C   0x6880             LDR      R0,[R0, #+8]
+   \                     ??lcd_2: (+1)
+   \       0x1E   0x4770             BX       LR
+   \                     ??lcd_0:
+   \       0x20   0x....'....        DC32     _ZN8touchgfx3HAL8instanceE
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Transition::subobject Transition()
+   \                     _ZN8touchgfx10TransitionC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN8touchgfx10TransitionC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::Transition::Transition()
+   \                     _ZN8touchgfx10TransitionC1Ev: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Transition_0
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0x6041             STR      R1,[R0, #+4]
+   \        0x8   0x2100             MOVS     R1,#+0
+   \        0xA   0x7201             STRB     R1,[R0, #+8]
+   \        0xC   0x4770             BX       LR
+   \        0xE   0xBF00             Nop
+   \                     ??Transition_0:
+   \       0x10   0x....'....        DC32     _ZTVN8touchgfx10TransitionE+0x8
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Transition::~Transition() noexcept
+   \                     _ZN8touchgfx10TransitionD1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::Transition::deleter ~Transition() noexcept
+   \                     _ZN8touchgfx10TransitionD0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx10TransitionD1Ev
+   \        0xA   0x210C             MOVS     R1,#+12
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZdlPvj
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Transition::handleTickEvent()
+   \                     _ZN8touchgfx10Transition15handleTickEventEv: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Transition::tearDown()
+   \                     _ZN8touchgfx10Transition8tearDownEv: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Transition::init()
+   \                     _ZN8touchgfx10Transition4initEv: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Transition::invalidate()
+   \                     _ZN8touchgfx10Transition10invalidateEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN8touchgfx11Application11getInstanceEv
+   \        0x6   0x6801             LDR      R1,[R0, #+0]
+   \        0x8   0x6B09             LDR      R1,[R1, #+48]
+   \        0xA   0x4788             BLX      R1
+   \        0xC   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::Transition::setScreenContainer(touchgfx::Container &)
+   \                     _ZN8touchgfx10Transition18setScreenContainerERNS_9ContainerE: (+1)
+   \        0x0   0x6041             STR      R1,[R0, #+4]
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::NoTransition &touchgfx::AbstractPartition::at<touchgfx::NoTransition>(uint16_t)
+   \                     _ZN8touchgfx17AbstractPartition2atINS_12NoTransitionEEERT_t: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB289             UXTH     R1,R1
+   \        0x4   0x6802             LDR      R2,[R0, #+0]
+   \        0x6   0x6A52             LDR      R2,[R2, #+36]
+   \        0x8   0x4790             BLX      R2
+   \        0xA   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp Screen1View &touchgfx::AbstractPartition::at<Screen1View>(uint16_t)
+   \                     _ZN8touchgfx17AbstractPartition2atI11Screen1ViewEERT_t: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB289             UXTH     R1,R1
+   \        0x4   0x6802             LDR      R2,[R0, #+0]
+   \        0x6   0x6A52             LDR      R2,[R2, #+36]
+   \        0x8   0x4790             BLX      R2
+   \        0xA   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp Screen1Presenter &touchgfx::AbstractPartition::at<Screen1Presenter>(uint16_t)
+   \                     _ZN8touchgfx17AbstractPartition2atI16Screen1PresenterEERT_t: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB289             UXTH     R1,R1
+   \        0x4   0x6802             LDR      R2,[R0, #+0]
+   \        0x6   0x6A52             LDR      R2,[R2, #+36]
+   \        0x8   0x4790             BLX      R2
+   \        0xA   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::SlideTransition<touchgfx::WEST> &touchgfx::AbstractPartition::at<touchgfx::SlideTransition<touchgfx::WEST>>(uint16_t)
+   \                     _ZN8touchgfx17AbstractPartition2atINS_15SlideTransitionILNS_9DirectionE3EEEEERT_t: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB289             UXTH     R1,R1
+   \        0x4   0x6802             LDR      R2,[R0, #+0]
+   \        0x6   0x6A52             LDR      R2,[R2, #+36]
+   \        0x8   0x4790             BLX      R2
+   \        0xA   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::SlideTransition<touchgfx::EAST> &touchgfx::AbstractPartition::at<touchgfx::SlideTransition<touchgfx::EAST>>(uint16_t)
+   \                     _ZN8touchgfx17AbstractPartition2atINS_15SlideTransitionILNS_9DirectionE2EEEEERT_t: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB289             UXTH     R1,R1
+   \        0x4   0x6802             LDR      R2,[R0, #+0]
+   \        0x6   0x6A52             LDR      R2,[R2, #+36]
+   \        0x8   0x4790             BLX      R2
+   \        0xA   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp Screen2View &touchgfx::AbstractPartition::at<Screen2View>(uint16_t)
+   \                     _ZN8touchgfx17AbstractPartition2atI11Screen2ViewEERT_t: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB289             UXTH     R1,R1
+   \        0x4   0x6802             LDR      R2,[R0, #+0]
+   \        0x6   0x6A52             LDR      R2,[R2, #+36]
+   \        0x8   0x4790             BLX      R2
+   \        0xA   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp Screen2Presenter &touchgfx::AbstractPartition::at<Screen2Presenter>(uint16_t)
+   \                     _ZN8touchgfx17AbstractPartition2atI16Screen2PresenterEERT_t: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB289             UXTH     R1,R1
+   \        0x4   0x6802             LDR      R2,[R0, #+0]
+   \        0x6   0x6A52             LDR      R2,[R2, #+36]
+   \        0x8   0x4790             BLX      R2
+   \        0xA   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::MVPApplication::deleter ~MVPApplication() noexcept
+   \                     _ZN8touchgfx14MVPApplicationD0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx14MVPApplicationD1Ev
+   \        0xA   0xF44F 0x71A0      MOV      R1,#+320
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0x.... 0x....      BL       _ZdlPvj
+   \       0x14   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::MVPApplication::~MVPApplication() noexcept
+   \                     _ZN8touchgfx14MVPApplicationD1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::MVPApplication::subobject MVPApplication()
+   \                     _ZN8touchgfx14MVPApplicationC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN8touchgfx14MVPApplicationC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::MVPApplication::MVPApplication()
+   \                     _ZN8touchgfx14MVPApplicationC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx11ApplicationC2Ev
+   \        0xA   0x4806             LDR.N    R0,??MVPApplication_0
+   \        0xC   0x6020             STR      R0,[R4, #+0]
+   \        0xE   0x2000             MOVS     R0,#+0
+   \       0x10   0xF8C4 0x0138      STR      R0,[R4, #+312]
+   \       0x14   0x2000             MOVS     R0,#+0
+   \       0x16   0xF8C4 0x013C      STR      R0,[R4, #+316]
+   \       0x1A   0x4803             LDR.N    R0,??MVPApplication_0+0x4
+   \       0x1C   0x6004             STR      R4,[R0, #+0]
+   \       0x1E   0x0020             MOVS     R0,R4
+   \       0x20   0xBD10             POP      {R4,PC}
+   \       0x22   0xBF00             Nop
+   \                     ??MVPApplication_0:
+   \       0x24   0x....'....        DC32     _ZTVN8touchgfx14MVPApplicationE+0x8
+   \       0x28   0x....'....        DC32     _ZN8touchgfx11Application8instanceE
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::MVPApplication::handlePendingScreenTransition()
+   \                     _ZN8touchgfx14MVPApplication29handlePendingScreenTransitionEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN8touchgfx14MVPApplication31evaluatePendingScreenTransitionEv
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::MVPApplication::evaluatePendingScreenTransition()
+   \                     _ZN8touchgfx14MVPApplication31evaluatePendingScreenTransitionEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF8D4 0x013C      LDR      R0,[R4, #+316]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD012             BEQ.N    ??evaluatePendingScreenTransition_0
+   \        0xC   0xF8D4 0x013C      LDR      R0,[R4, #+316]
+   \       0x10   0xF8D4 0x113C      LDR      R1,[R4, #+316]
+   \       0x14   0x6809             LDR      R1,[R1, #+0]
+   \       0x16   0x68C9             LDR      R1,[R1, #+12]
+   \       0x18   0x4788             BLX      R1
+   \       0x1A   0x2800             CMP      R0,#+0
+   \       0x1C   0xD009             BEQ.N    ??evaluatePendingScreenTransition_0
+   \       0x1E   0xF8D4 0x013C      LDR      R0,[R4, #+316]
+   \       0x22   0xF8D4 0x113C      LDR      R1,[R4, #+316]
+   \       0x26   0x6809             LDR      R1,[R1, #+0]
+   \       0x28   0x6889             LDR      R1,[R1, #+8]
+   \       0x2A   0x4788             BLX      R1
+   \       0x2C   0x2000             MOVS     R0,#+0
+   \       0x2E   0xF8C4 0x013C      STR      R0,[R4, #+316]
+   \                     ??evaluatePendingScreenTransition_0: (+1)
+   \       0x32   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 4
+   \   __vfp Screen1Presenter *touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+   \                     _ZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_12NoTransitionE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_: (+1)
+   \        0x0   0xE92D 0x47F0      PUSH     {R4-R10,LR}
+   \        0x4   0x0007             MOVS     R7,R0
+   \        0x6   0x000E             MOVS     R6,R1
+   \        0x8   0x0014             MOVS     R4,R2
+   \        0xA   0x001D             MOVS     R5,R3
+   \        0xC   0x68A0             LDR      R0,[R4, #+8]
+   \        0xE   0x68A1             LDR      R1,[R4, #+8]
+   \       0x10   0x6809             LDR      R1,[R1, #+0]
+   \       0x12   0x6A09             LDR      R1,[R1, #+32]
+   \       0x14   0x4788             BLX      R1
+   \       0x16   0xF5B0 0x7F96      CMP      R0,#+300
+   \       0x1A   0xD206             BCS.N    ??makeTransition_3
+   \       0x1C   0x22A3             MOVS     R2,#+163
+   \       0x1E   0x4966             LDR.N    R1,??makeTransition_0
+   \       0x20   0x4866             LDR.N    R0,??makeTransition_0+0x4
+   \       0x22   0x.... 0x....      BL       __aeabi_assert
+   \       0x26   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_3: (+1)
+   \       0x2A   0x6860             LDR      R0,[R4, #+4]
+   \       0x2C   0x6861             LDR      R1,[R4, #+4]
+   \       0x2E   0x6809             LDR      R1,[R1, #+0]
+   \       0x30   0x6A09             LDR      R1,[R1, #+32]
+   \       0x32   0x4788             BLX      R1
+   \       0x34   0x2810             CMP      R0,#+16
+   \       0x36   0xD206             BCS.N    ??makeTransition_4
+   \       0x38   0x22A4             MOVS     R2,#+164
+   \       0x3A   0x495F             LDR.N    R1,??makeTransition_0
+   \       0x3C   0x4860             LDR.N    R0,??makeTransition_0+0x8
+   \       0x3E   0x.... 0x....      BL       __aeabi_assert
+   \       0x42   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_4: (+1)
+   \       0x46   0x68E0             LDR      R0,[R4, #+12]
+   \       0x48   0x68E1             LDR      R1,[R4, #+12]
+   \       0x4A   0x6809             LDR      R1,[R1, #+0]
+   \       0x4C   0x6A09             LDR      R1,[R1, #+32]
+   \       0x4E   0x4788             BLX      R1
+   \       0x50   0x280C             CMP      R0,#+12
+   \       0x52   0xD206             BCS.N    ??makeTransition_5
+   \       0x54   0x22A5             MOVS     R2,#+165
+   \       0x56   0x4958             LDR.N    R1,??makeTransition_0
+   \       0x58   0x485A             LDR.N    R0,??makeTransition_0+0xC
+   \       0x5A   0x.... 0x....      BL       __aeabi_assert
+   \       0x5E   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_5: (+1)
+   \       0x62   0x46A8             MOV      R8,R5
+   \       0x64   0x46B1             MOV      R9,R6
+   \       0x66   0x46BA             MOV      R10,R7
+   \       0x68   0x.... 0x....      BL       _ZN8touchgfx11Application11getInstanceEv
+   \       0x6C   0x.... 0x....      BL       _ZN8touchgfx11Application20clearAllTimerWidgetsEv
+   \       0x70   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x74   0x2800             CMP      R0,#+0
+   \       0x76   0xD006             BEQ.N    ??makeTransition_6
+   \       0x78   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x7C   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \       0x80   0x6809             LDR      R1,[R1, #+0]
+   \       0x82   0x68C9             LDR      R1,[R1, #+12]
+   \       0x84   0x4788             BLX      R1
+   \                     ??makeTransition_6: (+1)
+   \       0x86   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x8A   0x2800             CMP      R0,#+0
+   \       0x8C   0xD006             BEQ.N    ??makeTransition_7
+   \       0x8E   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x92   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \       0x96   0x6809             LDR      R1,[R1, #+0]
+   \       0x98   0x6809             LDR      R1,[R1, #+0]
+   \       0x9A   0x4788             BLX      R1
+   \                     ??makeTransition_7: (+1)
+   \       0x9C   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xA0   0x2800             CMP      R0,#+0
+   \       0xA2   0xD006             BEQ.N    ??makeTransition_8
+   \       0xA4   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xA8   0xF8DA 0x1000      LDR      R1,[R10, #+0]
+   \       0xAC   0x6809             LDR      R1,[R1, #+0]
+   \       0xAE   0x6949             LDR      R1,[R1, #+20]
+   \       0xB0   0x4788             BLX      R1
+   \                     ??makeTransition_8: (+1)
+   \       0xB2   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xB6   0x2800             CMP      R0,#+0
+   \       0xB8   0xD006             BEQ.N    ??makeTransition_9
+   \       0xBA   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xBE   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \       0xC2   0x6809             LDR      R1,[R1, #+0]
+   \       0xC4   0x6849             LDR      R1,[R1, #+4]
+   \       0xC6   0x4788             BLX      R1
+   \                     ??makeTransition_9: (+1)
+   \       0xC8   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xCC   0x2800             CMP      R0,#+0
+   \       0xCE   0xD006             BEQ.N    ??makeTransition_10
+   \       0xD0   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xD4   0xF8DA 0x1000      LDR      R1,[R10, #+0]
+   \       0xD8   0x6809             LDR      R1,[R1, #+0]
+   \       0xDA   0x6809             LDR      R1,[R1, #+0]
+   \       0xDC   0x4788             BLX      R1
+   \                     ??makeTransition_10: (+1)
+   \       0xDE   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xE2   0x2800             CMP      R0,#+0
+   \       0xE4   0xD006             BEQ.N    ??makeTransition_11
+   \       0xE6   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xEA   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \       0xEE   0x6809             LDR      R1,[R1, #+0]
+   \       0xF0   0x6889             LDR      R1,[R1, #+8]
+   \       0xF2   0x4788             BLX      R1
+   \                     ??makeTransition_11: (+1)
+   \       0xF4   0x2100             MOVS     R1,#+0
+   \       0xF6   0x68E0             LDR      R0,[R4, #+12]
+   \       0xF8   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atINS_12NoTransitionEEERT_t
+   \       0xFC   0x0001             MOVS     R1,R0
+   \       0xFE   0x200C             MOVS     R0,#+12
+   \      0x100   0x.... 0x....      BL       _ZnwjPv
+   \      0x104   0x2800             CMP      R0,#+0
+   \      0x106   0xD003             BEQ.N    ??makeTransition_12
+   \      0x108   0x.... 0x....      BL       _ZN8touchgfx12NoTransitionC1Ev
+   \      0x10C   0x4680             MOV      R8,R0
+   \      0x10E   0xE001             B.N      ??makeTransition_13
+   \                     ??makeTransition_12: (+1)
+   \      0x110   0xF05F 0x0800      MOVS     R8,#+0
+   \                     ??makeTransition_13: (+1)
+   \      0x114   0x2100             MOVS     R1,#+0
+   \      0x116   0x68A0             LDR      R0,[R4, #+8]
+   \      0x118   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atI11Screen1ViewEERT_t
+   \      0x11C   0x0001             MOVS     R1,R0
+   \      0x11E   0xF44F 0x7096      MOV      R0,#+300
+   \      0x122   0x.... 0x....      BL       _ZnwjPv
+   \      0x126   0x2800             CMP      R0,#+0
+   \      0x128   0xD003             BEQ.N    ??makeTransition_14
+   \      0x12A   0x.... 0x....      BL       _ZN11Screen1ViewC1Ev
+   \      0x12E   0x4681             MOV      R9,R0
+   \      0x130   0xE001             B.N      ??makeTransition_15
+   \                     ??makeTransition_14: (+1)
+   \      0x132   0xF05F 0x0900      MOVS     R9,#+0
+   \                     ??makeTransition_15: (+1)
+   \      0x136   0x2100             MOVS     R1,#+0
+   \      0x138   0x6860             LDR      R0,[R4, #+4]
+   \      0x13A   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atI16Screen1PresenterEERT_t
+   \      0x13E   0x0001             MOVS     R1,R0
+   \      0x140   0x2010             MOVS     R0,#+16
+   \      0x142   0x.... 0x....      BL       _ZnwjPv
+   \      0x146   0x2800             CMP      R0,#+0
+   \      0x148   0xD004             BEQ.N    ??makeTransition_16
+   \      0x14A   0x4649             MOV      R1,R9
+   \      0x14C   0x.... 0x....      BL       _ZN16Screen1PresenterC1ER11Screen1View
+   \      0x150   0x0004             MOVS     R4,R0
+   \      0x152   0xE000             B.N      ??makeTransition_17
+   \                     ??makeTransition_16: (+1)
+   \      0x154   0x2400             MOVS     R4,#+0
+   \                     ??makeTransition_17: (+1)
+   \      0x156   0xF8C5 0x8000      STR      R8,[R5, #+0]
+   \      0x15A   0x6034             STR      R4,[R6, #+0]
+   \      0x15C   0xF8C7 0x9000      STR      R9,[R7, #+0]
+   \      0x160   0x2C00             CMP      R4,#+0
+   \      0x162   0xD001             BEQ.N    ??makeTransition_18
+   \      0x164   0x1D21             ADDS     R1,R4,#+4
+   \      0x166   0xE000             B.N      ??makeTransition_19
+   \                     ??makeTransition_18: (+1)
+   \      0x168   0x2100             MOVS     R1,#+0
+   \                     ??makeTransition_19: (+1)
+   \      0x16A   0x9D08             LDR      R5,[SP, #+32]
+   \      0x16C   0x0028             MOVS     R0,R5
+   \      0x16E   0x.... 0x....      BL       _ZN5Model4bindEP13ModelListener
+   \      0x172   0x0029             MOVS     R1,R5
+   \      0x174   0x1D20             ADDS     R0,R4,#+4
+   \      0x176   0x.... 0x....      BL       _ZN13ModelListener4bindEP5Model
+   \      0x17A   0x0021             MOVS     R1,R4
+   \      0x17C   0x4648             MOV      R0,R9
+   \      0x17E   0x.... 0x....      BL       _ZN8touchgfx4ViewI16Screen1PresenterE4bindERS1_
+   \      0x182   0x0025             MOVS     R5,R4
+   \      0x184   0x4648             MOV      R0,R9
+   \      0x186   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \      0x18A   0x68C9             LDR      R1,[R1, #+12]
+   \      0x18C   0x4788             BLX      R1
+   \      0x18E   0x0028             MOVS     R0,R5
+   \      0x190   0x6829             LDR      R1,[R5, #+0]
+   \      0x192   0x6809             LDR      R1,[R1, #+0]
+   \      0x194   0x4788             BLX      R1
+   \      0x196   0x4641             MOV      R1,R8
+   \      0x198   0x4648             MOV      R0,R9
+   \      0x19A   0x.... 0x....      BL       _ZN8touchgfx6Screen14bindTransitionERNS_10TransitionE
+   \      0x19E   0x4640             MOV      R0,R8
+   \      0x1A0   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \      0x1A4   0x6909             LDR      R1,[R1, #+16]
+   \      0x1A6   0x4788             BLX      R1
+   \      0x1A8   0x4640             MOV      R0,R8
+   \      0x1AA   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \      0x1AE   0x6949             LDR      R1,[R1, #+20]
+   \      0x1B0   0x4788             BLX      R1
+   \      0x1B2   0x0020             MOVS     R0,R4
+   \      0x1B4   0xE8BD 0x87F0      POP      {R4-R10,PC}
+   \                     ??makeTransition_0:
+   \      0x1B8   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_12NoTransitionE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_1
+   \      0x1BC   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_12NoTransitionE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_0
+   \      0x1C0   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_12NoTransitionE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_3
+   \      0x1C4   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_12NoTransitionE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_5
+
+   \                                 In section .text, align 4
+   \   __vfp Screen1Presenter *touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::SlideTransition<touchgfx::WEST>, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+   \                     _ZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_15SlideTransitionILNS_9DirectionE3EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_: (+1)
+   \        0x0   0xE92D 0x47F0      PUSH     {R4-R10,LR}
+   \        0x4   0x0007             MOVS     R7,R0
+   \        0x6   0x000E             MOVS     R6,R1
+   \        0x8   0x0014             MOVS     R4,R2
+   \        0xA   0x001D             MOVS     R5,R3
+   \        0xC   0x68A0             LDR      R0,[R4, #+8]
+   \        0xE   0x68A1             LDR      R1,[R4, #+8]
+   \       0x10   0x6809             LDR      R1,[R1, #+0]
+   \       0x12   0x6A09             LDR      R1,[R1, #+32]
+   \       0x14   0x4788             BLX      R1
+   \       0x16   0xF5B0 0x7F96      CMP      R0,#+300
+   \       0x1A   0xD206             BCS.N    ??makeTransition_20
+   \       0x1C   0x22A3             MOVS     R2,#+163
+   \       0x1E   0x4967             LDR.N    R1,??makeTransition_1
+   \       0x20   0x4867             LDR.N    R0,??makeTransition_1+0x4
+   \       0x22   0x.... 0x....      BL       __aeabi_assert
+   \       0x26   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_20: (+1)
+   \       0x2A   0x6860             LDR      R0,[R4, #+4]
+   \       0x2C   0x6861             LDR      R1,[R4, #+4]
+   \       0x2E   0x6809             LDR      R1,[R1, #+0]
+   \       0x30   0x6A09             LDR      R1,[R1, #+32]
+   \       0x32   0x4788             BLX      R1
+   \       0x34   0x2810             CMP      R0,#+16
+   \       0x36   0xD206             BCS.N    ??makeTransition_21
+   \       0x38   0x22A4             MOVS     R2,#+164
+   \       0x3A   0x4960             LDR.N    R1,??makeTransition_1
+   \       0x3C   0x4861             LDR.N    R0,??makeTransition_1+0x8
+   \       0x3E   0x.... 0x....      BL       __aeabi_assert
+   \       0x42   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_21: (+1)
+   \       0x46   0x68E0             LDR      R0,[R4, #+12]
+   \       0x48   0x68E1             LDR      R1,[R4, #+12]
+   \       0x4A   0x6809             LDR      R1,[R1, #+0]
+   \       0x4C   0x6A09             LDR      R1,[R1, #+32]
+   \       0x4E   0x4788             BLX      R1
+   \       0x50   0x2854             CMP      R0,#+84
+   \       0x52   0xD206             BCS.N    ??makeTransition_22
+   \       0x54   0x22A5             MOVS     R2,#+165
+   \       0x56   0x4959             LDR.N    R1,??makeTransition_1
+   \       0x58   0x485B             LDR.N    R0,??makeTransition_1+0xC
+   \       0x5A   0x.... 0x....      BL       __aeabi_assert
+   \       0x5E   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_22: (+1)
+   \       0x62   0x46A8             MOV      R8,R5
+   \       0x64   0x46B1             MOV      R9,R6
+   \       0x66   0x46BA             MOV      R10,R7
+   \       0x68   0x.... 0x....      BL       _ZN8touchgfx11Application11getInstanceEv
+   \       0x6C   0x.... 0x....      BL       _ZN8touchgfx11Application20clearAllTimerWidgetsEv
+   \       0x70   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x74   0x2800             CMP      R0,#+0
+   \       0x76   0xD006             BEQ.N    ??makeTransition_23
+   \       0x78   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x7C   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \       0x80   0x6809             LDR      R1,[R1, #+0]
+   \       0x82   0x68C9             LDR      R1,[R1, #+12]
+   \       0x84   0x4788             BLX      R1
+   \                     ??makeTransition_23: (+1)
+   \       0x86   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x8A   0x2800             CMP      R0,#+0
+   \       0x8C   0xD006             BEQ.N    ??makeTransition_24
+   \       0x8E   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x92   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \       0x96   0x6809             LDR      R1,[R1, #+0]
+   \       0x98   0x6809             LDR      R1,[R1, #+0]
+   \       0x9A   0x4788             BLX      R1
+   \                     ??makeTransition_24: (+1)
+   \       0x9C   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xA0   0x2800             CMP      R0,#+0
+   \       0xA2   0xD006             BEQ.N    ??makeTransition_25
+   \       0xA4   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xA8   0xF8DA 0x1000      LDR      R1,[R10, #+0]
+   \       0xAC   0x6809             LDR      R1,[R1, #+0]
+   \       0xAE   0x6949             LDR      R1,[R1, #+20]
+   \       0xB0   0x4788             BLX      R1
+   \                     ??makeTransition_25: (+1)
+   \       0xB2   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xB6   0x2800             CMP      R0,#+0
+   \       0xB8   0xD006             BEQ.N    ??makeTransition_26
+   \       0xBA   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xBE   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \       0xC2   0x6809             LDR      R1,[R1, #+0]
+   \       0xC4   0x6849             LDR      R1,[R1, #+4]
+   \       0xC6   0x4788             BLX      R1
+   \                     ??makeTransition_26: (+1)
+   \       0xC8   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xCC   0x2800             CMP      R0,#+0
+   \       0xCE   0xD006             BEQ.N    ??makeTransition_27
+   \       0xD0   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xD4   0xF8DA 0x1000      LDR      R1,[R10, #+0]
+   \       0xD8   0x6809             LDR      R1,[R1, #+0]
+   \       0xDA   0x6809             LDR      R1,[R1, #+0]
+   \       0xDC   0x4788             BLX      R1
+   \                     ??makeTransition_27: (+1)
+   \       0xDE   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xE2   0x2800             CMP      R0,#+0
+   \       0xE4   0xD006             BEQ.N    ??makeTransition_28
+   \       0xE6   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xEA   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \       0xEE   0x6809             LDR      R1,[R1, #+0]
+   \       0xF0   0x6889             LDR      R1,[R1, #+8]
+   \       0xF2   0x4788             BLX      R1
+   \                     ??makeTransition_28: (+1)
+   \       0xF4   0x2100             MOVS     R1,#+0
+   \       0xF6   0x68E0             LDR      R0,[R4, #+12]
+   \       0xF8   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atINS_15SlideTransitionILNS_9DirectionE3EEEEERT_t
+   \       0xFC   0x0001             MOVS     R1,R0
+   \       0xFE   0x2054             MOVS     R0,#+84
+   \      0x100   0x.... 0x....      BL       _ZnwjPv
+   \      0x104   0x2800             CMP      R0,#+0
+   \      0x106   0xD004             BEQ.N    ??makeTransition_29
+   \      0x108   0x2114             MOVS     R1,#+20
+   \      0x10A   0x.... 0x....      BL       _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EEC1Eh
+   \      0x10E   0x4680             MOV      R8,R0
+   \      0x110   0xE001             B.N      ??makeTransition_30
+   \                     ??makeTransition_29: (+1)
+   \      0x112   0xF05F 0x0800      MOVS     R8,#+0
+   \                     ??makeTransition_30: (+1)
+   \      0x116   0x2100             MOVS     R1,#+0
+   \      0x118   0x68A0             LDR      R0,[R4, #+8]
+   \      0x11A   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atI11Screen1ViewEERT_t
+   \      0x11E   0x0001             MOVS     R1,R0
+   \      0x120   0xF44F 0x7096      MOV      R0,#+300
+   \      0x124   0x.... 0x....      BL       _ZnwjPv
+   \      0x128   0x2800             CMP      R0,#+0
+   \      0x12A   0xD003             BEQ.N    ??makeTransition_31
+   \      0x12C   0x.... 0x....      BL       _ZN11Screen1ViewC1Ev
+   \      0x130   0x4681             MOV      R9,R0
+   \      0x132   0xE001             B.N      ??makeTransition_32
+   \                     ??makeTransition_31: (+1)
+   \      0x134   0xF05F 0x0900      MOVS     R9,#+0
+   \                     ??makeTransition_32: (+1)
+   \      0x138   0x2100             MOVS     R1,#+0
+   \      0x13A   0x6860             LDR      R0,[R4, #+4]
+   \      0x13C   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atI16Screen1PresenterEERT_t
+   \      0x140   0x0001             MOVS     R1,R0
+   \      0x142   0x2010             MOVS     R0,#+16
+   \      0x144   0x.... 0x....      BL       _ZnwjPv
+   \      0x148   0x2800             CMP      R0,#+0
+   \      0x14A   0xD004             BEQ.N    ??makeTransition_33
+   \      0x14C   0x4649             MOV      R1,R9
+   \      0x14E   0x.... 0x....      BL       _ZN16Screen1PresenterC1ER11Screen1View
+   \      0x152   0x0004             MOVS     R4,R0
+   \      0x154   0xE000             B.N      ??makeTransition_34
+   \                     ??makeTransition_33: (+1)
+   \      0x156   0x2400             MOVS     R4,#+0
+   \                     ??makeTransition_34: (+1)
+   \      0x158   0xF8C5 0x8000      STR      R8,[R5, #+0]
+   \      0x15C   0x6034             STR      R4,[R6, #+0]
+   \      0x15E   0xF8C7 0x9000      STR      R9,[R7, #+0]
+   \      0x162   0x2C00             CMP      R4,#+0
+   \      0x164   0xD001             BEQ.N    ??makeTransition_35
+   \      0x166   0x1D21             ADDS     R1,R4,#+4
+   \      0x168   0xE000             B.N      ??makeTransition_36
+   \                     ??makeTransition_35: (+1)
+   \      0x16A   0x2100             MOVS     R1,#+0
+   \                     ??makeTransition_36: (+1)
+   \      0x16C   0x9D08             LDR      R5,[SP, #+32]
+   \      0x16E   0x0028             MOVS     R0,R5
+   \      0x170   0x.... 0x....      BL       _ZN5Model4bindEP13ModelListener
+   \      0x174   0x0029             MOVS     R1,R5
+   \      0x176   0x1D20             ADDS     R0,R4,#+4
+   \      0x178   0x.... 0x....      BL       _ZN13ModelListener4bindEP5Model
+   \      0x17C   0x0021             MOVS     R1,R4
+   \      0x17E   0x4648             MOV      R0,R9
+   \      0x180   0x.... 0x....      BL       _ZN8touchgfx4ViewI16Screen1PresenterE4bindERS1_
+   \      0x184   0x0025             MOVS     R5,R4
+   \      0x186   0x4648             MOV      R0,R9
+   \      0x188   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \      0x18C   0x68C9             LDR      R1,[R1, #+12]
+   \      0x18E   0x4788             BLX      R1
+   \      0x190   0x0028             MOVS     R0,R5
+   \      0x192   0x6829             LDR      R1,[R5, #+0]
+   \      0x194   0x6809             LDR      R1,[R1, #+0]
+   \      0x196   0x4788             BLX      R1
+   \      0x198   0x4641             MOV      R1,R8
+   \      0x19A   0x4648             MOV      R0,R9
+   \      0x19C   0x.... 0x....      BL       _ZN8touchgfx6Screen14bindTransitionERNS_10TransitionE
+   \      0x1A0   0x4640             MOV      R0,R8
+   \      0x1A2   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \      0x1A6   0x6909             LDR      R1,[R1, #+16]
+   \      0x1A8   0x4788             BLX      R1
+   \      0x1AA   0x4640             MOV      R0,R8
+   \      0x1AC   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \      0x1B0   0x6949             LDR      R1,[R1, #+20]
+   \      0x1B2   0x4788             BLX      R1
+   \      0x1B4   0x0020             MOVS     R0,R4
+   \      0x1B6   0xE8BD 0x87F0      POP      {R4-R10,PC}
+   \      0x1BA   0xBF00             Nop
+   \                     ??makeTransition_1:
+   \      0x1BC   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_15SlideTransitionILNS_9DirectionE3EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_1
+   \      0x1C0   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_15SlideTransitionILNS_9DirectionE3EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_0
+   \      0x1C4   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_15SlideTransitionILNS_9DirectionE3EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_3
+   \      0x1C8   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_15SlideTransitionILNS_9DirectionE3EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_5
+
+   \                                 In section .text, align 4
+   \   __vfp Screen2Presenter *touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::SlideTransition<touchgfx::EAST>, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+   \                     _ZN8touchgfx14makeTransitionI11Screen2View16Screen2PresenterNS_15SlideTransitionILNS_9DirectionE2EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_: (+1)
+   \        0x0   0xE92D 0x47F0      PUSH     {R4-R10,LR}
+   \        0x4   0x0007             MOVS     R7,R0
+   \        0x6   0x000E             MOVS     R6,R1
+   \        0x8   0x0014             MOVS     R4,R2
+   \        0xA   0x001D             MOVS     R5,R3
+   \        0xC   0x68A0             LDR      R0,[R4, #+8]
+   \        0xE   0x68A1             LDR      R1,[R4, #+8]
+   \       0x10   0x6809             LDR      R1,[R1, #+0]
+   \       0x12   0x6A09             LDR      R1,[R1, #+32]
+   \       0x14   0x4788             BLX      R1
+   \       0x16   0xF5B0 0x7F96      CMP      R0,#+300
+   \       0x1A   0xD206             BCS.N    ??makeTransition_37
+   \       0x1C   0x22A3             MOVS     R2,#+163
+   \       0x1E   0x4967             LDR.N    R1,??makeTransition_2
+   \       0x20   0x4867             LDR.N    R0,??makeTransition_2+0x4
+   \       0x22   0x.... 0x....      BL       __aeabi_assert
+   \       0x26   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_37: (+1)
+   \       0x2A   0x6860             LDR      R0,[R4, #+4]
+   \       0x2C   0x6861             LDR      R1,[R4, #+4]
+   \       0x2E   0x6809             LDR      R1,[R1, #+0]
+   \       0x30   0x6A09             LDR      R1,[R1, #+32]
+   \       0x32   0x4788             BLX      R1
+   \       0x34   0x2810             CMP      R0,#+16
+   \       0x36   0xD206             BCS.N    ??makeTransition_38
+   \       0x38   0x22A4             MOVS     R2,#+164
+   \       0x3A   0x4960             LDR.N    R1,??makeTransition_2
+   \       0x3C   0x4861             LDR.N    R0,??makeTransition_2+0x8
+   \       0x3E   0x.... 0x....      BL       __aeabi_assert
+   \       0x42   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_38: (+1)
+   \       0x46   0x68E0             LDR      R0,[R4, #+12]
+   \       0x48   0x68E1             LDR      R1,[R4, #+12]
+   \       0x4A   0x6809             LDR      R1,[R1, #+0]
+   \       0x4C   0x6A09             LDR      R1,[R1, #+32]
+   \       0x4E   0x4788             BLX      R1
+   \       0x50   0x2854             CMP      R0,#+84
+   \       0x52   0xD206             BCS.N    ??makeTransition_39
+   \       0x54   0x22A5             MOVS     R2,#+165
+   \       0x56   0x4959             LDR.N    R1,??makeTransition_2
+   \       0x58   0x485B             LDR.N    R0,??makeTransition_2+0xC
+   \       0x5A   0x.... 0x....      BL       __aeabi_assert
+   \       0x5E   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??makeTransition_39: (+1)
+   \       0x62   0x46A8             MOV      R8,R5
+   \       0x64   0x46B1             MOV      R9,R6
+   \       0x66   0x46BA             MOV      R10,R7
+   \       0x68   0x.... 0x....      BL       _ZN8touchgfx11Application11getInstanceEv
+   \       0x6C   0x.... 0x....      BL       _ZN8touchgfx11Application20clearAllTimerWidgetsEv
+   \       0x70   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x74   0x2800             CMP      R0,#+0
+   \       0x76   0xD006             BEQ.N    ??makeTransition_40
+   \       0x78   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x7C   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \       0x80   0x6809             LDR      R1,[R1, #+0]
+   \       0x82   0x68C9             LDR      R1,[R1, #+12]
+   \       0x84   0x4788             BLX      R1
+   \                     ??makeTransition_40: (+1)
+   \       0x86   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x8A   0x2800             CMP      R0,#+0
+   \       0x8C   0xD006             BEQ.N    ??makeTransition_41
+   \       0x8E   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \       0x92   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \       0x96   0x6809             LDR      R1,[R1, #+0]
+   \       0x98   0x6809             LDR      R1,[R1, #+0]
+   \       0x9A   0x4788             BLX      R1
+   \                     ??makeTransition_41: (+1)
+   \       0x9C   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xA0   0x2800             CMP      R0,#+0
+   \       0xA2   0xD006             BEQ.N    ??makeTransition_42
+   \       0xA4   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xA8   0xF8DA 0x1000      LDR      R1,[R10, #+0]
+   \       0xAC   0x6809             LDR      R1,[R1, #+0]
+   \       0xAE   0x6949             LDR      R1,[R1, #+20]
+   \       0xB0   0x4788             BLX      R1
+   \                     ??makeTransition_42: (+1)
+   \       0xB2   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xB6   0x2800             CMP      R0,#+0
+   \       0xB8   0xD006             BEQ.N    ??makeTransition_43
+   \       0xBA   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xBE   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \       0xC2   0x6809             LDR      R1,[R1, #+0]
+   \       0xC4   0x6849             LDR      R1,[R1, #+4]
+   \       0xC6   0x4788             BLX      R1
+   \                     ??makeTransition_43: (+1)
+   \       0xC8   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xCC   0x2800             CMP      R0,#+0
+   \       0xCE   0xD006             BEQ.N    ??makeTransition_44
+   \       0xD0   0xF8DA 0x0000      LDR      R0,[R10, #+0]
+   \       0xD4   0xF8DA 0x1000      LDR      R1,[R10, #+0]
+   \       0xD8   0x6809             LDR      R1,[R1, #+0]
+   \       0xDA   0x6809             LDR      R1,[R1, #+0]
+   \       0xDC   0x4788             BLX      R1
+   \                     ??makeTransition_44: (+1)
+   \       0xDE   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xE2   0x2800             CMP      R0,#+0
+   \       0xE4   0xD006             BEQ.N    ??makeTransition_45
+   \       0xE6   0xF8D9 0x0000      LDR      R0,[R9, #+0]
+   \       0xEA   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \       0xEE   0x6809             LDR      R1,[R1, #+0]
+   \       0xF0   0x6889             LDR      R1,[R1, #+8]
+   \       0xF2   0x4788             BLX      R1
+   \                     ??makeTransition_45: (+1)
+   \       0xF4   0x2100             MOVS     R1,#+0
+   \       0xF6   0x68E0             LDR      R0,[R4, #+12]
+   \       0xF8   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atINS_15SlideTransitionILNS_9DirectionE2EEEEERT_t
+   \       0xFC   0x0001             MOVS     R1,R0
+   \       0xFE   0x2054             MOVS     R0,#+84
+   \      0x100   0x.... 0x....      BL       _ZnwjPv
+   \      0x104   0x2800             CMP      R0,#+0
+   \      0x106   0xD004             BEQ.N    ??makeTransition_46
+   \      0x108   0x2114             MOVS     R1,#+20
+   \      0x10A   0x.... 0x....      BL       _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EEC1Eh
+   \      0x10E   0x4680             MOV      R8,R0
+   \      0x110   0xE001             B.N      ??makeTransition_47
+   \                     ??makeTransition_46: (+1)
+   \      0x112   0xF05F 0x0800      MOVS     R8,#+0
+   \                     ??makeTransition_47: (+1)
+   \      0x116   0x2100             MOVS     R1,#+0
+   \      0x118   0x68A0             LDR      R0,[R4, #+8]
+   \      0x11A   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atI11Screen2ViewEERT_t
+   \      0x11E   0x0001             MOVS     R1,R0
+   \      0x120   0xF44F 0x7096      MOV      R0,#+300
+   \      0x124   0x.... 0x....      BL       _ZnwjPv
+   \      0x128   0x2800             CMP      R0,#+0
+   \      0x12A   0xD003             BEQ.N    ??makeTransition_48
+   \      0x12C   0x.... 0x....      BL       _ZN11Screen2ViewC1Ev
+   \      0x130   0x4681             MOV      R9,R0
+   \      0x132   0xE001             B.N      ??makeTransition_49
+   \                     ??makeTransition_48: (+1)
+   \      0x134   0xF05F 0x0900      MOVS     R9,#+0
+   \                     ??makeTransition_49: (+1)
+   \      0x138   0x2100             MOVS     R1,#+0
+   \      0x13A   0x6860             LDR      R0,[R4, #+4]
+   \      0x13C   0x.... 0x....      BL       _ZN8touchgfx17AbstractPartition2atI16Screen2PresenterEERT_t
+   \      0x140   0x0001             MOVS     R1,R0
+   \      0x142   0x2010             MOVS     R0,#+16
+   \      0x144   0x.... 0x....      BL       _ZnwjPv
+   \      0x148   0x2800             CMP      R0,#+0
+   \      0x14A   0xD004             BEQ.N    ??makeTransition_50
+   \      0x14C   0x4649             MOV      R1,R9
+   \      0x14E   0x.... 0x....      BL       _ZN16Screen2PresenterC1ER11Screen2View
+   \      0x152   0x0004             MOVS     R4,R0
+   \      0x154   0xE000             B.N      ??makeTransition_51
+   \                     ??makeTransition_50: (+1)
+   \      0x156   0x2400             MOVS     R4,#+0
+   \                     ??makeTransition_51: (+1)
+   \      0x158   0xF8C5 0x8000      STR      R8,[R5, #+0]
+   \      0x15C   0x6034             STR      R4,[R6, #+0]
+   \      0x15E   0xF8C7 0x9000      STR      R9,[R7, #+0]
+   \      0x162   0x2C00             CMP      R4,#+0
+   \      0x164   0xD001             BEQ.N    ??makeTransition_52
+   \      0x166   0x1D21             ADDS     R1,R4,#+4
+   \      0x168   0xE000             B.N      ??makeTransition_53
+   \                     ??makeTransition_52: (+1)
+   \      0x16A   0x2100             MOVS     R1,#+0
+   \                     ??makeTransition_53: (+1)
+   \      0x16C   0x9D08             LDR      R5,[SP, #+32]
+   \      0x16E   0x0028             MOVS     R0,R5
+   \      0x170   0x.... 0x....      BL       _ZN5Model4bindEP13ModelListener
+   \      0x174   0x0029             MOVS     R1,R5
+   \      0x176   0x1D20             ADDS     R0,R4,#+4
+   \      0x178   0x.... 0x....      BL       _ZN13ModelListener4bindEP5Model
+   \      0x17C   0x0021             MOVS     R1,R4
+   \      0x17E   0x4648             MOV      R0,R9
+   \      0x180   0x.... 0x....      BL       _ZN8touchgfx4ViewI16Screen2PresenterE4bindERS1_
+   \      0x184   0x0025             MOVS     R5,R4
+   \      0x186   0x4648             MOV      R0,R9
+   \      0x188   0xF8D9 0x1000      LDR      R1,[R9, #+0]
+   \      0x18C   0x68C9             LDR      R1,[R1, #+12]
+   \      0x18E   0x4788             BLX      R1
+   \      0x190   0x0028             MOVS     R0,R5
+   \      0x192   0x6829             LDR      R1,[R5, #+0]
+   \      0x194   0x6809             LDR      R1,[R1, #+0]
+   \      0x196   0x4788             BLX      R1
+   \      0x198   0x4641             MOV      R1,R8
+   \      0x19A   0x4648             MOV      R0,R9
+   \      0x19C   0x.... 0x....      BL       _ZN8touchgfx6Screen14bindTransitionERNS_10TransitionE
+   \      0x1A0   0x4640             MOV      R0,R8
+   \      0x1A2   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \      0x1A6   0x6909             LDR      R1,[R1, #+16]
+   \      0x1A8   0x4788             BLX      R1
+   \      0x1AA   0x4640             MOV      R0,R8
+   \      0x1AC   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \      0x1B0   0x6949             LDR      R1,[R1, #+20]
+   \      0x1B2   0x4788             BLX      R1
+   \      0x1B4   0x0020             MOVS     R0,R4
+   \      0x1B6   0xE8BD 0x87F0      POP      {R4-R10,PC}
+   \      0x1BA   0xBF00             Nop
+   \                     ??makeTransition_2:
+   \      0x1BC   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen2View16Screen2PresenterNS_15SlideTransitionILNS_9DirectionE2EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_1
+   \      0x1C0   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen2View16Screen2PresenterNS_15SlideTransitionILNS_9DirectionE2EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_0
+   \      0x1C4   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen2View16Screen2PresenterNS_15SlideTransitionILNS_9DirectionE2EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_3
+   \      0x1C8   0x....'....        DC32     _ZZN8touchgfx14makeTransitionI11Screen2View16Screen2PresenterNS_15SlideTransitionILNS_9DirectionE2EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_Es_5
+
+   \                                 In section .text, align 2
+   \   __vfp void Model::bind(ModelListener *)
+   \                     _ZN5Model4bindEP13ModelListener: (+1)
+   \        0x0   0x6001             STR      R1,[R0, #+0]
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp FrontendApplicationBase::~FrontendApplicationBase() noexcept
+   \                     _ZN23FrontendApplicationBaseD1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp FrontendApplicationBase::deleter ~FrontendApplicationBase() noexcept
+   \                     _ZN23FrontendApplicationBaseD0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN23FrontendApplicationBaseD1Ev
+   \        0xA   0xF44F 0x71AC      MOV      R1,#+344
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0x.... 0x....      BL       _ZdlPvj
+   \       0x14   0xBD10             POP      {R4,PC}
+      6          #include <gui/common/FrontendHeap.hpp>
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::NoTransition::deleter ~NoTransition() noexcept
+   \                     _ZN8touchgfx12NoTransitionD0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx12NoTransitionD1Ev
+   \        0xA   0x210C             MOVS     R1,#+12
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZdlPvj
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::NoTransition::NoTransition()
+   \                     _ZN8touchgfx12NoTransitionC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx10TransitionC2Ev
+   \        0xA   0x4802             LDR.N    R0,??NoTransition_0
+   \        0xC   0x6020             STR      R0,[R4, #+0]
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0xBD10             POP      {R4,PC}
+   \       0x12   0xBF00             Nop
+   \                     ??NoTransition_0:
+   \       0x14   0x....'....        DC32     _ZTVN8touchgfx12NoTransitionE+0x8
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::NoTransition::~NoTransition() noexcept
+   \                     _ZN8touchgfx12NoTransitionD1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::NoTransition::handleTickEvent()
+   \                     _ZN8touchgfx12NoTransition15handleTickEventEv: (+1)
+   \        0x0   0x2101             MOVS     R1,#+1
+   \        0x2   0x7201             STRB     R1,[R0, #+8]
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::SlideTransition<touchgfx::EAST>::deleter ~SlideTransition() noexcept
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EED0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EED1Ev
+   \        0xA   0x2154             MOVS     R1,#+84
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZdlPvj
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::SlideTransition<touchgfx::WEST>::deleter ~SlideTransition() noexcept
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EED0Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EED1Ev
+   \        0xA   0x2154             MOVS     R1,#+84
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZdlPvj
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::SlideTransition<touchgfx::EAST>::~SlideTransition() noexcept
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EED1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp touchgfx::SlideTransition<touchgfx::WEST>::~SlideTransition() noexcept
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EED1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::SlideTransition<touchgfx::EAST>::SlideTransition(uint8_t)
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EEC1Eh: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0020             MOVS     R0,R4
+   \        0x8   0x.... 0x....      BL       _ZN8touchgfx10TransitionC2Ev
+   \        0xC   0x481B             LDR.N    R0,??SlideTransition_0
+   \        0xE   0x6020             STR      R0,[R4, #+0]
+   \       0x10   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x14   0x.... 0x....      BL       _ZN8touchgfx14SnapshotWidgetC1Ev
+   \       0x18   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x1C   0x63A0             STR      R0,[R4, #+56]
+   \       0x1E   0x4818             LDR.N    R0,??SlideTransition_0+0x4
+   \       0x20   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x24   0x0021             MOVS     R1,R4
+   \       0x26   0xF114 0x003C      ADDS     R0,R4,#+60
+   \       0x2A   0x.... 0x....      BL       _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvEC1EPS3_MS3_FvS5_E
+   \       0x2E   0xF884 0x504C      STRB     R5,[R4, #+76]
+   \       0x32   0x2000             MOVS     R0,#+0
+   \       0x34   0xF884 0x004D      STRB     R0,[R4, #+77]
+   \       0x38   0x2000             MOVS     R0,#+0
+   \       0x3A   0xF8A4 0x0050      STRH     R0,[R4, #+80]
+   \       0x3E   0x4811             LDR.N    R0,??SlideTransition_0+0x8
+   \       0x40   0x7800             LDRB     R0,[R0, #+0]
+   \       0x42   0x2800             CMP      R0,#+0
+   \       0x44   0xD017             BEQ.N    ??SlideTransition_2
+   \       0x46   0x4D10             LDR.N    R5,??SlideTransition_0+0xC
+   \       0x48   0x4810             LDR.N    R0,??SlideTransition_0+0x10
+   \       0x4A   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \       0x4E   0xB200             SXTH     R0,R0
+   \       0x50   0x9000             STR      R0,[SP, #+0]
+   \       0x52   0xF9B5 0x0000      LDRSH    R0,[R5, #+0]
+   \       0x56   0x0003             MOVS     R3,R0
+   \       0x58   0xB21B             SXTH     R3,R3
+   \       0x5A   0x2200             MOVS     R2,#+0
+   \       0x5C   0x2100             MOVS     R1,#+0
+   \       0x5E   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x62   0x.... 0x....      BL       _ZN8touchgfx8Drawable11setPositionEssss
+   \       0x66   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x6A   0x.... 0x....      BL       _ZN8touchgfx14SnapshotWidget12makeSnapshotEv
+   \       0x6E   0x8828             LDRH     R0,[R5, #+0]
+   \       0x70   0x4240             RSBS     R0,R0,#+0
+   \       0x72   0xF8A4 0x004E      STRH     R0,[R4, #+78]
+   \                     ??SlideTransition_2: (+1)
+   \       0x76   0x0020             MOVS     R0,R4
+   \       0x78   0xBD32             POP      {R1,R4,R5,PC}
+   \       0x7A   0xBF00             Nop
+   \                     ??SlideTransition_0:
+   \       0x7C   0x....'....        DC32     _ZTVN8touchgfx15SlideTransitionILNS_9DirectionE2EEE+0x8
+   \       0x80   0x....'....        DC32     ?_2
+   \       0x84   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+   \       0x88   0x....'....        DC32     _ZN8touchgfx3HAL13DISPLAY_WIDTHE
+   \       0x8C   0x....'....        DC32     _ZN8touchgfx3HAL14DISPLAY_HEIGHTE
+
+   \                                 In section .text, align 4
+   \   __vfp touchgfx::SlideTransition<touchgfx::WEST>::SlideTransition(uint8_t)
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EEC1Eh: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0020             MOVS     R0,R4
+   \        0x8   0x.... 0x....      BL       _ZN8touchgfx10TransitionC2Ev
+   \        0xC   0x481B             LDR.N    R0,??SlideTransition_1
+   \        0xE   0x6020             STR      R0,[R4, #+0]
+   \       0x10   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x14   0x.... 0x....      BL       _ZN8touchgfx14SnapshotWidgetC1Ev
+   \       0x18   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x1C   0x63A0             STR      R0,[R4, #+56]
+   \       0x1E   0x4818             LDR.N    R0,??SlideTransition_1+0x4
+   \       0x20   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x24   0x0021             MOVS     R1,R4
+   \       0x26   0xF114 0x003C      ADDS     R0,R4,#+60
+   \       0x2A   0x.... 0x....      BL       _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvEC1EPS3_MS3_FvS5_E
+   \       0x2E   0xF884 0x504C      STRB     R5,[R4, #+76]
+   \       0x32   0x2000             MOVS     R0,#+0
+   \       0x34   0xF884 0x004D      STRB     R0,[R4, #+77]
+   \       0x38   0x2000             MOVS     R0,#+0
+   \       0x3A   0xF8A4 0x0050      STRH     R0,[R4, #+80]
+   \       0x3E   0x4811             LDR.N    R0,??SlideTransition_1+0x8
+   \       0x40   0x7800             LDRB     R0,[R0, #+0]
+   \       0x42   0x2800             CMP      R0,#+0
+   \       0x44   0xD017             BEQ.N    ??SlideTransition_3
+   \       0x46   0x4D10             LDR.N    R5,??SlideTransition_1+0xC
+   \       0x48   0x4810             LDR.N    R0,??SlideTransition_1+0x10
+   \       0x4A   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \       0x4E   0xB200             SXTH     R0,R0
+   \       0x50   0x9000             STR      R0,[SP, #+0]
+   \       0x52   0xF9B5 0x0000      LDRSH    R0,[R5, #+0]
+   \       0x56   0x0003             MOVS     R3,R0
+   \       0x58   0xB21B             SXTH     R3,R3
+   \       0x5A   0x2200             MOVS     R2,#+0
+   \       0x5C   0x2100             MOVS     R1,#+0
+   \       0x5E   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x62   0x.... 0x....      BL       _ZN8touchgfx8Drawable11setPositionEssss
+   \       0x66   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x6A   0x.... 0x....      BL       _ZN8touchgfx14SnapshotWidget12makeSnapshotEv
+   \       0x6E   0xF9B5 0x0000      LDRSH    R0,[R5, #+0]
+   \       0x72   0xF8A4 0x004E      STRH     R0,[R4, #+78]
+   \                     ??SlideTransition_3: (+1)
+   \       0x76   0x0020             MOVS     R0,R4
+   \       0x78   0xBD32             POP      {R1,R4,R5,PC}
+   \       0x7A   0xBF00             Nop
+   \                     ??SlideTransition_1:
+   \       0x7C   0x....'....        DC32     _ZTVN8touchgfx15SlideTransitionILNS_9DirectionE3EEE+0x8
+   \       0x80   0x....'....        DC32     ?_1
+   \       0x84   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+   \       0x88   0x....'....        DC32     _ZN8touchgfx3HAL13DISPLAY_WIDTHE
+   \       0x8C   0x....'....        DC32     _ZN8touchgfx3HAL14DISPLAY_HEIGHTE
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::SlideTransition<touchgfx::EAST>::handleTickEvent()
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EE15handleTickEventEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x482A             LDR.N    R0,??handleTickEvent_0
+   \        0x6   0x7800             LDRB     R0,[R0, #+0]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD102             BNE.N    ??handleTickEvent_2
+   \        0xC   0x2001             MOVS     R0,#+1
+   \        0xE   0x7220             STRB     R0,[R4, #+8]
+   \       0x10   0xE04D             B.N      ??handleTickEvent_3
+   \                     ??handleTickEvent_2: (+1)
+   \       0x12   0x0020             MOVS     R0,R4
+   \       0x14   0x.... 0x....      BL       _ZN8touchgfx10Transition15handleTickEventEv
+   \       0x18   0xF894 0x004D      LDRB     R0,[R4, #+77]
+   \       0x1C   0x1C40             ADDS     R0,R0,#+1
+   \       0x1E   0xF884 0x004D      STRB     R0,[R4, #+77]
+   \       0x22   0xF894 0x004C      LDRB     R0,[R4, #+76]
+   \       0x26   0xF894 0x104D      LDRB     R1,[R4, #+77]
+   \       0x2A   0x4288             CMP      R0,R1
+   \       0x2C   0xD33A             BCC.N    ??handleTickEvent_4
+   \       0x2E   0xF894 0x304C      LDRB     R3,[R4, #+76]
+   \       0x32   0xB29B             UXTH     R3,R3
+   \       0x34   0xF9B4 0x204E      LDRSH    R2,[R4, #+78]
+   \       0x38   0x2100             MOVS     R1,#+0
+   \       0x3A   0xF894 0x004D      LDRB     R0,[R4, #+77]
+   \       0x3E   0xB280             UXTH     R0,R0
+   \       0x40   0x.... 0x....      BL       _ZN8touchgfx15EasingEquations12cubicEaseOutEtsst
+   \       0x44   0xF8A4 0x0050      STRH     R0,[R4, #+80]
+   \       0x48   0xF9B4 0x0050      LDRSH    R0,[R4, #+80]
+   \       0x4C   0x2102             MOVS     R1,#+2
+   \       0x4E   0xFB90 0xF2F1      SDIV     R2,R0,R1
+   \       0x52   0xFB01 0x0012      MLS      R0,R1,R2,R0
+   \       0x56   0x2800             CMP      R0,#+0
+   \       0x58   0xD00C             BEQ.N    ??handleTickEvent_5
+   \       0x5A   0xF9B4 0x0050      LDRSH    R0,[R4, #+80]
+   \       0x5E   0x2801             CMP      R0,#+1
+   \       0x60   0xDB01             BLT.N    ??handleTickEvent_6
+   \       0x62   0x2001             MOVS     R0,#+1
+   \       0x64   0xE001             B.N      ??handleTickEvent_7
+   \                     ??handleTickEvent_6: (+1)
+   \       0x66   0xF05F 0x30FF      MOVS     R0,#+4294967295
+   \                     ??handleTickEvent_7: (+1)
+   \       0x6A   0xF8B4 0x1050      LDRH     R1,[R4, #+80]
+   \       0x6E   0x1840             ADDS     R0,R0,R1
+   \       0x70   0xF8A4 0x0050      STRH     R0,[R4, #+80]
+   \                     ??handleTickEvent_5: (+1)
+   \       0x74   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x78   0x.... 0x....      BL       _ZNK8touchgfx8Drawable4getXEv
+   \       0x7C   0xF8B4 0x1050      LDRH     R1,[R4, #+80]
+   \       0x80   0x1A08             SUBS     R0,R1,R0
+   \       0x82   0xF8A4 0x0050      STRH     R0,[R4, #+80]
+   \       0x86   0x2200             MOVS     R2,#+0
+   \       0x88   0xF9B4 0x1050      LDRSH    R1,[R4, #+80]
+   \       0x8C   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x90   0x.... 0x....      BL       _ZN8touchgfx8Drawable12moveRelativeEss
+   \       0x94   0xF114 0x013C      ADDS     R1,R4,#+60
+   \       0x98   0x6860             LDR      R0,[R4, #+4]
+   \       0x9A   0x6862             LDR      R2,[R4, #+4]
+   \       0x9C   0x6812             LDR      R2,[R2, #+0]
+   \       0x9E   0x6F92             LDR      R2,[R2, #+120]
+   \       0xA0   0x4790             BLX      R2
+   \       0xA2   0xE004             B.N      ??handleTickEvent_3
+   \                     ??handleTickEvent_4: (+1)
+   \       0xA4   0x2001             MOVS     R0,#+1
+   \       0xA6   0x7220             STRB     R0,[R4, #+8]
+   \       0xA8   0x2000             MOVS     R0,#+0
+   \       0xAA   0xF884 0x004D      STRB     R0,[R4, #+77]
+   \                     ??handleTickEvent_3: (+1)
+   \       0xAE   0xBD10             POP      {R4,PC}
+   \                     ??handleTickEvent_0:
+   \       0xB0   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::SlideTransition<touchgfx::WEST>::handleTickEvent()
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EE15handleTickEventEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x482A             LDR.N    R0,??handleTickEvent_1
+   \        0x6   0x7800             LDRB     R0,[R0, #+0]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD102             BNE.N    ??handleTickEvent_8
+   \        0xC   0x2001             MOVS     R0,#+1
+   \        0xE   0x7220             STRB     R0,[R4, #+8]
+   \       0x10   0xE04D             B.N      ??handleTickEvent_9
+   \                     ??handleTickEvent_8: (+1)
+   \       0x12   0x0020             MOVS     R0,R4
+   \       0x14   0x.... 0x....      BL       _ZN8touchgfx10Transition15handleTickEventEv
+   \       0x18   0xF894 0x004D      LDRB     R0,[R4, #+77]
+   \       0x1C   0x1C40             ADDS     R0,R0,#+1
+   \       0x1E   0xF884 0x004D      STRB     R0,[R4, #+77]
+   \       0x22   0xF894 0x004C      LDRB     R0,[R4, #+76]
+   \       0x26   0xF894 0x104D      LDRB     R1,[R4, #+77]
+   \       0x2A   0x4288             CMP      R0,R1
+   \       0x2C   0xD33A             BCC.N    ??handleTickEvent_10
+   \       0x2E   0xF894 0x304C      LDRB     R3,[R4, #+76]
+   \       0x32   0xB29B             UXTH     R3,R3
+   \       0x34   0xF9B4 0x204E      LDRSH    R2,[R4, #+78]
+   \       0x38   0x2100             MOVS     R1,#+0
+   \       0x3A   0xF894 0x004D      LDRB     R0,[R4, #+77]
+   \       0x3E   0xB280             UXTH     R0,R0
+   \       0x40   0x.... 0x....      BL       _ZN8touchgfx15EasingEquations12cubicEaseOutEtsst
+   \       0x44   0xF8A4 0x0050      STRH     R0,[R4, #+80]
+   \       0x48   0xF9B4 0x0050      LDRSH    R0,[R4, #+80]
+   \       0x4C   0x2102             MOVS     R1,#+2
+   \       0x4E   0xFB90 0xF2F1      SDIV     R2,R0,R1
+   \       0x52   0xFB01 0x0012      MLS      R0,R1,R2,R0
+   \       0x56   0x2800             CMP      R0,#+0
+   \       0x58   0xD00C             BEQ.N    ??handleTickEvent_11
+   \       0x5A   0xF9B4 0x0050      LDRSH    R0,[R4, #+80]
+   \       0x5E   0x2801             CMP      R0,#+1
+   \       0x60   0xDB01             BLT.N    ??handleTickEvent_12
+   \       0x62   0x2001             MOVS     R0,#+1
+   \       0x64   0xE001             B.N      ??handleTickEvent_13
+   \                     ??handleTickEvent_12: (+1)
+   \       0x66   0xF05F 0x30FF      MOVS     R0,#+4294967295
+   \                     ??handleTickEvent_13: (+1)
+   \       0x6A   0xF8B4 0x1050      LDRH     R1,[R4, #+80]
+   \       0x6E   0x1840             ADDS     R0,R0,R1
+   \       0x70   0xF8A4 0x0050      STRH     R0,[R4, #+80]
+   \                     ??handleTickEvent_11: (+1)
+   \       0x74   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x78   0x.... 0x....      BL       _ZNK8touchgfx8Drawable4getXEv
+   \       0x7C   0xF8B4 0x1050      LDRH     R1,[R4, #+80]
+   \       0x80   0x1A08             SUBS     R0,R1,R0
+   \       0x82   0xF8A4 0x0050      STRH     R0,[R4, #+80]
+   \       0x86   0x2200             MOVS     R2,#+0
+   \       0x88   0xF9B4 0x1050      LDRSH    R1,[R4, #+80]
+   \       0x8C   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x90   0x.... 0x....      BL       _ZN8touchgfx8Drawable12moveRelativeEss
+   \       0x94   0xF114 0x013C      ADDS     R1,R4,#+60
+   \       0x98   0x6860             LDR      R0,[R4, #+4]
+   \       0x9A   0x6862             LDR      R2,[R4, #+4]
+   \       0x9C   0x6812             LDR      R2,[R2, #+0]
+   \       0x9E   0x6F92             LDR      R2,[R2, #+120]
+   \       0xA0   0x4790             BLX      R2
+   \       0xA2   0xE004             B.N      ??handleTickEvent_9
+   \                     ??handleTickEvent_10: (+1)
+   \       0xA4   0x2001             MOVS     R0,#+1
+   \       0xA6   0x7220             STRB     R0,[R4, #+8]
+   \       0xA8   0x2000             MOVS     R0,#+0
+   \       0xAA   0xF884 0x004D      STRB     R0,[R4, #+77]
+   \                     ??handleTickEvent_9: (+1)
+   \       0xAE   0xBD10             POP      {R4,PC}
+   \                     ??handleTickEvent_1:
+   \       0xB0   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::SlideTransition<touchgfx::EAST>::tearDown()
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EE8tearDownEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0002             MOVS     R2,R0
+   \        0x4   0x4807             LDR.N    R0,??tearDown_0
+   \        0x6   0x7800             LDRB     R0,[R0, #+0]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD009             BEQ.N    ??tearDown_2
+   \        0xC   0x6850             LDR      R0,[R2, #+4]
+   \        0xE   0x2800             CMP      R0,#+0
+   \       0x10   0xD006             BEQ.N    ??tearDown_2
+   \       0x12   0xF112 0x010C      ADDS     R1,R2,#+12
+   \       0x16   0x6850             LDR      R0,[R2, #+4]
+   \       0x18   0x6852             LDR      R2,[R2, #+4]
+   \       0x1A   0x6812             LDR      R2,[R2, #+0]
+   \       0x1C   0x6E12             LDR      R2,[R2, #+96]
+   \       0x1E   0x4790             BLX      R2
+   \                     ??tearDown_2: (+1)
+   \       0x20   0xBD01             POP      {R0,PC}
+   \       0x22   0xBF00             Nop
+   \                     ??tearDown_0:
+   \       0x24   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::SlideTransition<touchgfx::WEST>::tearDown()
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EE8tearDownEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0002             MOVS     R2,R0
+   \        0x4   0x4807             LDR.N    R0,??tearDown_1
+   \        0x6   0x7800             LDRB     R0,[R0, #+0]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD009             BEQ.N    ??tearDown_3
+   \        0xC   0x6850             LDR      R0,[R2, #+4]
+   \        0xE   0x2800             CMP      R0,#+0
+   \       0x10   0xD006             BEQ.N    ??tearDown_3
+   \       0x12   0xF112 0x010C      ADDS     R1,R2,#+12
+   \       0x16   0x6850             LDR      R0,[R2, #+4]
+   \       0x18   0x6852             LDR      R2,[R2, #+4]
+   \       0x1A   0x6812             LDR      R2,[R2, #+0]
+   \       0x1C   0x6E12             LDR      R2,[R2, #+96]
+   \       0x1E   0x4790             BLX      R2
+   \                     ??tearDown_3: (+1)
+   \       0x20   0xBD01             POP      {R0,PC}
+   \       0x22   0xBF00             Nop
+   \                     ??tearDown_1:
+   \       0x24   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::SlideTransition<touchgfx::EAST>::init()
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EE4initEv: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x480D             LDR.N    R0,??init_0
+   \        0x6   0x7800             LDRB     R0,[R0, #+0]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD016             BEQ.N    ??init_2
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZN8touchgfx10Transition4initEv
+   \       0x12   0x480B             LDR.N    R0,??init_0+0x4
+   \       0x14   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x18   0x0021             MOVS     R1,R4
+   \       0x1A   0x4668             MOV      R0,SP
+   \       0x1C   0x.... 0x....      BL       _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE2EEERNS_8DrawableEvvEC1EPS3_MS3_FvS5_E
+   \       0x20   0x0001             MOVS     R1,R0
+   \       0x22   0x6860             LDR      R0,[R4, #+4]
+   \       0x24   0x6862             LDR      R2,[R4, #+4]
+   \       0x26   0x6812             LDR      R2,[R2, #+0]
+   \       0x28   0x6F92             LDR      R2,[R2, #+120]
+   \       0x2A   0x4790             BLX      R2
+   \       0x2C   0xF114 0x010C      ADDS     R1,R4,#+12
+   \       0x30   0x6860             LDR      R0,[R4, #+4]
+   \       0x32   0x6862             LDR      R2,[R4, #+4]
+   \       0x34   0x6812             LDR      R2,[R2, #+0]
+   \       0x36   0x6DD2             LDR      R2,[R2, #+92]
+   \       0x38   0x4790             BLX      R2
+   \                     ??init_2: (+1)
+   \       0x3A   0xBD1F             POP      {R0-R4,PC}
+   \                     ??init_0:
+   \       0x3C   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+   \       0x40   0x....'....        DC32     ?_4
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::SlideTransition<touchgfx::WEST>::init()
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EE4initEv: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x480D             LDR.N    R0,??init_1
+   \        0x6   0x7800             LDRB     R0,[R0, #+0]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD016             BEQ.N    ??init_3
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZN8touchgfx10Transition4initEv
+   \       0x12   0x480B             LDR.N    R0,??init_1+0x4
+   \       0x14   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x18   0x0021             MOVS     R1,R4
+   \       0x1A   0x4668             MOV      R0,SP
+   \       0x1C   0x.... 0x....      BL       _ZN8touchgfx8CallbackINS_15SlideTransitionILNS_9DirectionE3EEERNS_8DrawableEvvEC1EPS3_MS3_FvS5_E
+   \       0x20   0x0001             MOVS     R1,R0
+   \       0x22   0x6860             LDR      R0,[R4, #+4]
+   \       0x24   0x6862             LDR      R2,[R4, #+4]
+   \       0x26   0x6812             LDR      R2,[R2, #+0]
+   \       0x28   0x6F92             LDR      R2,[R2, #+120]
+   \       0x2A   0x4790             BLX      R2
+   \       0x2C   0xF114 0x010C      ADDS     R1,R4,#+12
+   \       0x30   0x6860             LDR      R0,[R4, #+4]
+   \       0x32   0x6862             LDR      R2,[R4, #+4]
+   \       0x34   0x6812             LDR      R2,[R2, #+0]
+   \       0x36   0x6DD2             LDR      R2,[R2, #+92]
+   \       0x38   0x4790             BLX      R2
+   \                     ??init_3: (+1)
+   \       0x3A   0xBD1F             POP      {R0-R4,PC}
+   \                     ??init_1:
+   \       0x3C   0x....'....        DC32     _ZN8touchgfx3HAL21USE_ANIMATION_STORAGEE
+   \       0x40   0x....'....        DC32     ?_3
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::SlideTransition<touchgfx::EAST>::initMoveDrawable(touchgfx::Drawable &)
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EE16initMoveDrawableERNS_8DrawableE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0008             MOVS     R0,R1
+   \        0x4   0x2200             MOVS     R2,#+0
+   \        0x6   0x4904             LDR.N    R1,??initMoveDrawable_0
+   \        0x8   0xF9B1 0x1000      LDRSH    R1,[R1, #+0]
+   \        0xC   0xB209             SXTH     R1,R1
+   \        0xE   0x6803             LDR      R3,[R0, #+0]
+   \       0x10   0x6D1B             LDR      R3,[R3, #+80]
+   \       0x12   0x4798             BLX      R3
+   \       0x14   0xBD01             POP      {R0,PC}
+   \       0x16   0xBF00             Nop
+   \                     ??initMoveDrawable_0:
+   \       0x18   0x....'....        DC32     _ZN8touchgfx3HAL13DISPLAY_WIDTHE
+
+   \                                 In section .text, align 4
+   \   __vfp void touchgfx::SlideTransition<touchgfx::WEST>::initMoveDrawable(touchgfx::Drawable &)
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EE16initMoveDrawableERNS_8DrawableE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0008             MOVS     R0,R1
+   \        0x4   0x2200             MOVS     R2,#+0
+   \        0x6   0x4904             LDR.N    R1,??initMoveDrawable_1
+   \        0x8   0x8809             LDRH     R1,[R1, #+0]
+   \        0xA   0x4249             RSBS     R1,R1,#+0
+   \        0xC   0xB209             SXTH     R1,R1
+   \        0xE   0x6803             LDR      R3,[R0, #+0]
+   \       0x10   0x6D1B             LDR      R3,[R3, #+80]
+   \       0x12   0x4798             BLX      R3
+   \       0x14   0xBD01             POP      {R0,PC}
+   \       0x16   0xBF00             Nop
+   \                     ??initMoveDrawable_1:
+   \       0x18   0x....'....        DC32     _ZN8touchgfx3HAL13DISPLAY_WIDTHE
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::SlideTransition<touchgfx::EAST>::tickMoveDrawable(touchgfx::Drawable &)
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE2EE16tickMoveDrawableERNS_8DrawableE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x000B             MOVS     R3,R1
+   \        0x4   0x6B81             LDR      R1,[R0, #+56]
+   \        0x6   0x428B             CMP      R3,R1
+   \        0x8   0xD006             BEQ.N    ??tickMoveDrawable_0
+   \                     ??tickMoveDrawable_1: (+1)
+   \        0xA   0x2200             MOVS     R2,#+0
+   \        0xC   0xF9B0 0x1050      LDRSH    R1,[R0, #+80]
+   \       0x10   0x0018             MOVS     R0,R3
+   \       0x12   0x681B             LDR      R3,[R3, #+0]
+   \       0x14   0x6D1B             LDR      R3,[R3, #+80]
+   \       0x16   0x4798             BLX      R3
+   \                     ??tickMoveDrawable_0: (+1)
+   \       0x18   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::SlideTransition<touchgfx::WEST>::tickMoveDrawable(touchgfx::Drawable &)
+   \                     _ZN8touchgfx15SlideTransitionILNS_9DirectionE3EE16tickMoveDrawableERNS_8DrawableE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x000B             MOVS     R3,R1
+   \        0x4   0x6B81             LDR      R1,[R0, #+56]
+   \        0x6   0x428B             CMP      R3,R1
+   \        0x8   0xD006             BEQ.N    ??tickMoveDrawable_2
+   \                     ??tickMoveDrawable_3: (+1)
+   \        0xA   0x2200             MOVS     R2,#+0
+   \        0xC   0xF9B0 0x1050      LDRSH    R1,[R0, #+80]
+   \       0x10   0x0018             MOVS     R0,R3
+   \       0x12   0x681B             LDR      R3,[R3, #+0]
+   \       0x14   0x6D1B             LDR      R3,[R3, #+80]
+   \       0x16   0x4798             BLX      R3
+   \                     ??tickMoveDrawable_2: (+1)
+   \       0x18   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::View<Screen1Presenter>::bind(Screen1Presenter &)
+   \                     _ZN8touchgfx4ViewI16Screen1PresenterE4bindERS1_: (+1)
+   \        0x0   0x63C1             STR      R1,[R0, #+60]
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void touchgfx::View<Screen2Presenter>::bind(Screen2Presenter &)
+   \                     _ZN8touchgfx4ViewI16Screen2PresenterE4bindERS1_: (+1)
+   \        0x0   0x63C1             STR      R1,[R0, #+60]
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void ModelListener::bind(Model *)
+   \                     _ZN13ModelListener4bindEP5Model: (+1)
+   \        0x0   0x6041             STR      R1,[R0, #+4]
+   \        0x2   0x4770             BX       LR
+      7          #include <touchgfx/transitions/NoTransition.hpp>
+      8          #include <texts/TextKeysAndLanguages.hpp>
+      9          #include <touchgfx/Texts.hpp>
+     10          #include <touchgfx/hal/HAL.hpp>
+     11          #include<platform/driver/lcd/LCD24bpp.hpp>
+     12          #include <gui/screen1_screen/Screen1View.hpp>
+     13          #include <gui/screen1_screen/Screen1Presenter.hpp>
+     14          #include <gui/screen2_screen/Screen2View.hpp>
+     15          #include <gui/screen2_screen/Screen2Presenter.hpp>
+     16          
+     17          using namespace touchgfx;
+     18          
+
+   \                                 In section .text, align 2, keep-with-next
+   \   __vfp FrontendApplicationBase::subobject FrontendApplicationBase(Model &, FrontendHeap &)
+   \                     _ZN23FrontendApplicationBaseC2ER5ModelR12FrontendHeap: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN23FrontendApplicationBaseC1ER5ModelR12FrontendHeap
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+     19          FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
+     20              : touchgfx::MVPApplication(),
+     21                transitionCallback(),
+     22                frontendHeap(heap),
+     23                model(m)
+     24          {
+   \                     _ZN23FrontendApplicationBaseC1ER5ModelR12FrontendHeap: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x.... 0x....      BL       _ZN8touchgfx14MVPApplicationC2Ev
+   \        0xE   0x....             LDR.N    R0,??DataTable7
+   \       0x10   0x6020             STR      R0,[R4, #+0]
+   \       0x12   0xF514 0x70A0      ADDS     R0,R4,#+320
+   \       0x16   0x.... 0x....      BL       _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEC1Ev
+   \       0x1A   0xF8C4 0x6150      STR      R6,[R4, #+336]
+   \       0x1E   0xF8C4 0x5154      STR      R5,[R4, #+340]
+     25              touchgfx::HAL::getInstance()->setDisplayOrientation(touchgfx::ORIENTATION_LANDSCAPE);
+   \       0x22   0x.... 0x....      BL       _ZN8touchgfx3HAL11getInstanceEv
+   \       0x26   0x2100             MOVS     R1,#+0
+   \       0x28   0x6802             LDR      R2,[R0, #+0]
+   \       0x2A   0x6892             LDR      R2,[R2, #+8]
+   \       0x2C   0x4790             BLX      R2
+     26              touchgfx::Texts::setLanguage(GB);
+   \       0x2E   0x2000             MOVS     R0,#+0
+   \       0x30   0x.... 0x....      BL       _ZN8touchgfx5Texts11setLanguageEt
+     27              reinterpret_cast<touchgfx::LCD24bpp&>(touchgfx::HAL::lcd()).enableTextureMapperAll();
+   \       0x34   0x.... 0x....      BL       _ZN8touchgfx3HAL3lcdEv
+   \       0x38   0x.... 0x....      BL       _ZN8touchgfx8LCD24bpp22enableTextureMapperAllEv
+     28          }
+   \       0x3C   0x0020             MOVS     R0,R4
+   \       0x3E   0xBD70             POP      {R4-R6,PC}
+     29          
+     30          /*
+     31           * Screen Transition Declarations
+     32           */
+     33          
+     34          // Screen1
+     35          
+
+   \                                 In section .text, align 2, keep-with-next
+     36          void FrontendApplicationBase::gotoScreen1ScreenNoTransition()
+     37          {
+   \                     _ZN23FrontendApplicationBase29gotoScreen1ScreenNoTransitionEv: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     38              transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreen1ScreenNoTransitionImpl);
+   \        0x4   0x....             LDR.N    R0,??DataTable7_1
+   \        0x6   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \        0xA   0x0021             MOVS     R1,R4
+   \        0xC   0x4668             MOV      R0,SP
+   \        0xE   0x.... 0x....      BL       _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEC1EPS1_MS1_FvvE
+   \       0x12   0x0001             MOVS     R1,R0
+   \       0x14   0xF514 0x70A0      ADDS     R0,R4,#+320
+   \       0x18   0x.... 0x....      BL       _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEaSEOS2_
+     39              pendingScreenTransitionCallback = &transitionCallback;
+   \       0x1C   0xF514 0x70A0      ADDS     R0,R4,#+320
+   \       0x20   0xF8C4 0x013C      STR      R0,[R4, #+316]
+     40          }
+   \       0x24   0xBD1F             POP      {R0-R4,PC}
+     41          
+
+   \                                 In section .text, align 2, keep-with-next
+     42          void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()
+     43          {
+   \                     _ZN23FrontendApplicationBase33gotoScreen1ScreenNoTransitionImplEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     44              touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+   \        0x2   0xF8D0 0x1154      LDR      R1,[R0, #+340]
+   \        0x6   0x9100             STR      R1,[SP, #+0]
+   \        0x8   0x....             LDR.N    R3,??DataTable7_2
+   \        0xA   0xF8D0 0x2150      LDR      R2,[R0, #+336]
+   \        0xE   0xF510 0x719C      ADDS     R1,R0,#+312
+   \       0x12   0x....             LDR.N    R0,??DataTable7_3
+   \       0x14   0x.... 0x....      BL       _ZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_12NoTransitionE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_
+     45          }
+   \       0x18   0xBD01             POP      {R0,PC}
+     46          
+
+   \                                 In section .text, align 2, keep-with-next
+     47          void FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWest()
+     48          {
+   \                     _ZN23FrontendApplicationBase36gotoScreen1ScreenSlideTransitionWestEv: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     49              transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreen1ScreenSlideTransitionWestImpl);
+   \        0x4   0x....             LDR.N    R0,??DataTable7_4
+   \        0x6   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \        0xA   0x0021             MOVS     R1,R4
+   \        0xC   0x4668             MOV      R0,SP
+   \        0xE   0x.... 0x....      BL       _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEC1EPS1_MS1_FvvE
+   \       0x12   0x0001             MOVS     R1,R0
+   \       0x14   0xF514 0x70A0      ADDS     R0,R4,#+320
+   \       0x18   0x.... 0x....      BL       _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEaSEOS2_
+     50              pendingScreenTransitionCallback = &transitionCallback;
+   \       0x1C   0xF514 0x70A0      ADDS     R0,R4,#+320
+   \       0x20   0xF8C4 0x013C      STR      R0,[R4, #+316]
+     51          }
+   \       0x24   0xBD1F             POP      {R0-R4,PC}
+     52          
+
+   \                                 In section .text, align 2, keep-with-next
+     53          void FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWestImpl()
+     54          {
+   \                     _ZN23FrontendApplicationBase40gotoScreen1ScreenSlideTransitionWestImplEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     55              touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+   \        0x2   0xF8D0 0x1154      LDR      R1,[R0, #+340]
+   \        0x6   0x9100             STR      R1,[SP, #+0]
+   \        0x8   0x....             LDR.N    R3,??DataTable7_2
+   \        0xA   0xF8D0 0x2150      LDR      R2,[R0, #+336]
+   \        0xE   0xF510 0x719C      ADDS     R1,R0,#+312
+   \       0x12   0x....             LDR.N    R0,??DataTable7_3
+   \       0x14   0x.... 0x....      BL       _ZN8touchgfx14makeTransitionI11Screen1View16Screen1PresenterNS_15SlideTransitionILNS_9DirectionE3EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_
+     56          }
+   \       0x18   0xBD01             POP      {R0,PC}
+     57          
+     58          // Screen2
+     59          
+
+   \                                 In section .text, align 2, keep-with-next
+     60          void FrontendApplicationBase::gotoScreen2ScreenSlideTransitionEast()
+     61          {
+   \                     _ZN23FrontendApplicationBase36gotoScreen2ScreenSlideTransitionEastEv: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     62              transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreen2ScreenSlideTransitionEastImpl);
+   \        0x4   0x....             LDR.N    R0,??DataTable7_5
+   \        0x6   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \        0xA   0x0021             MOVS     R1,R4
+   \        0xC   0x4668             MOV      R0,SP
+   \        0xE   0x.... 0x....      BL       _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEC1EPS1_MS1_FvvE
+   \       0x12   0x0001             MOVS     R1,R0
+   \       0x14   0xF514 0x70A0      ADDS     R0,R4,#+320
+   \       0x18   0x.... 0x....      BL       _ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEaSEOS2_
+     63              pendingScreenTransitionCallback = &transitionCallback;
+   \       0x1C   0xF514 0x70A0      ADDS     R0,R4,#+320
+   \       0x20   0xF8C4 0x013C      STR      R0,[R4, #+316]
+     64          }
+   \       0x24   0xBD1F             POP      {R0-R4,PC}
+     65          
+
+   \                                 In section .text, align 2, keep-with-next
+     66          void FrontendApplicationBase::gotoScreen2ScreenSlideTransitionEastImpl()
+     67          {
+   \                     _ZN23FrontendApplicationBase40gotoScreen2ScreenSlideTransitionEastImplEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     68              touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+   \        0x2   0xF8D0 0x1154      LDR      R1,[R0, #+340]
+   \        0x6   0x9100             STR      R1,[SP, #+0]
+   \        0x8   0x....             LDR.N    R3,??DataTable7_2
+   \        0xA   0xF8D0 0x2150      LDR      R2,[R0, #+336]
+   \        0xE   0xF510 0x719C      ADDS     R1,R0,#+312
+   \       0x12   0x....             LDR.N    R0,??DataTable7_3
+   \       0x14   0x.... 0x....      BL       _ZN8touchgfx14makeTransitionI11Screen2View16Screen2PresenterNS_15SlideTransitionILNS_9DirectionE2EEE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_
+     69          }
+   \       0x18   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \        0x0   0x....'....        DC32     _ZTV23FrontendApplicationBase+0x8
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \        0x0   0x....'....        DC32     ?_5
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \        0x0   0x....'....        DC32     _ZN8touchgfx11Application17currentTransitionE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_3:
+   \        0x0   0x....'....        DC32     _ZN8touchgfx11Application13currentScreenE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_4:
+   \        0x0   0x....'....        DC32     ?_6
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_5:
+   \        0x0   0x....'....        DC32     ?_7
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   FrontendApplicationBase::FrontendApplicationBase(Model &, FrontendHeap &)
+        16   -- Indirect call
+        16   -> touchgfx::Callback<FrontendApplicationBase>::Callback()
+        16   -> touchgfx::HAL::getInstance()
+        16   -> touchgfx::HAL::lcd()
+        16   -> touchgfx::LCD24bpp::enableTextureMapperAll()
+        16   -> touchgfx::MVPApplication::subobject MVPApplication()
+        16   -> touchgfx::Texts::setLanguage(uint16_t)
+       8   FrontendApplicationBase::deleter ~FrontendApplicationBase() noexcept
+         8   -> FrontendApplicationBase::~FrontendApplicationBase() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+      24   FrontendApplicationBase::gotoScreen1ScreenNoTransition()
+        24   -> touchgfx::Callback<FrontendApplicationBase>::Callback(FrontendApplicationBase *, void (FrontendApplicationBase::*)())
+        24   -> touchgfx::Callback<FrontendApplicationBase>::operator=(touchgfx::Callback<FrontendApplicationBase, void, void, void> &&) noexcept
+       8   FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()
+         8   -> touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+      24   FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWest()
+        24   -> touchgfx::Callback<FrontendApplicationBase>::Callback(FrontendApplicationBase *, void (FrontendApplicationBase::*)())
+        24   -> touchgfx::Callback<FrontendApplicationBase>::operator=(touchgfx::Callback<FrontendApplicationBase, void, void, void> &&) noexcept
+       8   FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWestImpl()
+         8   -> touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::SlideTransition<touchgfx::WEST>, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+      24   FrontendApplicationBase::gotoScreen2ScreenSlideTransitionEast()
+        24   -> touchgfx::Callback<FrontendApplicationBase>::Callback(FrontendApplicationBase *, void (FrontendApplicationBase::*)())
+        24   -> touchgfx::Callback<FrontendApplicationBase>::operator=(touchgfx::Callback<FrontendApplicationBase, void, void, void> &&) noexcept
+       8   FrontendApplicationBase::gotoScreen2ScreenSlideTransitionEastImpl()
+         8   -> touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::SlideTransition<touchgfx::EAST>, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+       8   FrontendApplicationBase::subobject FrontendApplicationBase(Model &, FrontendHeap &)
+         8   -> FrontendApplicationBase::FrontendApplicationBase(Model &, FrontendHeap &)
+       0   FrontendApplicationBase::~FrontendApplicationBase() noexcept
+       0   Model::bind(ModelListener *)
+       0   ModelListener::bind(Model *)
+       0   operator new(unsigned int, void *) noexcept
+       8   touchgfx::AbstractPartition::at<Screen1Presenter>(uint16_t)
+         8   -- Indirect call
+       8   touchgfx::AbstractPartition::at<Screen1View>(uint16_t)
+         8   -- Indirect call
+       8   touchgfx::AbstractPartition::at<Screen2Presenter>(uint16_t)
+         8   -- Indirect call
+       8   touchgfx::AbstractPartition::at<Screen2View>(uint16_t)
+         8   -- Indirect call
+       8   touchgfx::AbstractPartition::at<touchgfx::NoTransition>(uint16_t)
+         8   -- Indirect call
+       8   touchgfx::AbstractPartition::at<touchgfx::SlideTransition<touchgfx::EAST>>(uint16_t)
+         8   -- Indirect call
+       8   touchgfx::AbstractPartition::at<touchgfx::SlideTransition<touchgfx::WEST>>(uint16_t)
+         8   -- Indirect call
+       0   touchgfx::Application::appSwitchScreen(uint8_t)
+       8   touchgfx::Application::requestRedraw(touchgfx::Rect &)
+         8   -> __aeabi_memcpy
+       8   touchgfx::Callback<FrontendApplicationBase>::Callback()
+         8   -> touchgfx::GenericCallback<void>::subobject GenericCallback() noexcept
+      24   touchgfx::Callback<FrontendApplicationBase>::Callback(FrontendApplicationBase *, void (FrontendApplicationBase::*)())
+        24   -> touchgfx::GenericCallback<void>::subobject GenericCallback() noexcept
+       8   touchgfx::Callback<FrontendApplicationBase>::deleter ~Callback() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+         8   -> touchgfx::Callback<FrontendApplicationBase>::~Callback() noexcept
+       8   touchgfx::Callback<FrontendApplicationBase>::execute()
+         8   -- Indirect call
+       0   touchgfx::Callback<FrontendApplicationBase>::isValid() const
+      16   touchgfx::Callback<FrontendApplicationBase>::operator=(touchgfx::Callback<FrontendApplicationBase, void, void, void> &&) noexcept
+        16   -> touchgfx::GenericCallback<void>::operator=(touchgfx::GenericCallback<void, void, void> const &) noexcept
+       0   touchgfx::Callback<FrontendApplicationBase>::~Callback() noexcept
+      24   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::EAST> *, void (touchgfx::SlideTransition<touchgfx::EAST>::*)(touchgfx::Drawable &))
+        24   -> touchgfx::GenericCallback<touchgfx::Drawable &>::subobject GenericCallback() noexcept
+       8   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::deleter ~Callback() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+         8   -> touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::~Callback() noexcept
+       8   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::execute(touchgfx::Drawable &)
+         8   -- Indirect call
+       0   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::isValid() const
+       0   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::~Callback() noexcept
+      24   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::WEST> *, void (touchgfx::SlideTransition<touchgfx::WEST>::*)(touchgfx::Drawable &))
+        24   -> touchgfx::GenericCallback<touchgfx::Drawable &>::subobject GenericCallback() noexcept
+       8   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::deleter ~Callback() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+         8   -> touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::~Callback() noexcept
+       8   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::execute(touchgfx::Drawable &)
+         8   -- Indirect call
+       0   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::isValid() const
+       0   touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::~Callback() noexcept
+       0   touchgfx::Drawable::getX() const
+      16   touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)
+        16   -> touchgfx::Drawable::setWidthHeight(int16_t, int16_t)
+        16   -> touchgfx::Drawable::setXY(int16_t, int16_t)
+      16   touchgfx::Drawable::setWidthHeight(int16_t, int16_t)
+        16   -- Indirect call
+      16   touchgfx::Drawable::setXY(int16_t, int16_t)
+        16   -- Indirect call
+       0   touchgfx::GenericCallback<touchgfx::Drawable &>::GenericCallback() noexcept
+       8   touchgfx::GenericCallback<touchgfx::Drawable &>::subobject GenericCallback() noexcept
+         8   -> touchgfx::GenericCallback<touchgfx::Drawable &>::GenericCallback() noexcept
+       0   touchgfx::GenericCallback<void>::GenericCallback() noexcept
+       0   touchgfx::GenericCallback<void>::operator=(touchgfx::GenericCallback<void, void, void> const &) noexcept
+       8   touchgfx::GenericCallback<void>::subobject GenericCallback() noexcept
+         8   -> touchgfx::GenericCallback<void>::GenericCallback() noexcept
+       0   touchgfx::HAL::getInstance()
+       0   touchgfx::HAL::lcd()
+       8   touchgfx::MVPApplication::MVPApplication()
+         8   -> touchgfx::Application::subobject Application()
+       8   touchgfx::MVPApplication::deleter ~MVPApplication() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+         8   -> touchgfx::MVPApplication::~MVPApplication() noexcept
+       8   touchgfx::MVPApplication::evaluatePendingScreenTransition()
+         8   -- Indirect call
+       8   touchgfx::MVPApplication::handlePendingScreenTransition()
+         8   -> touchgfx::MVPApplication::evaluatePendingScreenTransition()
+       8   touchgfx::MVPApplication::subobject MVPApplication()
+         8   -> touchgfx::MVPApplication::MVPApplication()
+       0   touchgfx::MVPApplication::~MVPApplication() noexcept
+       8   touchgfx::NoTransition::NoTransition()
+         8   -> touchgfx::Transition::subobject Transition()
+       8   touchgfx::NoTransition::deleter ~NoTransition() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+         8   -> touchgfx::NoTransition::~NoTransition() noexcept
+       0   touchgfx::NoTransition::handleTickEvent()
+       0   touchgfx::NoTransition::~NoTransition() noexcept
+      16   touchgfx::SlideTransition<touchgfx::EAST>::SlideTransition(uint8_t)
+        16   -> touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::EAST> *, void (touchgfx::SlideTransition<touchgfx::EAST>::*)(touchgfx::Drawable &))
+        16   -> touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)
+        16   -> touchgfx::SnapshotWidget::SnapshotWidget()
+        16   -> touchgfx::SnapshotWidget::makeSnapshot()
+        16   -> touchgfx::Transition::subobject Transition()
+       8   touchgfx::SlideTransition<touchgfx::EAST>::deleter ~SlideTransition() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+         8   -> touchgfx::SlideTransition<touchgfx::EAST>::~SlideTransition() noexcept
+       8   touchgfx::SlideTransition<touchgfx::EAST>::handleTickEvent()
+         8   -- Indirect call
+         8   -> touchgfx::Drawable::getX() const
+         8   -> touchgfx::Drawable::moveRelative(int16_t, int16_t)
+         8   -> touchgfx::EasingEquations::cubicEaseOut(uint16_t, int16_t, int16_t, uint16_t)
+         8   -> touchgfx::Transition::handleTickEvent()
+      24   touchgfx::SlideTransition<touchgfx::EAST>::init()
+        24   -- Indirect call
+        24   -> touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::EAST> *, void (touchgfx::SlideTransition<touchgfx::EAST>::*)(touchgfx::Drawable &))
+        24   -> touchgfx::Transition::init()
+       8   touchgfx::SlideTransition<touchgfx::EAST>::initMoveDrawable(touchgfx::Drawable &)
+         8   -- Indirect call
+       8   touchgfx::SlideTransition<touchgfx::EAST>::tearDown()
+         8   -- Indirect call
+       8   touchgfx::SlideTransition<touchgfx::EAST>::tickMoveDrawable(touchgfx::Drawable &)
+         8   -- Indirect call
+       0   touchgfx::SlideTransition<touchgfx::EAST>::~SlideTransition() noexcept
+      16   touchgfx::SlideTransition<touchgfx::WEST>::SlideTransition(uint8_t)
+        16   -> touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::WEST> *, void (touchgfx::SlideTransition<touchgfx::WEST>::*)(touchgfx::Drawable &))
+        16   -> touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)
+        16   -> touchgfx::SnapshotWidget::SnapshotWidget()
+        16   -> touchgfx::SnapshotWidget::makeSnapshot()
+        16   -> touchgfx::Transition::subobject Transition()
+       8   touchgfx::SlideTransition<touchgfx::WEST>::deleter ~SlideTransition() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+         8   -> touchgfx::SlideTransition<touchgfx::WEST>::~SlideTransition() noexcept
+       8   touchgfx::SlideTransition<touchgfx::WEST>::handleTickEvent()
+         8   -- Indirect call
+         8   -> touchgfx::Drawable::getX() const
+         8   -> touchgfx::Drawable::moveRelative(int16_t, int16_t)
+         8   -> touchgfx::EasingEquations::cubicEaseOut(uint16_t, int16_t, int16_t, uint16_t)
+         8   -> touchgfx::Transition::handleTickEvent()
+      24   touchgfx::SlideTransition<touchgfx::WEST>::init()
+        24   -- Indirect call
+        24   -> touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::WEST> *, void (touchgfx::SlideTransition<touchgfx::WEST>::*)(touchgfx::Drawable &))
+        24   -> touchgfx::Transition::init()
+       8   touchgfx::SlideTransition<touchgfx::WEST>::initMoveDrawable(touchgfx::Drawable &)
+         8   -- Indirect call
+       8   touchgfx::SlideTransition<touchgfx::WEST>::tearDown()
+         8   -- Indirect call
+       8   touchgfx::SlideTransition<touchgfx::WEST>::tickMoveDrawable(touchgfx::Drawable &)
+         8   -- Indirect call
+       0   touchgfx::SlideTransition<touchgfx::WEST>::~SlideTransition() noexcept
+       0   touchgfx::Transition::Transition()
+       8   touchgfx::Transition::deleter ~Transition() noexcept
+         8   -> operator delete(void *, unsigned int) noexcept
+         8   -> touchgfx::Transition::~Transition() noexcept
+       0   touchgfx::Transition::handleTickEvent()
+       0   touchgfx::Transition::init()
+       8   touchgfx::Transition::invalidate()
+         8   -- Indirect call
+         8   -> touchgfx::Application::getInstance()
+       0   touchgfx::Transition::setScreenContainer(touchgfx::Container &)
+       8   touchgfx::Transition::subobject Transition()
+         8   -> touchgfx::Transition::Transition()
+       0   touchgfx::Transition::tearDown()
+       0   touchgfx::Transition::~Transition() noexcept
+       0   touchgfx::View<Screen1Presenter>::bind(Screen1Presenter &)
+       0   touchgfx::View<Screen2Presenter>::bind(Screen2Presenter &)
+      32   touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+        32   -- Indirect call
+        32   -> Model::bind(ModelListener *)
+        32   -> ModelListener::bind(Model *)
+        32   -> Screen1Presenter::Screen1Presenter(Screen1View &)
+        32   -> Screen1View::Screen1View()
+        32   -> __aeabi_assert
+        32   -> __iar_EmptyStepPoint
+        32   -> operator new(unsigned int, void *) noexcept
+        32   -> touchgfx::AbstractPartition::at<Screen1Presenter>(uint16_t)
+        32   -> touchgfx::AbstractPartition::at<Screen1View>(uint16_t)
+        32   -> touchgfx::AbstractPartition::at<touchgfx::NoTransition>(uint16_t)
+        32   -> touchgfx::Application::clearAllTimerWidgets()
+        32   -> touchgfx::Application::getInstance()
+        32   -> touchgfx::NoTransition::NoTransition()
+        32   -> touchgfx::Screen::bindTransition(touchgfx::Transition &)
+        32   -> touchgfx::View<Screen1Presenter>::bind(Screen1Presenter &)
+      32   touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::SlideTransition<touchgfx::WEST>, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+        32   -- Indirect call
+        32   -> Model::bind(ModelListener *)
+        32   -> ModelListener::bind(Model *)
+        32   -> Screen1Presenter::Screen1Presenter(Screen1View &)
+        32   -> Screen1View::Screen1View()
+        32   -> __aeabi_assert
+        32   -> __iar_EmptyStepPoint
+        32   -> operator new(unsigned int, void *) noexcept
+        32   -> touchgfx::AbstractPartition::at<Screen1Presenter>(uint16_t)
+        32   -> touchgfx::AbstractPartition::at<Screen1View>(uint16_t)
+        32   -> touchgfx::AbstractPartition::at<touchgfx::SlideTransition<touchgfx::WEST>>(uint16_t)
+        32   -> touchgfx::Application::clearAllTimerWidgets()
+        32   -> touchgfx::Application::getInstance()
+        32   -> touchgfx::Screen::bindTransition(touchgfx::Transition &)
+        32   -> touchgfx::SlideTransition<touchgfx::WEST>::SlideTransition(uint8_t)
+        32   -> touchgfx::View<Screen1Presenter>::bind(Screen1Presenter &)
+      32   touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::SlideTransition<touchgfx::EAST>, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+        32   -- Indirect call
+        32   -> Model::bind(ModelListener *)
+        32   -> ModelListener::bind(Model *)
+        32   -> Screen2Presenter::Screen2Presenter(Screen2View &)
+        32   -> Screen2View::Screen2View()
+        32   -> __aeabi_assert
+        32   -> __iar_EmptyStepPoint
+        32   -> operator new(unsigned int, void *) noexcept
+        32   -> touchgfx::AbstractPartition::at<Screen2Presenter>(uint16_t)
+        32   -> touchgfx::AbstractPartition::at<Screen2View>(uint16_t)
+        32   -> touchgfx::AbstractPartition::at<touchgfx::SlideTransition<touchgfx::EAST>>(uint16_t)
+        32   -> touchgfx::Application::clearAllTimerWidgets()
+        32   -> touchgfx::Application::getInstance()
+        32   -> touchgfx::Screen::bindTransition(touchgfx::Transition &)
+        32   -> touchgfx::SlideTransition<touchgfx::EAST>::SlideTransition(uint8_t)
+        32   -> touchgfx::View<Screen2Presenter>::bind(Screen2Presenter &)
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+       4  ??DataTable7_3
+       4  ??DataTable7_4
+       4  ??DataTable7_5
+      64  FrontendApplicationBase::FrontendApplicationBase(Model &, FrontendHeap &)
+      22  FrontendApplicationBase::deleter ~FrontendApplicationBase() noexcept
+      38  FrontendApplicationBase::gotoScreen1ScreenNoTransition()
+      26  FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()
+      38  FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWest()
+      26  FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWestImpl()
+      38  FrontendApplicationBase::gotoScreen2ScreenSlideTransitionEast()
+      26  FrontendApplicationBase::gotoScreen2ScreenSlideTransitionEastImpl()
+       8  FrontendApplicationBase::subobject FrontendApplicationBase(Model &, FrontendHeap &)
+       2  FrontendApplicationBase::~FrontendApplicationBase() noexcept
+       4  Model::bind(ModelListener *)
+       4  ModelListener::bind(Model *)
+       4  operator new(unsigned int, void *) noexcept
+      12  touchgfx::AbstractPartition::at<Screen1Presenter>(uint16_t)
+      12  touchgfx::AbstractPartition::at<Screen1View>(uint16_t)
+      12  touchgfx::AbstractPartition::at<Screen2Presenter>(uint16_t)
+      12  touchgfx::AbstractPartition::at<Screen2View>(uint16_t)
+      12  touchgfx::AbstractPartition::at<touchgfx::NoTransition>(uint16_t)
+      12  touchgfx::AbstractPartition::at<touchgfx::SlideTransition<touchgfx::EAST>>(uint16_t)
+      12  touchgfx::AbstractPartition::at<touchgfx::SlideTransition<touchgfx::WEST>>(uint16_t)
+       2  touchgfx::Application::appSwitchScreen(uint8_t)
+      14  touchgfx::Application::requestRedraw(touchgfx::Rect &)
+      40  touchgfx::Callback<FrontendApplicationBase>::Callback()
+      36  touchgfx::Callback<FrontendApplicationBase>::Callback(FrontendApplicationBase *, void (FrontendApplicationBase::*)())
+      20  touchgfx::Callback<FrontendApplicationBase>::deleter ~Callback() noexcept
+      32  touchgfx::Callback<FrontendApplicationBase>::execute()
+      34  touchgfx::Callback<FrontendApplicationBase>::isValid() const
+      30  touchgfx::Callback<FrontendApplicationBase>::operator=(touchgfx::Callback<FrontendApplicationBase, void, void, void> &&) noexcept
+       2  touchgfx::Callback<FrontendApplicationBase>::~Callback() noexcept
+      36  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::EAST> *, void (touchgfx::SlideTransition<touchgfx::EAST>::*)(touchgfx::Drawable &))
+      20  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::deleter ~Callback() noexcept
+      32  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::execute(touchgfx::Drawable &)
+      34  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::isValid() const
+       2  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::Drawable &>::~Callback() noexcept
+      36  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::Callback(touchgfx::SlideTransition<touchgfx::WEST> *, void (touchgfx::SlideTransition<touchgfx::WEST>::*)(touchgfx::Drawable &))
+      20  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::deleter ~Callback() noexcept
+      32  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::execute(touchgfx::Drawable &)
+      34  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::isValid() const
+       2  touchgfx::Callback<touchgfx::SlideTransition<touchgfx::WEST>, touchgfx::Drawable &>::~Callback() noexcept
+       6  touchgfx::Drawable::getX() const
+      36  touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)
+      30  touchgfx::Drawable::setWidthHeight(int16_t, int16_t)
+      30  touchgfx::Drawable::setXY(int16_t, int16_t)
+       2  touchgfx::GenericCallback<touchgfx::Drawable &>::GenericCallback() noexcept
+       8  touchgfx::GenericCallback<touchgfx::Drawable &>::subobject GenericCallback() noexcept
+       2  touchgfx::GenericCallback<void>::GenericCallback() noexcept
+       2  touchgfx::GenericCallback<void>::operator=(touchgfx::GenericCallback<void, void, void> const &) noexcept
+       8  touchgfx::GenericCallback<void>::subobject GenericCallback() noexcept
+      12  touchgfx::HAL::getInstance()
+      36  touchgfx::HAL::lcd()
+      44  touchgfx::MVPApplication::MVPApplication()
+      22  touchgfx::MVPApplication::deleter ~MVPApplication() noexcept
+      52  touchgfx::MVPApplication::evaluatePendingScreenTransition()
+       8  touchgfx::MVPApplication::handlePendingScreenTransition()
+       8  touchgfx::MVPApplication::subobject MVPApplication()
+       2  touchgfx::MVPApplication::~MVPApplication() noexcept
+      24  touchgfx::NoTransition::NoTransition()
+      20  touchgfx::NoTransition::deleter ~NoTransition() noexcept
+       6  touchgfx::NoTransition::handleTickEvent()
+       2  touchgfx::NoTransition::~NoTransition() noexcept
+     144  touchgfx::SlideTransition<touchgfx::EAST>::SlideTransition(uint8_t)
+      20  touchgfx::SlideTransition<touchgfx::EAST>::deleter ~SlideTransition() noexcept
+     180  touchgfx::SlideTransition<touchgfx::EAST>::handleTickEvent()
+      68  touchgfx::SlideTransition<touchgfx::EAST>::init()
+      28  touchgfx::SlideTransition<touchgfx::EAST>::initMoveDrawable(touchgfx::Drawable &)
+      40  touchgfx::SlideTransition<touchgfx::EAST>::tearDown()
+      26  touchgfx::SlideTransition<touchgfx::EAST>::tickMoveDrawable(touchgfx::Drawable &)
+       2  touchgfx::SlideTransition<touchgfx::EAST>::~SlideTransition() noexcept
+     144  touchgfx::SlideTransition<touchgfx::WEST>::SlideTransition(uint8_t)
+      20  touchgfx::SlideTransition<touchgfx::WEST>::deleter ~SlideTransition() noexcept
+     180  touchgfx::SlideTransition<touchgfx::WEST>::handleTickEvent()
+      68  touchgfx::SlideTransition<touchgfx::WEST>::init()
+      28  touchgfx::SlideTransition<touchgfx::WEST>::initMoveDrawable(touchgfx::Drawable &)
+      40  touchgfx::SlideTransition<touchgfx::WEST>::tearDown()
+      26  touchgfx::SlideTransition<touchgfx::WEST>::tickMoveDrawable(touchgfx::Drawable &)
+       2  touchgfx::SlideTransition<touchgfx::WEST>::~SlideTransition() noexcept
+      20  touchgfx::Transition::Transition()
+      20  touchgfx::Transition::deleter ~Transition() noexcept
+       2  touchgfx::Transition::handleTickEvent()
+       2  touchgfx::Transition::init()
+      14  touchgfx::Transition::invalidate()
+       4  touchgfx::Transition::setScreenContainer(touchgfx::Container &)
+       8  touchgfx::Transition::subobject Transition()
+       2  touchgfx::Transition::tearDown()
+       2  touchgfx::Transition::~Transition() noexcept
+       4  touchgfx::View<Screen1Presenter>::bind(Screen1Presenter &)
+       4  touchgfx::View<Screen2Presenter>::bind(Screen2Presenter &)
+     456  touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+     460  touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::SlideTransition<touchgfx::WEST>, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+     460  touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::SlideTransition<touchgfx::EAST>, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
+   2'900  -- Other
+
+ 
+ 2'900 bytes in section .rodata
+ 3'700 bytes in section .text
+ 
+ 288 bytes of CODE  memory (+ 3'412 bytes shared)
+  64 bytes of CONST memory (+ 2'836 bytes shared)
+
+Errors: none
+Warnings: none
