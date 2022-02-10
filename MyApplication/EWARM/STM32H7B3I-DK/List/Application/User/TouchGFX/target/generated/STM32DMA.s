@@ -1,72 +1,74 @@
 ﻿///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM        08/Feb/2022  20:54:05
+// IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM        09/Feb/2022  10:51:37
 // Copyright 1999-2021 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
 //    Endian       =  little
 //    Source file  =
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\target\generated\STM32DMA.cpp
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\TouchGFX\target\generated\STM32DMA.cpp
 //        [UTF-8]
 //    Command line =
 //        -f
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\generated\STM32DMA.o.rsp
-//        (D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\target\generated\STM32DMA.cpp
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\generated\STM32DMA.o.rsp
+//        (D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\TouchGFX\target\generated\STM32DMA.cpp
 //        -D USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target\generated
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target\generated
 //        -lA
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target\generated
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target\generated
 //        -o
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\generated
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\generated
 //        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --no_clustering --no_scheduling --debug --endian=little
 //        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program
 //        Files\IAR Systems\Embedded Workbench
 //        9.0\arm\inc\c\DLib_Config_Full.h" -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Core/Inc\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/App\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+//        -I
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+//        -I
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
 //        -Ol --c++ --no_exceptions --no_rtti --no_static_destruction
 //        --source_encoding utf8 --text_out utf8 --utf8_text_in)
 //        --dependencies=n
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\generated\STM32DMA.o.d
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\Application\User\TouchGFX\target\generated\STM32DMA.o.d
 //    Locale       =  C
 //    List file    =
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target\generated\STM32DMA.s
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\Application\User\TouchGFX\target\generated\STM32DMA.s
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -226,7 +228,7 @@ _ZN8STM32DMAD2Ev:
         BL       _ZN8STM32DMAD1Ev
         POP      {R1,PC}        
           CFI EndBlock cfiBlock2
-// D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\target\generated\STM32DMA.cpp
+// D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\TouchGFX\target\generated\STM32DMA.cpp
 //    1 
 //    2 /**
 //    3   ******************************************************************************
@@ -1613,21 +1615,23 @@ _ZZN8STM32DMA22getChromARTInputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_0:
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8STM32DMA22getChromARTInputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_1
         DATA
-// __absolute char const <_ZZN8STM32DMA22getChromARTInputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_1>[83]
+// __absolute char const <_ZZN8STM32DMA22getChromARTInputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_1>[94]
 _ZZN8STM32DMA22getChromARTInputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_1:
         DATA8
-        DC8 0x44, 0x3A, 0x5C, 0x39, 0x39, 0x5F, 0x50, 0x72
-        DC8 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x47, 0x69
-        DC8 0x74, 0x48, 0x75, 0x62, 0x5C, 0x54, 0x6F, 0x75
-        DC8 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C, 0x4D, 0x79
-        DC8 0x41, 0x70, 0x70, 0x6C, 0x69, 0x63, 0x61, 0x74
-        DC8 0x69, 0x6F, 0x6E, 0x5C, 0x54, 0x6F, 0x75, 0x63
-        DC8 0x68, 0x47, 0x46, 0x58, 0x5C, 0x74, 0x61, 0x72
-        DC8 0x67, 0x65, 0x74, 0x5C, 0x67, 0x65, 0x6E, 0x65
-        DC8 0x72, 0x61, 0x74, 0x65, 0x64, 0x5C, 0x53, 0x54
-        DC8 0x4D, 0x33, 0x32, 0x44, 0x4D, 0x41, 0x2E, 0x63
-        DC8 0x70, 0x70, 0
-        DS8 1
+        DC8 0x44, 0x3A, 0x5C, 0x30, 0x30, 0x31, 0x5F, 0x50
+        DC8 0x72, 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x42
+        DC8 0x5F, 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46
+        DC8 0x58, 0x5F, 0x53, 0x74, 0x6D, 0x33, 0x32, 0x5C
+        DC8 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58
+        DC8 0x5C, 0x4D, 0x79, 0x41, 0x70, 0x70, 0x6C, 0x69
+        DC8 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5C, 0x54
+        DC8 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C
+        DC8 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x5C, 0x67
+        DC8 0x65, 0x6E, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64
+        DC8 0x5C, 0x53, 0x54, 0x4D, 0x33, 0x32, 0x44, 0x4D
+        DC8 0x41, 0x2E, 0x63, 0x70, 0x70, 0
+        DATA16
+        DS8 2
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8STM32DMA23getChromARTOutputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_0
@@ -1641,21 +1645,23 @@ _ZZN8STM32DMA23getChromARTOutputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_0:
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8STM32DMA23getChromARTOutputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_1
         DATA
-// __absolute char const <_ZZN8STM32DMA23getChromARTOutputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_1>[83]
+// __absolute char const <_ZZN8STM32DMA23getChromARTOutputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_1>[94]
 _ZZN8STM32DMA23getChromARTOutputFormatEN8touchgfx6Bitmap12BitmapFormatEEs_1:
         DATA8
-        DC8 0x44, 0x3A, 0x5C, 0x39, 0x39, 0x5F, 0x50, 0x72
-        DC8 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x47, 0x69
-        DC8 0x74, 0x48, 0x75, 0x62, 0x5C, 0x54, 0x6F, 0x75
-        DC8 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C, 0x4D, 0x79
-        DC8 0x41, 0x70, 0x70, 0x6C, 0x69, 0x63, 0x61, 0x74
-        DC8 0x69, 0x6F, 0x6E, 0x5C, 0x54, 0x6F, 0x75, 0x63
-        DC8 0x68, 0x47, 0x46, 0x58, 0x5C, 0x74, 0x61, 0x72
-        DC8 0x67, 0x65, 0x74, 0x5C, 0x67, 0x65, 0x6E, 0x65
-        DC8 0x72, 0x61, 0x74, 0x65, 0x64, 0x5C, 0x53, 0x54
-        DC8 0x4D, 0x33, 0x32, 0x44, 0x4D, 0x41, 0x2E, 0x63
-        DC8 0x70, 0x70, 0
-        DS8 1
+        DC8 0x44, 0x3A, 0x5C, 0x30, 0x30, 0x31, 0x5F, 0x50
+        DC8 0x72, 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x42
+        DC8 0x5F, 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46
+        DC8 0x58, 0x5F, 0x53, 0x74, 0x6D, 0x33, 0x32, 0x5C
+        DC8 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58
+        DC8 0x5C, 0x4D, 0x79, 0x41, 0x70, 0x70, 0x6C, 0x69
+        DC8 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5C, 0x54
+        DC8 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C
+        DC8 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x5C, 0x67
+        DC8 0x65, 0x6E, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64
+        DC8 0x5C, 0x53, 0x54, 0x4D, 0x33, 0x32, 0x44, 0x4D
+        DC8 0x41, 0x2E, 0x63, 0x70, 0x70, 0
+        DATA16
+        DS8 2
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI8STM32DMA
@@ -1688,18 +1694,20 @@ _ZTS8STM32DMA:
         DATA
 ?_1:
         DATA8
-        DC8 0x44, 0x3A, 0x5C, 0x39, 0x39, 0x5F, 0x50, 0x72
-        DC8 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x47, 0x69
-        DC8 0x74, 0x48, 0x75, 0x62, 0x5C, 0x54, 0x6F, 0x75
-        DC8 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C, 0x4D, 0x79
-        DC8 0x41, 0x70, 0x70, 0x6C, 0x69, 0x63, 0x61, 0x74
-        DC8 0x69, 0x6F, 0x6E, 0x5C, 0x54, 0x6F, 0x75, 0x63
-        DC8 0x68, 0x47, 0x46, 0x58, 0x5C, 0x74, 0x61, 0x72
-        DC8 0x67, 0x65, 0x74, 0x5C, 0x67, 0x65, 0x6E, 0x65
-        DC8 0x72, 0x61, 0x74, 0x65, 0x64, 0x5C, 0x53, 0x54
-        DC8 0x4D, 0x33, 0x32, 0x44, 0x4D, 0x41, 0x2E, 0x63
-        DC8 0x70, 0x70, 0
-        DS8 1
+        DC8 0x44, 0x3A, 0x5C, 0x30, 0x30, 0x31, 0x5F, 0x50
+        DC8 0x72, 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x42
+        DC8 0x5F, 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46
+        DC8 0x58, 0x5F, 0x53, 0x74, 0x6D, 0x33, 0x32, 0x5C
+        DC8 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58
+        DC8 0x5C, 0x4D, 0x79, 0x41, 0x70, 0x70, 0x6C, 0x69
+        DC8 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5C, 0x54
+        DC8 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C
+        DC8 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x5C, 0x67
+        DC8 0x65, 0x6E, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64
+        DC8 0x5C, 0x53, 0x54, 0x4D, 0x33, 0x32, 0x44, 0x4D
+        DC8 0x41, 0x2E, 0x63, 0x70, 0x70, 0
+        DATA16
+        DS8 2
 
         END
 //  326 
@@ -1767,11 +1775,11 @@ _ZTS8STM32DMA:
 //  388 }
 //  389 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 // 
-//   440 bytes in section .rodata
+//   476 bytes in section .rodata
 // 1'242 bytes in section .text
 // 
 // 1'012 bytes of CODE  memory (+ 230 bytes shared)
-//   112 bytes of CONST memory (+ 328 bytes shared)
+//   124 bytes of CONST memory (+ 352 bytes shared)
 //
 //Errors: none
 //Warnings: none

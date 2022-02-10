@@ -1,72 +1,74 @@
 ﻿///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM        08/Feb/2022  20:54:24
+// IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM        09/Feb/2022  10:51:33
 // Copyright 1999-2021 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
 //    Endian       =  little
 //    Source file  =
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\generated\texts\src\Texts.cpp
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\TouchGFX\generated\texts\src\Texts.cpp
 //        [UTF-8]
 //    Command line =
 //        -f
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\texts\Texts.o.rsp
-//        (D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\generated\texts\src\Texts.cpp
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\texts\Texts.o.rsp
+//        (D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\TouchGFX\generated\texts\src\Texts.cpp
 //        -D USE_HAL_DRIVER -D STM32H7B3xxQ -D USE_BPP=24 -lC
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\texts
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\texts
 //        -lA
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\texts
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\texts
 //        -o
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\texts
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\texts
 //        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --no_clustering --no_scheduling --debug --endian=little
 //        --cpu=Cortex-M7 -e --fpu=VFPv5_d16 --dlib_config "C:\Program
 //        Files\IAR Systems\Embedded Workbench
 //        9.0\arm\inc\c\DLib_Config_Full.h" -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Core/Inc\ -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/App\ -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Core/Inc\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/App\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/target/generated\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/target\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Device/ST/STM32H7xx/Include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/CMSIS/Include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/BSP/Components/Common\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Drivers/BSP/STM32H7B3I-DK\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../Middlewares/ST/touchgfx/framework/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/fonts/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/gui_generated/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/images/include\
 //        -I
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/texts/include\
+//        -I
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/gui/include\
+//        -I
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM/../TouchGFX/generated/videos/include\
 //        -Ol --c++ --no_exceptions --no_rtti --no_static_destruction
 //        --source_encoding utf8 --text_out utf8 --utf8_text_in)
 //        --dependencies=n
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\texts\Texts.o.d
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\Obj\TouchGFX\generated\texts\Texts.o.d
 //    Locale       =  C
 //    List file    =
-//        D:\99_Project\GitHub\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\texts\Texts.s
+//        D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\EWARM\STM32H7B3I-DK\List\TouchGFX\generated\texts\Texts.s
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -183,7 +185,7 @@
           CFI D15 SameValue
           CFI EndCommon cfiCommon0
         
-// D:\99_Project\GitHub\TouchGFX\MyApplication\TouchGFX\generated\texts\src\Texts.cpp
+// D:\001_Project\B_TouchGFX_Stm32\TouchGFX\MyApplication\TouchGFX\generated\texts\src\Texts.cpp
 //    1 /* DO NOT EDIT THIS FILE */
 //    2 /* This file is autogenerated by the text-database code generator */
 //    3 
@@ -718,27 +720,26 @@ _ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEvEs:
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEvEs_0
         DATA
-// __absolute char const <_ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEvEs_0>[121]
+// __absolute char const <_ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEvEs_0>[132]
 _ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEvEs_0:
         DATA8
-        DC8 0x44, 0x3A, 0x5C, 0x39, 0x39, 0x5F, 0x50, 0x72
-        DC8 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x47, 0x69
-        DC8 0x74, 0x48, 0x75, 0x62, 0x5C, 0x54, 0x6F, 0x75
-        DC8 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C, 0x4D, 0x79
-        DC8 0x41, 0x70, 0x70, 0x6C, 0x69, 0x63, 0x61, 0x74
-        DC8 0x69, 0x6F, 0x6E, 0x5C, 0x45, 0x57, 0x41, 0x52
-        DC8 0x4D, 0x2F, 0x2E, 0x2E, 0x2F, 0x4D, 0x69, 0x64
-        DC8 0x64, 0x6C, 0x65, 0x77, 0x61, 0x72, 0x65, 0x73
-        DC8 0x2F, 0x53, 0x54, 0x2F, 0x74, 0x6F, 0x75, 0x63
-        DC8 0x68, 0x67, 0x66, 0x78, 0x2F, 0x66, 0x72, 0x61
-        DC8 0x6D, 0x65, 0x77, 0x6F, 0x72, 0x6B, 0x2F, 0x69
-        DC8 0x6E, 0x63, 0x6C, 0x75, 0x64, 0x65, 0x5C, 0x74
+        DC8 0x44, 0x3A, 0x5C, 0x30, 0x30, 0x31, 0x5F, 0x50
+        DC8 0x72, 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x42
+        DC8 0x5F, 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46
+        DC8 0x58, 0x5F, 0x53, 0x74, 0x6D, 0x33, 0x32, 0x5C
+        DC8 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58
+        DC8 0x5C, 0x4D, 0x79, 0x41, 0x70, 0x70, 0x6C, 0x69
+        DC8 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5C, 0x45
+        DC8 0x57, 0x41, 0x52, 0x4D, 0x2F, 0x2E, 0x2E, 0x2F
+        DC8 0x4D, 0x69, 0x64, 0x64, 0x6C, 0x65, 0x77, 0x61
+        DC8 0x72, 0x65, 0x73, 0x2F, 0x53, 0x54, 0x2F, 0x74
         DC8 0x6F, 0x75, 0x63, 0x68, 0x67, 0x66, 0x78, 0x2F
-        DC8 0x54, 0x65, 0x78, 0x74, 0x50, 0x72, 0x6F, 0x76
-        DC8 0x69, 0x64, 0x65, 0x72, 0x2E, 0x68, 0x70, 0x70
-        DC8 0
-        DATA
-        DS8 3
+        DC8 0x66, 0x72, 0x61, 0x6D, 0x65, 0x77, 0x6F, 0x72
+        DC8 0x6B, 0x2F, 0x69, 0x6E, 0x63, 0x6C, 0x75, 0x64
+        DC8 0x65, 0x5C, 0x74, 0x6F, 0x75, 0x63, 0x68, 0x67
+        DC8 0x66, 0x78, 0x2F, 0x54, 0x65, 0x78, 0x74, 0x50
+        DC8 0x72, 0x6F, 0x76, 0x69, 0x64, 0x65, 0x72, 0x2E
+        DC8 0x68, 0x70, 0x70, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEtEs
@@ -753,27 +754,26 @@ _ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEtEs:
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEtEs_0
         DATA
-// __absolute char const <_ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEtEs_0>[121]
+// __absolute char const <_ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEtEs_0>[132]
 _ZZN8touchgfx12TextProvider14circularBufferILj10EE8peekCharEtEs_0:
         DATA8
-        DC8 0x44, 0x3A, 0x5C, 0x39, 0x39, 0x5F, 0x50, 0x72
-        DC8 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x47, 0x69
-        DC8 0x74, 0x48, 0x75, 0x62, 0x5C, 0x54, 0x6F, 0x75
-        DC8 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C, 0x4D, 0x79
-        DC8 0x41, 0x70, 0x70, 0x6C, 0x69, 0x63, 0x61, 0x74
-        DC8 0x69, 0x6F, 0x6E, 0x5C, 0x45, 0x57, 0x41, 0x52
-        DC8 0x4D, 0x2F, 0x2E, 0x2E, 0x2F, 0x4D, 0x69, 0x64
-        DC8 0x64, 0x6C, 0x65, 0x77, 0x61, 0x72, 0x65, 0x73
-        DC8 0x2F, 0x53, 0x54, 0x2F, 0x74, 0x6F, 0x75, 0x63
-        DC8 0x68, 0x67, 0x66, 0x78, 0x2F, 0x66, 0x72, 0x61
-        DC8 0x6D, 0x65, 0x77, 0x6F, 0x72, 0x6B, 0x2F, 0x69
-        DC8 0x6E, 0x63, 0x6C, 0x75, 0x64, 0x65, 0x5C, 0x74
+        DC8 0x44, 0x3A, 0x5C, 0x30, 0x30, 0x31, 0x5F, 0x50
+        DC8 0x72, 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x42
+        DC8 0x5F, 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46
+        DC8 0x58, 0x5F, 0x53, 0x74, 0x6D, 0x33, 0x32, 0x5C
+        DC8 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58
+        DC8 0x5C, 0x4D, 0x79, 0x41, 0x70, 0x70, 0x6C, 0x69
+        DC8 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5C, 0x45
+        DC8 0x57, 0x41, 0x52, 0x4D, 0x2F, 0x2E, 0x2E, 0x2F
+        DC8 0x4D, 0x69, 0x64, 0x64, 0x6C, 0x65, 0x77, 0x61
+        DC8 0x72, 0x65, 0x73, 0x2F, 0x53, 0x54, 0x2F, 0x74
         DC8 0x6F, 0x75, 0x63, 0x68, 0x67, 0x66, 0x78, 0x2F
-        DC8 0x54, 0x65, 0x78, 0x74, 0x50, 0x72, 0x6F, 0x76
-        DC8 0x69, 0x64, 0x65, 0x72, 0x2E, 0x68, 0x70, 0x70
-        DC8 0
-        DATA
-        DS8 3
+        DC8 0x66, 0x72, 0x61, 0x6D, 0x65, 0x77, 0x6F, 0x72
+        DC8 0x6B, 0x2F, 0x69, 0x6E, 0x63, 0x6C, 0x75, 0x64
+        DC8 0x65, 0x5C, 0x74, 0x6F, 0x75, 0x63, 0x68, 0x67
+        DC8 0x66, 0x78, 0x2F, 0x54, 0x65, 0x78, 0x74, 0x50
+        DC8 0x72, 0x6F, 0x76, 0x69, 0x64, 0x65, 0x72, 0x2E
+        DC8 0x68, 0x70, 0x70, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8touchgfx12TextProvider14circularBufferILj10EE10replaceAt1EtEs
@@ -788,27 +788,26 @@ _ZZN8touchgfx12TextProvider14circularBufferILj10EE10replaceAt1EtEs:
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8touchgfx12TextProvider14circularBufferILj10EE10replaceAt1EtEs_0
         DATA
-// __absolute char const <_ZZN8touchgfx12TextProvider14circularBufferILj10EE10replaceAt1EtEs_0>[121]
+// __absolute char const <_ZZN8touchgfx12TextProvider14circularBufferILj10EE10replaceAt1EtEs_0>[132]
 _ZZN8touchgfx12TextProvider14circularBufferILj10EE10replaceAt1EtEs_0:
         DATA8
-        DC8 0x44, 0x3A, 0x5C, 0x39, 0x39, 0x5F, 0x50, 0x72
-        DC8 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x47, 0x69
-        DC8 0x74, 0x48, 0x75, 0x62, 0x5C, 0x54, 0x6F, 0x75
-        DC8 0x63, 0x68, 0x47, 0x46, 0x58, 0x5C, 0x4D, 0x79
-        DC8 0x41, 0x70, 0x70, 0x6C, 0x69, 0x63, 0x61, 0x74
-        DC8 0x69, 0x6F, 0x6E, 0x5C, 0x45, 0x57, 0x41, 0x52
-        DC8 0x4D, 0x2F, 0x2E, 0x2E, 0x2F, 0x4D, 0x69, 0x64
-        DC8 0x64, 0x6C, 0x65, 0x77, 0x61, 0x72, 0x65, 0x73
-        DC8 0x2F, 0x53, 0x54, 0x2F, 0x74, 0x6F, 0x75, 0x63
-        DC8 0x68, 0x67, 0x66, 0x78, 0x2F, 0x66, 0x72, 0x61
-        DC8 0x6D, 0x65, 0x77, 0x6F, 0x72, 0x6B, 0x2F, 0x69
-        DC8 0x6E, 0x63, 0x6C, 0x75, 0x64, 0x65, 0x5C, 0x74
+        DC8 0x44, 0x3A, 0x5C, 0x30, 0x30, 0x31, 0x5F, 0x50
+        DC8 0x72, 0x6F, 0x6A, 0x65, 0x63, 0x74, 0x5C, 0x42
+        DC8 0x5F, 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46
+        DC8 0x58, 0x5F, 0x53, 0x74, 0x6D, 0x33, 0x32, 0x5C
+        DC8 0x54, 0x6F, 0x75, 0x63, 0x68, 0x47, 0x46, 0x58
+        DC8 0x5C, 0x4D, 0x79, 0x41, 0x70, 0x70, 0x6C, 0x69
+        DC8 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x5C, 0x45
+        DC8 0x57, 0x41, 0x52, 0x4D, 0x2F, 0x2E, 0x2E, 0x2F
+        DC8 0x4D, 0x69, 0x64, 0x64, 0x6C, 0x65, 0x77, 0x61
+        DC8 0x72, 0x65, 0x73, 0x2F, 0x53, 0x54, 0x2F, 0x74
         DC8 0x6F, 0x75, 0x63, 0x68, 0x67, 0x66, 0x78, 0x2F
-        DC8 0x54, 0x65, 0x78, 0x74, 0x50, 0x72, 0x6F, 0x76
-        DC8 0x69, 0x64, 0x65, 0x72, 0x2E, 0x68, 0x70, 0x70
-        DC8 0
-        DATA
-        DS8 3
+        DC8 0x66, 0x72, 0x61, 0x6D, 0x65, 0x77, 0x6F, 0x72
+        DC8 0x6B, 0x2F, 0x69, 0x6E, 0x63, 0x6C, 0x75, 0x64
+        DC8 0x65, 0x5C, 0x74, 0x6F, 0x75, 0x63, 0x68, 0x67
+        DC8 0x66, 0x78, 0x2F, 0x54, 0x65, 0x78, 0x74, 0x50
+        DC8 0x72, 0x6F, 0x76, 0x69, 0x64, 0x65, 0x72, 0x2E
+        DC8 0x68, 0x70, 0x70, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTSN8touchgfx4FontE
@@ -1112,12 +1111,12 @@ _ZNK8touchgfx5Texts7getTextEt:
         END
 // 
 //  14 bytes in section .bss
-// 528 bytes in section .rodata
+// 552 bytes in section .rodata
 // 628 bytes in section .text
 //  40 bytes in section TextFlashSection
 // 
 // 490 bytes of CODE  memory (+ 138 bytes shared)
-//  44 bytes of CONST memory (+ 524 bytes shared)
+//  44 bytes of CONST memory (+ 548 bytes shared)
 //  14 bytes of DATA  memory
 //
 //Errors: none
